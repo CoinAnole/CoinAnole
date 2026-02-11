@@ -1,0 +1,69 @@
+name: CodePet Scheduler
+
+on:
+  schedule:
+    - cron: '13,43 * * * *'  # At minute 13 and 43 of every hour
+  workflow_dispatch:  # Manual trigger for testing
+
+permissions:
+  contents: write
+
+jobs:
+  check-and-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install PyGithub requests
+      
+      - name: Detect activity and calculate state
+        id: state_calc
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          WATCHED_REPOS: ${{ secrets.WATCHED_REPOS }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python .codepet/scripts/calculate_state.py
+      
+      - name: Commit state changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions[bot]"
+          git add .codepet/activity.json .codepet/state.json
+          git commit -m "Update CodePet state [runner]" || echo "No changes to commit"
+          git push
+      
+      - name: Calculate back-off
+        id: backoff
+        run: python .codepet/scripts/calculate_backoff.py
+      
+      - name: Trigger Kilo Cloud Agent
+        if: steps.backoff.outputs.should_trigger == 'true'
+        run: |
+          curl -X POST "${{ secrets.KILO_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -H "x-webhook-secret: ${{ secrets.KILO_WEBHOOK_SECRET }}" \
+            -d "{
+              \"trigger_source\": \"github_actions\",
+              \"hours_inactive\": ${{ steps.backoff.outputs.hours_inactive }},
+              \"backoff_reason\": \"${{ steps.backoff.outputs.reason }}\",
+              \"repository\": \"${{ github.repository }}\",
+              \"actor\": \"${{ github.actor }}\"
+            }"
+          echo "Webhook triggered successfully"
+      
+      - name: Log skip decision
+        if: steps.backoff.outputs.should_trigger == 'false'
+        run: |
+          echo "Skipping webhook trigger: ${{ steps.backoff.outputs.reason }}"
+          echo "Hours since activity: ${{ steps.backoff.outputs.hours_inactive }}"
+          echo "Next expected interval: ${{ steps.backoff.outputs.next_interval }} minutes"
