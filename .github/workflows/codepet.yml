@@ -56,6 +56,7 @@ jobs:
               \"trigger_source\": \"github_actions\",
               \"hours_inactive\": ${{ steps.backoff.outputs.hours_inactive }},
               \"backoff_reason\": \"${{ steps.backoff.outputs.reason }}\",
+              \"next_interval\": ${{ steps.backoff.outputs.next_interval }},
               \"repository\": \"${{ github.repository }}\",
               \"actor\": \"${{ github.actor }}\"
             }"
