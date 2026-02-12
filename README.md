@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 97/100 | █████████░ |
-| ⚡ Energy | 54/100 | █████░░░░░ |
+| 🍖 Hunger | 96/100 | █████████░ |
+| ⚡ Energy | 58/100 | █████▌░░░░ |
 | 😊 Happiness | 80/100 | ████████░░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 42 commits | **Current Streak:** 0 days
 
-Byte's eyes are looking a bit brighter now! Energy has ticked up to 54, and the little blob seems more alert at the desk. The coffee cup still sits nearby—though it hasn't been touched yet. Morning light streams through the Chicago window as Byte continues typing away, content and slowly gaining vigor.
+Byte is positively glowing! ✨ Energy has climbed to 58, and the little blob's eyes sparkle with renewed enthusiasm. Tiny sparkles dance around Byte's head as they type away on the laptop, clearly enjoying the productive morning. The Chicago skyline outside the window looks bright and inviting, matching Byte's cheerful mood.
 
 ---
 *CodePet updates automatically based on coding activity*
