@@ -1,5 +1,11 @@
-# 🦎✊
-## [Anoles versus Geckos: The Ultimate Showdown](https://www.anoleannals.org/2018/03/26/anoles-versus-geckos-the-ultimate-showdown/)
+# 🐣 CodePet: A Living Digital Pet in Your GitHub Profile
+
+**CodePet** is an AI-powered digital companion that lives in your GitHub README, evolving based on your actual coding activity. It combines GitHub Actions, Kilo Cloud Agents, and fal.ai image generation to create a living, breathing profile pet.
+
+💰 **Cost:** ~3¢ per hour during its most active periods (~1.5¢ per update)
+
+> 🏆 **Kilo "Automate Everything" Challenge Entry**  
+> 📖 [Learn more about the project →](ABOUT_CODEPET.md)
 
 <!-- CodePet Below Here -->
 
