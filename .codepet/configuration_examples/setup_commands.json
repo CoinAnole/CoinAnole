@@ -1,0 +1,7 @@
+[
+  "git config --global user.email 'codepet@digital.pet'",
+  "git config --global user.name 'CodePet'",
+  "curl -fsSL https://bun.com/install | bash",
+  "git clone https://github.com/CoinAnole/falcon /tmp/falcon",
+  "cd /tmp/falcon && $HOME/.bun/bin/bun install"
+]
