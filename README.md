@@ -5,6 +5,8 @@
 > 🏆 **Kilo "Automate Everything" Challenge Entry**  
 > 📖 [Learn more about the project →](ABOUT_CODEPET.md)
 
+Want to set up your own CodePet? Find configuration examples in [`.codepet/configuration_examples`](.codepet/configuration_examples).
+
 <!-- CodePet Below Here -->
 
 ## Meet Byte 🐣
