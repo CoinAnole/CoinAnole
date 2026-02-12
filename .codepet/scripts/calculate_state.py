@@ -36,6 +36,15 @@ DEFAULT_PET_STATS = {
 }
 
 
+def to_iso8601(dt: datetime | None) -> str | None:
+    """Convert datetime to ISO string (UTC) if present."""
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc).isoformat()
+
+
 def get_current_time() -> datetime:
     """Get current UTC time."""
     return datetime.now(timezone.utc)
@@ -93,6 +102,7 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
             "repos_touched": [],
             "session_duration_minutes": 0,
             "marathon_detected": False,
+            "last_commit_timestamp": None,
             "social_events": {
                 "stars_received": 0,
                 "prs_merged": 0,
@@ -109,6 +119,7 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
             "repos_touched": [],
             "session_duration_minutes": 0,
             "marathon_detected": False,
+            "last_commit_timestamp": None,
             "social_events": {
                 "stars_received": 0,
                 "prs_merged": 0,
@@ -182,6 +193,7 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
         "repos_touched": list(repos_touched),
         "session_duration_minutes": session_duration,
         "marathon_detected": marathon,
+        "last_commit_timestamp": to_iso8601(last_commit_time),
         "social_events": {
             "stars_received": 0,  # TODO: Query from API
             "prs_merged": 0,
@@ -329,6 +341,15 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         # Update GitHub stats
         github_stats["commits_today"] = github_stats.get("commits_today", 0) + activity["commits_detected"]
         github_stats["total_commits_all_time"] = github_stats.get("total_commits_all_time", 0) + activity["commits_detected"]
+        if activity.get("last_commit_timestamp"):
+            github_stats["last_commit_timestamp"] = activity["last_commit_timestamp"]
+        elif github_stats.get("last_commit_timestamp") is None:
+            # Migration fallback: older state files may be missing this field.
+            # Preserve a stable reference so back-off can grow over time.
+            if github_stats.get("total_commits_all_time", 0) > 0:
+                github_stats["last_commit_timestamp"] = previous_state.get("last_updated")
+            else:
+                github_stats["last_commit_timestamp"] = None
         if activity["repos_touched"]:
             github_stats["repos_touched_today"] = list(set(
                 github_stats.get("repos_touched_today", []) + activity["repos_touched"]
@@ -360,7 +381,7 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
             "commits_today": activity["commits_detected"],
             "longest_session_today_minutes": 0,
             "repos_touched_today": activity["repos_touched"],
-            "last_commit_timestamp": None,
+            "last_commit_timestamp": activity.get("last_commit_timestamp"),
             "total_commits_all_time": activity["commits_detected"],
             "active_days": sorted(list(active_days_set))
         }

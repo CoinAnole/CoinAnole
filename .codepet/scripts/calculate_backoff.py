@@ -36,38 +36,45 @@ def set_output(key: str, value: str) -> None:
     print(f"  {key}={value}")
 
 
-def read_last_activity(activity_file: Path) -> tuple[datetime | None, int]:
+def parse_iso8601(timestamp: str) -> datetime:
+    """Parse ISO8601 timestamp and normalize to UTC."""
+    dt = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
+def read_last_activity(state_file: Path, activity_file: Path) -> datetime | None:
     """
-    Read the last activity timestamp from activity.json.
-    
-    Returns:
-        Tuple of (last_activity datetime or None, hours_inactive)
+    Read the last commit timestamp from state/activity files.
+
+    Priority:
+    1) state.json -> github.last_commit_timestamp (persistent across no-commit runs)
+    2) activity.json -> current window when commits_detected > 0 (best effort)
     """
-    if not activity_file.exists():
-        print("No activity file found - assuming first run")
-        return None, 0
-    
     try:
-        with open(activity_file) as f:
-            activity = json.load(f)
-        
-        last_activity_str = activity.get("timestamp")
-        if not last_activity_str:
-            print("No timestamp in activity file")
-            return None, 0
-        
-        # Parse ISO 8601 timestamp
-        last_activity = datetime.fromisoformat(last_activity_str.replace("Z", "+00:00"))
-        
-        # Calculate hours inactive
-        current_time = datetime.now(timezone.utc)
-        hours_inactive = int((current_time - last_activity).total_seconds() / 3600)
-        
-        return last_activity, hours_inactive
-        
+        if state_file.exists():
+            with open(state_file) as f:
+                state = json.load(f)
+
+            last_commit_str = state.get("github", {}).get("last_commit_timestamp")
+            if last_commit_str:
+                return parse_iso8601(last_commit_str)
+
+        if activity_file.exists():
+            with open(activity_file) as f:
+                activity = json.load(f)
+
+            activity_block = activity.get("activity", {})
+            if activity_block.get("commits_detected", 0) > 0:
+                last_commit_str = activity_block.get("last_commit_timestamp") or activity.get("timestamp")
+                if last_commit_str:
+                    return parse_iso8601(last_commit_str)
+
     except (json.JSONDecodeError, ValueError) as e:
-        print(f"Error parsing activity file: {e}")
-        return None, 0
+        print(f"Error parsing activity/state file: {e}")
+
+    return None
 
 
 def calculate_backoff(hours_inactive: int, current_time: datetime) -> dict:
@@ -163,22 +170,28 @@ def main() -> int:
     
     # Setup paths
     activity_file = Path(".codepet/activity.json")
-    
-    # Read last activity
-    last_activity, hours_inactive = read_last_activity(activity_file)
+    state_file = Path(".codepet/state.json")
+
+    # Read last commit activity
+    last_activity = read_last_activity(state_file, activity_file)
     
     # Determine back-off logic
     current_time = datetime.now(timezone.utc)
     
     if last_activity is None:
-        # First run - always trigger
-        result = {
-            "should_trigger": True,
-            "reason": "first_run",
-            "next_interval": 30,
-            "hours_inactive": hours_inactive
-        }
+        if not state_file.exists() and not activity_file.exists():
+            # First run - always trigger
+            result = {
+                "should_trigger": True,
+                "reason": "first_run",
+                "next_interval": 30,
+                "hours_inactive": 0
+            }
+        else:
+            # Existing setup but no commit history tracked yet: default to max back-off.
+            result = calculate_backoff(8, current_time)
     else:
+        hours_inactive = max(0, int((current_time - last_activity).total_seconds() / 3600))
         result = calculate_backoff(hours_inactive, current_time)
     
     # Output all results for GitHub Actions
