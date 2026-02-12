@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 99/100 | ██████████ |
-| ⚡ Energy | 42/100 | ████░░░░░░ |
+| 🍖 Hunger | 98/100 | ██████████ |
+| ⚡ Energy | 50/100 | █████░░░░░ |
 | 😊 Happiness | 80/100 | ████████░░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 42 commits | **Current Streak:** 0 days
 
-Byte is looking more refreshed as the morning light streams through the Chicago window! After a restful break, energy levels have recovered slightly. The golden trophy still gleams on the desk, celebrating yesterday's 42-commit achievement. Byte sits contentedly at the laptop, ready for another day of coding adventures.
+Byte is looking more energized this morning! After some rest, energy has climbed back up to 50, and the little blob seems more alert and ready to code. The trophy has been tucked away, but the coffee cup remains on the desk—just in case. The Chicago skyline outside glows with fresh morning light as Byte types away happily.
 
 ---
 *CodePet updates automatically based on coding activity*
