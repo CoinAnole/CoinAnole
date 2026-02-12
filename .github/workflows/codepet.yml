@@ -2,7 +2,7 @@ name: CodePet Scheduler
 
 on:
   schedule:
-    - cron: '13,43 * * * *'  # At minute 13 and 43 of every hour
+    - cron: '23 * * * *'  # At minute 23 (runner only seems to want to run once an hour)
   workflow_dispatch:  # Manual trigger for testing
 
 permissions:

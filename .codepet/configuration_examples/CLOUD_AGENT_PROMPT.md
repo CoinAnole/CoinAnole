@@ -73,6 +73,8 @@ All state files are in `.codepet/`:
 - `initial/initial_prompt.txt` - The prompt used to create the initial image
 - `image_edit_prompt.txt` - Where you should save your generated prompts (for audit trail)
 
+**IMPORTANT**: If `codepet.png` exists, you MUST use `read_file` to examine it BEFORE deciding what edits to make. Understanding the current visual state is essential for determining appropriate changes.
+
 ## Image Generation Guidelines
 
 ### Using Falcon for Image Edits
@@ -93,8 +95,10 @@ Always use Falcon with these parameters to maintain consistency:
 3. Read `.codepet/initial/initial_prompt.txt` to understand the original vision
 
 **If `.codepet/codepet.png` exists:**
-1. Use it as the base image for your edit
-2. Apply only small, targeted changes based on state changes
+1. **FIRST**: Use `read_file` to view the current `.codepet/codepet.png` image
+2. Examine what's currently depicted (pet's pose, environment, items on desk, lighting, etc.)
+3. Use it as the base image for your edit
+4. Apply only small, targeted changes based on state changes and what you observe in the current image
 
 ### Edit Prompt Guidelines
 
@@ -226,41 +230,46 @@ Maintain a continuing story for Byte:
    - Compare current mood/stats to previous state
    - Note any significant activity (marathon sessions, many commits, social events)
 
-3. **Determine if image edit is needed:**
+3. **Examine the current image (if it exists):**
+   - Use `read_file` to view `.codepet/codepet.png`
+   - Note the current visual state: pet's appearance, pose, environment, items, lighting
+   - This context is required before deciding what changes to make
+
+4. **Determine if image edit is needed:**
    - Major mood changes → edit image
    - Stage evolution → edit image
    - Stat threshold crossed (hunger/energy < 20 or > 80) → consider edit
    - Significant activity → consider environmental changes
 
-4. **Generate or select base image:**
+5. **Generate or select base image:**
    - If `.codepet/codepet.png` exists, use it as base
    - If not, copy from `.codepet/initial/initial.png`
 
-5. **Craft and save edit prompt:**
-   - Write a small, targeted prompt
+6. **Craft and save edit prompt:**
+   - Write a small, targeted prompt based on your examination of the current image
    - Save it to `.codepet/image_edit_prompt.txt` for audit trail
 
-6. **Generate image with Falcon:**
+7. **Generate image with Falcon:**
    ```bash
   /tmp/falcon/bin/falcon --edit .codepet/codepet.png "[your prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
    ```
 
-7. **Verify the output:**
+8. **Verify the output:**
     - Use `read_file` to view the generated PNG image
     - Compare to expected outcome
     - Retry if necessary (max 2 times)
 
-8. **Replace old image:**
+9. **Replace old image:**
    ```bash
    mv .codepet/new_pet.png .codepet/codepet.png
    ```
 
-9. **Update README.md:**
+10. **Update README.md:**
    - Find the `<!-- CodePet Below Here -->` line
    - Replace everything below it with new content
    - Include image, stats, and narrative
 
-10. **Commit using the helper script:**
+11. **Commit using the helper script:**
     ```bash
     .codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description of changes]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md
     ```
@@ -294,6 +303,7 @@ When the pet crosses a stage threshold:
 
 ## Important Reminders
 
+- **ALWAYS examine the existing `.codepet/codepet.png` BEFORE deciding on edits** - You must know the current visual state before planning changes
 - **Always use `--guidance-scale 0.5`** with Falcon to prevent drift
 - **Keep prompts small and direct** - don't change everything at once
 - **Verify the output image** before overwriting codepet.png
