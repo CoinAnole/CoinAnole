@@ -44,6 +44,34 @@ def parse_iso8601(timestamp: str) -> datetime:
     return dt.astimezone(timezone.utc)
 
 
+def read_run_window(activity_file: Path) -> tuple[datetime, datetime | None]:
+    """
+    Read current and previous scheduler check timestamps from activity.json.
+
+    Returns:
+        (current_check, previous_check_or_none)
+    """
+    fallback_now = datetime.now(timezone.utc)
+
+    if not activity_file.exists():
+        return fallback_now, None
+
+    try:
+        with open(activity_file) as f:
+            activity = json.load(f)
+
+        current_check_str = activity.get("timestamp")
+        previous_check_str = activity.get("calculation", {}).get("previous_check")
+
+        current_check = parse_iso8601(current_check_str) if current_check_str else fallback_now
+        previous_check = parse_iso8601(previous_check_str) if previous_check_str else None
+        return current_check, previous_check
+
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"Error parsing run window from activity file: {e}")
+        return fallback_now, None
+
+
 def read_last_activity(state_file: Path, activity_file: Path) -> datetime | None:
     """
     Read the last commit timestamp from state/activity files.
@@ -77,84 +105,84 @@ def read_last_activity(state_file: Path, activity_file: Path) -> datetime | None
     return None
 
 
-def calculate_backoff(hours_inactive: int, current_time: datetime) -> dict:
+def crossed_interval_boundary(
+    last_activity: datetime,
+    previous_check: datetime | None,
+    current_check: datetime,
+    interval_minutes: int
+) -> bool:
+    """
+    Determine whether an interval boundary was crossed since previous check.
+
+    This makes back-off robust to scheduler jitter: if a job starts late, the
+    trigger fires on the first run after the boundary is crossed.
+    """
+    current_inactive_minutes = max(0.0, (current_check - last_activity).total_seconds() / 60)
+
+    if previous_check is None:
+        return current_inactive_minutes >= interval_minutes
+
+    safe_previous_check = min(previous_check, current_check)
+    previous_inactive_minutes = max(0.0, (safe_previous_check - last_activity).total_seconds() / 60)
+
+    previous_bucket = int(previous_inactive_minutes // interval_minutes)
+    current_bucket = int(current_inactive_minutes // interval_minutes)
+    return current_bucket > previous_bucket
+
+
+def calculate_backoff(
+    hours_inactive: int,
+    current_time: datetime,
+    last_activity: datetime,
+    previous_check: datetime | None
+) -> dict:
     """
     Calculate back-off logic based on hours of inactivity.
     
-    Progressive back-off strategy:
-    - < 2 hours: Active user, trigger every 30 min (normal)
-    - 2-4 hours: Back off to 1 hour intervals
-    - 4-8 hours: Back off to 2 hour intervals  
+    Progressive back-off strategy for an hourly scheduler:
+    - < 2 hours: Active user, trigger every run (hourly)
+    - 2-4 hours: Back off to 2 hour intervals
+    - 4-8 hours: Back off to 4 hour intervals
     - 8+ hours: Back off to 6 hour intervals (max)
     
     Returns:
         Dict with should_trigger, reason, next_interval, hours_inactive
     """
-    current_hour = current_time.hour
-    current_min = current_time.minute
-    
     if hours_inactive < 2:
-        # Active: trigger every 30 min
+        # Active: trigger on every scheduled run (hourly cron)
         return {
             "should_trigger": True,
             "reason": "active_user",
-            "next_interval": 30,
+            "next_interval": 60,
             "hours_inactive": hours_inactive
         }
     
     elif hours_inactive < 4:
-        # 2-4 hours: back off to 1 hour
-        # Trigger at minute 00 (skip :30 runs)
-        if current_min < 30:
-            return {
-                "should_trigger": True,
-                "reason": "backoff_1hr",
-                "next_interval": 60,
-                "hours_inactive": hours_inactive
-            }
-        else:
-            return {
-                "should_trigger": False,
-                "reason": "skipping_for_backoff",
-                "next_interval": 60,
-                "hours_inactive": hours_inactive
-            }
+        should_trigger = crossed_interval_boundary(last_activity, previous_check, current_time, 120)
+        return {
+            "should_trigger": should_trigger,
+            "reason": "backoff_2hr" if should_trigger else "skipping_for_backoff",
+            "next_interval": 120,
+            "hours_inactive": hours_inactive
+        }
     
     elif hours_inactive < 8:
-        # 4-8 hours: back off to 2 hours
-        # Trigger only at even hours (00, 02, 04...) at minute 00
-        if (current_hour % 2 == 0) and current_min < 30:
-            return {
-                "should_trigger": True,
-                "reason": "backoff_2hr",
-                "next_interval": 120,
-                "hours_inactive": hours_inactive
-            }
-        else:
-            return {
-                "should_trigger": False,
-                "reason": "skipping_for_backoff",
-                "next_interval": 120,
-                "hours_inactive": hours_inactive
-            }
+        should_trigger = crossed_interval_boundary(last_activity, previous_check, current_time, 240)
+        return {
+            "should_trigger": should_trigger,
+            "reason": "backoff_4hr" if should_trigger else "skipping_for_backoff",
+            "next_interval": 240,
+            "hours_inactive": hours_inactive
+        }
     
     else:
-        # 8+ hours: back off to 6 hours max
-        # Trigger at 00, 06, 12, 18 at minute 00
-        if current_hour in [0, 6, 12, 18] and current_min < 30:
-            return {
-                "should_trigger": True,
-                "reason": "backoff_6hr",
-                "next_interval": 360,
-                "hours_inactive": hours_inactive
-            }
-        else:
-            return {
-                "should_trigger": False,
-                "reason": "skipping_for_backoff",
-                "next_interval": 360,
-                "hours_inactive": hours_inactive
-            }
+        should_trigger = crossed_interval_boundary(last_activity, previous_check, current_time, 360)
+        return {
+            "should_trigger": should_trigger,
+            "reason": "backoff_6hr" if should_trigger else "skipping_for_backoff",
+            "next_interval": 360,
+            "hours_inactive": hours_inactive
+        }
 
 
 def main() -> int:
@@ -172,11 +200,9 @@ def main() -> int:
     activity_file = Path(".codepet/activity.json")
     state_file = Path(".codepet/state.json")
 
-    # Read last commit activity
+    # Read scheduler window and last commit activity
+    current_time, previous_check = read_run_window(activity_file)
     last_activity = read_last_activity(state_file, activity_file)
-    
-    # Determine back-off logic
-    current_time = datetime.now(timezone.utc)
     
     if last_activity is None:
         if not state_file.exists() and not activity_file.exists():
@@ -184,15 +210,20 @@ def main() -> int:
             result = {
                 "should_trigger": True,
                 "reason": "first_run",
-                "next_interval": 30,
+                "next_interval": 60,
                 "hours_inactive": 0
             }
         else:
             # Existing setup but no commit history tracked yet: default to max back-off.
-            result = calculate_backoff(8, current_time)
+            result = {
+                "should_trigger": False,
+                "reason": "skipping_for_backoff",
+                "next_interval": 360,
+                "hours_inactive": 8
+            }
     else:
         hours_inactive = max(0, int((current_time - last_activity).total_seconds() / 3600))
-        result = calculate_backoff(hours_inactive, current_time)
+        result = calculate_backoff(hours_inactive, current_time, last_activity, previous_check)
     
     # Output all results for GitHub Actions
     print("\nOutputs:")

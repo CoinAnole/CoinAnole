@@ -19,28 +19,32 @@ Activity is measured in unique days with commits across watched repositories.
 
 ## Runner Schedule and Back-off Logic
 
-Understanding when and why you get triggered helps interpret the timeframe in `activity.json`:
+Understanding when and why you get triggered helps interpret the timeframe in `activity.json` and `state.json`:
 
 ### GitHub Actions Schedule
-The GitHub Actions runner executes **every 30 minutes** (at :13 and :43 of each hour). It always:
+The GitHub Actions runner executes **every hour** (currently at minute :23). It always:
 1. Scans watched repositories for new commits/activity
 2. Calculates updated stats (hunger decay, energy changes, etc.)
 3. Commits `state.json` and `activity.json`
+
+GitHub cron is best-effort, not real-time. Runs can start late, so webhook timing is approximate.
 
 ### Webhook Back-off Strategy
 To avoid wasting Kilo credits during inactivity, the runner implements **progressive back-off**:
 
 | Hours Inactive | Trigger Interval | When You'll Be Called |
 |----------------|------------------|----------------------|
-| < 2 hours | Every 30 min | Active coding - frequent updates |
-| 2-4 hours | Every 1 hour | User stepped away - hourly check-ins |
-| 4-8 hours | Every 2 hours | Extended break - every 2 hours |
+| < 2 hours | Every 1 hour | Active coding - frequent updates |
+| 2-4 hours | Every 2 hours | User stepped away - slower check-ins |
+| 4-8 hours | Every 4 hours | Extended break - less frequent updates |
 | 8+ hours | Every 6 hours | Overnight/sleep - minimal updates |
 
 ### What This Means for You
-- `hours_since_last_check` in `activity.json` will typically be ~0.5 (30 min) during active periods
-- During back-off, you may see gaps of 1-6 hours between triggers
+- `hours_since_last_check` in `activity.json` will typically be ~1.0 during active periods (hourly runner cadence)
+- During back-off, you may see gaps of 1-6+ hours between triggers
+- Back-off intervals are minimum targets; trigger occurs on the first scheduled run after an interval boundary is crossed
 - `hours_inactive` in the webhook payload tells you how long since the last detected commit
+- Inactivity is derived from `state.json` (`github.last_commit_timestamp`), not from the latest runner check timestamp
 - Longer gaps mean longer stat decay (hunger increases, energy decreases more)
 
 ### Interpreting Timeframes
@@ -51,16 +55,16 @@ To avoid wasting Kilo credits during inactivity, the runner implements **progres
 
 ### Webhook Payload Variables
 When triggered, the following variables are available from the webhook payload:
-- `{{backoff_reason}}` - Why you were triggered (`active_user`, `backoff_1hr`, `backoff_2hr`, `backoff_6hr`, `first_run`)
+- `{{backoff_reason}}` - Why you were triggered (`active_user`, `backoff_2hr`, `backoff_4hr`, `backoff_6hr`, `first_run`)
 - `{{hours_inactive}}` - Hours since last detected commit (integer)
-- `{{next_interval}}` - Minutes until the next expected trigger (30, 60, 120, or 360)
+- `{{next_interval}}` - Minutes until the next expected trigger (60, 120, 240, or 360)
 
 Here is the payload:
 {{body}}
 
 Use these to contextualize your narrative:
 - If `backoff_reason` is `backoff_6hr` and `hours_inactive` is high, Byte has been alone for a while
-- If `next_interval` is 30, the user is active and you can expect another update soon
+- If `next_interval` is 60, the user is active and you can expect another update on the next scheduled run
 - If `backoff_reason` is `first_run`, this is Byte's debut - make it special!
 
 ## State Files Location

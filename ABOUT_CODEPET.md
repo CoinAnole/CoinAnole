@@ -32,7 +32,7 @@ The cloud agent is **qualitative automation**—the Agent makes creative decisio
 The architecture exists to empower the Agent to focus purely on creativity. GitHub Actions handles the mechanical work so the Agent can focus on the art.
 
 ```
-GitHub Actions (every 30 min) → Detect activity in watched repos → 
+GitHub Actions (every hour) → Detect activity in watched repos → 
   Calculate new state mechanically → Commit activity.json + state.json →
   [If update needed]: Call Kilo Webhook → 
     Kilo Agent clones repo, analyzes diffs → Falcon (img2img) → Commit README
@@ -45,7 +45,7 @@ The runner handles the "boring" stuff—number crunching that would waste Kilo c
 
 | Responsibility | Details |
 |----------------|---------|
-| Schedule | Runs approximately every 30 minutes via cron |
+| Schedule | Runs hourly via cron (best-effort timing; start may drift) |
 | Activity Detection | Scans watched repos for commits, PRs, stars |
 | State Calculation | Mechanically calculates hunger, energy, happiness, social stats |
 | File Updates | Writes `.codepet/activity.json` and `.codepet/state.json` |
@@ -71,15 +71,15 @@ The Agent handles everything that requires **judgment, creativity, and visual re
 ## The Back-off Architecture
 
 **Without back-off**:
-- 48 webhook calls/day × 30 days = **1,440 calls/month**
+- 24 webhook calls/day × 30 days = **720 calls/month**
 - Kilo Agent runs even when user is asleep
 
 **With back-off** (Agent empowerment):
-- State calculation runs every 30 min (free GitHub Actions)
+- State calculation runs every hour (free GitHub Actions)
 - Kilo Agent called only when creative work is needed:
   - New activity detected, OR
   - Every 6 hours for decay updates
-- ~8 calls/day × 30 = **240 calls/month** (**83% reduction**)
+- As low as 4 calls/day during inactivity = **120 calls/month** (**up to 83% reduction**)
 
 **Additional benefits**:
 - No Kilo credits spent on state calculation
@@ -93,7 +93,7 @@ The Agent handles everything that requires **judgment, creativity, and visual re
 ### Multi-Repo Activity Scanning
 
 Unlike simple commit counters, CodePet watches selected public and private repositories, detecting:
-- Coding sessions (grouped by 30-min gaps)
+- Coding sessions (grouped by hourly check windows)
 - Marathon sessions (>2 hours)
 - Context switches (repos touched)
 - Social activity (stars, PRs, followers)
@@ -157,7 +157,7 @@ Every creative decision is committed to git:
 ## Technologies Used
 
 - **Kilo Cloud Agents** - The creative engine (qualitative reasoning, image generation decisions)
-- **GitHub Actions** - Mechanical state calculation (runs every 30 min)
+- **GitHub Actions** - Mechanical state calculation (runs hourly)
 - **GitHub Webhooks** - Trigger the Agent when creative updates are needed
 - **fal.ai / Falcon** - Image generation pipeline (FLUX.2 Flash model)
 - **PyGithub** - GitHub API integration for activity scanning
