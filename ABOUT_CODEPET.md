@@ -141,7 +141,9 @@ Based on **days of activity detected** (not necessarily consecutive):
 |------|---------|
 | `.codepet/activity.json` | Activity data for the period (feeds the Agent) |
 | `.codepet/state.json` | Full pet state (feeds the Agent's creative decisions) |
-| `.codepet/scripts/` | State calculation and back-off logic scripts (with `cloud_agent/commit_to_master.sh` for direct commits) |
+| `.codepet/scripts/calculate_state.py` | Stable runner entrypoint/facade for state calculation |
+| `.codepet/scripts/state_calc/` | Internal modules for state calc (`activity_detection`, `session_analysis`, `pet_rules`, `image_tracking`, `state_builder`, `io_utils`) |
+| `.codepet/scripts/` | Back-off and webhook prep scripts (plus `cloud_agent/commit_to_master.sh` for direct commits) |
 | `.codepet/stage_images/baby.png` | Canonical starting image and baby-stage re-grounding anchor |
 | `.codepet/initial/initial_prompt.txt` | Description of your pet for the Agent to use |
 | `.codepet/codepet.png` | Generated pet image (the Agent's artistic output) |

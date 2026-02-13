@@ -1,0 +1,83 @@
+import os
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+
+SCRIPT_DIR = Path(__file__).resolve().parents[1]
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from state_calc.image_tracking import build_image_tracking_state
+
+
+class ImageTrackingTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tempdir = tempfile.TemporaryDirectory()
+        self.old_cwd = os.getcwd()
+        os.chdir(self.tempdir.name)
+
+    def tearDown(self) -> None:
+        os.chdir(self.old_cwd)
+        self.tempdir.cleanup()
+
+    def test_build_image_tracking_state_stage_change_sets_evolution_fields(self) -> None:
+        stage_dir = Path(".codepet/stage_images")
+        stage_dir.mkdir(parents=True, exist_ok=True)
+        (stage_dir / "baby.png").write_bytes(b"stub")
+
+        previous_state = {
+            "image_state": {
+                "edit_count_since_reset": 2,
+                "total_edits_all_time": 5,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+        }
+
+        image_state, regrounding, evolution = build_image_tracking_state(
+            previous_state=previous_state,
+            current_stage="teen",
+            previous_stage="baby",
+            threshold=6,
+        )
+
+        self.assertTrue(evolution["just_occurred"])
+        self.assertEqual(evolution["base_reference"], ".codepet/stage_images/baby.png")
+        self.assertEqual(evolution["target_reference"], ".codepet/stage_images/teen.png")
+        self.assertEqual(image_state["current_stage_reference"], ".codepet/stage_images/baby.png")
+        self.assertFalse(regrounding["should_reground"])
+
+    def test_build_image_tracking_state_sets_threshold_reground_reason(self) -> None:
+        stage_dir = Path(".codepet/stage_images")
+        stage_dir.mkdir(parents=True, exist_ok=True)
+        (stage_dir / "baby.png").write_bytes(b"stub")
+
+        previous_state = {
+            "image_state": {
+                "edit_count_since_reset": 6,
+                "total_edits_all_time": 10,
+                "last_reset_at": None,
+                "reset_count": 1,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+        }
+
+        _, regrounding, evolution = build_image_tracking_state(
+            previous_state=previous_state,
+            current_stage="baby",
+            previous_stage="baby",
+            threshold=6,
+        )
+
+        self.assertFalse(evolution["just_occurred"])
+        self.assertTrue(regrounding["should_reground"])
+        self.assertEqual(regrounding["reason"], "edit_threshold_reached")
+
+
+if __name__ == "__main__":
+    unittest.main()
