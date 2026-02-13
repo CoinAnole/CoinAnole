@@ -55,9 +55,20 @@ To avoid wasting Kilo credits during inactivity, the runner implements **progres
 
 ### Webhook Payload Variables
 When triggered, the following variables are available from the webhook payload:
-- `{{backoff_reason}}` - Why you were triggered (`active_user`, `backoff_2hr`, `backoff_4hr`, `backoff_6hr`, `first_run`)
-- `{{hours_inactive}}` - Hours since last detected commit (integer)
-- `{{next_interval}}` - Minutes until the next expected trigger (60, 120, 240, or 360)
+- `{{trigger_source}}` - Trigger origin (`github_actions` or `manual_reground`)
+- `{{repository}}` - Repository name (`owner/repo`)
+- `{{actor}}` - User or bot that triggered the workflow
+- `{{backoff_reason}}` - Why you were triggered (`active_user`, `backoff_2hr`, `backoff_4hr`, `backoff_6hr`, `first_run`) (scheduler path)
+- `{{hours_inactive}}` - Hours since last detected commit (integer) (scheduler path)
+- `{{next_interval}}` - Minutes until the next expected trigger (60, 120, 240, or 360) (scheduler path)
+- `{{force_reground}}` - Explicit re-ground request (`true` for manual re-ground workflow)
+- `{{regrounding_should_reground}}` - Runner-computed re-grounding flag from `state.json`
+- `{{regrounding_reason}}` - Re-ground reason (`edit_threshold_reached` or `null`)
+- `{{regrounding_threshold}}` - Active threshold value (default `6`)
+- `{{image_edit_count_since_reset}}` - Counter value after pre-webhook increment
+- `{{image_total_edits_all_time}}` - Lifetime edit counter after pre-webhook increment
+- `{{evolution_just_occurred}}` - Whether a stage transition was detected in latest state calculation
+- `{{current_stage_reference}}` - Current stage anchor path used for re-grounding base selection
 
 Here is the payload:
 {{body}}
@@ -66,6 +77,9 @@ Use these to contextualize your narrative:
 - If `backoff_reason` is `backoff_6hr` and `hours_inactive` is high, Byte has been alone for a while
 - If `next_interval` is 60, the user is active and you can expect another update on the next scheduled run
 - If `backoff_reason` is `first_run`, this is Byte's debut - make it special!
+- If `force_reground` is true, run Re-Grounding Mode even if normal edit signals are weak
+- If `regrounding_should_reground` is true, treat this as a style/identity maintenance pass
+- If `evolution_just_occurred` is true, follow the evolution special case with stage reference anchoring
 
 ## State Files Location
 
