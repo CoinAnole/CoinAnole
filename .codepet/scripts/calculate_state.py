@@ -14,7 +14,7 @@ Environment Variables:
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -36,6 +36,7 @@ DEFAULT_PET_STATS = {
 }
 
 DEFAULT_REGROUND_THRESHOLD = 6
+RECENT_ACTIVE_DAYS_LIMIT = 7
 
 
 def to_iso8601(dt: datetime | None) -> str | None:
@@ -50,6 +51,25 @@ def to_iso8601(dt: datetime | None) -> str | None:
 def get_current_time() -> datetime:
     """Get current UTC time."""
     return datetime.now(timezone.utc)
+
+
+def calculate_session_duration_minutes(
+    first_commit: datetime | None,
+    last_commit: datetime | None,
+    commit_count: int
+) -> int:
+    """
+    Calculate session duration from commit timestamps.
+
+    Falls back to 10 minutes for a single commit to avoid zero-length sessions.
+    """
+    if commit_count <= 0 or first_commit is None or last_commit is None:
+        return 0
+    if commit_count == 1:
+        return 10
+
+    duration_minutes = int(round((last_commit - first_commit).total_seconds() / 60))
+    return max(10, duration_minutes)
 
 
 def load_previous_state(state_file: Path) -> dict | None:
@@ -101,8 +121,11 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
         print("Activity detection requires PyGithub: pip install PyGithub")
         return {
             "commits_detected": 0,
+            "commits_today_detected": 0,
             "repos_touched": [],
+            "repos_touched_today": [],
             "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
             "marathon_detected": False,
             "last_commit_timestamp": None,
             "social_events": {
@@ -118,8 +141,11 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
         print("Warning: GH_TOKEN not set")
         return {
             "commits_detected": 0,
+            "commits_today_detected": 0,
             "repos_touched": [],
+            "repos_touched_today": [],
             "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
             "marathon_detected": False,
             "last_commit_timestamp": None,
             "social_events": {
@@ -133,9 +159,16 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
     username = os.environ.get("GITHUB_REPOSITORY", "").split("/")[0]
     
     commits_detected = 0
+    commits_today_detected = 0
     repos_touched = set()
+    repos_touched_today = set()
+    seen_commits = set()
+    first_commit_time = None
     last_commit_time = None
+    first_commit_time_today = None
+    last_commit_time_today = None
     branches_checked = 0
+    today = get_today_date()
     
     for repo_name in watched_repos:
         try:
@@ -157,12 +190,36 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
                     commits = repo.get_commits(sha=branch.name, since=last_check, author=username)
                     
                     for commit in commits:
+                        commit_sha = getattr(commit, "sha", None)
+                        dedupe_key = f"{repo_name}:{commit_sha}" if commit_sha else None
+                        if dedupe_key and dedupe_key in seen_commits:
+                            continue
+                        if dedupe_key:
+                            seen_commits.add(dedupe_key)
+
+                        author = commit.commit.author or commit.commit.committer
+                        if author is None or author.date is None:
+                            continue
+                        commit_time = author.date
+                        if commit_time.tzinfo is None:
+                            commit_time = commit_time.replace(tzinfo=timezone.utc)
+
                         commits_detected += 1
                         repos_touched.add(repo_name)
-                        commit_time = commit.commit.author.date
+
+                        if first_commit_time is None or commit_time < first_commit_time:
+                            first_commit_time = commit_time
                         
                         if last_commit_time is None or commit_time > last_commit_time:
                             last_commit_time = commit_time
+
+                        if commit_time.astimezone(timezone.utc).strftime("%Y-%m-%d") == today:
+                            commits_today_detected += 1
+                            repos_touched_today.add(repo_name)
+                            if first_commit_time_today is None or commit_time < first_commit_time_today:
+                                first_commit_time_today = commit_time
+                            if last_commit_time_today is None or commit_time > last_commit_time_today:
+                                last_commit_time_today = commit_time
                     
                     branches_checked += 1
                     
@@ -175,25 +232,28 @@ def detect_activity(watched_repos: list[str], last_check: datetime) -> dict:
     print(f"  Total branches checked: {branches_checked}")
     
     # Calculate session duration from commits
-    session_duration = 0
-    marathon = False
-    
-    # If we found commits, calculate session duration from first to last commit
-    if commits_detected > 0 and last_commit_time:
-        # We need to track first commit time too for proper session calculation
-        # For now, estimate based on number of commits (assume ~10 min per commit on avg)
-        session_duration = commits_detected * 10
-        
-        # Marathon = 2+ hour session (120+ minutes)
-        marathon = session_duration >= 120
-        
-        if marathon:
-            print(f"  Marathon session detected: {session_duration} minutes")
+    session_duration = calculate_session_duration_minutes(
+        first_commit=first_commit_time,
+        last_commit=last_commit_time,
+        commit_count=commits_detected
+    )
+    session_duration_today = calculate_session_duration_minutes(
+        first_commit=first_commit_time_today,
+        last_commit=last_commit_time_today,
+        commit_count=commits_today_detected
+    )
+    marathon = max(session_duration, session_duration_today) >= 120
+
+    if marathon:
+        print(f"  Marathon session detected: {max(session_duration, session_duration_today)} minutes")
     
     return {
         "commits_detected": commits_detected,
-        "repos_touched": list(repos_touched),
+        "commits_today_detected": commits_today_detected,
+        "repos_touched": sorted(repos_touched),
+        "repos_touched_today": sorted(repos_touched_today),
         "session_duration_minutes": session_duration,
+        "session_duration_today_minutes": session_duration_today,
         "marathon_detected": marathon,
         "last_commit_timestamp": to_iso8601(last_commit_time),
         "social_events": {
@@ -309,6 +369,48 @@ def apply_activity_bonuses(pet: dict, activity: dict) -> dict:
 def get_today_date() -> str:
     """Get today's date as ISO format string (YYYY-MM-DD)."""
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def parse_iso_datetime(value: str | None) -> datetime | None:
+    """Parse ISO datetime string into timezone-aware UTC datetime."""
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def trim_active_days(active_days: set[str] | list[str], limit: int = RECENT_ACTIVE_DAYS_LIMIT) -> list[str]:
+    """
+    Keep only the most recent active day entries for state size control.
+
+    `active_days_total` stores the all-time count to preserve stage progression.
+    """
+    normalized = sorted({d for d in active_days if isinstance(d, str)})
+    if len(normalized) <= limit:
+        return normalized
+    return normalized[-limit:]
+
+
+def calculate_current_streak(active_days: set[str], today: str) -> int:
+    """Calculate consecutive active days ending on today."""
+    if today not in active_days:
+        return 0
+
+    try:
+        cursor = datetime.strptime(today, "%Y-%m-%d").date()
+    except ValueError:
+        return 0
+
+    streak = 0
+    while cursor.isoformat() in active_days:
+        streak += 1
+        cursor -= timedelta(days=1)
+    return streak
 
 
 def to_int(value: Any, default: int = 0) -> int:
@@ -433,17 +535,49 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         pet = previous_state.get("pet", {})
         github_stats = previous_state.get("github", {})
         previous_stage = previous_state.get("pet", {}).get("stage")
+        commits_detected_today = max(
+            0,
+            to_int(activity.get("commits_today_detected"), to_int(activity.get("commits_detected"), 0))
+        )
+        session_duration_today = max(
+            0,
+            to_int(
+                activity.get("session_duration_today_minutes"),
+                to_int(activity.get("session_duration_minutes"), 0)
+            )
+        )
+        repos_touched_today = activity.get("repos_touched_today")
+        if not isinstance(repos_touched_today, list):
+            repos_touched_today = activity.get("repos_touched", []) if commits_detected_today > 0 else []
+
+        # Reset daily counters at UTC day rollover.
+        previous_update = parse_iso_datetime(previous_state.get("last_updated"))
+        previous_day = previous_update.strftime("%Y-%m-%d") if previous_update else None
+        if previous_day != today:
+            github_stats["commits_today"] = 0
+            github_stats["longest_session_today_minutes"] = 0
+            github_stats["repos_touched_today"] = []
 
         # Ensure stats exist
         if "stats" not in pet:
             pet["stats"] = DEFAULT_PET_STATS.copy()
 
-        # Track active days (unique dates with activity)
-        active_days_set = set(github_stats.get("active_days", []))
-        if activity["commits_detected"] > 0:
+        # Track active days (unique dates with activity).
+        # Prefer new key; fall back to legacy `active_days` for migration.
+        existing_recent_days = github_stats.get("recent_active_days", github_stats.get("active_days", []))
+        active_days_set = set(existing_recent_days)
+        active_days_total = max(
+            to_int(github_stats.get("active_days_total"), len(active_days_set)),
+            len(active_days_set)
+        )
+        if commits_detected_today > 0 and today not in active_days_set:
+            active_days_total += 1
+        if commits_detected_today > 0:
             active_days_set.add(today)
-        github_stats["active_days"] = sorted(list(active_days_set))
-        active_days_count = len(active_days_set)
+        github_stats["recent_active_days"] = trim_active_days(active_days_set)
+        github_stats.pop("active_days", None)
+        github_stats["active_days_total"] = active_days_total
+        active_days_count = active_days_total
 
         # Apply decay
         pet = apply_decay(pet, hours_passed, activity)
@@ -452,8 +586,16 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         pet = apply_activity_bonuses(pet, activity)
 
         # Update GitHub stats
-        github_stats["commits_today"] = github_stats.get("commits_today", 0) + activity["commits_detected"]
-        github_stats["total_commits_all_time"] = github_stats.get("total_commits_all_time", 0) + activity["commits_detected"]
+        github_stats["commits_today"] = max(0, to_int(github_stats.get("commits_today"), 0)) + commits_detected_today
+        github_stats["total_commits_all_time"] = max(
+            0,
+            to_int(github_stats.get("total_commits_all_time"), 0)
+        ) + max(0, to_int(activity.get("commits_detected"), 0))
+        github_stats["longest_session_today_minutes"] = max(
+            max(0, to_int(github_stats.get("longest_session_today_minutes"), 0)),
+            session_duration_today
+        )
+        github_stats["current_streak"] = calculate_current_streak(set(github_stats["recent_active_days"]), today)
         if activity.get("last_commit_timestamp"):
             github_stats["last_commit_timestamp"] = activity["last_commit_timestamp"]
         elif github_stats.get("last_commit_timestamp") is None:
@@ -463,10 +605,12 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
                 github_stats["last_commit_timestamp"] = previous_state.get("last_updated")
             else:
                 github_stats["last_commit_timestamp"] = None
-        if activity["repos_touched"]:
-            github_stats["repos_touched_today"] = list(set(
-                github_stats.get("repos_touched_today", []) + activity["repos_touched"]
+        if repos_touched_today:
+            github_stats["repos_touched_today"] = sorted(set(
+                github_stats.get("repos_touched_today", []) + repos_touched_today
             ))
+        elif "repos_touched_today" not in github_stats:
+            github_stats["repos_touched_today"] = []
 
         # Calculate mood and stage
         pet["mood"] = calculate_mood(pet, github_stats, activity["repos_touched"])
@@ -474,8 +618,23 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
 
     else:
         # Initial state for new pet - starts as baby, not egg
+        commits_detected_today = max(
+            0,
+            to_int(activity.get("commits_today_detected"), to_int(activity.get("commits_detected"), 0))
+        )
+        session_duration_today = max(
+            0,
+            to_int(
+                activity.get("session_duration_today_minutes"),
+                to_int(activity.get("session_duration_minutes"), 0)
+            )
+        )
+        repos_touched_today = activity.get("repos_touched_today")
+        if not isinstance(repos_touched_today, list):
+            repos_touched_today = activity.get("repos_touched", []) if commits_detected_today > 0 else []
+
         active_days_set = set()
-        if activity["commits_detected"] > 0:
+        if commits_detected_today > 0:
             active_days_set.add(today)
 
         pet = {
@@ -490,13 +649,14 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
             }
         }
         github_stats = {
-            "current_streak": 0,
-            "commits_today": activity["commits_detected"],
-            "longest_session_today_minutes": 0,
-            "repos_touched_today": activity["repos_touched"],
+            "current_streak": calculate_current_streak(active_days_set, today),
+            "commits_today": commits_detected_today,
+            "longest_session_today_minutes": session_duration_today,
+            "repos_touched_today": sorted(set(repos_touched_today)),
             "last_commit_timestamp": activity.get("last_commit_timestamp"),
             "total_commits_all_time": activity["commits_detected"],
-            "active_days": sorted(list(active_days_set))
+            "recent_active_days": trim_active_days(active_days_set),
+            "active_days_total": len(active_days_set)
         }
         previous_stage = None
 
@@ -586,11 +746,14 @@ def main() -> int:
     # Print state summary
     pet = new_state["pet"]
     github_stats = new_state["github"]
-    active_days = len(github_stats.get("active_days", []))
+    active_days_total = to_int(
+        github_stats.get("active_days_total"),
+        len(github_stats.get("recent_active_days", github_stats.get("active_days", [])))
+    )
     print(f"  Name: {pet['name']}")
     print(f"  Stage: {pet['stage']}")
     print(f"  Mood: {pet['mood']}")
-    print(f"  Active days: {active_days}")
+    print(f"  Active days: {active_days_total}")
     print(f"  Stats: hunger={pet['stats']['hunger']:.1f}, "
           f"energy={pet['stats']['energy']:.1f}, "
           f"happiness={pet['stats']['happiness']:.1f}")
