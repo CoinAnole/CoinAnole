@@ -45,6 +45,20 @@ jobs:
       - name: Calculate back-off
         id: backoff
         run: python .codepet/scripts/calculate_backoff.py
+
+      - name: Prepare pre-webhook image state
+        id: pre_webhook
+        if: steps.backoff.outputs.should_trigger == 'true'
+        run: python .codepet/scripts/prepare_webhook_state.py
+
+      - name: Commit pre-webhook state changes
+        if: steps.backoff.outputs.should_trigger == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions[bot]"
+          git add .codepet/state.json
+          git commit -m "Prepare CodePet webhook state [runner]" || echo "No pre-webhook changes to commit"
+          git push
       
       - name: Trigger Kilo Cloud Agent
         if: steps.backoff.outputs.should_trigger == 'true'
@@ -58,7 +72,15 @@ jobs:
               \"backoff_reason\": \"${{ steps.backoff.outputs.reason }}\",
               \"next_interval\": ${{ steps.backoff.outputs.next_interval }},
               \"repository\": \"${{ github.repository }}\",
-              \"actor\": \"${{ github.actor }}\"
+              \"actor\": \"${{ github.actor }}\",
+              \"force_reground\": false,
+              \"regrounding_should_reground\": ${{ steps.pre_webhook.outputs.should_reground }},
+              \"regrounding_reason\": ${{ steps.pre_webhook.outputs.reason_json }},
+              \"regrounding_threshold\": ${{ steps.pre_webhook.outputs.threshold }},
+              \"image_edit_count_since_reset\": ${{ steps.pre_webhook.outputs.edit_count_since_reset }},
+              \"image_total_edits_all_time\": ${{ steps.pre_webhook.outputs.total_edits_all_time }},
+              \"evolution_just_occurred\": ${{ steps.pre_webhook.outputs.evolution_just_occurred }},
+              \"current_stage_reference\": \"${{ steps.pre_webhook.outputs.current_stage_reference }}\"
             }"
           echo "Webhook triggered successfully"
       

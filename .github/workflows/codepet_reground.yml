@@ -1,0 +1,35 @@
+name: CodePet Force Re-Ground
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_reground:
+        description: "Force a re-grounding run"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  trigger-reground:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Kilo Cloud Agent (force re-ground)
+        if: ${{ inputs.force_reground }}
+        run: |
+          curl -X POST "${{ secrets.KILO_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -H "x-webhook-secret: ${{ secrets.KILO_WEBHOOK_SECRET }}" \
+            -d "{
+              \"trigger_source\": \"manual_reground\",
+              \"repository\": \"${{ github.repository }}\",
+              \"actor\": \"${{ github.actor }}\",
+              \"force_reground\": true
+            }"
+          echo "Force re-ground webhook triggered successfully"
+
+      - name: Log skip decision
+        if: ${{ !inputs.force_reground }}
+        run: echo "force_reground input is false; skipping webhook trigger."

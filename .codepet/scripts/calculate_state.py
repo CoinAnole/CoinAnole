@@ -35,6 +35,8 @@ DEFAULT_PET_STATS = {
     "social": 50
 }
 
+DEFAULT_REGROUND_THRESHOLD = 6
+
 
 def to_iso8601(dt: datetime | None) -> str | None:
     """Convert datetime to ISO string (UTC) if present."""
@@ -309,17 +311,109 @@ def get_today_date() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
+def to_int(value: Any, default: int = 0) -> int:
+    """Best-effort integer conversion with sane fallback."""
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def get_reground_threshold(previous_state: dict | None) -> int:
+    """Resolve re-grounding threshold from env, previous state, or default."""
+    env_threshold = os.environ.get("REGROUND_THRESHOLD")
+    if env_threshold is not None:
+        return max(1, to_int(env_threshold, DEFAULT_REGROUND_THRESHOLD))
+
+    if previous_state:
+        previous_threshold = previous_state.get("regrounding", {}).get("threshold")
+        return max(1, to_int(previous_threshold, DEFAULT_REGROUND_THRESHOLD))
+
+    return DEFAULT_REGROUND_THRESHOLD
+
+
+def build_image_tracking_state(
+    previous_state: dict | None,
+    current_stage: str,
+    previous_stage: str | None,
+    threshold: int
+) -> tuple[dict, dict, dict]:
+    """
+    Build image tracking fields for state.json.
+
+    These fields are runner-tracked metadata used by webhook preparation and
+    cloud-agent re-grounding logic.
+    """
+    previous_image_state = (previous_state or {}).get("image_state", {})
+    previous_regrounding = (previous_state or {}).get("regrounding", {})
+
+    stage_changed = previous_stage is not None and previous_stage != current_stage
+
+    if stage_changed:
+        base_reference = f".codepet/stage_images/{previous_stage}.png"
+        target_reference = f".codepet/stage_images/{current_stage}.png"
+        current_stage_reference = base_reference
+        evolution = {
+            "just_occurred": True,
+            "previous_stage": previous_stage,
+            "new_stage": current_stage,
+            "base_reference": base_reference,
+            "target_reference": target_reference
+        }
+    else:
+        current_stage_reference = previous_image_state.get("current_stage_reference")
+        if not current_stage_reference:
+            current_stage_reference = f".codepet/stage_images/{current_stage}.png"
+
+        evolution = {
+            "just_occurred": False,
+            "previous_stage": None,
+            "new_stage": None,
+            "base_reference": None,
+            "target_reference": None
+        }
+
+    image_state = {
+        "edit_count_since_reset": max(0, to_int(previous_image_state.get("edit_count_since_reset"), 0)),
+        "total_edits_all_time": max(0, to_int(previous_image_state.get("total_edits_all_time"), 0)),
+        "last_reset_at": previous_image_state.get("last_reset_at"),
+        "reset_count": max(0, to_int(previous_image_state.get("reset_count"), 0)),
+        "current_stage_reference": current_stage_reference
+    }
+
+    should_reground = bool(previous_regrounding.get("should_reground", False))
+    reason = previous_regrounding.get("reason")
+
+    if image_state["edit_count_since_reset"] >= threshold:
+        should_reground = True
+        if reason is None:
+            reason = "edit_threshold_reached"
+    elif reason == "edit_threshold_reached":
+        should_reground = False
+        reason = None
+
+    regrounding = {
+        "should_reground": should_reground,
+        "reason": reason,
+        "threshold": threshold
+    }
+
+    return image_state, regrounding, evolution
+
+
 def calculate_state(previous_state: dict | None, activity: dict, hours_passed: float) -> dict:
     """
     Calculate new pet state based on previous state, activity, and time passed.
     """
     now = get_current_time()
     today = get_today_date()
+    reground_threshold = get_reground_threshold(previous_state)
 
     if previous_state:
         # Update existing pet
         pet = previous_state.get("pet", {})
         github_stats = previous_state.get("github", {})
+        previous_stage = previous_state.get("pet", {}).get("stage")
 
         # Ensure stats exist
         if "stats" not in pet:
@@ -385,12 +479,25 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
             "total_commits_all_time": activity["commits_detected"],
             "active_days": sorted(list(active_days_set))
         }
+        previous_stage = None
+
+    image_state, regrounding, evolution = build_image_tracking_state(
+        previous_state=previous_state,
+        current_stage=pet["stage"],
+        previous_stage=previous_stage,
+        threshold=reground_threshold
+    )
 
     return {
         "last_updated": now.isoformat(),
         "updated_by": "github-actions-runner",
         "pet": pet,
-        "github": github_stats
+        "github": github_stats,
+        "image_state": image_state,
+        "regrounding": regrounding,
+        "evolution": evolution,
+        # Compatibility helper for consumers expecting a flat boolean flag.
+        "evolution_just_occurred": evolution["just_occurred"]
     }
 
 

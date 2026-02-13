@@ -89,7 +89,68 @@ Always use Falcon with these parameters to maintain consistency:
 /tmp/falcon/bin/falcon --edit [base_image] "[your edit prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output [output.png]
 ```
 
-**Important**: Use `--guidance-scale 0.5` to keep edits close to the original image and avoid visual drift over time.
+**Important**: Use `--guidance-scale 0.5` for normal incremental edits; use `0.7` only in re-grounding/evolution stabilization mode.
+
+### Re-Grounding Mode
+
+Use this mode when either condition is true:
+- `state.json` has `regrounding.should_reground: true`
+- Webhook payload has `force_reground: true`
+
+#### Step 1: Choose Base Image
+- Default re-ground base: `state.image_state.current_stage_reference`
+- Evolution special case (`state.evolution.just_occurred: true`): use `state.evolution.base_reference`
+- If chosen stage reference does not exist:
+  - Fallback 1: `.codepet/codepet.png`
+  - Fallback 2: `.codepet/initial/initial.png`
+
+#### Step 1.5: Extract Desirable Narrative Drift
+- Inspect current `.codepet/codepet.png` and capture concrete details to carry forward:
+  - Palette tendencies
+  - Environment details
+  - Desk props / recurring objects
+- Keep these unless they conflict with core identity anchors (pixel-art medium + recognizable Byte form).
+
+#### Step 2: Generate Re-Grounding Image
+```bash
+/tmp/falcon/bin/falcon --edit [stage_reference_image] "[regrounding prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
+```
+
+Use `--guidance-scale 0.7` only for re-grounding/evolution stabilization.
+Use `--guidance-scale 0.5` for normal incremental edits.
+
+#### Canonical Image-Model Prompt Template (Single Source)
+
+Use this as the only re-grounding template you fill with concrete values:
+
+```text
+Retro pixel art scene, dithered shading, clean 2D composition.
+Byte is a {stage} blob character at a desk with a laptop, with a simple Chicago skyline window in frame.
+Current state cues: mood {mood}; energy {energy_description}; hunger {hunger_description}.
+Carry forward narrative details from the latest scene:
+- palette tendencies: {palette_notes}
+- environment details: {environment_notes}
+- desk props: {prop_notes}
+Preserve core character identity and stage-appropriate form.
+Keep the image readable and consistent with an evolving pixel-art story world.
+```
+
+#### Prompt Composition Rules (Meta Instructions)
+- Do not include file names, JSON keys, or policy phrasing in the Falcon prompt.
+- Convert carry-forward intent into concrete visual descriptions (actual colors/props/details).
+- Keep the final prompt visual and concise.
+
+#### Step 3: Post-Generation State Updates
+- If re-grounding succeeded:
+  - Reset `state.image_state.edit_count_since_reset` to `0`
+  - Set `state.image_state.last_reset_at` to current UTC timestamp
+  - Increment `state.image_state.reset_count`
+  - Set `state.regrounding.should_reground` to `false`
+  - Clear `state.regrounding.reason` (`null`)
+- If evolution just occurred and render succeeded:
+  - Save canonical stage image to `state.evolution.target_reference`
+  - Update `state.image_state.current_stage_reference` to `state.evolution.target_reference`
+- Write updated state back to `.codepet/state.json` and include it in the commit.
 
 ### First Run vs. Subsequent Runs
 
@@ -150,7 +211,7 @@ Reference these when crafting prompts:
 
 **If the output is unsatisfactory**, you may retry:
 ```bash
-/tmp/falcon/bin/falcon --edit [base_image] "[refined prompt - more specific]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output [output2.png]
+/tmp/falcon/bin/falcon --edit [base_image] "[refined prompt - more specific]" --model flux2Flash --resolution 512x512 --guidance-scale [same_as_selected_mode] --no-open --output [output2.png]
 ```
 
 Maximum 2 retry attempts per update.
@@ -244,18 +305,21 @@ Maintain a continuing story for Byte:
    - Stage evolution → edit image
    - Stat threshold crossed (hunger/energy < 20 or > 80) → consider edit
    - Significant activity → consider environmental changes
+   - `state.regrounding.should_reground == true` or `force_reground == true` → run Re-Grounding Mode
 
 5. **Generate or select base image:**
-   - If `.codepet/codepet.png` exists, use it as base
-   - If not, copy from `.codepet/initial/initial.png`
+   - Re-grounding mode: use stage reference base (from state fields above)
+   - Normal mode: if `.codepet/codepet.png` exists, use it as base
+   - If no current image exists, copy from `.codepet/initial/initial.png`
 
 6. **Craft and save edit prompt:**
-   - Write a small, targeted prompt based on your examination of the current image
+   - Normal mode: write a small, targeted prompt based on current image
+   - Re-grounding mode: fill the canonical re-grounding template using concrete carry-forward details
    - Save it to `.codepet/image_edit_prompt.txt` for audit trail
 
 7. **Generate image with Falcon:**
    ```bash
-  /tmp/falcon/bin/falcon --edit .codepet/codepet.png "[your prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+  /tmp/falcon/bin/falcon --edit [base_image] "[your prompt]" --model flux2Flash --resolution 512x512 --guidance-scale [0.5_or_0.7] --no-open --output .codepet/new_pet.png
    ```
 
 8. **Verify the output:**
@@ -275,8 +339,9 @@ Maintain a continuing story for Byte:
 
 11. **Commit using the helper script:**
     ```bash
-    .codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description of changes]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md
+    .codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description of changes]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md .codepet/state.json
     ```
+    - If you created or updated a stage image (for example `.codepet/stage_images/teen.png`), include that path in the same commit command.
 
 ## Commit Message Guidelines
 
@@ -308,7 +373,7 @@ When the pet crosses a stage threshold:
 ## Important Reminders
 
 - **ALWAYS examine the existing `.codepet/codepet.png` BEFORE deciding on edits** - You must know the current visual state before planning changes
-- **Always use `--guidance-scale 0.5`** with Falcon to prevent drift
+- **Use `--guidance-scale 0.5` for normal edits and `0.7` only for re-grounding/evolution stabilization**
 - **Keep prompts small and direct** - don't change everything at once
 - **Verify the output image** before overwriting codepet.png
 - **Only edit README.md below the comment line**

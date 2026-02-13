@@ -88,6 +88,21 @@ The Agent handles everything that requires **judgment, creativity, and visual re
 
 ---
 
+## Identity Re-Grounding (Style Stability + Narrative Continuity)
+
+CodePet now distinguishes between two drift types:
+- **Harmful drift**: Byte's medium/identity drifts away from pixel-art blob form.
+- **Desirable drift**: Narrative evolution in palette, environment, and desk props.
+
+To manage this, the pipeline uses a 3-part re-grounding design:
+- **Runner-side edit tracking** in `state.json.image_state` with a deterministic threshold of 6 webhook-driven edits.
+- **Stage reference anchors** in `.codepet/stage_images/` so evolution can build from stable stage baselines.
+- **Cloud-agent re-grounding mode** that restores style/identity anchors while carrying forward desirable narrative details seen in the latest image.
+
+The runner increments edit counters only when a webhook is about to run. On successful re-grounding, the cloud agent resets counters and updates stage references as needed.
+
+---
+
 ## Technical Highlights
 
 ### Multi-Repo Activity Scanning
@@ -130,8 +145,10 @@ Based on **days of activity detected** (not necessarily consecutive):
 | `.codepet/initial/initial.png` | **Your custom pet image** - the Agent builds on this foundation |
 | `.codepet/initial/initial_prompt.txt` | Description of your pet for the Agent to use |
 | `.codepet/codepet.png` | Generated pet image (the Agent's artistic output) |
+| `.codepet/stage_images/` | Canonical per-stage reference anchors for re-grounding/evolution |
 | `.codepet/image_edit_prompt.txt` | Record of prompts used (Agent's creative audit trail) |
 | `.github/workflows/codepet.yml` | GitHub Actions schedule configuration |
+| `.github/workflows/codepet_reground.yml` | Manual force re-ground trigger |
 
 ---
 
