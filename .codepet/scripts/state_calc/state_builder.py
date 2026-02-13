@@ -1,5 +1,7 @@
 """State object builder for CodePet."""
 
+import copy
+
 from .constants import DEFAULT_PET_STATS
 from .image_tracking import build_image_tracking_state, get_reground_threshold
 from .pet_rules import (
@@ -24,8 +26,8 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
 
     if previous_state:
         # Update existing pet
-        pet = previous_state.get("pet", {})
-        github_stats = previous_state.get("github", {})
+        pet = copy.deepcopy(previous_state.get("pet", {}))
+        github_stats = copy.deepcopy(previous_state.get("github", {}))
         previous_stage = previous_state.get("pet", {}).get("stage")
         commits_detected_today = max(
             0,

@@ -16,6 +16,26 @@ except ImportError:
     HAS_GITHUB = False
     print("Warning: PyGithub not installed, activity detection will be limited")
 
+MIN_DATETIME_UTC = datetime.min.replace(tzinfo=timezone.utc)
+
+
+def _to_utc_datetime(value: Any) -> datetime | None:
+    """Normalize datetimes to timezone-aware UTC."""
+    if not isinstance(value, datetime):
+        return None
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=timezone.utc)
+    return value.astimezone(timezone.utc)
+
+
+def _get_branch_commit_time(branch: Any) -> datetime:
+    """Best-effort branch last-commit timestamp used for branch sorting."""
+    try:
+        commit_time = branch.commit.commit.author.date
+    except Exception:
+        return MIN_DATETIME_UTC
+    return _to_utc_datetime(commit_time) or MIN_DATETIME_UTC
+
 
 def get_watched_repos() -> list[str]:
     """
@@ -66,6 +86,12 @@ def detect_activity(
     else:
         g = Github(token)
         username = os.environ.get("GITHUB_REPOSITORY", "").split("/")[0]
+        if not username:
+            try:
+                username = getattr(g.get_user(), "login", "") or ""
+            except Exception as e:
+                print(f"Warning: Could not resolve authenticated username: {e}")
+                username = ""
 
         for repo_name in watched_repos:
             try:
@@ -76,7 +102,7 @@ def detect_activity(
                 all_branches = list(repo.get_branches())
                 branches = sorted(
                     all_branches,
-                    key=lambda b: b.commit.commit.author.date,
+                    key=_get_branch_commit_time,
                     reverse=True,
                 )[:5]
 
@@ -84,7 +110,10 @@ def detect_activity(
 
                 for branch in branches:
                     try:
-                        commits = repo.get_commits(sha=branch.name, since=last_check, author=username)
+                        if username:
+                            commits = repo.get_commits(sha=branch.name, since=last_check, author=username)
+                        else:
+                            commits = repo.get_commits(sha=branch.name, since=last_check)
 
                         for commit in commits:
                             commit_sha = getattr(commit, "sha", None)
@@ -97,12 +126,12 @@ def detect_activity(
                             author = commit.commit.author or commit.commit.committer
                             if author is None or author.date is None:
                                 continue
-                            commit_time = author.date
-                            if commit_time.tzinfo is None:
-                                commit_time = commit_time.replace(tzinfo=timezone.utc)
+                            commit_time = _to_utc_datetime(author.date)
+                            if commit_time is None:
+                                continue
 
                             commit_events.append({
-                                "timestamp": commit_time.astimezone(timezone.utc),
+                                "timestamp": commit_time,
                                 "repo": repo_name,
                             })
 

@@ -287,6 +287,36 @@ class SessionAnalysisLogicTests(unittest.TestCase):
         assert open_session is not None
         self.assertEqual(open_session["repos_touched"], [])
 
+    def test_analyze_commit_sessions_accepts_naive_now(self) -> None:
+        analysis = SESSION_ANALYSIS.analyze_commit_sessions(
+            commit_events=[make_event(10, 0)],
+            today="2026-02-12",
+            now=datetime(2026, 2, 12, 10, 20),
+            previous_session_tracker=None,
+        )
+        self.assertEqual(analysis["session_count_detected"], 1)
+        open_session = analysis["session_tracker"]["open_session"]
+        assert open_session is not None
+        self.assertEqual(open_session["last_commit"], "2026-02-12T10:00:00+00:00")
+
+    def test_merge_open_session_into_summary_sanitizes_repo_lists(self) -> None:
+        merged = SESSION_ANALYSIS.merge_open_session_into_summary(
+            {
+                "start": "2026-02-12T10:00:00+00:00",
+                "last_commit": "2026-02-12T10:20:00+00:00",
+                "commit_count": 2,
+                "repos_touched": ["owner/open", "", None, "owner/open", 123],
+            },
+            {
+                "start": "2026-02-12T10:30:00+00:00",
+                "end": "2026-02-12T10:40:00+00:00",
+                "duration_minutes": 10,
+                "commit_count": 1,
+                "repos_touched": ["owner/new", "owner/open", False],
+            },
+        )
+        self.assertEqual(merged["repos_touched"], ["owner/new", "owner/open"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -12,7 +12,6 @@ Environment Variables:
 """
 
 import sys
-from datetime import datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -84,8 +83,8 @@ def main() -> int:
 
     # Calculate time window
     if previous_state:
-        last_check = datetime.fromisoformat(previous_state["last_updated"].replace("Z", "+00:00"))
-        hours_passed = (now - last_check).total_seconds() / 3600
+        last_check = parse_iso_datetime(previous_state.get("last_updated")) or now
+        hours_passed = max(0.0, (now - last_check).total_seconds() / 3600)
     else:
         last_check = now
         hours_passed = 0

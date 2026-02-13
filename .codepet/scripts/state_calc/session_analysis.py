@@ -15,6 +15,16 @@ from .constants import (
 from .time_utils import parse_iso_datetime, to_int, to_iso8601
 
 
+def _normalize_repo_list(value: Any) -> list[str]:
+    """Normalize repo lists to sorted, unique non-empty strings."""
+    if not isinstance(value, list):
+        return []
+    return sorted({
+        repo for repo in value
+        if isinstance(repo, str) and repo
+    })
+
+
 def calculate_session_duration_minutes(
     first_commit: datetime | None,
     last_commit: datetime | None,
@@ -201,13 +211,7 @@ def normalize_open_session(open_session: Any) -> dict | None:
     if commit_count <= 0:
         return None
 
-    raw_repos = open_session.get("repos_touched", [])
-    if not isinstance(raw_repos, list):
-        raw_repos = []
-    repos_touched = sorted({
-        repo for repo in raw_repos
-        if isinstance(repo, str) and repo
-    })
+    repos_touched = _normalize_repo_list(open_session.get("repos_touched", []))
     split_timeout = compute_adaptive_timeout(
         gaps_minutes=[],
         fallback_timeout=to_int(open_session.get("split_timeout_minutes"), DEFAULT_SESSION_SPLIT_TIMEOUT_MINUTES),
@@ -250,13 +254,10 @@ def merge_open_session_into_summary(open_session: dict, summary: dict) -> dict:
     merged_count = max(0, to_int(open_session.get("commit_count"), 0)) + max(
         0, to_int(summary.get("commit_count"), 0)
     )
-    open_repos = open_session.get("repos_touched", [])
-    if not isinstance(open_repos, list):
-        open_repos = []
-    summary_repos = summary.get("repos_touched", [])
-    if not isinstance(summary_repos, list):
-        summary_repos = []
-    merged_repos = sorted(set(open_repos + summary_repos))
+    merged_repos = sorted(set(
+        _normalize_repo_list(open_session.get("repos_touched", []))
+        + _normalize_repo_list(summary.get("repos_touched", []))
+    ))
 
     return {
         "start": to_iso8601(merged_start),
@@ -274,6 +275,10 @@ def analyze_commit_sessions(
     previous_session_tracker: dict | None,
 ) -> dict:
     """Compute coherent session summaries and tracker updates."""
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now = now.astimezone(timezone.utc)
+
     normalized_events: list[dict[str, Any]] = []
     for event in commit_events:
         commit_time = event.get("timestamp")

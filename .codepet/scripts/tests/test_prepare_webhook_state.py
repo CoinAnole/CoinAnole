@@ -63,6 +63,19 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertEqual(PREPARE_WEBHOOK_STATE.to_int("abc", default=7), 7)
         self.assertEqual(PREPARE_WEBHOOK_STATE.to_int(None, default=3), 3)
 
+    def test_set_output_supports_local_and_github_actions_modes(self) -> None:
+        with patch.dict(os.environ, {"GITHUB_OUTPUT": ""}, clear=False), patch("builtins.print") as print_mock:
+            PREPARE_WEBHOOK_STATE.set_output("example", "value")
+        print_mock.assert_any_call("::set-output name=example::value")
+        print_mock.assert_any_call("  example=value")
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = Path(temp_dir) / "github_output.txt"
+            with patch.dict(os.environ, {"GITHUB_OUTPUT": str(output_path)}, clear=False), patch("builtins.print"):
+                PREPARE_WEBHOOK_STATE.set_output("next_interval", "120")
+
+            self.assertEqual(output_path.read_text(encoding="utf-8"), "next_interval=120\n")
+
     def test_resolve_reground_base_selection_order(self) -> None:
         stage_dir = Path(".codepet/stage_images")
         stage_dir.mkdir(parents=True, exist_ok=True)

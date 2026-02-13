@@ -15,16 +15,15 @@ import sys
 from pathlib import Path
 from typing import Any
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from state_calc.output_utils import set_output as _set_output
+from state_calc.time_utils import to_int
+
 
 DEFAULT_THRESHOLD = 6
-
-
-def to_int(value: Any, default: int = 0) -> int:
-    """Best-effort integer conversion with fallback."""
-    try:
-        return int(value)
-    except (TypeError, ValueError):
-        return default
 
 
 def is_truthy(value: Any) -> bool:
@@ -37,16 +36,8 @@ def is_truthy(value: Any) -> bool:
 
 
 def set_output(key: str, value: str) -> None:
-    """Write outputs for GitHub Actions or local debugging."""
-    output_file = os.environ.get("GITHUB_OUTPUT")
-
-    if output_file:
-        with open(output_file, "a") as f:
-            f.write(f"{key}={value}\n")
-    else:
-        print(f"::set-output name={key}::{value}")
-
-    print(f"  {key}={value}")
+    """Compatibility wrapper around the shared output helper."""
+    _set_output(key, value)
 
 
 def resolve_reground_base(state: dict, image_state: dict) -> tuple[str, str, bool]:

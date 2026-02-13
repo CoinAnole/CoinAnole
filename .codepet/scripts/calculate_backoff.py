@@ -14,26 +14,16 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from state_calc.output_utils import set_output as _set_output
+
 
 def set_output(key: str, value: str) -> None:
-    """
-    Write output for GitHub Actions or print for local testing.
-    
-    In GitHub Actions, writes to GITHUB_OUTPUT file.
-    Locally, just prints to stdout.
-    """
-    output_file = os.environ.get("GITHUB_OUTPUT")
-    
-    if output_file:
-        # Running in GitHub Actions
-        with open(output_file, "a") as f:
-            f.write(f"{key}={value}\n")
-    else:
-        # Running locally - print for visibility
-        print(f"::set-output name={key}::{value}")
-    
-    # Always print for logs
-    print(f"  {key}={value}")
+    """Compatibility wrapper around the shared output helper."""
+    _set_output(key, value)
 
 
 def parse_iso8601(timestamp: str) -> datetime:
