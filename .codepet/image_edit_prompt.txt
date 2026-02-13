@@ -1,1 +1,9 @@
-add a small coffee cup on the desk, Byte looks slightly more alert and curious, soft morning light coming through the window
+Retro pixel art scene, dithered shading, clean 2D composition.
+Byte is a baby blob character at a desk with a laptop, with a simple Chicago skyline window in frame.
+Current state cues: mood content; energy fully charged; hunger well-fed.
+Carry forward narrative details from the latest scene:
+- palette tendencies: soft cyan-blue for the blob, warm wood tones for desk, gray walls, blue sky through window
+- environment details: simple room with window showing Chicago skyline, soft natural daylight
+- desk props: laptop (larger than the blob), possible small items like a coffee cup
+Preserve core character identity and stage-appropriate form.
+Keep the image readable and consistent with an evolving pixel-art story world.
