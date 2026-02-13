@@ -5,6 +5,7 @@ CodePet Pre-Webhook State Preparation
 Mutates .codepet/state.json immediately before webhook execution:
 - increments image edit counters (anticipating image edit)
 - updates re-grounding flags based on threshold
+- optionally forces re-grounding via FORCE_REGROUND=true
 - exposes outputs for GitHub Actions
 """
 
@@ -24,6 +25,15 @@ def to_int(value: Any, default: int = 0) -> int:
         return int(value)
     except (TypeError, ValueError):
         return default
+
+
+def is_truthy(value: Any) -> bool:
+    """Interpret common truthy string/boolean values."""
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    return str(value).strip().lower() in {"1", "true", "yes", "on"}
 
 
 def set_output(key: str, value: str) -> None:
@@ -60,6 +70,7 @@ def main() -> int:
         DEFAULT_THRESHOLD
     )
     threshold = max(1, threshold)
+    force_reground = is_truthy(os.environ.get("FORCE_REGROUND", "false"))
 
     edit_count = max(0, to_int(image_state.get("edit_count_since_reset"), 0)) + 1
     total_edits = max(0, to_int(image_state.get("total_edits_all_time"), 0)) + 1
@@ -71,7 +82,10 @@ def main() -> int:
     should_reground = bool(regrounding.get("should_reground", False))
     reason = previous_reason
 
-    if edit_count >= threshold:
+    if force_reground:
+        should_reground = True
+        reason = "force_reground"
+    elif edit_count >= threshold:
         should_reground = True
         if reason in (None, "edit_threshold_reached"):
             reason = "edit_threshold_reached"
@@ -98,12 +112,14 @@ def main() -> int:
     print(f"  edit_count_since_reset={edit_count}")
     print(f"  total_edits_all_time={total_edits}")
     print(f"  threshold={threshold}")
+    print(f"  force_reground={force_reground}")
     print(f"  should_reground={should_reground}")
     print(f"  reason={reason}")
 
     set_output("edit_count_since_reset", str(edit_count))
     set_output("total_edits_all_time", str(total_edits))
     set_output("threshold", str(threshold))
+    set_output("force_reground", str(force_reground).lower())
     set_output("should_reground", str(should_reground).lower())
     set_output("reason_json", json.dumps(reason))
     set_output("evolution_just_occurred", str(evolution_just_occurred).lower())

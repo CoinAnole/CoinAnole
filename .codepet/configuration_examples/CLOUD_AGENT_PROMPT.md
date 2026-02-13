@@ -62,8 +62,8 @@ When triggered, the following variables are available from the webhook payload:
 - `{{hours_inactive}}` - Hours since last detected commit (integer) (scheduler path)
 - `{{next_interval}}` - Minutes until the next expected trigger (60, 120, 240, or 360) (scheduler path)
 - `{{force_reground}}` - Explicit re-ground request (`true` for manual re-ground workflow)
-- `{{regrounding_should_reground}}` - Runner-computed re-grounding flag from `state.json`
-- `{{regrounding_reason}}` - Re-ground reason (`edit_threshold_reached` or `null`)
+- `{{regrounding_should_reground}}` - Runner-computed re-grounding flag from `state.json` (available in both scheduler and manual flows)
+- `{{regrounding_reason}}` - Re-ground reason (`force_reground`, `edit_threshold_reached`, or `null`)
 - `{{regrounding_threshold}}` - Active threshold value (default `6`)
 - `{{image_edit_count_since_reset}}` - Counter value after pre-webhook increment
 - `{{image_total_edits_all_time}}` - Lifetime edit counter after pre-webhook increment
@@ -79,6 +79,7 @@ Use these to contextualize your narrative:
 - If `backoff_reason` is `first_run`, this is Byte's debut - make it special!
 - If `force_reground` is true, run Re-Grounding Mode even if normal edit signals are weak
 - If `regrounding_should_reground` is true, treat this as a style/identity maintenance pass
+- If `regrounding_reason` is `force_reground`, prioritize a full re-grounding pass over incremental edits
 - If `evolution_just_occurred` is true, follow the evolution special case with stage reference anchoring
 
 ## State Files Location
