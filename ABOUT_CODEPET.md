@@ -142,7 +142,7 @@ Based on **days of activity detected** (not necessarily consecutive):
 | `.codepet/activity.json` | Activity data for the period (feeds the Agent) |
 | `.codepet/state.json` | Full pet state (feeds the Agent's creative decisions) |
 | `.codepet/scripts/` | State calculation and back-off logic scripts (with `cloud_agent/commit_to_master.sh` for direct commits) |
-| `.codepet/initial/initial.png` | **Your custom pet image** - the Agent builds on this foundation |
+| `.codepet/stage_images/baby.png` | Canonical starting image and baby-stage re-grounding anchor |
 | `.codepet/initial/initial_prompt.txt` | Description of your pet for the Agent to use |
 | `.codepet/codepet.png` | Generated pet image (the Agent's artistic output) |
 | `.codepet/stage_images/` | Canonical per-stage reference anchors for re-grounding/evolution |

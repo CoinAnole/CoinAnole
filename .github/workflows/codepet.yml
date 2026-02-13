@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions[bot]"
-          git add .codepet/activity.json .codepet/state.json
+          git add .codepet/activity.json .codepet/state.json .codepet/stage_images
           git commit -m "Update CodePet state [runner]" || echo "No changes to commit"
           git push
       
@@ -56,7 +56,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions[bot]"
-          git add .codepet/state.json
+          git add .codepet/state.json .codepet/stage_images
           git commit -m "Prepare CodePet webhook state [runner]" || echo "No pre-webhook changes to commit"
           git push
       
@@ -80,7 +80,10 @@ jobs:
               \"image_edit_count_since_reset\": ${{ steps.pre_webhook.outputs.edit_count_since_reset }},
               \"image_total_edits_all_time\": ${{ steps.pre_webhook.outputs.total_edits_all_time }},
               \"evolution_just_occurred\": ${{ steps.pre_webhook.outputs.evolution_just_occurred }},
-              \"current_stage_reference\": \"${{ steps.pre_webhook.outputs.current_stage_reference }}\"
+              \"current_stage_reference\": \"${{ steps.pre_webhook.outputs.current_stage_reference }}\",
+              \"reground_base_image\": \"${{ steps.pre_webhook.outputs.reground_base_image }}\",
+              \"reground_base_rule\": \"${{ steps.pre_webhook.outputs.reground_base_rule }}\",
+              \"reground_base_exists\": ${{ steps.pre_webhook.outputs.reground_base_exists }}
             }"
           echo "Webhook triggered successfully"
       

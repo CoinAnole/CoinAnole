@@ -332,6 +332,19 @@ def get_reground_threshold(previous_state: dict | None) -> int:
     return DEFAULT_REGROUND_THRESHOLD
 
 
+def ensure_stage_image_bootstrap(stage: str) -> None:
+    """
+    Ensure stage image directory exists.
+
+    Re-grounding anchors live under `.codepet/stage_images/`.
+    """
+    stage_dir = Path(".codepet/stage_images")
+    stage_dir.mkdir(parents=True, exist_ok=True)
+
+    if stage == "baby" and not (stage_dir / "baby.png").exists():
+        print("Warning: Missing stage anchor .codepet/stage_images/baby.png")
+
+
 def build_image_tracking_state(
     previous_state: dict | None,
     current_stage: str,
@@ -348,6 +361,9 @@ def build_image_tracking_state(
     previous_regrounding = (previous_state or {}).get("regrounding", {})
 
     stage_changed = previous_stage is not None and previous_stage != current_stage
+    ensure_stage_image_bootstrap(current_stage)
+    if previous_stage:
+        ensure_stage_image_bootstrap(previous_stage)
 
     if stage_changed:
         base_reference = f".codepet/stage_images/{previous_stage}.png"
@@ -361,9 +377,12 @@ def build_image_tracking_state(
             "target_reference": target_reference
         }
     else:
-        current_stage_reference = previous_image_state.get("current_stage_reference")
-        if not current_stage_reference:
-            current_stage_reference = f".codepet/stage_images/{current_stage}.png"
+        current_stage_reference = f".codepet/stage_images/{current_stage}.png"
+        previous_reference = previous_image_state.get("current_stage_reference")
+        if previous_reference and Path(current_stage_reference).exists() is False:
+            # Migration fallback: keep prior reference only if canonical anchor
+            # is not yet available.
+            current_stage_reference = previous_reference
 
         evolution = {
             "just_occurred": False,

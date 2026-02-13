@@ -69,6 +69,9 @@ When triggered, the following variables are available from the webhook payload:
 - `{{image_total_edits_all_time}}` - Lifetime edit counter after pre-webhook increment
 - `{{evolution_just_occurred}}` - Whether a stage transition was detected in latest state calculation
 - `{{current_stage_reference}}` - Current stage anchor path used for re-grounding base selection
+- `{{reground_base_image}}` - Runner-selected base image path for re-grounding
+- `{{reground_base_rule}}` - Which rule selected `reground_base_image`
+- `{{reground_base_exists}}` - Whether selected base file exists at trigger time (`true`/`false`)
 
 Here is the payload:
 {{body}}
@@ -81,6 +84,7 @@ Use these to contextualize your narrative:
 - If `regrounding_should_reground` is true, treat this as a style/identity maintenance pass
 - If `regrounding_reason` is `force_reground`, prioritize a full re-grounding pass over incremental edits
 - If `evolution_just_occurred` is true, follow the evolution special case with stage reference anchoring
+- If `reground_base_exists` is `true`, use `reground_base_image` as the Falcon `--edit` input for Re-Grounding Mode
 
 ## State Files Location
 
@@ -88,7 +92,7 @@ All state files are in `.codepet/`:
 - `state.json` - Current pet stats, mood, stage, derived state
 - `activity.json` - Recent activity data (commits, sessions, social events)
 - `codepet.png` - The current pet image (if it exists)
-- `initial/initial.png` - The base image for first run
+- `stage_images/` - Canonical per-stage re-grounding anchors (`baby.png`, `teen.png`, etc.)
 - `initial/initial_prompt.txt` - The prompt used to create the initial image
 - `image_edit_prompt.txt` - Where you should save your generated prompts (for audit trail)
 
@@ -113,11 +117,16 @@ Use this mode when either condition is true:
 - Webhook payload has `force_reground: true`
 
 #### Step 1: Choose Base Image
-- Default re-ground base: `state.image_state.current_stage_reference`
-- Evolution special case (`state.evolution.just_occurred: true`): use `state.evolution.base_reference`
-- If chosen stage reference does not exist:
-  - Fallback 1: `.codepet/codepet.png`
-  - Fallback 2: `.codepet/initial/initial.png`
+- Primary source of truth: use `{{reground_base_image}}` from webhook payload when `{{reground_base_exists}} == true`.
+- Re-grounding anchor policy: use `.codepet/stage_images/` as the canonical location for re-grounding bases.
+- Fallback logic (only if payload base is missing or not provided):
+  1. If `state.evolution.just_occurred == true`, use `state.evolution.base_reference`.
+  2. Else use `state.image_state.current_stage_reference`.
+  3. If stage reference is missing, use `.codepet/codepet.png` as bootstrap fallback.
+
+**Hard rules**:
+- If both chosen base and required fallback are missing, stop and report the missing files instead of running Falcon.
+- Before running Falcon, print/log the selected base path and which rule selected it (`reground_base_rule` if payload provided).
 
 #### Step 1.5: Extract Desirable Narrative Drift
 - Inspect current `.codepet/codepet.png` and capture concrete details to carry forward:
@@ -128,7 +137,7 @@ Use this mode when either condition is true:
 
 #### Step 2: Generate Re-Grounding Image
 ```bash
-/tmp/falcon/bin/falcon --edit [stage_reference_image] "[regrounding prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [reground_base_image] "[regrounding prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
 ```
 
 Use `--guidance-scale 0.7` only for re-grounding/evolution stabilization.
@@ -179,7 +188,7 @@ Retro pixel art scene with dithered shading and clean 2D composition. Byte is a 
 ### First Run vs. Subsequent Runs
 
 **If `.codepet/codepet.png` does NOT exist:**
-1. Copy `.codepet/initial/initial.png` to `.codepet/codepet.png`
+1. Copy `.codepet/stage_images/baby.png` to `.codepet/codepet.png`
 2. This becomes the base for all future edits
 3. Read `.codepet/initial/initial_prompt.txt` to understand the original vision
 
@@ -332,9 +341,10 @@ Maintain a continuing story for Byte:
    - `state.regrounding.should_reground == true` or `force_reground == true` → run Re-Grounding Mode
 
 5. **Generate or select base image:**
-   - Re-grounding mode: use stage reference base (from state fields above)
+   - Re-grounding mode: use the strict precedence from `Step 1: Choose Base Image` above
+   - Re-grounding should resolve to `.codepet/stage_images/{stage}.png` in normal operation
    - Normal mode: if `.codepet/codepet.png` exists, use it as base
-   - If no current image exists, copy from `.codepet/initial/initial.png`
+   - If no current image exists, copy from `.codepet/stage_images/baby.png`
 
 6. **Craft and save edit prompt:**
    - Normal mode: write a small, targeted prompt based on current image
