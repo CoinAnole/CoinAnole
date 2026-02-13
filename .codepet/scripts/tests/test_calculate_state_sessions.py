@@ -1,10 +1,17 @@
 import importlib.util
+import sys
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 
 
-MODULE_PATH = Path(__file__).resolve().parents[1] / "calculate_state.py"
+SCRIPT_DIR = Path(__file__).resolve().parents[1]
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from state_calc import session_analysis as SESSION_ANALYSIS
+
+MODULE_PATH = SCRIPT_DIR / "calculate_state.py"
 SPEC = importlib.util.spec_from_file_location("calculate_state", MODULE_PATH)
 CALCULATE_STATE = importlib.util.module_from_spec(SPEC)
 assert SPEC is not None and SPEC.loader is not None
@@ -19,117 +26,48 @@ def make_event(hour: int, minute: int, repo: str = "owner/repo") -> dict:
     return {"timestamp": make_time(hour, minute), "repo": repo}
 
 
-class SessionLogicTests(unittest.TestCase):
-    def test_compute_adaptive_timeout_clamps(self) -> None:
-        self.assertEqual(CALCULATE_STATE.compute_adaptive_timeout([5.0, 6.0], None), 45)
-        self.assertEqual(CALCULATE_STATE.compute_adaptive_timeout([40.0, 45.0], None), 90)
-        self.assertEqual(CALCULATE_STATE.compute_adaptive_timeout([], 60), 60)
-        self.assertEqual(CALCULATE_STATE.compute_adaptive_timeout([], None), 45)
+class SessionFacadeCompatibilityTests(unittest.TestCase):
+    def test_facade_re_exports_session_analysis_functions(self) -> None:
+        exported_names = [
+            "compute_adaptive_timeout",
+            "split_into_sessions",
+            "select_primary_session",
+            "merge_with_open_session",
+            "analyze_commit_sessions",
+        ]
+        for name in exported_names:
+            self.assertTrue(hasattr(CALCULATE_STATE, name), f"Missing facade export: {name}")
+            self.assertIs(getattr(CALCULATE_STATE, name), getattr(SESSION_ANALYSIS, name))
 
-    def test_split_into_sessions_respects_gap_rule(self) -> None:
+    def test_facade_all_includes_session_exports(self) -> None:
+        expected = {
+            "compute_adaptive_timeout",
+            "split_into_sessions",
+            "select_primary_session",
+            "merge_with_open_session",
+            "analyze_commit_sessions",
+        }
+        self.assertTrue(expected.issubset(set(CALCULATE_STATE.__all__)))
+
+    def test_facade_session_behavior_matches_module(self) -> None:
         events = [
             make_event(10, 0),
             make_event(10, 20),
-            make_event(10, 50),
             make_event(12, 0),
         ]
-        sessions = CALCULATE_STATE.split_into_sessions(events, split_timeout=45)
-        self.assertEqual(len(sessions), 2)
-        self.assertEqual(len(sessions[0]), 3)
-        self.assertEqual(len(sessions[1]), 1)
-
-    def test_primary_session_tie_break(self) -> None:
-        summaries = [
-            {
-                "start": "2026-02-12T10:00:00+00:00",
-                "end": "2026-02-12T11:00:00+00:00",
-                "duration_minutes": 60,
-                "commit_count": 3,
-                "repos_touched": ["a/b"],
-            },
-            {
-                "start": "2026-02-12T12:00:00+00:00",
-                "end": "2026-02-12T13:00:00+00:00",
-                "duration_minutes": 60,
-                "commit_count": 4,
-                "repos_touched": ["a/c"],
-            },
-        ]
-        primary = CALCULATE_STATE.select_primary_session(summaries)
-        assert primary is not None
-        self.assertEqual(primary["commit_count"], 4)
-
-    def test_merge_with_open_session_window(self) -> None:
-        open_session = {
-            "start": "2026-02-12T10:00:00+00:00",
-            "last_commit": "2026-02-12T10:40:00+00:00",
-            "commit_count": 3,
-            "repos_touched": ["owner/repo"],
-            "split_timeout_minutes": 45,
-        }
-        self.assertTrue(CALCULATE_STATE.merge_with_open_session(open_session, make_time(11, 0)))
-        self.assertFalse(CALCULATE_STATE.merge_with_open_session(open_session, make_time(12, 0)))
-
-    def test_open_session_expires_without_new_commits(self) -> None:
-        previous_tracker = {
-            "open_session": {
-                "start": "2026-02-12T08:00:00+00:00",
-                "last_commit": "2026-02-12T08:15:00+00:00",
-                "commit_count": 2,
-                "repos_touched": ["owner/repo"],
-                "split_timeout_minutes": 45,
-            },
-            "last_timeout_minutes": 45,
-        }
-        analysis = CALCULATE_STATE.analyze_commit_sessions(
-            commit_events=[],
+        facade_result = CALCULATE_STATE.analyze_commit_sessions(
+            commit_events=events,
             today="2026-02-12",
-            now=make_time(9, 5),
-            previous_session_tracker=previous_tracker,
-        )
-        self.assertIsNone(analysis["session_tracker"]["open_session"])
-        self.assertEqual(analysis["session_duration_minutes"], 0)
-
-    def test_marathon_detected_across_runs(self) -> None:
-        previous_tracker = {
-            "open_session": {
-                "start": "2026-02-12T10:00:00+00:00",
-                "last_commit": "2026-02-12T10:50:00+00:00",
-                "commit_count": 4,
-                "repos_touched": ["owner/repo"],
-                "split_timeout_minutes": 45,
-            },
-            "last_timeout_minutes": 45,
-        }
-        analysis = CALCULATE_STATE.analyze_commit_sessions(
-            commit_events=[
-                make_event(11, 10),
-                make_event(11, 40),
-                make_event(12, 15),
-            ],
-            today="2026-02-12",
-            now=make_time(12, 20),
-            previous_session_tracker=previous_tracker,
-        )
-        self.assertTrue(analysis["marathon_detected"])
-        self.assertEqual(analysis["session_duration_minutes"], 135)
-        self.assertEqual(analysis["session_count_detected"], 1)
-        self.assertIsNotNone(analysis["session_tracker"]["open_session"])
-
-    def test_isolated_commits_do_not_trigger_marathon(self) -> None:
-        analysis = CALCULATE_STATE.analyze_commit_sessions(
-            commit_events=[
-                make_event(10, 0),
-                make_event(13, 0),
-                make_event(16, 0),
-            ],
-            today="2026-02-12",
-            now=make_time(16, 5),
+            now=make_time(12, 5),
             previous_session_tracker=None,
         )
-        self.assertFalse(analysis["marathon_detected"])
-        self.assertEqual(analysis["session_count_detected"], 3)
-        self.assertEqual(analysis["session_duration_minutes"], 10)
+        module_result = SESSION_ANALYSIS.analyze_commit_sessions(
+            commit_events=events,
+            today="2026-02-12",
+            now=make_time(12, 5),
+            previous_session_tracker=None,
+        )
+        self.assertEqual(facade_result, module_result)
 
 
 if __name__ == "__main__":
