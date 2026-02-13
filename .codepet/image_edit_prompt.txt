@@ -1,10 +1,3 @@
-Retro pixel art scene, dithered shading, clean 2D composition.
-Byte is a baby blob character at a desk with a laptop, with a simple Chicago skyline window in frame.
-Current state cues: mood content; energy fully charged; hunger getting high (89/100, needs food soon).
-Carry forward narrative details from the latest scene:
-- palette tendencies: soft cyan-blue for the blob, warm wood tones for desk, gray walls, blue sky through window
-- environment details: simple room with window showing Chicago skyline, soft natural daylight
-- desk props: laptop (larger than the blob), coffee cup, desk lamp
-- Byte expression: content but slightly hungry, maybe glancing at an empty food bowl
-Preserve core character identity and stage-appropriate form.
-Keep the image readable and consistent with an evolving pixel-art story world.
+Re-grounding prompt (force_reground triggered):
+
+Retro pixel art scene with dithered shading and clean 2D composition. Byte is a baby blob at a desk with a large laptop and a simple Chicago skyline window. Byte looks content but hungry, with bright alert eyes and a slight glance toward an empty food bowl. Keep the soft cyan-blue blob color, warm wood desk tones, gray room walls, and gentle morning light. Include the desk lamp and coffee cup from the current setup.
