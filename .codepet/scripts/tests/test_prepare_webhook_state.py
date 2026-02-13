@@ -59,6 +59,10 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertFalse(PREPARE_WEBHOOK_STATE.is_truthy("0"))
         self.assertFalse(PREPARE_WEBHOOK_STATE.is_truthy("off"))
 
+    def test_to_int_falls_back_for_invalid_values(self) -> None:
+        self.assertEqual(PREPARE_WEBHOOK_STATE.to_int("abc", default=7), 7)
+        self.assertEqual(PREPARE_WEBHOOK_STATE.to_int(None, default=3), 3)
+
     def test_resolve_reground_base_selection_order(self) -> None:
         stage_dir = Path(".codepet/stage_images")
         stage_dir.mkdir(parents=True, exist_ok=True)
@@ -118,6 +122,37 @@ class PrepareWebhookStateTests(unittest.TestCase):
 
     def test_main_returns_error_when_state_is_missing(self) -> None:
         exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"})
+        self.assertEqual(exit_code, 1)
+        self.assertEqual(outputs, {})
+
+    def test_main_returns_error_on_malformed_state_json(self) -> None:
+        state_path = Path(".codepet/state.json")
+        state_path.parent.mkdir(parents=True, exist_ok=True)
+        state_path.write_text("{bad", encoding="utf-8")
+
+        exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"})
+        self.assertEqual(exit_code, 1)
+        self.assertEqual(outputs, {})
+
+    def test_main_returns_error_when_state_write_fails(self) -> None:
+        self.write_state(
+            {
+                "pet": {"stage": "adult"},
+                "image_state": {"edit_count_since_reset": 0, "total_edits_all_time": 0},
+                "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+                "evolution": {"just_occurred": False},
+            }
+        )
+        real_open = open
+
+        def fail_on_state_write(path, mode="r", *args, **kwargs):
+            if str(path).endswith(".codepet/state.json") and "w" in mode:
+                raise OSError("simulated write failure")
+            return real_open(path, mode, *args, **kwargs)
+
+        with patch("builtins.open", side_effect=fail_on_state_write):
+            exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"})
+
         self.assertEqual(exit_code, 1)
         self.assertEqual(outputs, {})
 

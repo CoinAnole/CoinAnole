@@ -33,12 +33,7 @@ def ensure_stage_image_bootstrap(stage: str) -> None:
         print("Warning: Missing stage anchor .codepet/stage_images/baby.png")
 
 
-def build_image_tracking_state(
-    previous_state: dict | None,
-    current_stage: str,
-    previous_stage: str | None,
-    threshold: int,
-) -> tuple[dict, dict, dict]:
+def build_image_tracking_state(previous_state: dict | None, current_stage: str, previous_stage: str | None, threshold: int) -> tuple[dict, dict, dict]:
     """
     Build image tracking fields for state.json.
 

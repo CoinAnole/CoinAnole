@@ -65,13 +65,25 @@ def split_into_sessions(commit_events: list[dict[str, Any]], split_timeout: int)
     if not commit_events:
         return []
 
-    events = sorted(
-        [
-            event for event in commit_events
-            if isinstance(event.get("timestamp"), datetime)
-        ],
-        key=lambda event: event.get("timestamp"),
-    )
+    def normalize_commit_time(value: Any) -> datetime | None:
+        if not isinstance(value, datetime):
+            return None
+        if value.tzinfo is None:
+            value = value.replace(tzinfo=timezone.utc)
+        return value.astimezone(timezone.utc)
+
+    events = []
+    for event in commit_events:
+        commit_time = normalize_commit_time(event.get("timestamp"))
+        if commit_time is None:
+            continue
+        events.append(
+            {
+                "timestamp": commit_time,
+                "repo": event.get("repo"),
+            }
+        )
+    events.sort(key=lambda event: event["timestamp"])
     if not events:
         return []
 
@@ -81,12 +93,7 @@ def split_into_sessions(commit_events: list[dict[str, Any]], split_timeout: int)
     safe_timeout = max(1, split_timeout)
 
     for event in events:
-        commit_time = event.get("timestamp")
-        if not isinstance(commit_time, datetime):
-            continue
-        if commit_time.tzinfo is None:
-            commit_time = commit_time.replace(tzinfo=timezone.utc)
-        commit_time = commit_time.astimezone(timezone.utc)
+        commit_time = event["timestamp"]
 
         normalized_event = {
             "timestamp": commit_time,

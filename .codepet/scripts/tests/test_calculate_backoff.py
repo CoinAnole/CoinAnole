@@ -20,6 +20,23 @@ def utc_time(hour: int, minute: int = 0) -> datetime:
 
 
 class CalculateBackoffTests(unittest.TestCase):
+    def test_parse_iso8601_assumes_utc_for_naive_timestamp(self) -> None:
+        parsed = CALCULATE_BACKOFF.parse_iso8601("2026-02-13T12:34:56")
+        self.assertEqual(parsed.isoformat(), "2026-02-13T12:34:56+00:00")
+
+    def test_set_output_supports_local_and_github_actions_modes(self) -> None:
+        with patch.dict(os.environ, {"GITHUB_OUTPUT": ""}, clear=False), patch("builtins.print") as print_mock:
+            CALCULATE_BACKOFF.set_output("example", "value")
+        print_mock.assert_any_call("::set-output name=example::value")
+        print_mock.assert_any_call("  example=value")
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = Path(temp_dir) / "github_output.txt"
+            with patch.dict(os.environ, {"GITHUB_OUTPUT": str(output_path)}, clear=False), patch("builtins.print"):
+                CALCULATE_BACKOFF.set_output("next_interval", "120")
+
+            self.assertEqual(output_path.read_text(encoding="utf-8"), "next_interval=120\n")
+
     def test_crossed_interval_boundary_handles_jitter_and_buckets(self) -> None:
         last_activity = utc_time(0, 0)
         current = utc_time(3, 10)
@@ -212,6 +229,44 @@ class CalculateBackoffTests(unittest.TestCase):
             self.assertEqual(outputs["reason"], "skipping_for_backoff")
             self.assertEqual(outputs["next_interval"], "360")
             self.assertEqual(outputs["hours_inactive"], "8")
+
+    def test_main_uses_last_activity_to_calculate_backoff(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            codepet_dir = Path(temp_dir) / ".codepet"
+            codepet_dir.mkdir(parents=True, exist_ok=True)
+            (codepet_dir / "activity.json").write_text(
+                json.dumps(
+                    {
+                        "timestamp": "2026-02-13T11:00:00+00:00",
+                        "calculation": {"previous_check": "2026-02-13T09:00:00+00:00"},
+                        "activity": {"commits_detected": 0},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (codepet_dir / "state.json").write_text(
+                json.dumps({"github": {"last_commit_timestamp": "2026-02-13T08:00:00+00:00"}}),
+                encoding="utf-8",
+            )
+
+            outputs = {}
+
+            def capture_output(key: str, value: str) -> None:
+                outputs[key] = value
+
+            old_cwd = os.getcwd()
+            os.chdir(temp_dir)
+            try:
+                with patch.object(CALCULATE_BACKOFF, "set_output", side_effect=capture_output):
+                    exit_code = CALCULATE_BACKOFF.main()
+            finally:
+                os.chdir(old_cwd)
+
+            self.assertEqual(exit_code, 0)
+            self.assertEqual(outputs["should_trigger"], "true")
+            self.assertEqual(outputs["reason"], "backoff_2hr")
+            self.assertEqual(outputs["next_interval"], "120")
+            self.assertEqual(outputs["hours_inactive"], "3")
 
 
 if __name__ == "__main__":
