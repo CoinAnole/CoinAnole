@@ -108,7 +108,7 @@ The runner increments edit counters only when a webhook is about to run. On succ
 ### Multi-Repo Activity Scanning
 
 Unlike simple commit counters, CodePet watches selected public and private repositories, detecting:
-- Coding sessions (grouped by hourly check windows)
+- Coding sessions (coherent clusters split by inactivity gaps, with continuity across hourly runs)
 - Marathon sessions (>2 hours)
 - Context switches (repos touched)
 - Social activity (stars, PRs, followers)
@@ -118,7 +118,7 @@ Unlike simple commit counters, CodePet watches selected public and private repos
 | Stat | Range | Decay Rate | GitHub Input |
 |------|-------|------------|--------------|
 | **Hunger** | 0-100 | -5 per 6hrs without commits | Commit recency |
-| **Energy** | 0-100 | -10 per 2hr+ coding session | Session duration from timestamps |
+| **Energy** | 0-100 | -10 per 2hr+ coding session | Coherent session duration from commit timestamps |
 | **Happiness** | 0-100 | -2 per day without social activity | Stars, PRs merged, followers |
 | **Social** | 0-100 | N/A (cumulative) | Total stars + followers + forks |
 

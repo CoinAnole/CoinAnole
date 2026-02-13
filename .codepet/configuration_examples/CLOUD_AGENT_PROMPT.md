@@ -41,6 +41,7 @@ To avoid wasting Kilo credits during inactivity, the runner implements **progres
 
 ### What This Means for You
 - `hours_since_last_check` in `activity.json` will typically be ~1.0 during active periods (hourly runner cadence)
+- Session metrics in `activity.json` are coherence-based commit clusters, not raw scheduler window length
 - During back-off, you may see gaps of 1-6+ hours between triggers
 - Back-off intervals are minimum targets; trigger occurs on the first scheduled run after an interval boundary is crossed
 - `hours_inactive` in the webhook payload tells you how long since the last detected commit
