@@ -139,21 +139,30 @@ Use `--guidance-scale 0.5` for normal incremental edits.
 Use this as the only re-grounding template you fill with concrete values:
 
 ```text
-Retro pixel art scene, dithered shading, clean 2D composition.
-Byte is a {stage} blob character at a desk with a laptop, with a simple Chicago skyline window in frame.
-Current state cues: mood {mood}; energy {energy_description}; hunger {hunger_description}.
-Carry forward narrative details from the latest scene:
-- palette tendencies: {palette_notes}
-- environment details: {environment_notes}
-- desk props: {prop_notes}
-Preserve core character identity and stage-appropriate form.
-Keep the image readable and consistent with an evolving pixel-art story world.
+Retro pixel art scene with dithered shading and clean 2D composition. Byte is a {stage} blob at a desk with a laptop and a simple Chicago skyline window. Byte appears {mood_visual}, with {energy_visual} and {hunger_visual}. Use {palette_notes_sentence}. Include {environment_notes_sentence}. Include {prop_notes_sentence}.
 ```
 
 #### Prompt Composition Rules (Meta Instructions)
 - Do not include file names, JSON keys, or policy phrasing in the Falcon prompt.
 - Convert carry-forward intent into concrete visual descriptions (actual colors/props/details).
-- Keep the final prompt visual and concise.
+- Convert all placeholders into plain scene language before running Falcon.
+- Final Falcon prompt must be a single paragraph (no markdown, no bullet markers, no section labels).
+
+#### Falcon Prompt Lint (Required Before Running)
+- Reject and rewrite the prompt if it contains any of these phrases:
+  - `Carry forward narrative details`
+  - `Preserve core character identity`
+  - `Keep the image readable`
+  - `latest scene`
+  - `palette tendencies:`
+  - `environment details:`
+  - `desk props:`
+- Reject and rewrite the prompt if it contains markdown bullets (`- `) or placeholder braces (`{` or `}`).
+
+#### Good Re-Grounding Prompt Example (Model-Ready)
+```text
+Retro pixel art scene with dithered shading and clean 2D composition. Byte is a baby blob at a desk with a large laptop and a simple Chicago skyline window. Byte looks content but hungry, with bright alert eyes and a slight glance toward an empty food bowl. Keep the soft cyan-blue blob color, warm wood desk tones, gray room walls, and gentle morning light. Include the desk lamp and coffee cup from the current setup.
+```
 
 #### Step 3: Post-Generation State Updates
 - If re-grounding succeeded:
