@@ -31,5 +31,14 @@
       "2026-02-11",
       "2026-02-12"
     ]
+  },
+  "image_state": {
+    "edit_count_since_reset": 1,
+    "total_edits_all_time": 1
+  },
+  "regrounding": {
+    "should_reground": true,
+    "reason": "force_reground",
+    "threshold": 6
   }
 }
