@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 86/100 | ████████▌░ |
+| 🍖 Hunger | 91/100 | █████████░ |
 | ⚡ Energy | 98/100 | █████████▊ |
-| 😊 Happiness | 83/100 | ████████▎░ |
+| 😊 Happiness | 85/100 | ████████▌░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 45 commits | **Current Streak:** 3 days
+**Today's Activity:** 46 commits | **Current Streak:** 3 days
 
-Byte sits contentedly at the desk, eyes sparkling with joy as golden sparkles float gently around. The little cyan blob has been coding up a storm today with 45 commits across the streak! The food bowl sits empty on the desk - Byte's been so focused on coding that snack time was forgotten. Despite the rumbling tummy (hunger at 86!) and slightly lower energy, Byte remains happy and energetic, basking in the warm Chicago sunset glow through the window. A fresh commit just came in, and Byte is excited to keep the momentum going!
+Byte glows with contentment at the desk, bathed in the warm Chicago sunset streaming through the window. Sparkles dance around the little cyan blob's head, reflecting the happiness from a productive 3-day coding streak with 46 commits today! The desk lamp casts a cozy amber light over the workspace, illuminating a fresh coffee mug and a full food bowl. Byte's energy remains high at 98%, ready for more coding adventures. The re-grounding refresh has left Byte looking crisp and vibrant, ready to continue the journey toward the Teen stage!
 
 ---
 *CodePet updates automatically based on coding activity*

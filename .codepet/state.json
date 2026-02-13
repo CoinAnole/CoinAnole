@@ -47,15 +47,15 @@
     }
   },
   "image_state": {
-    "edit_count_since_reset": 6,
+    "edit_count_since_reset": 0,
     "total_edits_all_time": 9,
-    "last_reset_at": "2026-02-13T02:13:03+00:00",
-    "reset_count": 2,
+    "last_reset_at": "2026-02-13T16:02:52+00:00",
+    "reset_count": 3,
     "current_stage_reference": ".codepet/stage_images/baby.png"
   },
   "regrounding": {
-    "should_reground": true,
-    "reason": "edit_threshold_reached",
+    "should_reground": false,
+    "reason": null,
     "threshold": 6
   },
   "evolution": {
