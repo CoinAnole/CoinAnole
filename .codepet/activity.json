@@ -1,13 +1,16 @@
 {
-  "timestamp": "2026-02-13T03:23:38.326882+00:00",
+  "timestamp": "2026-02-13T05:39:03.675805+00:00",
   "period": {
-    "start": "2026-02-12T23:47:19.083276+00:00",
-    "end": "2026-02-13T03:23:38.326882+00:00"
+    "start": "2026-02-13T03:23:48.264463+00:00",
+    "end": "2026-02-13T05:39:03.675805+00:00"
   },
   "activity": {
     "commits_detected": 0,
+    "commits_today_detected": 0,
     "repos_touched": [],
+    "repos_touched_today": [],
     "session_duration_minutes": 0,
+    "session_duration_today_minutes": 0,
     "marathon_detected": false,
     "last_commit_timestamp": null,
     "social_events": {
@@ -17,7 +20,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-12T23:47:19.083276+00:00",
-    "hours_since_last_check": 3.61
+    "previous_check": "2026-02-13T03:23:48.264463+00:00",
+    "hours_since_last_check": 2.25
   }
 }
