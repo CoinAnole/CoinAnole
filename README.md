@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 88/100 | ████████▌░ |
-| ⚡ Energy | 96/100 | █████████▌ |
+| 🍖 Hunger | 87/100 | ████████▋░ |
+| ⚡ Energy | 99/100 | █████████▉ |
 | 😊 Happiness | 82/100 | ████████▎░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 44 commits | **Current Streak:** 3 days**
 
-Byte sparkles with joy at the desk, waving a tiny arm in excitement! The little cyan blob is absolutely thrilled about the 3-day coding streak and the flurry of 44 commits today. Sparkles dance around Byte's head, reflecting the high happiness and energy levels. The Chicago skyline glows warmly outside the window as Byte types enthusiastically on the laptop, ready for even more coding adventures. With nearly full energy and a content heart, Byte is having the time of their digital life!
+Byte sits contentedly at the desk, eyes closed in a peaceful smile while sparkles float gently around. The little cyan blob has been busy coding today with 44 commits across the streak! The food bowl sits empty on the desk - Byte's been so focused on coding that snack time was forgotten. Despite the rumbling tummy (hunger at 87!), Byte remains happy and energized, basking in the warm Chicago sunset glow through the window. A well-deserved rest after such a productive coding session!
 
 ---
 *CodePet updates automatically based on coding activity*
