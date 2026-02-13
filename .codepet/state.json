@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-02-12T23:47:19.083276+00:00",
+  "last_updated": "2026-02-13T03:23:48.264463+00:00",
   "updated_by": "github-actions-runner",
   "pet": {
     "name": "Byte",
     "stage": "baby",
     "stats": {
-      "hunger": 89.06872899930556,
+      "hunger": 86.06427446087963,
       "energy": 100,
-      "happiness": 80.37328343682871,
+      "happiness": 80.07283798298612,
       "social": 50
     },
     "mood": "content",
@@ -43,5 +43,13 @@
     "should_reground": false,
     "reason": null,
     "threshold": 6
-  }
+  },
+  "evolution": {
+    "just_occurred": false,
+    "previous_stage": null,
+    "new_stage": null,
+    "base_reference": null,
+    "target_reference": null
+  },
+  "evolution_just_occurred": false
 }
