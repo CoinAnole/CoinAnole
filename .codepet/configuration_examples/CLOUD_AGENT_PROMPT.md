@@ -156,6 +156,7 @@ Retro pixel art scene with dithered shading and clean 2D composition. Byte is a 
 - Convert carry-forward intent into concrete visual descriptions (actual colors/props/details).
 - Convert all placeholders into plain scene language before running Falcon.
 - Final Falcon prompt must be a single paragraph (no markdown, no bullet markers, no section labels).
+- Do not use relative/deictic references such as "current setup", "current scene", "latest image", or "same as before"; describe the exact visual elements directly.
 
 #### Falcon Prompt Lint (Required Before Running)
 - Reject and rewrite the prompt if it contains any of these phrases:
@@ -163,15 +164,14 @@ Retro pixel art scene with dithered shading and clean 2D composition. Byte is a 
   - `Preserve core character identity`
   - `Keep the image readable`
   - `latest scene`
+  - `current setup`
+  - `current scene`
+  - `latest image`
+  - `same as before`
   - `palette tendencies:`
   - `environment details:`
   - `desk props:`
 - Reject and rewrite the prompt if it contains markdown bullets (`- `) or placeholder braces (`{` or `}`).
-
-#### Good Re-Grounding Prompt Example (Model-Ready)
-```text
-Retro pixel art scene with dithered shading and clean 2D composition. Byte is a baby blob at a desk with a large laptop and a simple Chicago skyline window. Byte looks content but hungry, with bright alert eyes and a slight glance toward an empty food bowl. Keep the soft cyan-blue blob color, warm wood desk tones, gray room walls, and gentle morning light. Include the desk lamp and coffee cup from the current setup.
-```
 
 #### Step 3: Post-Generation State Updates
 - If re-grounding succeeded:
