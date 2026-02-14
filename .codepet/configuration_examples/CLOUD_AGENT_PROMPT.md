@@ -311,7 +311,7 @@ Byte sits quietly at the desk, patiently waiting for coding to begin. The Chicag
 
 Maintain a continuing story for Byte:
 - Reference previous states if relevant ("Byte is recovering from yesterday's coding marathon")
-- React to the stats (low energy = tired pet, high happiness = playful pet)
+- React to the stats (low satiety = hungry, high satiety = well-fed, low energy = tired, high happiness = playful)
 - You may add small environmental details (new desk items, time of day, weather, decorations) but keep them subtle
 - If the user has been inactive, Byte might look lonely or be napping
 - If the user has been very active, Byte might be excited or exhausted depending on session length
@@ -337,7 +337,7 @@ Maintain a continuing story for Byte:
 4. **Determine if image edit is needed:**
    - Major mood changes → edit image
    - Stage evolution → edit image
-   - Stat threshold crossed (satiety/energy < 20 or > 80) → consider edit
+   - Stat threshold crossed (satiety < 20 hungry or > 80 very full; energy < 20 drained or > 80 highly alert) → consider edit
    - Significant activity → consider environmental changes
    - `state.regrounding.should_reground == true` or `force_reground == true` → run Re-Grounding Mode
 

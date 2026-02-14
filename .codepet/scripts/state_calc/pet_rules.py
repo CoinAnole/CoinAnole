@@ -48,7 +48,7 @@ def apply_decay(pet: dict, hours_passed: float, activity: dict) -> dict:
     Apply stat decay or recovery based on time passed and activity.
 
     Decay rates:
-    - Satiety: -5 per 6 hours
+    - Satiety: -5 per 6 hours without commits (lower means hungrier)
     - Energy: +10 per 2 hours of rest (recovery during inactivity)
             -10 per 2 hours if still active (marathon mode)
     - Happiness: -2 per day

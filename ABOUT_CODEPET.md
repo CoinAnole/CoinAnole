@@ -117,10 +117,12 @@ Unlike simple commit counters, CodePet watches selected public and private repos
 
 | Stat | Range | Decay Rate | GitHub Input |
 |------|-------|------------|--------------|
-| **Satiety** | 0-100 | -5 per 6hrs without commits | Commit recency |
+| **Satiety** | 0-100 | -5 per 6hrs without commits; +5 per detected commit | Commit recency + commit count |
 | **Energy** | 0-100 | -10 per 2hr+ coding session | Coherent session duration from commit timestamps |
 | **Happiness** | 0-100 | -2 per day without social activity | Stars, PRs merged, followers |
 | **Social** | 0-100 | N/A (cumulative) | Total stars + followers + forks |
+
+Interpretation: higher satiety means Byte is well-fed; lower satiety means Byte is hungry.
 
 ### Evolution Stages
 
