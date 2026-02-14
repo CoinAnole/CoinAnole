@@ -75,6 +75,7 @@ class StateBuilderMigrationTests(unittest.TestCase):
         self.assertEqual(result["pet"]["stats"], DEFAULT_PET_STATS)
         self.assertEqual(result["github"]["last_commit_timestamp"], "2026-02-13T09:00:00+00:00")
         self.assertEqual(result["github"]["longest_streak"], 1)
+        self.assertEqual(result["github"]["highest_commits_in_day"], 0)
         self.assertEqual(result["github"]["repos_touched_today"], [])
         self.assertIn("session_tracker", result["github"])
 
@@ -114,6 +115,7 @@ class StateBuilderMigrationTests(unittest.TestCase):
 
         self.assertIsNone(result["github"]["last_commit_timestamp"])
         self.assertEqual(result["github"]["longest_streak"], 0)
+        self.assertEqual(result["github"]["highest_commits_in_day"], 0)
 
     def test_initial_state_repos_touched_today_falls_back_to_repos_touched(self) -> None:
         activity = make_activity(
@@ -131,8 +133,46 @@ class StateBuilderMigrationTests(unittest.TestCase):
 
         self.assertEqual(result["github"]["commits_today"], 1)
         self.assertEqual(result["github"]["longest_streak"], 1)
+        self.assertEqual(result["github"]["highest_commits_in_day"], 1)
         self.assertEqual(result["github"]["repos_touched_today"], ["a/repo", "z/repo"])
         self.assertEqual(result["github"]["last_commit_timestamp"], "2026-02-13T10:00:00+00:00")
+
+    def test_migration_preserves_previous_day_commits_as_highest_daily_commits(self) -> None:
+        previous_state = {
+            "last_updated": "2026-02-12T23:55:00+00:00",
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": DEFAULT_PET_STATS.copy(),
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "current_streak": 1,
+                "commits_today": 9,
+                "longest_session_today_minutes": 40,
+                "total_commits_all_time": 12,
+                "last_commit_timestamp": "2026-02-12T23:55:00+00:00",
+                "recent_active_days": ["2026-02-12"],
+                "active_days_total": 1,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            },
+        }
+        activity = make_activity(
+            commits_detected=0,
+            commits_today_detected=0,
+            repos_touched=[],
+            repos_touched_today=[],
+            last_commit_timestamp=None,
+        )
+
+        with patch.object(state_builder, "get_current_time", return_value=FIXED_NOW), patch.object(
+            state_builder, "get_today_date", return_value=FIXED_TODAY
+        ):
+            result = state_builder.calculate_state(previous_state, activity, hours_passed=0)
+
+        self.assertEqual(result["github"]["commits_today"], 0)
+        self.assertEqual(result["github"]["highest_commits_in_day"], 9)
 
 
 if __name__ == "__main__":

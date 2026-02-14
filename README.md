@@ -22,7 +22,7 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 | 😊 Happiness | 89/100 | ████████▉░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 1 commit | **Current Streak:** 4 days | **Best Streak:** 4 days
+**Today's Activity:** 1 commit | **Current Streak:** 4 days | **Best Streak:** 4 days | **Best Day:** 1 commit
 
 Byte is absolutely ecstatic! With a 4-day coding streak going strong, Byte's eyes sparkle with joy as hearts and sparkles float around the desk. The food bowl is now full of tasty treats, and a shiny golden trophy sits proudly next to the laptop—celebrating the consistent coding effort. The Chicago skyline outside seems to glow a little brighter tonight, matching Byte's radiant happiness. Keep up the great work!
 

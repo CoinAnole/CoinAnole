@@ -124,6 +124,7 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         repos_touched_today = activity.get("repos_touched_today")
         if not isinstance(repos_touched_today, list):
             repos_touched_today = activity.get("repos_touched", []) if commits_detected_today > 0 else []
+        commits_today_before_rollover = max(0, to_int(github_stats.get("commits_today"), 0))
 
         # Reset daily counters at UTC day rollover.
         previous_update = parse_iso_datetime(previous_state.get("last_updated"))
@@ -170,6 +171,14 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
 
         # Update GitHub stats
         github_stats["commits_today"] = max(0, to_int(github_stats.get("commits_today"), 0)) + commits_detected_today
+        previous_highest_commits_in_day = max(
+            max(0, to_int(github_stats.get("highest_commits_in_day"), 0)),
+            commits_today_before_rollover,
+        )
+        github_stats["highest_commits_in_day"] = max(
+            previous_highest_commits_in_day,
+            github_stats["commits_today"],
+        )
         github_stats["total_commits_all_time"] = max(
             0,
             to_int(github_stats.get("total_commits_all_time"), 0),
@@ -245,6 +254,7 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
             "current_streak": calculate_current_streak(active_days_set, today),
             "longest_streak": calculate_current_streak(active_days_set, today),
             "commits_today": commits_detected_today,
+            "highest_commits_in_day": commits_detected_today,
             "longest_session_today_minutes": session_duration_today,
             "repos_touched_today": sorted(set(repos_touched_today)),
             "last_commit_timestamp": activity.get("last_commit_timestamp"),

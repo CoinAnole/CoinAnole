@@ -41,6 +41,7 @@ class StateBuilderTests(unittest.TestCase):
         self.assertEqual(state["pet"]["name"], "Byte")
         self.assertEqual(state["pet"]["stage"], "baby")
         self.assertEqual(state["github"]["commits_today"], 1)
+        self.assertEqual(state["github"]["highest_commits_in_day"], 1)
         self.assertEqual(state["github"]["total_commits_all_time"], 2)
         self.assertEqual(state["github"]["current_streak"], 1)
         self.assertEqual(state["github"]["longest_streak"], 1)
@@ -105,6 +106,7 @@ class StateBuilderTests(unittest.TestCase):
             state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
 
         self.assertEqual(state["github"]["commits_today"], 2)
+        self.assertEqual(state["github"]["highest_commits_in_day"], 9)
         self.assertEqual(state["github"]["longest_session_today_minutes"], 20)
         self.assertEqual(state["github"]["total_commits_all_time"], 13)
         self.assertEqual(state["github"]["current_streak"], 2)
@@ -177,6 +179,7 @@ class StateBuilderTests(unittest.TestCase):
 
         self.assertEqual(state["github"]["current_streak"], 8)
         self.assertEqual(state["github"]["longest_streak"], 8)
+        self.assertEqual(state["github"]["highest_commits_in_day"], 1)
 
     def test_calculate_state_migrates_legacy_hunger_stat_to_satiety(self) -> None:
         previous_state = {
