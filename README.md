@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 85/100 | ████████▌░ |
+| 🍖 Hunger | 80/100 | ████████░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 87/100 | ████████▋░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 0 days
 
-Byte sits at the desk with a wistful expression, eyes drifting toward the empty food bowl that now sits beside the laptop. After 19 hours without coding activity, hunger has definitely set in—Byte's tummy rumbles softly in the quiet room. The Chicago skyline outside the window remains patient, as if waiting alongside Byte for the return of coding sessions. The desk lamp still glows warmly, but Byte's hopeful gaze keeps wandering to that empty bowl, dreaming of the virtual snacks that come with commits and coding progress.
+Byte gazes dreamily at the laptop screen, a little thought bubble floating above showing a delicious slice of pie. Despite the empty food bowl on the desk, Byte remains content and full of energy—daydreaming about the tasty rewards that coding commits bring. The Chicago skyline outside glows softly in the evening light, and the warm desk lamp keeps Byte company during this quiet coding lull. Those big, hopeful eyes suggest Byte is ready and waiting for the next burst of coding activity.
 
 ---
 *CodePet updates automatically based on coding activity*
