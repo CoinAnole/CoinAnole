@@ -1,3 +1,4 @@
+import os
 import sys
 import unittest
 from copy import deepcopy
@@ -220,6 +221,240 @@ class StateBuilderTests(unittest.TestCase):
             state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
 
         self.assertEqual(previous_state, original)
+
+    def test_calculate_state_sets_sleeping_true_for_overnight_inactivity(self) -> None:
+        now = datetime(2026, 2, 13, 8, 0, tzinfo=timezone.utc)  # 02:00 America/Chicago
+        previous_state = {
+            "last_updated": "2026-02-13T07:00:00+00:00",
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 0,
+                "longest_session_today_minutes": 0,
+                "repos_touched_today": [],
+                "total_commits_all_time": 10,
+                "recent_active_days": ["2026-02-12"],
+                "active_days_total": 1,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 1,
+                "last_commit_timestamp": "2026-02-13T03:00:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=now), patch.object(
+            state_builder, "get_today_date", return_value="2026-02-13"
+        ), patch.dict(os.environ, {"CODEPET_TIMEZONE": "America/Chicago"}, clear=False):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
+
+        self.assertTrue(state["pet"]["derived_state"]["is_sleeping"])
+        self.assertTrue(state["temporal"]["inactive_overnight"])
+        self.assertEqual(state["temporal"]["time_of_day"], "night")
+
+    def test_calculate_state_marks_late_night_coding_and_keeps_awake(self) -> None:
+        now = datetime(2026, 2, 13, 4, 30, tzinfo=timezone.utc)  # 22:30 America/Chicago
+        previous_state = {
+            "last_updated": "2026-02-13T03:30:00+00:00",
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": True, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 0,
+                "longest_session_today_minutes": 0,
+                "repos_touched_today": [],
+                "total_commits_all_time": 10,
+                "recent_active_days": ["2026-02-12"],
+                "active_days_total": 1,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 1,
+                "last_commit_timestamp": "2026-02-13T03:00:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 1,
+            "commits_today_detected": 1,
+            "session_duration_minutes": 15,
+            "session_duration_today_minutes": 15,
+            "repos_touched": ["owner/repo"],
+            "repos_touched_today": ["owner/repo"],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": "2026-02-13T04:20:00+00:00",
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=now), patch.object(
+            state_builder, "get_today_date", return_value="2026-02-13"
+        ), patch.dict(os.environ, {"CODEPET_TIMEZONE": "America/Chicago"}, clear=False):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
+
+        self.assertTrue(state["temporal"]["is_late_night_coding"])
+        self.assertFalse(state["pet"]["derived_state"]["is_sleeping"])
+        self.assertEqual(state["temporal"]["time_of_day"], "night")
+
+    def test_calculate_state_detects_evening_to_night_transition(self) -> None:
+        now = datetime(2026, 2, 13, 4, 30, tzinfo=timezone.utc)  # 22:30 America/Chicago
+        previous_state = {
+            "last_updated": "2026-02-13T03:30:00+00:00",
+            "temporal": {"time_of_day": "evening"},
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 0,
+                "longest_session_today_minutes": 0,
+                "repos_touched_today": [],
+                "total_commits_all_time": 10,
+                "recent_active_days": ["2026-02-12"],
+                "active_days_total": 1,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 1,
+                "last_commit_timestamp": "2026-02-13T02:00:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=now), patch.object(
+            state_builder, "get_today_date", return_value="2026-02-13"
+        ), patch.dict(os.environ, {"CODEPET_TIMEZONE": "America/Chicago"}, clear=False):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
+
+        self.assertEqual(state["temporal"]["time_of_day_transition"], "evening_to_night")
+
+    def test_calculate_state_detects_night_to_morning_transition(self) -> None:
+        now = datetime(2026, 2, 13, 13, 15, tzinfo=timezone.utc)  # 07:15 America/Chicago
+        previous_state = {
+            "last_updated": "2026-02-13T12:15:00+00:00",
+            "temporal": {"time_of_day": "night"},
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": True, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 0,
+                "longest_session_today_minutes": 0,
+                "repos_touched_today": [],
+                "total_commits_all_time": 10,
+                "recent_active_days": ["2026-02-12"],
+                "active_days_total": 1,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 1,
+                "last_commit_timestamp": "2026-02-13T08:00:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=now), patch.object(
+            state_builder, "get_today_date", return_value="2026-02-13"
+        ), patch.dict(os.environ, {"CODEPET_TIMEZONE": "America/Chicago"}, clear=False):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
+
+        self.assertEqual(state["temporal"]["time_of_day_transition"], "night_to_morning")
 
 
 if __name__ == "__main__":

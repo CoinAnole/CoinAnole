@@ -124,6 +124,8 @@ Unlike simple commit counters, CodePet watches selected public and private repos
 
 Interpretation: higher satiety means Byte is well-fed; lower satiety means Byte is hungry.
 
+Day/night presentation and sleep narration use Chicago-local temporal context (configurable timezone), while activity-day counters such as `commits_today` and streak calculations remain UTC-based for stable progression semantics.
+
 ### Evolution Stages
 
 Based on **days of activity detected** (not necessarily consecutive):

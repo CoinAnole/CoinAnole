@@ -205,6 +205,49 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertIn("reground_base_rule", outputs)
         self.assertIn("reground_base_exists", outputs)
 
+    def test_main_emits_temporal_outputs(self) -> None:
+        self.write_state(
+            {
+                "pet": {
+                    "stage": "baby",
+                    "derived_state": {"is_sleeping": True, "is_ghost": False, "days_inactive": 1},
+                },
+                "temporal": {
+                    "timezone": "America/Chicago",
+                    "local_timestamp": "2026-02-13T22:30:00-06:00",
+                    "local_hour": 22,
+                    "time_of_day": "night",
+                    "time_of_day_transition": "evening_to_night",
+                    "is_late_night_coding": True,
+                    "inactive_overnight": False,
+                },
+                "image_state": {
+                    "edit_count_since_reset": 0,
+                    "total_edits_all_time": 0,
+                    "reset_count": 0,
+                    "last_reset_at": None,
+                },
+                "regrounding": {
+                    "should_reground": False,
+                    "reason": None,
+                    "threshold": 6,
+                },
+                "evolution": {"just_occurred": False},
+            }
+        )
+        Path(".codepet/codepet.png").write_bytes(b"current-image")
+
+        exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"})
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(outputs["timezone"], "America/Chicago")
+        self.assertEqual(outputs["local_timestamp"], "2026-02-13T22:30:00-06:00")
+        self.assertEqual(outputs["local_hour"], "22")
+        self.assertEqual(outputs["time_of_day"], "night")
+        self.assertEqual(outputs["time_of_day_transition"], "evening_to_night")
+        self.assertEqual(outputs["is_sleeping"], "true")
+        self.assertEqual(outputs["is_late_night_coding"], "true")
+        self.assertEqual(outputs["inactive_overnight"], "false")
+
     def test_main_threshold_trigger_and_stale_reason_reset(self) -> None:
         self.write_state(
             {

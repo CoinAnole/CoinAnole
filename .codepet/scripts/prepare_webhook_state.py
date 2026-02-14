@@ -153,6 +153,17 @@ def main() -> int:
     evolution_just_occurred = bool(state.get("evolution", {}).get("just_occurred", False))
     current_stage_reference = image_state.get("current_stage_reference", "")
     reground_base_image, reground_base_rule, reground_base_exists = resolve_reground_base(state, image_state)
+    temporal = state.get("temporal", {})
+    derived_state = state.get("pet", {}).get("derived_state", {})
+
+    timezone_name = str(temporal.get("timezone", ""))
+    local_timestamp = str(temporal.get("local_timestamp", ""))
+    local_hour = to_int(temporal.get("local_hour"), -1)
+    time_of_day = str(temporal.get("time_of_day", "unknown"))
+    time_of_day_transition = str(temporal.get("time_of_day_transition", "none"))
+    is_sleeping = bool(derived_state.get("is_sleeping", False))
+    is_late_night_coding = bool(temporal.get("is_late_night_coding", False))
+    inactive_overnight = bool(temporal.get("inactive_overnight", False))
 
     print("Pre-webhook state prepared:")
     print(f"  edit_count_since_reset={edit_count}")
@@ -164,6 +175,14 @@ def main() -> int:
     print(f"  reground_base_image={reground_base_image}")
     print(f"  reground_base_rule={reground_base_rule}")
     print(f"  reground_base_exists={reground_base_exists}")
+    print(f"  timezone={timezone_name}")
+    print(f"  local_timestamp={local_timestamp}")
+    print(f"  local_hour={local_hour}")
+    print(f"  time_of_day={time_of_day}")
+    print(f"  time_of_day_transition={time_of_day_transition}")
+    print(f"  is_sleeping={is_sleeping}")
+    print(f"  is_late_night_coding={is_late_night_coding}")
+    print(f"  inactive_overnight={inactive_overnight}")
 
     set_output("edit_count_since_reset", str(edit_count))
     set_output("total_edits_all_time", str(total_edits))
@@ -176,6 +195,14 @@ def main() -> int:
     set_output("reground_base_image", str(reground_base_image))
     set_output("reground_base_rule", str(reground_base_rule))
     set_output("reground_base_exists", str(reground_base_exists).lower())
+    set_output("timezone", timezone_name)
+    set_output("local_timestamp", local_timestamp)
+    set_output("local_hour", str(local_hour))
+    set_output("time_of_day", time_of_day)
+    set_output("time_of_day_transition", time_of_day_transition)
+    set_output("is_sleeping", str(is_sleeping).lower())
+    set_output("is_late_night_coding", str(is_late_night_coding).lower())
+    set_output("inactive_overnight", str(inactive_overnight).lower())
 
     return 0
 

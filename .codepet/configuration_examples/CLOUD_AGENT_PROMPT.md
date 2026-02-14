@@ -73,6 +73,14 @@ When triggered, the following variables are available from the webhook payload:
 - `{{reground_base_image}}` - Runner-selected base image path for re-grounding
 - `{{reground_base_rule}}` - Which rule selected `reground_base_image`
 - `{{reground_base_exists}}` - Whether selected base file exists at trigger time (`true`/`false`)
+- `{{timezone}}` - Runner timezone used for local temporal context (default `America/Chicago`)
+- `{{local_timestamp}}` - Current runner time rendered in `timezone`
+- `{{local_hour}}` - Local hour integer in `timezone`
+- `{{time_of_day}}` - Local bucket (`morning`, `afternoon`, `evening`, `night`)
+- `{{time_of_day_transition}}` - Bucket transition (`none` or `{previous}_to_{current}`)
+- `{{is_sleeping}}` - Runner-derived sleep flag from `state.pet.derived_state.is_sleeping`
+- `{{is_late_night_coding}}` - Runner-derived late-night coding signal
+- `{{inactive_overnight}}` - Runner-derived overnight inactivity overlap signal
 
 Here is the payload:
 {{body}}
@@ -86,6 +94,15 @@ Use these to contextualize your narrative:
 - If `regrounding_reason` is `force_reground`, prioritize a full re-grounding pass over incremental edits
 - If `evolution_just_occurred` is true, follow the evolution special case with stage reference anchoring
 - If `reground_base_exists` is `true`, use `reground_base_image` as the Falcon `--edit` input for Re-Grounding Mode
+
+### Timezone and Circadian Rules
+- Treat timezone-aware local context as source of truth for day/night behavior: use `state.json.temporal` and matching webhook fields before inferring from UTC timestamps.
+- Do not infer sleep or late-night state from `hours_inactive` alone when temporal fields are present.
+- Required behavior:
+  - If `is_sleeping` is `true`, show sleeping visuals and sleeping narrative.
+  - If `is_late_night_coding` is `true`, show active late-night visuals and narrative.
+  - If `time_of_day_transition` is `evening_to_night` or `night_to_morning`, include subtle transition edits in lighting/skyline/environment.
+- Prefer continuity: keep the same environment, but let lighting and small props communicate local-time progression.
 
 ## State Files Location
 
@@ -315,6 +332,8 @@ Maintain a continuing story for Byte:
 - You may add small environmental details (new desk items, time of day, weather, decorations) but keep them subtle
 - If the user has been inactive, Byte might look lonely or be napping
 - If the user has been very active, Byte might be excited or exhausted depending on session length
+- Respect `state.temporal.time_of_day` and webhook temporal fields for day/night narrative details
+- Do not ignore `time_of_day_transition` when it is `evening_to_night` or `night_to_morning`
 
 ## Workflow Steps
 
@@ -393,6 +412,11 @@ Use descriptive messages like:
 - Add Z's floating above head
 - Pet should have closed eyes
 - Keep changes minimal - don't fully re-render
+
+### Late-Night Coding (`is_late_night_coding: true`)
+- Keep Byte awake and engaged with the laptop
+- Use night lighting (desk lamp/computer glow, darker skyline)
+- Mention late-hour coding energy in the README narrative
 
 ### Ghost Mode (`is_ghost: true`)
 - Make the pet semi-transparent/ghostly

@@ -1,9 +1,11 @@
 import json
+import os
 import sys
 import tempfile
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 
 SCRIPT_DIR = Path(__file__).resolve().parents[1]
@@ -11,6 +13,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from state_calc import io_utils, pet_rules, time_utils
+from state_calc.constants import DEFAULT_TIMEZONE
 
 
 def pet_with_stats(satiety: float, energy: float, happiness: float) -> dict:
@@ -165,6 +168,47 @@ class PetRulesAndUtilsTests(unittest.TestCase):
 
         self.assertEqual(time_utils.to_int("7"), 7)
         self.assertEqual(time_utils.to_int("bad", default=3), 3)
+
+    def test_time_utils_timezone_resolution_and_time_of_day_buckets(self) -> None:
+        utc_time = datetime(2026, 2, 13, 8, 0, tzinfo=timezone.utc)
+        chicago_local = time_utils.to_local_time(utc_time, "America/Chicago")
+        self.assertEqual(chicago_local.hour, 2)
+
+        self.assertEqual(time_utils.classify_time_of_day(6), "morning")
+        self.assertEqual(time_utils.classify_time_of_day(12), "afternoon")
+        self.assertEqual(time_utils.classify_time_of_day(18), "evening")
+        self.assertEqual(time_utils.classify_time_of_day(3), "night")
+
+        with patch.dict(os.environ, {"CODEPET_TIMEZONE": "Bad/Timezone"}, clear=False):
+            self.assertEqual(time_utils.get_timezone_name(), DEFAULT_TIMEZONE)
+
+        with patch.dict(os.environ, {"CODEPET_TIMEZONE": "America/Chicago"}, clear=False):
+            self.assertEqual(time_utils.get_timezone_name(), "America/Chicago")
+
+    def test_time_utils_interval_overlap_local_window(self) -> None:
+        start = datetime(2026, 2, 13, 3, 0, tzinfo=timezone.utc)
+        end = datetime(2026, 2, 13, 8, 0, tzinfo=timezone.utc)
+        self.assertTrue(
+            time_utils.interval_overlaps_local_window(
+                start_utc=start,
+                end_utc=end,
+                timezone_name="America/Chicago",
+                window_start_hour=0,
+                window_end_hour=6,
+            )
+        )
+
+        daytime_start = datetime(2026, 2, 13, 18, 0, tzinfo=timezone.utc)
+        daytime_end = datetime(2026, 2, 13, 20, 0, tzinfo=timezone.utc)
+        self.assertFalse(
+            time_utils.interval_overlaps_local_window(
+                start_utc=daytime_start,
+                end_utc=daytime_end,
+                timezone_name="America/Chicago",
+                window_start_hour=0,
+                window_end_hour=6,
+            )
+        )
 
     def test_io_utils_load_and_write_json_files(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

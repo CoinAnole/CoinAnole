@@ -1,4 +1,5 @@
 {
   "FAL_KEY": "From fal.ai",
-  "GH_TOKEN": "GitHub classic personal access token"
+  "GH_TOKEN": "GitHub classic personal access token",
+  "CODEPET_TIMEZONE": "Optional IANA timezone for narrative day/night context (default America/Chicago)"
 }
