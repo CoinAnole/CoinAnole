@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 97/100 | █████████▋ |
+| 🍖 Hunger | 91/100 | █████████░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 88/100 | ████████▊░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 49 commits | **Current Streak:** 3 days
+**Today's Activity:** 0 commits | **Current Streak:** 0 days
 
-Byte sits contentedly at the desk, eyes closed in a peaceful smile while tiny hands rest on the laptop keyboard. The warm Chicago sunset paints the sky in beautiful orange and pink hues through the window. A small succulent adds a touch of green to the wooden desk, while the silver desk lamp casts a cozy amber glow. Floating sparkles and pink hearts dance around Byte's head, reflecting the joy of a productive day with 49 commits and a growing 3-day streak. The coding journey continues!
+Byte rests peacefully at the desk in the quiet early morning hours, eyes closed in a gentle, contented smile. The Chicago skyline outside the window is bathed in soft blue-purple dawn light, a calm contrast to yesterday's vibrant sunset. The desk lamp sits dark, no longer needed as natural morning light fills the room. The succulent and coffee mug remain as faithful companions, waiting for the day's coding to begin. After 11 hours of rest, Byte is refreshed and ready, though hunger is starting to grow—perhaps it's time for breakfast and some commits!
 
 ---
 *CodePet updates automatically based on coding activity*
