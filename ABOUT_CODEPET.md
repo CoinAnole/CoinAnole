@@ -47,7 +47,7 @@ The runner handles the "boring" stuff—number crunching that would waste Kilo c
 |----------------|---------|
 | Schedule | Runs hourly via cron (best-effort timing; start may drift) |
 | Activity Detection | Scans watched repos for commits, PRs, stars |
-| State Calculation | Mechanically calculates hunger, energy, happiness, social stats |
+| State Calculation | Mechanically calculates satiety, energy, happiness, social stats |
 | File Updates | Writes `.codepet/activity.json` and `.codepet/state.json` |
 | Decision Making | Decides if Kilo Agent should be called (back-off rules) |
 | Version Control | Commits state changes before calling webhook |
@@ -117,7 +117,7 @@ Unlike simple commit counters, CodePet watches selected public and private repos
 
 | Stat | Range | Decay Rate | GitHub Input |
 |------|-------|------------|--------------|
-| **Hunger** | 0-100 | -5 per 6hrs without commits | Commit recency |
+| **Satiety** | 0-100 | -5 per 6hrs without commits | Commit recency |
 | **Energy** | 0-100 | -10 per 2hr+ coding session | Coherent session duration from commit timestamps |
 | **Happiness** | 0-100 | -2 per day without social activity | Stars, PRs merged, followers |
 | **Social** | 0-100 | N/A (cumulative) | Total stars + followers + forks |
@@ -188,7 +188,7 @@ Every creative decision is committed to git:
 
 CodePet is a type of fun GitHub profile status widget:
 - Displays current pet image in your README (Agent-generated art)
-- Shows real-time stats (hunger, energy, happiness, social)
+- Shows real-time stats (satiety, energy, happiness, social)
 - Reflects today's coding activity and current streak
 - Provides a narrative description of your pet's current state
 - Evolves as you code, creating a living record of your development journey

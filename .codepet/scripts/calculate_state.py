@@ -143,7 +143,7 @@ def main() -> int:
     print(f"  Mood: {pet['mood']}")
     print(f"  Active days: {active_days_total}")
     print(
-        f"  Stats: hunger={pet['stats']['hunger']:.1f}, "
+        f"  Stats: satiety={pet['stats']['satiety']:.1f}, "
         f"energy={pet['stats']['energy']:.1f}, "
         f"happiness={pet['stats']['happiness']:.1f}"
     )

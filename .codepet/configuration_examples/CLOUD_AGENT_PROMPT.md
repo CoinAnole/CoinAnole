@@ -24,7 +24,7 @@ Understanding when and why you get triggered helps interpret the timeframe in `a
 ### GitHub Actions Schedule
 The GitHub Actions runner executes **every hour** (currently at minute :23). It always:
 1. Scans watched repositories for new commits/activity
-2. Calculates updated stats (hunger decay, energy changes, etc.)
+2. Calculates updated stats (satiety decay, energy changes, etc.)
 3. Commits `state.json` and `activity.json`
 
 GitHub cron is best-effort, not real-time. Runs can start late, so webhook timing is approximate.
@@ -46,7 +46,7 @@ To avoid wasting Kilo credits during inactivity, the runner implements **progres
 - Back-off intervals are minimum targets; trigger occurs on the first scheduled run after an interval boundary is crossed
 - `hours_inactive` in the webhook payload tells you how long since the last detected commit
 - Inactivity is derived from `state.json` (`github.last_commit_timestamp`), not from the latest runner check timestamp
-- Longer gaps mean longer stat decay (hunger increases, energy decreases more)
+- Longer gaps mean longer stat decay (satiety decreases, energy decreases more)
 
 ### Interpreting Timeframes
 - **Active user** (< 2 hrs inactive): Small changes between runs, responsive to recent commits
@@ -149,7 +149,7 @@ Use `--guidance-scale 0.5` for normal incremental edits.
 Use this as the only re-grounding template you fill with concrete values:
 
 ```text
-Retro pixel art scene with dithered shading and clean 2D composition. Byte is a {stage} blob at a desk with a laptop and a simple Chicago skyline window. Byte appears {mood_visual}, with {energy_visual} and {hunger_visual}. Use {palette_notes_sentence}. Include {environment_notes_sentence}. Include {prop_notes_sentence}.
+Retro pixel art scene with dithered shading and clean 2D composition. Byte is a {stage} blob at a desk with a laptop and a simple Chicago skyline window. Byte appears {mood_visual}, with {energy_visual} and {satiety_visual}. Use {palette_notes_sentence}. Include {environment_notes_sentence}. Include {prop_notes_sentence}.
 ```
 
 #### Prompt Composition Rules (Meta Instructions)
@@ -218,7 +218,7 @@ Keep prompts **small and direct**. Focus on one or two visual changes at a time:
 Reference these when crafting prompts:
 
 **Mood Visuals:**
-- `starving` (hunger < 20): sunken cheeks, empty food bowl nearby, weak posture
+- `starving` (satiety < 20): sunken cheeks, empty food bowl nearby, weak posture
 - `exhausted` (energy < 30): droopy eyes, yawning, dark circles, coffee cups scattered
 - `ecstatic` (happiness > 80 + good streak): sparkles, bright lighting, jumping pose, hearts floating
 - `scattered` (many context switches): multiple windows floating, confused expression, messy desk
@@ -273,7 +273,7 @@ The CodePet section should contain:
 2. **Stats display** from `state.json`:
    - Stage (baby/teen/adult/elder)
    - Mood
-   - Hunger, Energy, Happiness, Social stats
+   - Satiety, Energy, Happiness, Social stats
    - Current streak, commits today
 
 3. **Narrative description** (2-4 sentences) describing:
@@ -294,7 +294,7 @@ The CodePet section should contain:
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Hunger | 50/100 | █████░░░░░ |
+| 🍖 Satiety | 50/100 | █████░░░░░ |
 | ⚡ Energy | 51/100 | █████░░░░░ |
 | 😊 Happiness | 50/100 | █████░░░░░ |
 | 👥 Social | 50/100 | █████░░░░░ |
@@ -337,7 +337,7 @@ Maintain a continuing story for Byte:
 4. **Determine if image edit is needed:**
    - Major mood changes → edit image
    - Stage evolution → edit image
-   - Stat threshold crossed (hunger/energy < 20 or > 80) → consider edit
+   - Stat threshold crossed (satiety/energy < 20 or > 80) → consider edit
    - Significant activity → consider environmental changes
    - `state.regrounding.should_reground == true` or `force_reground == true` → run Re-Grounding Mode
 

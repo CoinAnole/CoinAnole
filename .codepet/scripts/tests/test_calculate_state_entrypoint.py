@@ -22,7 +22,7 @@ class CalculateStateEntrypointSmokeTests(unittest.TestCase):
             "pet": {
                 "name": "Byte",
                 "stage": "baby",
-                "stats": {"hunger": 50, "energy": 50, "happiness": 50, "social": 50},
+                "stats": {"satiety": 50, "energy": 50, "happiness": 50, "social": 50},
                 "mood": "content",
                 "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
             },

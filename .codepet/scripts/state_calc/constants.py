@@ -2,7 +2,7 @@
 
 # Default stats for new pets
 DEFAULT_PET_STATS = {
-    "hunger": 50,
+    "satiety": 50,
     "energy": 50,
     "happiness": 50,
     "social": 50,

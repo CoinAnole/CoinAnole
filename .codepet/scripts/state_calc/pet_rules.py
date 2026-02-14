@@ -13,7 +13,7 @@ def calculate_mood(pet: dict, github_stats: dict, repos_touched: list) -> str:
     """
     stats = pet["stats"]
 
-    if stats["hunger"] < 20:
+    if stats["satiety"] < 20:
         return "starving"
     elif stats["energy"] < 30:
         return "exhausted"
@@ -48,16 +48,16 @@ def apply_decay(pet: dict, hours_passed: float, activity: dict) -> dict:
     Apply stat decay or recovery based on time passed and activity.
 
     Decay rates:
-    - Hunger: -5 per 6 hours
+    - Satiety: -5 per 6 hours
     - Energy: +10 per 2 hours of rest (recovery during inactivity)
             -10 per 2 hours if still active (marathon mode)
     - Happiness: -2 per day
     """
     stats = pet["stats"]
 
-    # Apply hunger decay (always decays)
-    hunger_decay = 5 * hours_passed / 6
-    stats["hunger"] = max(0, min(100, stats["hunger"] - hunger_decay))
+    # Apply satiety decay (always decays)
+    satiety_decay = 5 * hours_passed / 6
+    stats["satiety"] = max(0, min(100, stats["satiety"] - satiety_decay))
 
     # Apply happiness decay (always decays slowly)
     happiness_decay = 2 * hours_passed / 24
@@ -93,8 +93,8 @@ def apply_activity_bonuses(pet: dict, activity: dict) -> dict:
     repos = activity["repos_touched"]
 
     if commits > 0:
-        # Hunger increases (pet gets hungry from activity)
-        stats["hunger"] = min(100, stats["hunger"] + commits * 5)
+        # Satiety increases (pet gets fed from activity)
+        stats["satiety"] = min(100, stats["satiety"] + commits * 5)
         # Happiness increases from activity
         stats["happiness"] = min(100, stats["happiness"] + len(repos) * 2)
 

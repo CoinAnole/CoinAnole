@@ -13,10 +13,10 @@ if str(SCRIPT_DIR) not in sys.path:
 from state_calc import io_utils, pet_rules, time_utils
 
 
-def pet_with_stats(hunger: float, energy: float, happiness: float) -> dict:
+def pet_with_stats(satiety: float, energy: float, happiness: float) -> dict:
     return {
         "stats": {
-            "hunger": hunger,
+            "satiety": satiety,
             "energy": energy,
             "happiness": happiness,
             "social": 50,
@@ -28,7 +28,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
     def test_calculate_mood_all_branches(self) -> None:
         self.assertEqual(
             pet_rules.calculate_mood(
-                pet_with_stats(hunger=10, energy=90, happiness=70),
+                pet_with_stats(satiety=10, energy=90, happiness=70),
                 github_stats={"current_streak": 0},
                 repos_touched=[],
             ),
@@ -36,7 +36,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         )
         self.assertEqual(
             pet_rules.calculate_mood(
-                pet_with_stats(hunger=30, energy=20, happiness=70),
+                pet_with_stats(satiety=30, energy=20, happiness=70),
                 github_stats={"current_streak": 0},
                 repos_touched=[],
             ),
@@ -44,7 +44,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         )
         self.assertEqual(
             pet_rules.calculate_mood(
-                pet_with_stats(hunger=30, energy=60, happiness=95),
+                pet_with_stats(satiety=30, energy=60, happiness=95),
                 github_stats={"current_streak": 4},
                 repos_touched=[],
             ),
@@ -52,7 +52,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         )
         self.assertEqual(
             pet_rules.calculate_mood(
-                pet_with_stats(hunger=30, energy=60, happiness=50),
+                pet_with_stats(satiety=30, energy=60, happiness=50),
                 github_stats={"current_streak": 0},
                 repos_touched=["r1", "r2", "r3", "r4", "r5", "r6"],
             ),
@@ -60,7 +60,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         )
         self.assertEqual(
             pet_rules.calculate_mood(
-                pet_with_stats(hunger=30, energy=60, happiness=50),
+                pet_with_stats(satiety=30, energy=60, happiness=50),
                 github_stats={"current_streak": 1},
                 repos_touched=["r1"],
             ),
@@ -74,17 +74,17 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         self.assertEqual(pet_rules.calculate_stage(200), "elder")
 
     def test_apply_decay_handles_marathon_active_and_rest_modes(self) -> None:
-        marathon_pet = pet_with_stats(hunger=60, energy=50, happiness=60)
+        marathon_pet = pet_with_stats(satiety=60, energy=50, happiness=60)
         updated_marathon = pet_rules.apply_decay(
             marathon_pet,
             hours_passed=2,
             activity={"marathon_detected": True, "commits_detected": 4},
         )
-        self.assertAlmostEqual(updated_marathon["stats"]["hunger"], 58.3333, places=3)
+        self.assertAlmostEqual(updated_marathon["stats"]["satiety"], 58.3333, places=3)
         self.assertAlmostEqual(updated_marathon["stats"]["happiness"], 59.8333, places=3)
         self.assertEqual(updated_marathon["stats"]["energy"], 40)
 
-        active_pet = pet_with_stats(hunger=60, energy=50, happiness=60)
+        active_pet = pet_with_stats(satiety=60, energy=50, happiness=60)
         updated_active = pet_rules.apply_decay(
             active_pet,
             hours_passed=2,
@@ -92,7 +92,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         )
         self.assertEqual(updated_active["stats"]["energy"], 45)
 
-        rest_pet = pet_with_stats(hunger=60, energy=50, happiness=60)
+        rest_pet = pet_with_stats(satiety=60, energy=50, happiness=60)
         updated_rest = pet_rules.apply_decay(
             rest_pet,
             hours_passed=2,
@@ -101,7 +101,7 @@ class PetRulesAndUtilsTests(unittest.TestCase):
         self.assertEqual(updated_rest["stats"]["energy"], 60)
 
     def test_apply_activity_bonuses_and_marathon_penalty(self) -> None:
-        pet = pet_with_stats(hunger=90, energy=20, happiness=90)
+        pet = pet_with_stats(satiety=90, energy=20, happiness=90)
         updated = pet_rules.apply_activity_bonuses(
             pet,
             activity={
@@ -110,15 +110,15 @@ class PetRulesAndUtilsTests(unittest.TestCase):
                 "marathon_detected": True,
             },
         )
-        self.assertEqual(updated["stats"]["hunger"], 100)
+        self.assertEqual(updated["stats"]["satiety"], 100)
         self.assertEqual(updated["stats"]["happiness"], 94)
         self.assertEqual(updated["stats"]["energy"], 5)
 
         unchanged = pet_rules.apply_activity_bonuses(
-            pet_with_stats(hunger=50, energy=50, happiness=50),
+            pet_with_stats(satiety=50, energy=50, happiness=50),
             activity={"commits_detected": 0, "repos_touched": [], "marathon_detected": False},
         )
-        self.assertEqual(unchanged["stats"]["hunger"], 50)
+        self.assertEqual(unchanged["stats"]["satiety"], 50)
         self.assertEqual(unchanged["stats"]["energy"], 50)
         self.assertEqual(unchanged["stats"]["happiness"], 50)
 

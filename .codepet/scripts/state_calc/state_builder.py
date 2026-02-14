@@ -52,9 +52,17 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
             github_stats["longest_session_today_minutes"] = 0
             github_stats["repos_touched_today"] = []
 
-        # Ensure stats exist
-        if "stats" not in pet:
+        # Ensure stats exist and migrate legacy key `hunger` -> `satiety`.
+        if "stats" not in pet or not isinstance(pet["stats"], dict):
             pet["stats"] = DEFAULT_PET_STATS.copy()
+        else:
+            stats = pet["stats"]
+            if "satiety" not in stats and "hunger" in stats:
+                stats["satiety"] = stats["hunger"]
+            stats.pop("hunger", None)
+            for stat_name, default_value in DEFAULT_PET_STATS.items():
+                if stat_name not in stats:
+                    stats[stat_name] = default_value
 
         # Track active days (unique dates with activity).
         # Prefer new key; fall back to legacy `active_days` for migration.

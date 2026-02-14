@@ -53,7 +53,7 @@ class StateBuilderTests(unittest.TestCase):
             "pet": {
                 "name": "Byte",
                 "stage": "baby",
-                "stats": {"hunger": 60, "energy": 70, "happiness": 65, "social": 50},
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
                 "mood": "content",
                 "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
             },
@@ -107,13 +107,70 @@ class StateBuilderTests(unittest.TestCase):
         self.assertIn("new/repo", state["github"]["repos_touched_today"])
         self.assertEqual(state["pet"]["stage"], "baby")
 
-    def test_calculate_state_does_not_mutate_previous_state_input(self) -> None:
+    def test_calculate_state_migrates_legacy_hunger_stat_to_satiety(self) -> None:
         previous_state = {
             "last_updated": YESTERDAY,
             "pet": {
                 "name": "Byte",
                 "stage": "baby",
                 "stats": {"hunger": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 0,
+                "longest_session_today_minutes": 0,
+                "repos_touched_today": [],
+                "total_commits_all_time": 10,
+                "recent_active_days": ["2026-02-12"],
+                "active_days_total": 1,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 1,
+                "last_commit_timestamp": None,
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=FIXED_NOW), patch.object(
+            state_builder, "get_today_date", return_value=FIXED_TODAY
+        ):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=0)
+
+        self.assertEqual(state["pet"]["stats"]["satiety"], 60)
+        self.assertNotIn("hunger", state["pet"]["stats"])
+
+    def test_calculate_state_does_not_mutate_previous_state_input(self) -> None:
+        previous_state = {
+            "last_updated": YESTERDAY,
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
                 "mood": "content",
                 "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
             },
