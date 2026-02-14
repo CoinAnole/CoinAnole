@@ -74,6 +74,7 @@ class StateBuilderMigrationTests(unittest.TestCase):
 
         self.assertEqual(result["pet"]["stats"], DEFAULT_PET_STATS)
         self.assertEqual(result["github"]["last_commit_timestamp"], "2026-02-13T09:00:00+00:00")
+        self.assertEqual(result["github"]["longest_streak"], 1)
         self.assertEqual(result["github"]["repos_touched_today"], [])
         self.assertIn("session_tracker", result["github"])
 
@@ -112,6 +113,7 @@ class StateBuilderMigrationTests(unittest.TestCase):
             result = state_builder.calculate_state(previous_state, activity, hours_passed=0)
 
         self.assertIsNone(result["github"]["last_commit_timestamp"])
+        self.assertEqual(result["github"]["longest_streak"], 0)
 
     def test_initial_state_repos_touched_today_falls_back_to_repos_touched(self) -> None:
         activity = make_activity(
@@ -128,6 +130,7 @@ class StateBuilderMigrationTests(unittest.TestCase):
             result = state_builder.calculate_state(None, activity, hours_passed=0)
 
         self.assertEqual(result["github"]["commits_today"], 1)
+        self.assertEqual(result["github"]["longest_streak"], 1)
         self.assertEqual(result["github"]["repos_touched_today"], ["a/repo", "z/repo"])
         self.assertEqual(result["github"]["last_commit_timestamp"], "2026-02-13T10:00:00+00:00")
 

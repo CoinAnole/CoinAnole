@@ -291,7 +291,7 @@ The CodePet section should contain:
    - Stage (baby/teen/adult/elder)
    - Mood
    - Satiety, Energy, Happiness, Social stats
-   - Current streak, commits today
+   - Current streak, longest streak, commits today
 
 3. **Narrative description** (2-4 sentences) describing:
    - What Byte is doing/feeling right now
@@ -316,7 +316,7 @@ The CodePet section should contain:
 | 😊 Happiness | 50/100 | █████░░░░░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 0 commits | **Current Streak:** 0 days
+**Today's Activity:** 0 commits | **Current Streak:** 0 days | **Best Streak:** 0 days
 
 Byte sits quietly at the desk, patiently waiting for coding to begin. The Chicago skyline outside glows in the afternoon light. A single coffee cup sits on the desk, still full - a promise of work to come.
 

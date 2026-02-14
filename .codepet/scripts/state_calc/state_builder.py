@@ -2,6 +2,7 @@
 
 import copy
 import math
+from datetime import datetime
 
 from .constants import (
     DEFAULT_PET_STATS,
@@ -51,6 +52,47 @@ def _resolve_previous_time_of_day(previous_state: dict | None, timezone_name: st
     if previous_update is None:
         return None
     return classify_time_of_day(to_local_time(previous_update, timezone_name).hour)
+
+
+def _resolve_streaks(
+    github_stats: dict,
+    *,
+    today: str,
+    previous_day: str | None,
+    commits_detected_today: int,
+) -> tuple[int, int]:
+    """
+    Resolve current/longest streak with migration-safe continuity.
+
+    `recent_active_days` is intentionally trimmed for state size, so we preserve
+    day-to-day continuity using the prior persisted streak when appropriate.
+    """
+    calculated_current = calculate_current_streak(set(github_stats.get("recent_active_days", [])), today)
+    previous_current = max(0, to_int(github_stats.get("current_streak"), 0))
+    previous_longest = max(0, to_int(github_stats.get("longest_streak"), previous_current))
+
+    day_delta = None
+    if previous_day is not None:
+        try:
+            day_delta = (
+                datetime.strptime(today, "%Y-%m-%d").date()
+                - datetime.strptime(previous_day, "%Y-%m-%d").date()
+            ).days
+        except ValueError:
+            day_delta = None
+
+    current_streak = calculated_current
+    if commits_detected_today > 0:
+        if day_delta == 0:
+            current_streak = max(current_streak, previous_current)
+        elif day_delta == 1 and previous_current > 0:
+            current_streak = max(current_streak, previous_current + 1)
+    elif day_delta == 0:
+        # Preserve same-day streak across no-commit runner ticks.
+        current_streak = max(current_streak, previous_current)
+
+    longest_streak = max(previous_longest, current_streak)
+    return current_streak, longest_streak
 
 
 def calculate_state(previous_state: dict | None, activity: dict, hours_passed: float) -> dict:
@@ -139,7 +181,14 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         github_stats["session_tracker"] = normalize_session_tracker(
             activity.get("session_tracker", github_stats.get("session_tracker"))
         )
-        github_stats["current_streak"] = calculate_current_streak(set(github_stats["recent_active_days"]), today)
+        current_streak, longest_streak = _resolve_streaks(
+            github_stats,
+            today=today,
+            previous_day=previous_day,
+            commits_detected_today=commits_detected_today,
+        )
+        github_stats["current_streak"] = current_streak
+        github_stats["longest_streak"] = longest_streak
         if activity.get("last_commit_timestamp"):
             github_stats["last_commit_timestamp"] = activity["last_commit_timestamp"]
         elif github_stats.get("last_commit_timestamp") is None:
@@ -194,6 +243,7 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         }
         github_stats = {
             "current_streak": calculate_current_streak(active_days_set, today),
+            "longest_streak": calculate_current_streak(active_days_set, today),
             "commits_today": commits_detected_today,
             "longest_session_today_minutes": session_duration_today,
             "repos_touched_today": sorted(set(repos_touched_today)),

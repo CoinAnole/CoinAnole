@@ -28,6 +28,7 @@ class CalculateStateEntrypointSmokeTests(unittest.TestCase):
             },
             "github": {
                 "current_streak": 0,
+                "longest_streak": 0,
                 "commits_today": 0,
                 "longest_session_today_minutes": 0,
                 "repos_touched_today": [],

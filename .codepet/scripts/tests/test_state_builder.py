@@ -42,6 +42,8 @@ class StateBuilderTests(unittest.TestCase):
         self.assertEqual(state["pet"]["stage"], "baby")
         self.assertEqual(state["github"]["commits_today"], 1)
         self.assertEqual(state["github"]["total_commits_all_time"], 2)
+        self.assertEqual(state["github"]["current_streak"], 1)
+        self.assertEqual(state["github"]["longest_streak"], 1)
         self.assertIn(FIXED_TODAY, state["github"]["recent_active_days"])
         self.assertEqual(state["github"]["active_days_total"], 1)
         self.assertIn("session_tracker", state["github"])
@@ -105,8 +107,76 @@ class StateBuilderTests(unittest.TestCase):
         self.assertEqual(state["github"]["commits_today"], 2)
         self.assertEqual(state["github"]["longest_session_today_minutes"], 20)
         self.assertEqual(state["github"]["total_commits_all_time"], 13)
+        self.assertEqual(state["github"]["current_streak"], 2)
+        self.assertEqual(state["github"]["longest_streak"], 2)
         self.assertIn("new/repo", state["github"]["repos_touched_today"])
         self.assertEqual(state["pet"]["stage"], "baby")
+
+    def test_calculate_state_streak_continuity_can_exceed_recent_active_days_limit(self) -> None:
+        previous_state = {
+            "last_updated": YESTERDAY,
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 1,
+                "longest_session_today_minutes": 10,
+                "repos_touched_today": ["old/repo"],
+                "total_commits_all_time": 20,
+                "recent_active_days": [
+                    "2026-02-06",
+                    "2026-02-07",
+                    "2026-02-08",
+                    "2026-02-09",
+                    "2026-02-10",
+                    "2026-02-11",
+                    "2026-02-12",
+                ],
+                "active_days_total": 7,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 7,
+                "longest_streak": 7,
+                "last_commit_timestamp": "2026-02-12T12:00:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 1,
+            "commits_today_detected": 1,
+            "session_duration_minutes": 10,
+            "session_duration_today_minutes": 10,
+            "repos_touched": ["new/repo"],
+            "repos_touched_today": ["new/repo"],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": "2026-02-13T11:00:00+00:00",
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=FIXED_NOW), patch.object(
+            state_builder, "get_today_date", return_value=FIXED_TODAY
+        ):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
+
+        self.assertEqual(state["github"]["current_streak"], 8)
+        self.assertEqual(state["github"]["longest_streak"], 8)
 
     def test_calculate_state_migrates_legacy_hunger_stat_to_satiety(self) -> None:
         previous_state = {

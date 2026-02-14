@@ -193,7 +193,7 @@ Every creative decision is committed to git:
 CodePet is a type of fun GitHub profile status widget:
 - Displays current pet image in your README (Agent-generated art)
 - Shows real-time stats (satiety, energy, happiness, social)
-- Reflects today's coding activity and current streak
+- Reflects today's coding activity, current streak, and longest streak
 - Provides a narrative description of your pet's current state
 - Evolves as you code, creating a living record of your development journey
 
