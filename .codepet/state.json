@@ -36,8 +36,8 @@
     }
   },
   "image_state": {
-    "edit_count_since_reset": 1,
-    "total_edits_all_time": 16,
+    "edit_count_since_reset": 2,
+    "total_edits_all_time": 17,
     "last_reset_at": "2026-02-13T22:55:00+00:00",
     "reset_count": 4,
     "current_stage_reference": ".codepet/stage_images/baby.png"
