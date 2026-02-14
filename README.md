@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 83/100 | ████████▎░ |
-| ⚡ Energy | 98/100 | █████████▊ |
-| 😊 Happiness | 89/100 | ████████▉░ |
+| 🍖 Satiety | 82/100 | ████████▎░ |
+| ⚡ Energy | 100/100 | ██████████ |
+| 😊 Happiness | 88/100 | ████████▊░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 1 commit | **Current Streak:** 4 days | **Best Streak:** 4 days | **Best Day:** 1 commit
 
-Byte is absolutely ecstatic! With a 4-day coding streak going strong, Byte's eyes sparkle with joy as hearts and sparkles float around the desk. The food bowl is now full of tasty treats, and a shiny golden trophy sits proudly next to the laptop—celebrating the consistent coding effort. The Chicago skyline outside seems to glow a little brighter tonight, matching Byte's radiant happiness. Keep up the great work!
+Byte beams with pure joy at the desk, fully energized and ready to code! The afternoon sun casts a warm golden glow through the Chicago skyline window, matching Byte's radiant mood. Pink hearts and golden sparkles dance around the room, celebrating four consecutive days of coding magic. A shiny trophy sits proudly beside the laptop, a testament to the consistent effort, while the food bowl brims with tasty kibble. Byte waves enthusiastically—ready for whatever coding adventures come next!
 
 ---
 *CodePet updates automatically based on coding activity*
