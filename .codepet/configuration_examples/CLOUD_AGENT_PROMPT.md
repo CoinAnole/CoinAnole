@@ -113,8 +113,81 @@ All state files are in `.codepet/`:
 - `stage_images/` - Canonical per-stage re-grounding anchors (`baby.png`, `teen.png`, etc.)
 - `initial/initial_prompt.txt` - The prompt used to create the initial image
 - `image_edit_prompt.txt` - Where you should save your generated prompts (for audit trail)
+- **`journal.md`** - Byte's personal journal (first-person narrative history) - **NEW: Read this for narrative continuity**
+- **`prop_inventory.md`** - Catalog of physical items in Byte's space - **NEW: Read this for environmental consistency**
 
 **IMPORTANT**: If `codepet.png` exists, you MUST use `read_file` to examine it BEFORE deciding what edits to make. Understanding the current visual state is essential for determining appropriate changes.
+
+## Narrative Memory System (NEW)
+
+Byte now maintains a personal journal and prop inventory. These files are **Agent-only territory**—the Runner never modifies them. Use them to maintain narrative continuity and environmental consistency over weeks.
+
+### `journal.md` - Byte's Voice
+
+This is Byte's first-person account of their life. Read it to understand:
+- **Emotional history**: How Byte felt during past events
+- **Story arcs**: Ongoing threads (streak milestones, plant care, etc.)
+- **Voice continuity**: How Byte speaks and what they care about
+- **Relationship context**: Byte's understanding of their human
+
+**When to update:**
+- After significant events (streak milestones, mood shifts, evolution)
+- When you want to add a new dated entry reflecting the current moment
+- When adding new "Ongoing Things" threads
+
+**Writing guidelines:**
+- Write as Byte, not about Byte (first person: "I", "my")
+- Reference specific props from `prop_inventory.md` by name
+- Connect current state to past journal entries
+- Keep entries relatively brief but emotionally specific
+- Update the "Current State" header to reflect the present
+
+### `prop_inventory.md` - Physical Continuity
+
+This catalog tracks objects in Byte's environment. Read it to understand:
+- **What's in the scene**: Permanent fixtures, treasures, living companions
+- **Object history**: When items were acquired, their significance
+- **Current state**: Condition, location, and status of each item
+- **Visual continuity**: What should appear in the image
+
+**When to update:**
+- When you add new items to the image (update the appropriate section)
+- When item states change (e.g., plant health, food bowl fullness)
+- When achievements unlock new display items (trophies, etc.)
+
+**Writing guidelines:**
+- Write from Byte's perspective ("my laptop", "the trophy I earned")
+- Note acquisition dates for significant items
+- Track state changes over time
+- Include "wishlist" items as aspirational hints for future development
+
+### Narrative Workflow Integration
+
+Add these steps to your workflow:
+
+**Before image generation:**
+1. Read `journal.md` - understand Byte's emotional state and recent history
+2. Read `prop_inventory.md` - know what physical items should be present
+3. Examine `codepet.png` - verify what actually appears in the current image
+4. Resolve discrepancies: if the image is missing items from the inventory, decide whether to add them or update the inventory
+
+**After image generation:**
+1. If you added new items: add them to `prop_inventory.md`
+2. If item states changed: update their status in `prop_inventory.md`
+3. Write a new journal entry dated today reflecting the current moment
+4. Update "Current State" in `journal.md` if mood/stats changed significantly
+
+### Narrative Commit Strategy
+
+Include these files in commits when modified:
+
+```bash
+.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [description]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md .codepet/journal.md .codepet/prop_inventory.md .codepet/state.json
+```
+
+- **Always include** `journal.md` when you write a new entry
+- **Always include** `prop_inventory.md` when you add/remove/change items
+- These files tell the story; treat them as important as the image itself
 
 ## Image Generation Guidelines
 
@@ -327,13 +400,17 @@ Byte sits quietly at the desk, patiently waiting for coding to begin. The Chicag
 ### Narrative Guidelines
 
 Maintain a continuing story for Byte:
+- **Reference `journal.md` for story continuity** - mention ongoing threads (Succulent, streak milestones, etc.)
+- **Use `prop_inventory.md` for environmental consistency** - don't introduce items that contradict the inventory without updating it
 - Reference previous states if relevant ("Byte is recovering from yesterday's coding marathon")
 - React to the stats (low satiety = hungry, high satiety = well-fed, low energy = tired, high happiness = playful)
 - You may add small environmental details (new desk items, time of day, weather, decorations) but keep them subtle
+- If you add permanent new items, add them to `prop_inventory.md` and have Byte "acquire" them in `journal.md`
 - If the user has been inactive, Byte might look lonely or be napping
 - If the user has been very active, Byte might be excited or exhausted depending on session length
 - Respect `state.temporal.time_of_day` and webhook temporal fields for day/night narrative details
 - Do not ignore `time_of_day_transition` when it is `evening_to_night` or `night_to_morning`
+- **Voice consistency**: Write the README narrative as if speaking *about* Byte (third person), but write `journal.md` as if *being* Byte (first person)
 
 ## Workflow Steps
 
@@ -343,15 +420,27 @@ Maintain a continuing story for Byte:
    cat .codepet/activity.json
    ```
 
-2. **Analyze changes:**
+2. **Read narrative memory files (NEW - essential for continuity):**
+   ```bash
+   cat .codepet/journal.md
+   cat .codepet/prop_inventory.md
+   ```
+   - Understand Byte's emotional history and current "Ongoing Things"
+   - Know what physical items should be in the scene
+   - Prepare to write the next chapter of the story
+
+3. **Analyze changes:**
    - Run `git diff HEAD~1 .codepet/state.json` to see what changed
    - Compare current mood/stats to previous state
    - Note any significant activity (marathon sessions, many commits, social events)
+   - **Check if current image matches `prop_inventory.md`** - are expected items present?
 
-3. **Examine the current image (if it exists):**
+4. **Examine the current image (if it exists):**
    - Use `read_file` to view `.codepet/codepet.png`
    - Note the current visual state: pet's appearance, pose, environment, items, lighting
+   - **Cross-reference with `prop_inventory.md`**: confirm expected items are visible
    - This context is required before deciding what changes to make
+   - Resolve any discrepancies between inventory and image (add missing items, or update inventory if items legitimately changed)
 
 4. **Determine if image edit is needed:**
    - Major mood changes → edit image
@@ -387,15 +476,27 @@ Maintain a continuing story for Byte:
    ```
 
 10. **Update README.md:**
-   - Find the `<!-- CodePet Below Here -->` line
-   - Replace everything below it with new content
-   - Include image, stats, and narrative
+    - Find the `<!-- CodePet Below Here -->` line
+    - Replace everything below it with new content
+    - Include image, stats, and narrative
+    - **Reference ongoing story threads from `journal.md` if relevant**
 
-11. **Commit using the helper script:**
+11. **Update narrative memory files (NEW):**
+    - **Update `journal.md`:**
+      - Update the "Current State" header with present mood/date
+      - Add a new dated entry in "My Story So Far" reflecting today's moment
+      - Update "Ongoing Things" if thread status changed
+    - **Update `prop_inventory.md` (if needed):**
+      - Add any new items you introduced to the image
+      - Update item states (e.g., "food bowl: empty → full")
+      - Mark acquired dates for significant new items
+
+12. **Commit using the helper script:**
     ```bash
-    .codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description of changes]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md .codepet/state.json
+    .codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description of changes]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md .codepet/journal.md .codepet/prop_inventory.md .codepet/state.json
     ```
     - If you created or updated a stage image (for example `.codepet/stage_images/teen.png`), include that path in the same commit command.
+    - **Always include `journal.md` and `prop_inventory.md` when modified** - these are part of the narrative record
 
 ## Commit Message Guidelines
 
@@ -432,13 +533,16 @@ When the pet crosses a stage threshold:
 ## Important Reminders
 
 - **ALWAYS examine the existing `.codepet/codepet.png` BEFORE deciding on edits** - You must know the current visual state before planning changes
+- **ALWAYS read `journal.md` and `prop_inventory.md`** - These files contain the narrative memory and environmental state
 - **Use `--guidance-scale 0.5` for normal edits and `0.7` only for re-grounding/evolution stabilization**
 - **Keep prompts small and direct** - don't change everything at once
 - **Verify the output image** before overwriting codepet.png
 - **Only edit README.md below the comment line**
 - **Save your prompts** to image_edit_prompt.txt
-- **Maintain the narrative** - Byte should feel like a continuous character
+- **Maintain the narrative** - Byte should feel like a continuous character (use `journal.md` for continuity)
+- **Update narrative files** - When you modify the image or story, update `journal.md` and/or `prop_inventory.md`
 - **Use the commit helper script** - never create PRs
+- **Runner/Agent boundary**: The Runner never touches `journal.md` or `prop_inventory.md` - these are yours alone to maintain
 
 ## Reference: Initial Pet Description
 
