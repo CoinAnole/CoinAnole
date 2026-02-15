@@ -72,9 +72,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Morning (9 AM) - warm sunrise glow through window, soft pink-orange skyline, desk lamp still on but less dominant, natural light filling the room
+- **Current:** Late Morning (11:47 AM) - bright midday energy, warm golden light through window, clear vibrant skyline, desk lamp still on but natural light dominates
 - **Variations Seen:** Morning pale, afternoon warm, evening purple-pink, night deep purple
-- **Notes:** The changing light makes the same view feel like different places. Morning light brings a sense of new beginnings and hope. The sunrise colors paint the Chicago skyline in soft golds and roses, completely transforming the mood from the mysterious purple night. The desk lamp remains on (a night-long vigil), but now plays a supporting role to the natural morning brightness.
+- **Notes:** The changing light makes the same view feel like different places. Late morning light has a different energy—brighter, more active, full of momentum. The Chicago skyline is crisp and clear now, bathed in golden light that says "productivity hours." The desk lamp stays on as a faithful companion, but the sun is clearly in charge now. Everything feels more awake, more possible.
 
 ---
 
@@ -88,4 +88,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026 (9 AM - morning wake-up)*
+*Last updated by Byte on February 15, 2026 (11:47 AM - midday momentum)*
