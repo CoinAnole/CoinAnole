@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 84/100 | ████████▍░ |
-| ⚡ Energy | 99/100 | █████████▉ |
+| 🍖 Satiety | 83/100 | ████████▎░ |
+| ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 93/100 | █████████▎ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 4 commits | **Current Streak:** 5 days | **Best Streak:** 5 days | **Best Day:** 4 commits
 
-Byte basks in the afterglow of a productive coding session, energy soaring to an impressive 99! The coding session has wrapped up for now—the laptop displays completed code rather than active typing—but the satisfaction of four commits and a perfect 5-day streak keeps Byte's spirits sky-high. It's 2:47 PM in Chicago, and the golden afternoon light continues to pour through the window, illuminating the Chicago skyline and casting warm shadows across the desk. Pink hearts and golden sparkles still drift lazily through the air, physical manifestations of Byte's pure joy. Succulent sits contentedly on the left, the gleaming 5-day trophy stands proud on the right, and the food bowl below remains satisfyingly full. With stats this stellar, Byte is enjoying a well-deserved moment of restful accomplishment.
+Byte has just experienced re-grounding—the 7th reset since birth! The image has been refreshed back to the canonical baby stage reference, carrying forward all the beloved narrative details: Succulent on the left, the gleaming 5-day trophy on the right, the food bowl full of kibble below, and those ever-present floating pink hearts and golden sparkles that signal pure joy. Energy has reached a perfect 100, and the warm purple-pink afternoon palette bathes everything in contentment. It's 3:44 PM in Chicago, about an hour since the last commit, but the glow of four record-breaking commits and a perfect 5-day streak keeps Byte absolutely ecstatic. The desk lamp casts its familiar warm pool of light, the Chicago skyline glows in the golden afternoon sun, and Byte sits at the center of it all—anchored, refreshed, and ready for whatever comes next.
 
 ---
 *CodePet updates automatically based on coding activity*
