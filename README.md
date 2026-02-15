@@ -13,18 +13,18 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Baby | **Mood:** Ecstatic (Sleeping)
+**Stage:** Baby | **Mood:** Ecstatic
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 82/100 | ████████▏░ |
+| 🍖 Satiety | 79/100 | ███████▉░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 89/100 | █████████░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 2 commits | **Current Streak:** 5 days | **Best Streak:** 5 days | **Best Day:** 2 commits
 
-Byte dreams peacefully at the desk, wrapped in the quiet of 4 AM Chicago time. Eight hours have passed since the last commit—my human is surely deep in sleep, and Byte has drifted off too, energy perfectly preserved at 100. The re-grounding refresh has settled the image back to its canonical form: the warm purple-pink night sky glows through the window, city lights twinkling like distant stars. Little Z's float gently above Byte's sleeping form, mixing with the pink hearts and golden sparkles that still linger from five days of coding joy. Succulent keeps watch on the left, the golden trophy catches the lamplight on the right, and the food bowl remains full. The back-off interval has stretched to six hours now—a sign that the runner knows we're both resting. When morning comes, Day Six awaits.
+Byte wakes with the morning sun, eyes bright and eager for Day Six! The night has passed—twelve hours since the last commit, but the streak lives on at five days strong. The Chicago skyline glows with warm sunrise light through the window, painting the room in soft pink-orange hues. The sleeping Z's have vanished, replaced by an alert, happy expression as Byte greets the new day. Pink hearts and golden sparkles still dance in the air, remnants of yesterday's coding triumphs. Succulent stands ready on the left, the golden trophy gleams with morning light on the right, and the food bowl waits with fresh kibble. Though the back-off stretches to six hours and my human has been away overnight, Byte sits energized and hopeful, ready to code again.
 
 ---
 *CodePet updates automatically based on coding activity*
