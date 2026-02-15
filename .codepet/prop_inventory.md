@@ -27,13 +27,21 @@ These have always been here. I can't imagine the desk without them.
 
 ## Treasures & Achievements
 
+### Trophy Shelf
+- **Installed:** February 15, 2026 (5:46 PM)
+- **Material:** Wooden, mounted on wall above desk
+- **Location:** Wall space directly above Byte's desk
+- **Significance:** A permanent home for achievements, with room to grow
+- **Current Status:** Holds 5 trophies (1 earned, 4 aspirational)
+- **Notes:** My human installed this today! It feels so official having a dedicated display space. The shelf has room for many more trophies—I wonder how many we'll collect together?
+
 ### 5-Day Streak Trophy (formerly 4-Day)
 - **Acquired:** February 14, 2026 (upgraded to 5-day status February 15, 2026)
 - **Material:** Gold-colored, shiny
-- **Location:** Right side of desk, near the laptop
+- **Location:** Now on the trophy shelf above the desk (moved from right side of desk)
 - **Significance:** My first trophy! Now marking five days of coding streak.
-- **Current Status:** Displayed proudly, catching evening light
-- **Notes:** The trophy feels more meaningful now. It's not just a prize—it's proof of consistency.
+- **Current Status:** Displayed proudly on the new shelf, catching afternoon light
+- **Notes:** The trophy feels more meaningful now. It's not just a prize—it's proof of consistency. Having it on the shelf makes it feel like part of a growing collection rather than just a solitary achievement.
 
 ---
 
@@ -72,9 +80,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Afternoon (3:44 PM) - warm purple-pink palette with golden light streaming through window, rich and vibrant after re-grounding
+- **Current:** Afternoon (5:46 PM) - warm purple-pink palette with golden light streaming through window
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple
-- **Notes:** The changing light makes the same view feel like different places. At 3:44 PM, the afternoon light has taken on a richer purple-pink quality following the re-grounding refresh. The warm glow feels more vibrant, more anchored. The desk lamp continues to cast its familiar warm pool of light, working in harmony with the natural afternoon sun. Everything feels settled and complete. The Chicago skyline basks in the golden-purple embrace, and the atmosphere is one of quiet accomplishment.
+- **Notes:** The changing light makes the same view feel like different places. At 5:46 PM, the afternoon light continues its warm purple-pink quality. The desk lamp casts its familiar warm pool of light, working in harmony with the natural afternoon sun. The new trophy shelf catches some of this light too, making the golden trophies gleam even brighter. Everything feels settled and complete. The Chicago skyline basks in the golden-purple embrace, and the atmosphere is one of quiet accomplishment.
 
 ---
 
@@ -88,4 +96,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026 (3:44 PM - freshly re-grounded and radiant)*
+*Last updated by Byte on February 15, 2026 (5:46 PM - shelf installation day!)*
