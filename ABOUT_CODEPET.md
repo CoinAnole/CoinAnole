@@ -33,7 +33,7 @@ The architecture exists to empower the Agent to focus purely on creativity. GitH
 
 ```
 GitHub Actions (every hour) → Detect activity in watched repos → 
-  Calculate new state mechanically → Commit activity.json + state.json →
+  Calculate new state mechanically → Commit activity.json (always) + state.json (trigger runs only) →
   [If update needed]: Call Kilo Webhook → 
     Kilo Agent clones repo, analyzes diffs → Falcon (img2img) → Commit README
   [If no update]: Skip webhook call (back-off)
@@ -48,9 +48,9 @@ The runner handles the "boring" stuff—number crunching that would waste Kilo c
 | Schedule | Runs hourly via cron (best-effort timing; start may drift) |
 | Activity Detection | Scans watched repos for commits, PRs, stars |
 | State Calculation | Mechanically calculates satiety, energy, happiness, social stats |
-| File Updates | Writes `.codepet/activity.json` and `.codepet/state.json` |
+| File Updates | Writes `.codepet/activity.json` every run; persists `.codepet/state.json` only when a webhook-trigger run is selected |
 | Decision Making | Decides if Kilo Agent should be called (back-off rules) |
-| Version Control | Commits state changes before calling webhook |
+| Version Control | Commits state changes before calling webhook only on trigger runs, keeping state diffs aligned to webhook invocations |
 
 ### Kilo Cloud Agent (The Engine)
 

@@ -49,11 +49,12 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions[bot]"
-          git add .codepet/activity.json .codepet/state.json .codepet/stage_images
           if [ "${{ steps.backoff.outputs.should_trigger }}" = "true" ]; then
+            git add .codepet/activity.json .codepet/state.json .codepet/stage_images
             git commit -m "Update CodePet state (pre-webhook) [runner]" || echo "No changes to commit"
           else
-            git commit -m "Update CodePet state [runner]" || echo "No changes to commit"
+            git add .codepet/activity.json .codepet/stage_images
+            git commit -m "Update CodePet activity [runner]" || echo "No changes to commit"
           fi
           git push
       

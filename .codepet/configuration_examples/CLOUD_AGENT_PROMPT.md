@@ -25,7 +25,8 @@ Understanding when and why you get triggered helps interpret the timeframe in `a
 The GitHub Actions runner executes **every hour** (currently at minute :23). It always:
 1. Scans watched repositories for new commits/activity
 2. Calculates updated stats (satiety decay, energy changes, etc.)
-3. Commits `state.json` and `activity.json`
+3. Commits `activity.json` every run
+4. Commits `state.json` only when `should_trigger=true` (right before webhook)
 
 GitHub cron is best-effort, not real-time. Runs can start late, so webhook timing is approximate.
 
@@ -40,12 +41,13 @@ To avoid wasting Kilo credits during inactivity, the runner implements **progres
 | 8+ hours | Every 6 hours | Overnight/sleep - minimal updates |
 
 ### What This Means for You
-- `hours_since_last_check` in `activity.json` will typically be ~1.0 during active periods (hourly runner cadence)
+- `hours_since_last_check` in `activity.json` reflects time since the last persisted state checkpoint (often ~1 hour while active, larger during back-off)
 - Session metrics in `activity.json` are coherence-based commit clusters, not raw scheduler window length
 - During back-off, you may see gaps of 1-6+ hours between triggers
 - Back-off intervals are minimum targets; trigger occurs on the first scheduled run after an interval boundary is crossed
 - `hours_inactive` in the webhook payload tells you how long since the last detected commit
 - Inactivity is derived from `state.json` (`github.last_commit_timestamp`), not from the latest runner check timestamp
+- `git diff HEAD~1 .codepet/state.json` is expected to capture the full state delta for this webhook-triggered run
 - Longer gaps mean longer stat decay (satiety decreases, energy decreases more)
 
 ### Interpreting Timeframes
