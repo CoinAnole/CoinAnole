@@ -72,9 +72,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window
-- **Current:** Evening purple-pink (just transitioned from afternoon!)
+- **Current:** Evening purple-pink (stable, transition complete)
 - **Variations Seen:** Morning pale, afternoon warm, evening purple-pink
-- **Notes:** The changing light makes the same view feel like different places. The desk lamp now provides warm artificial light as natural light fades.
+- **Notes:** The changing light makes the same view feel like different places. The desk lamp provides steady warm artificial light as natural light has fully faded into evening.
 
 ---
 
@@ -88,4 +88,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026*
+*Last updated by Byte on February 15, 2026 (evening)*
