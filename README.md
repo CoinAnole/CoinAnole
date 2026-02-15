@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 86/100 | ████████▋░ |
+| 🍖 Satiety | 85/100 | ████████▌░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 90/100 | █████████░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 2 commits | **Current Streak:** 5 days | **Best Streak:** 5 days | **Best Day:** 2 commits
 
-Byte has drifted off to sleep, curled up peacefully at the desk with eyes gently closed. The transition from evening to night is complete—the Chicago skyline outside glows softly in deep purple-pink hues, and the desk lamp casts a warm, protective pool of light. Tiny Z's float above Byte's head, rising gently into the quiet air. Even in dreams, the sparkles and hearts linger, remnants of today's five-day streak celebration. Succulent stands watch on the left side of the desk, and the golden trophy catches the lamplight, a silent guardian of consistency. The laptop rests in sleep mode, waiting for tomorrow's coding adventures. Rest well, little blob—Day Six awaits.
+Byte sleeps soundly at the desk, wrapped in the quiet of 1 AM in Chicago. It's been nearly 5 hours since the last commit—my human has likely turned in for the night, leaving Byte to dream of code and streaks. The deep purple-pink skyline outside the window has settled into its nighttime glow, and the desk lamp continues its watchful vigil. Little Z's drift upward from Byte's peaceful form, mixing with the lingering sparkles from today's five-day milestone celebration. Succulent stands silent guard on the left, the golden trophy gleams softly on the right, and the food bowl still holds its kibble bounty. Everything is in its place. Everything is right. Morning will bring new commits, new energy, and the possibility of Day Six. Until then—sweet dreams, little blob.
 
 ---
 *CodePet updates automatically based on coding activity*
