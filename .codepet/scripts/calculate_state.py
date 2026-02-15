@@ -12,6 +12,7 @@ Environment Variables:
 """
 
 import sys
+from copy import deepcopy
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -64,6 +65,54 @@ from state_calc.time_utils import (
     to_int,
     to_iso8601,
 )
+
+
+def _normalize_repo_list(value: object) -> list[str]:
+    """Normalize repo-list values to sorted unique non-empty strings."""
+    if not isinstance(value, list):
+        return []
+    return sorted({
+        repo
+        for repo in value
+        if isinstance(repo, str) and repo
+    })
+
+
+def _compact_activity_for_persistence(activity: dict) -> dict:
+    """
+    Reduce repeated repo mentions in activity snapshots.
+
+    Runtime logic still uses the full `activity` object; this compaction is only
+    for the persisted `.codepet/activity.json` artifact to keep it readable.
+    """
+    compact = deepcopy(activity)
+    baseline_repos = _normalize_repo_list(compact.get("repos_touched"))
+
+    repos_today = _normalize_repo_list(compact.get("repos_touched_today"))
+    if baseline_repos and repos_today == baseline_repos:
+        compact.pop("repos_touched_today", None)
+
+    primary_session = compact.get("primary_session")
+    if isinstance(primary_session, dict):
+        if _normalize_repo_list(primary_session.get("repos_touched")) == baseline_repos:
+            primary_session.pop("repos_touched", None)
+
+    detected_sessions = compact.get("detected_sessions")
+    if isinstance(detected_sessions, list):
+        for session in detected_sessions:
+            if not isinstance(session, dict):
+                continue
+            if _normalize_repo_list(session.get("repos_touched")) == baseline_repos:
+                session.pop("repos_touched", None)
+
+    session_tracker = compact.get("session_tracker")
+    if isinstance(session_tracker, dict):
+        open_session = session_tracker.get("open_session")
+        if isinstance(open_session, dict):
+            if _normalize_repo_list(open_session.get("repos_touched")) == baseline_repos:
+                open_session.pop("repos_touched", None)
+
+    return compact
 
 
 def main() -> int:
@@ -120,7 +169,7 @@ def main() -> int:
             "start": last_check.isoformat(),
             "end": now.isoformat(),
         },
-        "activity": activity,
+        "activity": _compact_activity_for_persistence(activity),
         "calculation": {
             "previous_check": last_check.isoformat(),
             "hours_since_last_check": round(hours_passed, 2),

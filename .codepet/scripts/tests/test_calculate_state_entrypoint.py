@@ -16,6 +16,53 @@ SPEC.loader.exec_module(CALCULATE_STATE)
 
 
 class CalculateStateEntrypointSmokeTests(unittest.TestCase):
+    def test_compact_activity_removes_redundant_repo_mentions(self) -> None:
+        activity = {
+            "repos_touched": ["CoinAnole/challenge1"],
+            "repos_touched_today": ["CoinAnole/challenge1"],
+            "primary_session": {
+                "repos_touched": ["CoinAnole/challenge1"],
+            },
+            "detected_sessions": [
+                {"repos_touched": ["CoinAnole/challenge1"]},
+            ],
+            "session_tracker": {
+                "open_session": {"repos_touched": ["CoinAnole/challenge1"]},
+            },
+        }
+
+        compact = CALCULATE_STATE._compact_activity_for_persistence(activity)
+
+        self.assertNotIn("repos_touched_today", compact)
+        self.assertNotIn("repos_touched", compact["primary_session"])
+        self.assertNotIn("repos_touched", compact["detected_sessions"][0])
+        self.assertNotIn("repos_touched", compact["session_tracker"]["open_session"])
+        self.assertEqual(compact["repos_touched"], ["CoinAnole/challenge1"])
+
+    def test_compact_activity_keeps_session_specific_repo_lists(self) -> None:
+        activity = {
+            "repos_touched": ["CoinAnole/challenge1", "CoinAnole/challenge2"],
+            "repos_touched_today": ["CoinAnole/challenge1"],
+            "primary_session": {
+                "repos_touched": ["CoinAnole/challenge1"],
+            },
+            "detected_sessions": [
+                {"repos_touched": ["CoinAnole/challenge1"]},
+                {"repos_touched": ["CoinAnole/challenge2"]},
+            ],
+            "session_tracker": {
+                "open_session": {"repos_touched": ["CoinAnole/challenge2"]},
+            },
+        }
+
+        compact = CALCULATE_STATE._compact_activity_for_persistence(activity)
+
+        self.assertIn("repos_touched_today", compact)
+        self.assertIn("repos_touched", compact["primary_session"])
+        self.assertIn("repos_touched", compact["detected_sessions"][0])
+        self.assertIn("repos_touched", compact["detected_sessions"][1])
+        self.assertIn("repos_touched", compact["session_tracker"]["open_session"])
+
     @staticmethod
     def _minimal_previous_state(last_updated=None) -> dict:
         state = {

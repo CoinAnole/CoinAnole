@@ -10,9 +10,6 @@
     "repos_touched": [
       "CoinAnole/challenge1"
     ],
-    "repos_touched_today": [
-      "CoinAnole/challenge1"
-    ],
     "session_duration_minutes": 10,
     "session_duration_today_minutes": 10,
     "marathon_detected": false,
@@ -22,20 +19,14 @@
       "start": "2026-02-15T17:23:42+00:00",
       "end": "2026-02-15T17:23:42+00:00",
       "duration_minutes": 10,
-      "commit_count": 1,
-      "repos_touched": [
-        "CoinAnole/challenge1"
-      ]
+      "commit_count": 1
     },
     "detected_sessions": [
       {
         "start": "2026-02-15T17:23:42+00:00",
         "end": "2026-02-15T17:23:42+00:00",
         "duration_minutes": 10,
-        "commit_count": 1,
-        "repos_touched": [
-          "CoinAnole/challenge1"
-        ]
+        "commit_count": 1
       }
     ],
     "session_tracker": {
@@ -43,9 +34,6 @@
         "start": "2026-02-15T17:23:42+00:00",
         "last_commit": "2026-02-15T17:23:42+00:00",
         "commit_count": 1,
-        "repos_touched": [
-          "CoinAnole/challenge1"
-        ],
         "split_timeout_minutes": 90
       },
       "last_timeout_minutes": 90
