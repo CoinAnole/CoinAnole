@@ -115,8 +115,9 @@ All state files are in `.codepet/`:
 - `stage_images/` - Canonical per-stage re-grounding anchors (`baby.png`, `teen.png`, etc.)
 - `initial/initial_prompt.txt` - The prompt used to create the initial image
 - `image_edit_prompt.txt` - Where you should save your generated prompts (for audit trail)
-- **`journal.md`** - Byte's personal journal (first-person narrative history) - **NEW: Read this for narrative continuity**
-- **`prop_inventory.md`** - Catalog of physical items in Byte's space - **NEW: Read this for environmental consistency**
+- **`journal.md`** - Byte's personal journal (first-person narrative history) - **Read this for narrative continuity**
+- **`prop_inventory.md`** - Catalog of physical items in Byte's space - **Read this for environmental consistency**
+- **`steering.md`** - User steering recommendations - **NEW: Read this for user guidance**
 
 **IMPORTANT**: If `codepet.png` exists, you MUST use `read_file` to examine it BEFORE deciding what edits to make. Understanding the current visual state is essential for determining appropriate changes.
 
@@ -189,7 +190,23 @@ Include these files in commits when modified:
 
 - **Always include** `journal.md` when you write a new entry
 - **Always include** `prop_inventory.md` when you add/remove/change items
+- **Always include** `steering.md` when you complete a recommendation
 - These files tell the story; treat them as important as the image itself
+
+### `steering.md` - User Guidance
+
+This file contains user recommendations for Byte's development. It bridges the gap between "the user has an idea" and "the agent implements it naturally through the story."
+
+**How to handle steering:**
+1. **Read active recommendations** before planning image edits
+2. **Consider them during edit decisions** - don't implement immediately unless the moment fits (e.g., a shelf addition makes sense during a re-grounding or major scene refresh)
+3. **Implement naturally** - fold the change into Byte's ongoing story through journal entries and README narrative
+4. **Mark complete** - when you implement a recommendation, move it to "Recently Completed" with today's date
+5. **Update inventory** - if the steering affects physical items, update `prop_inventory.md`
+
+**Example workflow:**
+- User has: `- [ ] Add a shelf for the trophy`
+- You: During re-grounding or when editing, add the shelf, move the trophy, write a journal entry about "Byte's human installed a shelf today," update `prop_inventory.md`, mark steering item complete
 
 ## Image Generation Guidelines
 
@@ -422,13 +439,15 @@ Maintain a continuing story for Byte:
    cat .codepet/activity.json
    ```
 
-2. **Read narrative memory files (NEW - essential for continuity):**
+2. **Read narrative memory files (essential for continuity):**
    ```bash
    cat .codepet/journal.md
    cat .codepet/prop_inventory.md
+   cat .codepet/steering.md
    ```
    - Understand Byte's emotional history and current "Ongoing Things"
    - Know what physical items should be in the scene
+   - **Check for user steering recommendations** - if any unchecked items exist, consider them when planning edits
    - Prepare to write the next chapter of the story
 
 3. **Analyze changes:**
