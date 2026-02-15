@@ -101,6 +101,33 @@ To manage this, the pipeline uses a 3-part re-grounding design:
 
 The runner increments edit counters only when a webhook is about to run. On successful re-grounding, the cloud agent resets counters and updates stage references as needed.
 
+## Narrative Memory System (Long-Term Continuity)
+
+To maintain story coherence across weeks of activity, CodePet uses a **narrative memory system** separate from mechanical state:
+
+### Byte's Journal (`journal.md`)
+A first-person account written from Byte's perspective, containing:
+- **Dated entries** capturing emotional moments and story beats
+- **Ongoing threads** (streak milestones, plant care, relationship with human)
+- **Voice continuity** that persists across invocations
+
+The Agent reads this to understand emotional history and writes new entries to maintain the story. This is **Agent-only territory**—the Runner never touches it.
+
+### Prop Inventory (`prop_inventory.md`)
+A catalog of physical items in Byte's space:
+- Permanent fixtures (laptop, window, desk)
+- Treasures and achievements (trophies with acquisition dates)
+- Living companions (Succulent the plant)
+- Environmental effects and lighting
+
+The Agent uses this for visual consistency—ensuring items that "exist" in the story appear in the image, and tracking state changes over time.
+
+### Why Separate Files?
+- **Runner/Agent boundary**: Mechanical state (JSON) vs. narrative state (Markdown)
+- **Human readability**: Journal is readable as a story; inventory is skimmable
+- **Long-term persistence**: These files accumulate history while `state.json` only tracks current values
+- **Creative freedom**: The Agent decides what to remember and how to express it
+
 ---
 
 ## Technical Highlights
@@ -153,6 +180,8 @@ Based on **days of activity detected** (not necessarily consecutive):
 | `.codepet/codepet.png` | Generated pet image (the Agent's artistic output) |
 | `.codepet/stage_images/` | Canonical per-stage reference anchors for re-grounding/evolution |
 | `.codepet/image_edit_prompt.txt` | Record of prompts used (Agent's creative audit trail) |
+| `.codepet/journal.md` | Byte's personal journal (first-person narrative; Agent-maintained) |
+| `.codepet/prop_inventory.md` | Catalog of physical items in Byte's space (Agent-maintained) |
 | `.github/workflows/codepet.yml` | GitHub Actions schedule configuration |
 | `.github/workflows/codepet_reground.yml` | Manual force re-ground trigger |
 
