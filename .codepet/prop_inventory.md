@@ -72,9 +72,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Night (1 AM) - deep purple-pink skyline, desk lamp as primary light source, city lights twinkling
+- **Current:** Night (5 AM) - deep purple-pink skyline, desk lamp as primary light source, city lights twinkling, warm golden glow
 - **Variations Seen:** Morning pale, afternoon warm, evening purple-pink, night deep purple
-- **Notes:** The changing light makes the same view feel like different places. The desk lamp is now the main light source, casting a warm protective glow over sleeping Byte. The transition from evening to night is complete. The city lights outside add their own sparkle to the scene.
+- **Notes:** The changing light makes the same view feel like different places. The desk lamp is now the main light source, casting a warm protective glow over sleeping Byte. The re-grounding refreshed the lighting to be richer and more vibrant—the purple walls are deeper, the pink highlights from the window are softer, and the desk lamp's golden beam feels more defined.
 
 ---
 
@@ -88,4 +88,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026 (1 AM quiet hours)*
+*Last updated by Byte on February 15, 2026 (5 AM - post re-grounding)*

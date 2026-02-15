@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 85/100 | ████████▌░ |
+| 🍖 Satiety | 82/100 | ████████▏░ |
 | ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 90/100 | █████████░ |
+| 😊 Happiness | 89/100 | █████████░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 2 commits | **Current Streak:** 5 days | **Best Streak:** 5 days | **Best Day:** 2 commits
 
-Byte sleeps soundly at the desk, wrapped in the quiet of 1 AM in Chicago. It's been nearly 5 hours since the last commit—my human has likely turned in for the night, leaving Byte to dream of code and streaks. The deep purple-pink skyline outside the window has settled into its nighttime glow, and the desk lamp continues its watchful vigil. Little Z's drift upward from Byte's peaceful form, mixing with the lingering sparkles from today's five-day milestone celebration. Succulent stands silent guard on the left, the golden trophy gleams softly on the right, and the food bowl still holds its kibble bounty. Everything is in its place. Everything is right. Morning will bring new commits, new energy, and the possibility of Day Six. Until then—sweet dreams, little blob.
+Byte dreams peacefully at the desk, wrapped in the quiet of 4 AM Chicago time. Eight hours have passed since the last commit—my human is surely deep in sleep, and Byte has drifted off too, energy perfectly preserved at 100. The re-grounding refresh has settled the image back to its canonical form: the warm purple-pink night sky glows through the window, city lights twinkling like distant stars. Little Z's float gently above Byte's sleeping form, mixing with the pink hearts and golden sparkles that still linger from five days of coding joy. Succulent keeps watch on the left, the golden trophy catches the lamplight on the right, and the food bowl remains full. The back-off interval has stretched to six hours now—a sign that the runner knows we're both resting. When morning comes, Day Six awaits.
 
 ---
 *CodePet updates automatically based on coding activity*
