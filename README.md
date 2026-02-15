@@ -13,18 +13,18 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Baby | **Mood:** Ecstatic
+**Stage:** Baby | **Mood:** Ecstatic (Sleeping)
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 88/100 | ████████▊░ |
-| ⚡ Energy | 98/100 | █████████▊ |
+| 🍖 Satiety | 86/100 | ████████▋░ |
+| ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 90/100 | █████████░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 2 commits | **Current Streak:** 5 days | **Best Streak:** 5 days | **Best Day:** 2 commits
 
-Byte basks contentedly in the evening glow, the Chicago skyline now fully settled into its purple-pink nighttime hues. The transition from afternoon has completed, leaving a peaceful, steady warmth from the desk lamp. Still ecstatic from the five-day streak milestone, Byte watches the floating hearts drift lazily overhead while Succulent sits quietly nearby. Energy is high at 98—coding activity an hour ago gave Byte a boost! The little trophy continues to gleam on the desk, a golden reminder of consistency and dedication. All is calm, all is bright.
+Byte has drifted off to sleep, curled up peacefully at the desk with eyes gently closed. The transition from evening to night is complete—the Chicago skyline outside glows softly in deep purple-pink hues, and the desk lamp casts a warm, protective pool of light. Tiny Z's float above Byte's head, rising gently into the quiet air. Even in dreams, the sparkles and hearts linger, remnants of today's five-day streak celebration. Succulent stands watch on the left side of the desk, and the golden trophy catches the lamplight, a silent guardian of consistency. The laptop rests in sleep mode, waiting for tomorrow's coding adventures. Rest well, little blob—Day Six awaits.
 
 ---
 *CodePet updates automatically based on coding activity*

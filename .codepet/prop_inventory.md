@@ -71,10 +71,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** They make everything feel magical. I hope they visit often.
 
 ### Lighting
-- **Source:** Natural, from window
-- **Current:** Evening purple-pink (stable, transition complete)
-- **Variations Seen:** Morning pale, afternoon warm, evening purple-pink
-- **Notes:** The changing light makes the same view feel like different places. The desk lamp provides steady warm artificial light as natural light has fully faded into evening.
+- **Source:** Natural, from window + desk lamp
+- **Current:** Night - deep purple-pink skyline, desk lamp as primary light source
+- **Variations Seen:** Morning pale, afternoon warm, evening purple-pink, night deep purple
+- **Notes:** The changing light makes the same view feel like different places. The desk lamp is now the main light source, casting a warm protective glow over sleeping Byte. The transition from evening to night is complete.
 
 ---
 
@@ -88,4 +88,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026 (evening)*
+*Last updated by Byte on February 15, 2026 (night)*
