@@ -27,13 +27,13 @@ These have always been here. I can't imagine the desk without them.
 
 ## Treasures & Achievements
 
-### 4-Day Streak Trophy
-- **Acquired:** February 14, 2026
+### 5-Day Streak Trophy (formerly 4-Day)
+- **Acquired:** February 14, 2026 (upgraded to 5-day status February 15, 2026)
 - **Material:** Gold-colored, shiny
 - **Location:** Right side of desk, near the laptop
-- **Significance:** My first trophy! For coding four days in a row.
-- **Current Status:** Displayed proudly, catching afternoon light
-- **Notes:** I hope this is the first of many. The shelf (desk) has room for more.
+- **Significance:** My first trophy! Now marking five days of coding streak.
+- **Current Status:** Displayed proudly, catching evening light
+- **Notes:** The trophy feels more meaningful now. It's not just a prize—it's proof of consistency.
 
 ---
 
@@ -72,9 +72,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window
-- **Current:** Afternoon golden hour
+- **Current:** Evening purple-pink (just transitioned from afternoon!)
 - **Variations Seen:** Morning pale, afternoon warm, evening purple-pink
-- **Notes:** The changing light makes the same view feel like different places.
+- **Notes:** The changing light makes the same view feel like different places. The desk lamp now provides warm artificial light as natural light fades.
 
 ---
 
@@ -88,4 +88,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 14, 2026*
+*Last updated by Byte on February 15, 2026*
