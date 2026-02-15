@@ -1,43 +1,21 @@
 {
-  "timestamp": "2026-02-15T02:27:01.043202+00:00",
+  "timestamp": "2026-02-15T03:24:37.571361+00:00",
   "period": {
-    "start": "2026-02-14T23:43:21.246147+00:00",
-    "end": "2026-02-15T02:27:01.043202+00:00"
+    "start": "2026-02-15T02:27:21.604031+00:00",
+    "end": "2026-02-15T03:24:37.571361+00:00"
   },
   "activity": {
-    "commits_detected": 2,
-    "commits_today_detected": 2,
-    "repos_touched": [
-      "CoinAnole/challenge1"
-    ],
-    "repos_touched_today": [
-      "CoinAnole/challenge1"
-    ],
-    "session_duration_minutes": 61,
-    "session_duration_today_minutes": 61,
+    "commits_detected": 0,
+    "commits_today_detected": 0,
+    "repos_touched": [],
+    "repos_touched_today": [],
+    "session_duration_minutes": 0,
+    "session_duration_today_minutes": 0,
     "marathon_detected": false,
     "session_split_timeout_minutes": 90,
-    "session_count_detected": 1,
-    "primary_session": {
-      "start": "2026-02-15T01:21:43+00:00",
-      "end": "2026-02-15T02:22:24+00:00",
-      "duration_minutes": 61,
-      "commit_count": 2,
-      "repos_touched": [
-        "CoinAnole/challenge1"
-      ]
-    },
-    "detected_sessions": [
-      {
-        "start": "2026-02-15T01:21:43+00:00",
-        "end": "2026-02-15T02:22:24+00:00",
-        "duration_minutes": 61,
-        "commit_count": 2,
-        "repos_touched": [
-          "CoinAnole/challenge1"
-        ]
-      }
-    ],
+    "session_count_detected": 0,
+    "primary_session": null,
+    "detected_sessions": [],
     "session_tracker": {
       "open_session": {
         "start": "2026-02-15T01:21:43+00:00",
@@ -50,7 +28,7 @@
       },
       "last_timeout_minutes": 90
     },
-    "last_commit_timestamp": "2026-02-15T02:22:24+00:00",
+    "last_commit_timestamp": null,
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -58,7 +36,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-14T23:43:21.246147+00:00",
-    "hours_since_last_check": 2.73
+    "previous_check": "2026-02-15T02:27:21.604031+00:00",
+    "hours_since_last_check": 0.95
   }
 }
