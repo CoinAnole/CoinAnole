@@ -36,14 +36,6 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python .codepet/scripts/calculate_state.py
       
-      - name: Commit state changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "GitHub Actions[bot]"
-          git add .codepet/activity.json .codepet/state.json .codepet/stage_images
-          git commit -m "Update CodePet state [runner]" || echo "No changes to commit"
-          git push
-      
       - name: Calculate back-off
         id: backoff
         run: python .codepet/scripts/calculate_backoff.py
@@ -53,13 +45,16 @@ jobs:
         if: steps.backoff.outputs.should_trigger == 'true'
         run: python .codepet/scripts/prepare_webhook_state.py
 
-      - name: Commit pre-webhook state changes
-        if: steps.backoff.outputs.should_trigger == 'true'
+      - name: Commit state changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions[bot]"
-          git add .codepet/state.json .codepet/stage_images
-          git commit -m "Prepare CodePet webhook state [runner]" || echo "No pre-webhook changes to commit"
+          git add .codepet/activity.json .codepet/state.json .codepet/stage_images
+          if [ "${{ steps.backoff.outputs.should_trigger }}" = "true" ]; then
+            git commit -m "Update CodePet state (pre-webhook) [runner]" || echo "No changes to commit"
+          else
+            git commit -m "Update CodePet state [runner]" || echo "No changes to commit"
+          fi
           git push
       
       - name: Trigger Kilo Cloud Agent
