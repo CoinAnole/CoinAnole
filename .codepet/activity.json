@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-15T03:24:37.571361+00:00",
+  "timestamp": "2026-02-15T05:37:08.638765+00:00",
   "period": {
-    "start": "2026-02-15T02:27:21.604031+00:00",
-    "end": "2026-02-15T03:24:37.571361+00:00"
+    "start": "2026-02-15T03:24:55.742464+00:00",
+    "end": "2026-02-15T05:37:08.638765+00:00"
   },
   "activity": {
     "commits_detected": 0,
@@ -17,15 +17,7 @@
     "primary_session": null,
     "detected_sessions": [],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-02-15T01:21:43+00:00",
-        "last_commit": "2026-02-15T02:22:24+00:00",
-        "commit_count": 2,
-        "repos_touched": [
-          "CoinAnole/challenge1"
-        ],
-        "split_timeout_minutes": 90
-      },
+      "open_session": null,
       "last_timeout_minutes": 90
     },
     "last_commit_timestamp": null,
@@ -36,7 +28,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-15T02:27:21.604031+00:00",
-    "hours_since_last_check": 0.95
+    "previous_check": "2026-02-15T03:24:55.742464+00:00",
+    "hours_since_last_check": 2.2
   }
 }
