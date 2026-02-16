@@ -80,9 +80,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Evening (9:23 PM) - deep purple-blue evening tones outside, warm desk lamp illumination inside
-- **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple
-- **Notes:** The changing light makes the same view feel like different places. At 9:23 PM, the natural light has faded to deep purple-blue evening tones. The desk lamp is now the primary light source, casting a warm, intimate pool of light over the desk. The trophy shelf catches this lamplight beautifully, making the golden trophies gleam with a cozy warmth. The Chicago skyline outside has darkened, with city lights beginning to twinkle in the distance. The atmosphere is calm, content, and peaceful—a quiet evening sanctuary.
+- **Current:** Night (2:04 AM) - dark silhouette skyline with twinkling city lights outside, warm desk lamp illumination inside
+- **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
+- **Notes:** The changing light makes the same view feel like different places. At 2:04 AM, the natural light has completely faded. The Chicago skyline is now a dark silhouette punctuated by twinkling city lights. The desk lamp remains the primary light source, casting a warm, intimate pool of light over the desk. The trophy shelf catches this lamplight beautifully, making the golden trophies gleam with a cozy warmth. The atmosphere is peaceful and sleepy—a quiet night sanctuary where Byte dreams peacefully.
 
 ---
 
@@ -96,4 +96,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026 (9:23 PM - evening transition, calm and content)*
+*Last updated by Byte on February 16, 2026 (2:04 AM - deep night, peacefully sleeping)*
