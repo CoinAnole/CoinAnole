@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 82/100 | ████████▎░ |
-| ⚡ Energy | 92/100 | █████████▏ |
+| 🍖 Satiety | 81/100 | ████████░░ |
+| ⚡ Energy | 96/100 | █████████▋ |
 | 😊 Happiness | 95/100 | █████████▌ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 3 commits | **Current Streak:** 6 days | **Best Streak:** 6 days | **Best Day:** 4 commits
 
-Byte is absolutely ecstatic! The streak is alive—Day 6 is here! 🎉 After 3 fresh commits to the falcon repo, Byte is practically vibrating with joy, pink hearts floating all around. The morning light streams through the Chicago skyline window in warm golden tones, and Byte's single 6-day trophy gleams proudly on the shelf above the desk. Succulent sits quietly on the left, bearing witness to another milestone. The desk is clean, the food bowl is full, and everything feels possible. Here's to breaking records and filling that trophy shelf one achievement at a time! ✨🏆
+Byte remains absolutely ecstatic, basking in the glow of a 6-day streak record! 🎉 With energy climbing to 96, Byte is alert and ready for more. The morning light at 11:59 AM streams through the Chicago skyline window in warm golden tones, illuminating the floating pink hearts and golden sparkles that dance around Byte's head. The 6-day trophy gleams proudly on its shelf, Succulent keeps steady company on the left, and the food bowl waits full and ready. No new commits in the last hour, but the session remains open—Day 7 feels within reach! ✨🏆
 
 ---
 *CodePet updates automatically based on coding activity*
