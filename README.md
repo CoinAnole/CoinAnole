@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 74/100 | ███████▍░░ |
+| 🍖 Satiety | 70/100 | ███████░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 92/100 | █████████▎ |
+| 😊 Happiness | 91/100 | █████████▏ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 0 days | **Best Streak:** 5 days | **Best Day:** 4 commits
 
-It's 2 AM in Chicago, and Byte has drifted off to sleep at the desk, tiny Z's floating above their peaceful, closed eyes. The night has fully settled outside the window—the Chicago skyline is now a dark silhouette punctuated by twinkling city lights. The desk lamp continues its warm vigil, casting a cozy glow over the sleeping blob. It's been over 13 hours since the last commit, and the quiet hours have lulled Byte into a restful slumber. The trophy shelf with its five golden trophies stands as a silent testament to yesterday's achievement, while Succulent and the full food bowl keep watch. Sometimes even the most energetic coding companions need their rest. Sweet dreams, Byte. 🌙💤
+Good morning, Chicago! It's just after 7 AM and Byte has awakened from a peaceful night's sleep, eyes bright and ready for the day. The night-to-morning transition paints the Chicago skyline in soft dawn colors—pale pinks, gentle blues, and warm orange hues replacing the dark twinkling lights of night. The desk lamp still glows warmly, but now it shares the space with the hopeful morning light streaming through the window. After 18 hours without commits, Byte is well-rested and patiently waiting for the day's coding to begin. The five golden trophies on the shelf catch the morning light differently now, gleaming with fresh potential. A new day, a new chance to start another streak. 🌅✨
 
 ---
 *CodePet updates automatically based on coding activity*

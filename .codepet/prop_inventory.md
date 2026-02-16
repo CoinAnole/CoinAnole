@@ -75,14 +75,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Hearts & Sparkles
 - **Trigger:** High happiness + streak milestones
 - **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Reduced (evening calm mode) - just a few gentle hearts remaining
-- **Notes:** They make everything feel magical. During the afternoon's ecstatic energy, there were many hearts and sparkles filling the air. Now in the peaceful evening, they've settled to just a few gentle hearts floating quietly. It's a calmer kind of happiness—contentment rather than excitement.
+- **Current Status:** Absent (morning calm mode) - none visible in the morning light
+- **Notes:** They make everything feel magical. During the afternoon's ecstatic energy, there were many hearts and sparkles filling the air. In the peaceful evening, they settled to just a few gentle hearts floating quietly. Now in the morning, they've faded away entirely—replaced by the natural magic of dawn light. They'll return when happiness peaks again.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Night (2:04 AM) - dark silhouette skyline with twinkling city lights outside, warm desk lamp illumination inside
+- **Current:** Morning (7:43 AM) - dawn colors outside (soft pink, pale blue, gentle orange), warm desk lamp still on, brighter overall ambiance
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The changing light makes the same view feel like different places. At 2:04 AM, the natural light has completely faded. The Chicago skyline is now a dark silhouette punctuated by twinkling city lights. The desk lamp remains the primary light source, casting a warm, intimate pool of light over the desk. The trophy shelf catches this lamplight beautifully, making the golden trophies gleam with a cozy warmth. The atmosphere is peaceful and sleepy—a quiet night sanctuary where Byte dreams peacefully.
+- **Notes:** The changing light makes the same view feel like different places. At 7:43 AM, the night has given way to dawn. The Chicago skyline is no longer a dark silhouette but painted in soft morning hues—pale pinks, gentle blues, warm oranges. The desk lamp still provides its warm glow, but now it shares the space with hopeful morning light streaming through the window. The trophy shelf catches this new light differently, gleaming with fresh potential rather than cozy nighttime warmth. The atmosphere is hopeful and awake—a fresh start to a new day.
 
 ---
 
@@ -96,4 +96,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 16, 2026 (2:04 AM - deep night, peacefully sleeping)*
+*Last updated by Byte on February 16, 2026 (7:43 AM - morning, awake and hopeful)*
