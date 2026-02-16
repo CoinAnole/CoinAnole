@@ -1,44 +1,44 @@
 {
-  "timestamp": "2026-02-16T19:48:53.376347+00:00",
+  "timestamp": "2026-02-16T20:52:12.511777+00:00",
   "period": {
-    "start": "2026-02-16T19:06:31.844095+00:00",
-    "end": "2026-02-16T19:48:53.376347+00:00"
+    "start": "2026-02-16T19:49:17.597601+00:00",
+    "end": "2026-02-16T20:52:12.511777+00:00"
   },
   "activity": {
-    "commits_detected": 5,
-    "commits_today_detected": 5,
+    "commits_detected": 3,
+    "commits_today_detected": 3,
     "repos_touched": [
       "CoinAnole/falcon"
     ],
-    "session_duration_minutes": 12,
-    "session_duration_today_minutes": 12,
+    "session_duration_minutes": 16,
+    "session_duration_today_minutes": 16,
     "marathon_detected": false,
     "session_split_timeout_minutes": 45,
     "session_count_detected": 1,
     "primary_session": {
-      "start": "2026-02-16T19:09:58+00:00",
-      "end": "2026-02-16T19:21:41+00:00",
-      "duration_minutes": 12,
-      "commit_count": 5
+      "start": "2026-02-16T20:31:48+00:00",
+      "end": "2026-02-16T20:48:17+00:00",
+      "duration_minutes": 16,
+      "commit_count": 3
     },
     "detected_sessions": [
       {
-        "start": "2026-02-16T19:09:58+00:00",
-        "end": "2026-02-16T19:21:41+00:00",
-        "duration_minutes": 12,
-        "commit_count": 5
+        "start": "2026-02-16T20:31:48+00:00",
+        "end": "2026-02-16T20:48:17+00:00",
+        "duration_minutes": 16,
+        "commit_count": 3
       }
     ],
     "session_tracker": {
       "open_session": {
-        "start": "2026-02-16T19:09:58+00:00",
-        "last_commit": "2026-02-16T19:21:41+00:00",
-        "commit_count": 5,
+        "start": "2026-02-16T20:31:48+00:00",
+        "last_commit": "2026-02-16T20:48:17+00:00",
+        "commit_count": 3,
         "split_timeout_minutes": 45
       },
       "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-16T19:21:41+00:00",
+    "last_commit_timestamp": "2026-02-16T20:48:17+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +46,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-16T19:06:31.844095+00:00",
-    "hours_since_last_check": 0.71
+    "previous_check": "2026-02-16T19:49:17.597601+00:00",
+    "hours_since_last_check": 1.05
   }
 }
