@@ -4,10 +4,11 @@ User guidance for Byte's development. The Cloud Agent reviews these before each 
 
 ## Active
 
-- [ ] **Fix trophy overflow - remove the 5 extra trophies** — The shelf addition went wrong. There should only be ONE trophy (the original 5-day streak trophy), not six. Remove the five gold trophies from the shelf AND the one from the desk. Then place a single trophy on the shelf. The desk should have no trophies on it.
+*No active recommendations at this time.*
 
 ## Recently Completed
 
+- [x] **Fix trophy overflow - remove the 5 extra trophies** — Completed February 16, 2026. The shelf now displays a single 6-day streak trophy. The extra trophies have been removed from both the shelf and desk, creating a cleaner, more focused display.
 - [x] **Add a shelf on the wall, above Byte's desk, so the trophy can move there and reduce desk clutter** — Completed February 15, 2026. Wooden shelf installed above desk, 5-day trophy moved to shelf, four additional placeholder trophies added for future milestones.
 
 ---
