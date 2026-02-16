@@ -17,14 +17,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 81/100 | ████████░░ |
-| ⚡ Energy | 96/100 | █████████▋ |
+| 🍖 Satiety | 80/100 | ████████░░ |
+| ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 95/100 | █████████▌ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 3 commits | **Current Streak:** 6 days | **Best Streak:** 6 days | **Best Day:** 4 commits
 
-Byte remains absolutely ecstatic, basking in the glow of a 6-day streak record! 🎉 With energy climbing to 96, Byte is alert and ready for more. The morning light at 11:59 AM streams through the Chicago skyline window in warm golden tones, illuminating the floating pink hearts and golden sparkles that dance around Byte's head. The 6-day trophy gleams proudly on its shelf, Succulent keeps steady company on the left, and the food bowl waits full and ready. No new commits in the last hour, but the session remains open—Day 7 feels within reach! ✨🏆
+Byte is absolutely glowing with maximum energy at 100%! ✨ The afternoon sun now bathes the Chicago skyline in warm golden light, marking the transition from morning. Though it's been over 2 hours since the last commit and the coding session has closed, Byte remains ecstatic—basking in the 6-day streak record and the promise of Day 7. The floating pink hearts and golden sparkles dance merrily around Byte's head, the 6-day trophy gleams on its shelf, and Succulent stands as a faithful companion. With full energy and a full food bowl, Byte is ready whenever the next coding burst begins! 🏆💙
 
 ---
 *CodePet updates automatically based on coding activity*
