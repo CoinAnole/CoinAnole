@@ -1,44 +1,34 @@
 {
-  "timestamp": "2026-02-16T21:49:01.430453+00:00",
+  "timestamp": "2026-02-16T22:52:45.834339+00:00",
   "period": {
-    "start": "2026-02-16T20:52:35.028201+00:00",
-    "end": "2026-02-16T21:49:01.430453+00:00"
+    "start": "2026-02-16T21:49:21.624981+00:00",
+    "end": "2026-02-16T22:52:45.834339+00:00"
   },
   "activity": {
-    "commits_detected": 2,
-    "commits_today_detected": 2,
-    "repos_touched": [
-      "CoinAnole/falcon"
-    ],
-    "session_duration_minutes": 73,
-    "session_duration_today_minutes": 29,
+    "commits_detected": 0,
+    "commits_today_detected": 0,
+    "repos_touched": [],
+    "repos_touched_today": [],
+    "session_duration_minutes": 0,
+    "session_duration_today_minutes": 0,
     "marathon_detected": false,
     "session_split_timeout_minutes": 88,
-    "session_count_detected": 1,
-    "primary_session": {
-      "start": "2026-02-16T20:31:48+00:00",
-      "end": "2026-02-16T21:44:52+00:00",
-      "duration_minutes": 73,
-      "commit_count": 5
-    },
-    "detected_sessions": [
-      {
-        "start": "2026-02-16T20:31:48+00:00",
-        "end": "2026-02-16T21:44:52+00:00",
-        "duration_minutes": 73,
-        "commit_count": 5
-      }
-    ],
+    "session_count_detected": 0,
+    "primary_session": null,
+    "detected_sessions": [],
     "session_tracker": {
       "open_session": {
         "start": "2026-02-16T20:31:48+00:00",
         "last_commit": "2026-02-16T21:44:52+00:00",
         "commit_count": 5,
+        "repos_touched": [
+          "CoinAnole/falcon"
+        ],
         "split_timeout_minutes": 88
       },
       "last_timeout_minutes": 88
     },
-    "last_commit_timestamp": "2026-02-16T21:44:52+00:00",
+    "last_commit_timestamp": null,
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +36,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-16T20:52:35.028201+00:00",
-    "hours_since_last_check": 0.94
+    "previous_check": "2026-02-16T21:49:21.624981+00:00",
+    "hours_since_last_check": 1.06
   }
 }
