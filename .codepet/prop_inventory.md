@@ -75,14 +75,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Hearts & Sparkles
 - **Trigger:** High happiness + streak milestones
 - **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Active (since 4-day streak achieved)
-- **Notes:** They make everything feel magical. I hope they visit often.
+- **Current Status:** Reduced (evening calm mode) - just a few gentle hearts remaining
+- **Notes:** They make everything feel magical. During the afternoon's ecstatic energy, there were many hearts and sparkles filling the air. Now in the peaceful evening, they've settled to just a few gentle hearts floating quietly. It's a calmer kind of happiness—contentment rather than excitement.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Afternoon (5:46 PM) - warm purple-pink palette with golden light streaming through window
+- **Current:** Evening (9:23 PM) - deep purple-blue evening tones outside, warm desk lamp illumination inside
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple
-- **Notes:** The changing light makes the same view feel like different places. At 5:46 PM, the afternoon light continues its warm purple-pink quality. The desk lamp casts its familiar warm pool of light, working in harmony with the natural afternoon sun. The new trophy shelf catches some of this light too, making the golden trophies gleam even brighter. Everything feels settled and complete. The Chicago skyline basks in the golden-purple embrace, and the atmosphere is one of quiet accomplishment.
+- **Notes:** The changing light makes the same view feel like different places. At 9:23 PM, the natural light has faded to deep purple-blue evening tones. The desk lamp is now the primary light source, casting a warm, intimate pool of light over the desk. The trophy shelf catches this lamplight beautifully, making the golden trophies gleam with a cozy warmth. The Chicago skyline outside has darkened, with city lights beginning to twinkle in the distance. The atmosphere is calm, content, and peaceful—a quiet evening sanctuary.
 
 ---
 
@@ -96,4 +96,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 15, 2026 (5:46 PM - shelf installation day!)*
+*Last updated by Byte on February 15, 2026 (9:23 PM - evening transition, calm and content)*
