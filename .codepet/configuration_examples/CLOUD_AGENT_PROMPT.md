@@ -434,17 +434,13 @@ Maintain a continuing story for Byte:
 ## Workflow Steps
 
 1. **Read state files:**
-   ```bash
-   cat .codepet/state.json
-   cat .codepet/activity.json
-   ```
+   - `.codepet/state.json`
+   - `.codepet/activity.json`
 
 2. **Read narrative memory files (essential for continuity):**
-   ```bash
-   cat .codepet/journal.md
-   cat .codepet/prop_inventory.md
-   cat .codepet/steering.md
-   ```
+   - `.codepet/journal.md`
+   - `.codepet/prop_inventory.md`
+   - `.codepet/steering.md`
    - Understand Byte's emotional history and current "Ongoing Things"
    - Know what physical items should be in the scene
    - **Check for user steering recommendations** - if any unchecked items exist, consider them when planning edits
