@@ -202,7 +202,7 @@ Every creative decision is committed to git:
 
 1. **Cost optimization** - 83% reduction in calls by separating mechanical from creative work
 2. **Image Model Selection** - Each image edit should cost about 1¢.
-3. **Cost Efficient Multimodal Reasoning Models** - Kimi K2.5 has the vision skills to analyze images and exercise creative judgement.
+3. **Cost Efficient Multimodal Reasoning Models** - Models like **Kimi K2.5**, **Gemini 3 Flash**, and **Qwen3.5** have the vision skills to analyze images and exercise creative judgement. Avoid **GLM 4.6V**, which can fall into reasoning loops that result in timeouts.
 
 ---
 
@@ -213,7 +213,7 @@ Every creative decision is committed to git:
 - **GitHub Webhooks** - Trigger the Agent when creative updates are needed
 - **fal.ai / Falcon** - Image generation pipeline (FLUX.2 Flash model)
 - **PyGithub** - GitHub API integration for activity scanning
-- **Kimi K2.5** - Vision analysis and prompt generation within the Agent
+- **Kimi K2.5 / Gemini 3 Flash / Qwen3.5** - Vision analysis and prompt generation within the Agent
 
 ---
 
