@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-17T21:51:20.976440+00:00",
+  "timestamp": "2026-02-17T22:54:11.041346+00:00",
   "period": {
-    "start": "2026-02-17T21:00:03.027603+00:00",
-    "end": "2026-02-17T21:51:20.976440+00:00"
+    "start": "2026-02-17T21:51:36.555921+00:00",
+    "end": "2026-02-17T22:54:11.041346+00:00"
   },
   "activity": {
     "commits_detected": 1,
@@ -10,35 +10,35 @@
     "repos_touched": [
       "CoinAnole/AndroidTVAI"
     ],
-    "session_duration_minutes": 10,
+    "session_duration_minutes": 57,
     "session_duration_today_minutes": 10,
     "marathon_detected": false,
     "session_split_timeout_minutes": 66,
     "session_count_detected": 1,
     "primary_session": {
       "start": "2026-02-17T21:32:14+00:00",
-      "end": "2026-02-17T21:32:14+00:00",
-      "duration_minutes": 10,
-      "commit_count": 1
+      "end": "2026-02-17T22:29:38+00:00",
+      "duration_minutes": 57,
+      "commit_count": 2
     },
     "detected_sessions": [
       {
         "start": "2026-02-17T21:32:14+00:00",
-        "end": "2026-02-17T21:32:14+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
+        "end": "2026-02-17T22:29:38+00:00",
+        "duration_minutes": 57,
+        "commit_count": 2
       }
     ],
     "session_tracker": {
       "open_session": {
         "start": "2026-02-17T21:32:14+00:00",
-        "last_commit": "2026-02-17T21:32:14+00:00",
-        "commit_count": 1,
+        "last_commit": "2026-02-17T22:29:38+00:00",
+        "commit_count": 2,
         "split_timeout_minutes": 66
       },
       "last_timeout_minutes": 66
     },
-    "last_commit_timestamp": "2026-02-17T21:32:14+00:00",
+    "last_commit_timestamp": "2026-02-17T22:29:38+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +46,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-17T21:00:03.027603+00:00",
-    "hours_since_last_check": 0.85
+    "previous_check": "2026-02-17T21:51:36.555921+00:00",
+    "hours_since_last_check": 1.04
   }
 }
