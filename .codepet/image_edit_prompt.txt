@@ -1,1 +1,1 @@
-Update the floating text to say "6 Commits TODAY" to reflect the new commit count, keep the ecstatic mood with floating hearts and sparkles, maintain the afternoon Chicago skyline lighting
+change the text from '6 Commits TODAY' to '7 Commits TODAY' to reflect the new commit count, then change the trophy number from '2' to '7' to match the 7-day streak
