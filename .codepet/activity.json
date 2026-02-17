@@ -1,44 +1,39 @@
 {
-  "timestamp": "2026-02-16T23:49:08.352732+00:00",
+  "timestamp": "2026-02-17T03:17:21.904528+00:00",
   "period": {
-    "start": "2026-02-16T22:53:05.229608+00:00",
-    "end": "2026-02-16T23:49:08.352732+00:00"
+    "start": "2026-02-16T23:49:31.983034+00:00",
+    "end": "2026-02-17T03:17:21.904528+00:00"
   },
   "activity": {
-    "commits_detected": 2,
-    "commits_today_detected": 2,
+    "commits_detected": 3,
+    "commits_today_detected": 3,
     "repos_touched": [
       "CoinAnole/falcon"
     ],
-    "session_duration_minutes": 182,
-    "session_duration_today_minutes": 34,
+    "session_duration_minutes": 292,
+    "session_duration_today_minutes": 28,
     "marathon_detected": true,
-    "session_split_timeout_minutes": 90,
+    "session_split_timeout_minutes": 45,
     "session_count_detected": 1,
     "primary_session": {
       "start": "2026-02-16T20:31:48+00:00",
-      "end": "2026-02-16T23:33:43+00:00",
-      "duration_minutes": 182,
-      "commit_count": 7
+      "end": "2026-02-17T01:23:56+00:00",
+      "duration_minutes": 292,
+      "commit_count": 10
     },
     "detected_sessions": [
       {
         "start": "2026-02-16T20:31:48+00:00",
-        "end": "2026-02-16T23:33:43+00:00",
-        "duration_minutes": 182,
-        "commit_count": 7
+        "end": "2026-02-17T01:23:56+00:00",
+        "duration_minutes": 292,
+        "commit_count": 10
       }
     ],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-02-16T20:31:48+00:00",
-        "last_commit": "2026-02-16T23:33:43+00:00",
-        "commit_count": 7,
-        "split_timeout_minutes": 90
-      },
-      "last_timeout_minutes": 90
+      "open_session": null,
+      "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-16T23:33:43+00:00",
+    "last_commit_timestamp": "2026-02-17T01:23:56+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +41,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-16T22:53:05.229608+00:00",
-    "hours_since_last_check": 0.93
+    "previous_check": "2026-02-16T23:49:31.983034+00:00",
+    "hours_since_last_check": 3.46
   }
 }
