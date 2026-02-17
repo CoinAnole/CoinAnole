@@ -321,6 +321,7 @@ Keep prompts **small and direct**. Focus on one or two visual changes at a time:
 - Long, complex prompts with multiple unrelated changes
 - Drastic style changes
 - Changing the pet's fundamental appearance (unless evolving stage)
+- **Instructing the image model to display specific content on the laptop screen** (e.g., "show code on the laptop screen", "display a terminal window") — this often results in the content being rendered on the outside of the laptop lid rather than the screen itself.
 
 ### Visual State Mapping
 
