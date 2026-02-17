@@ -1,63 +1,44 @@
 {
-  "timestamp": "2026-02-17T20:59:46.009998+00:00",
+  "timestamp": "2026-02-17T21:51:20.976440+00:00",
   "period": {
-    "start": "2026-02-17T19:26:27.082591+00:00",
-    "end": "2026-02-17T20:59:46.009998+00:00"
+    "start": "2026-02-17T21:00:03.027603+00:00",
+    "end": "2026-02-17T21:51:20.976440+00:00"
   },
   "activity": {
-    "commits_detected": 22,
+    "commits_detected": 1,
     "commits_today_detected": 1,
     "repos_touched": [
       "CoinAnole/AndroidTVAI"
     ],
-    "session_duration_minutes": 94,
+    "session_duration_minutes": 10,
     "session_duration_today_minutes": 10,
     "marathon_detected": false,
     "session_split_timeout_minutes": 66,
-    "session_count_detected": 6,
+    "session_count_detected": 1,
     "primary_session": {
-      "start": "2025-10-10T22:57:30+00:00",
-      "end": "2025-10-11T00:31:09+00:00",
-      "duration_minutes": 94,
-      "commit_count": 5
+      "start": "2026-02-17T21:32:14+00:00",
+      "end": "2026-02-17T21:32:14+00:00",
+      "duration_minutes": 10,
+      "commit_count": 1
     },
     "detected_sessions": [
       {
-        "start": "2025-10-10T15:57:31+00:00",
-        "end": "2025-10-10T16:09:25+00:00",
-        "duration_minutes": 12,
-        "commit_count": 2
-      },
-      {
-        "start": "2025-10-10T19:23:45+00:00",
-        "end": "2025-10-10T20:43:45+00:00",
-        "duration_minutes": 80,
-        "commit_count": 8
-      },
-      {
-        "start": "2025-10-10T22:57:30+00:00",
-        "end": "2025-10-11T00:31:09+00:00",
-        "duration_minutes": 94,
-        "commit_count": 5
-      },
-      {
-        "start": "2025-10-25T01:07:43+00:00",
-        "end": "2025-10-25T02:13:27+00:00",
-        "duration_minutes": 66,
-        "commit_count": 5
-      },
-      {
-        "start": "2026-02-17T19:28:55+00:00",
-        "end": "2026-02-17T19:28:55+00:00",
+        "start": "2026-02-17T21:32:14+00:00",
+        "end": "2026-02-17T21:32:14+00:00",
         "duration_minutes": 10,
         "commit_count": 1
       }
     ],
     "session_tracker": {
-      "open_session": null,
+      "open_session": {
+        "start": "2026-02-17T21:32:14+00:00",
+        "last_commit": "2026-02-17T21:32:14+00:00",
+        "commit_count": 1,
+        "split_timeout_minutes": 66
+      },
       "last_timeout_minutes": 66
     },
-    "last_commit_timestamp": "2026-02-17T19:28:55+00:00",
+    "last_commit_timestamp": "2026-02-17T21:32:14+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -65,7 +46,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-17T19:26:27.082591+00:00",
-    "hours_since_last_check": 1.56
+    "previous_check": "2026-02-17T21:00:03.027603+00:00",
+    "hours_since_last_check": 0.85
   }
 }
