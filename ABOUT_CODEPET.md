@@ -1,4 +1,4 @@
-# CodePet: Entry for Kilo "Automate Everything" Challenge
+# CodePet
 
 ## The Big Idea
 
