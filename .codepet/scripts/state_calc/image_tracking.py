@@ -80,6 +80,7 @@ def build_image_tracking_state(previous_state: dict | None, current_stage: str, 
         "total_edits_all_time": max(0, to_int(previous_image_state.get("total_edits_all_time"), 0)),
         "last_reset_at": previous_image_state.get("last_reset_at"),
         "reset_count": max(0, to_int(previous_image_state.get("reset_count"), 0)),
+        "last_counted_image_revision": previous_image_state.get("last_counted_image_revision"),
         "current_stage_reference": current_stage_reference,
     }
 

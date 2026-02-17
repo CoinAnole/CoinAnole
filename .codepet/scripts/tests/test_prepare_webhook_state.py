@@ -3,6 +3,7 @@ import json
 import os
 import tempfile
 import unittest
+from contextlib import ExitStack
 from pathlib import Path
 from unittest.mock import patch
 
@@ -12,6 +13,8 @@ SPEC = importlib.util.spec_from_file_location("prepare_webhook_state", MODULE_PA
 PREPARE_WEBHOOK_STATE = importlib.util.module_from_spec(SPEC)
 assert SPEC is not None and SPEC.loader is not None
 SPEC.loader.exec_module(PREPARE_WEBHOOK_STATE)
+
+_UNSET = object()
 
 
 class PrepareWebhookStateTests(unittest.TestCase):
@@ -35,16 +38,24 @@ class PrepareWebhookStateTests(unittest.TestCase):
         with open(".codepet/state.json") as f:
             return json.load(f)
 
-    def run_main(self, env_updates: dict[str, str] | None = None) -> tuple[int, dict[str, str]]:
+    def run_main(
+        self,
+        env_updates: dict[str, str] | None = None,
+        image_revision: str | None | object = _UNSET,
+    ) -> tuple[int, dict[str, str]]:
         outputs: dict[str, str] = {}
 
         def capture_output(key: str, value: str) -> None:
             outputs[key] = value
 
         env_updates = env_updates or {}
-        with patch.object(PREPARE_WEBHOOK_STATE, "set_output", side_effect=capture_output), patch.dict(
-            os.environ, env_updates, clear=False
-        ):
+        with ExitStack() as stack:
+            stack.enter_context(patch.object(PREPARE_WEBHOOK_STATE, "set_output", side_effect=capture_output))
+            stack.enter_context(patch.dict(os.environ, env_updates, clear=False))
+            if image_revision is not _UNSET:
+                stack.enter_context(
+                    patch.object(PREPARE_WEBHOOK_STATE, "get_current_image_revision", return_value=image_revision)
+                )
             exit_code = PREPARE_WEBHOOK_STATE.main()
         return exit_code, outputs
 
@@ -133,6 +144,41 @@ class PrepareWebhookStateTests(unittest.TestCase):
         PREPARE_WEBHOOK_STATE.ensure_stage_image_bootstrap(state, image_state)
         self.assertEqual(image_state["current_stage_reference"], ".codepet/stage_images/teen.png")
 
+    def test_reconcile_image_edit_counters_bootstraps_marker_without_increment(self) -> None:
+        image_state = {"edit_count_since_reset": 2, "total_edits_all_time": 9}
+        edit_count, total_edits, incremented = PREPARE_WEBHOOK_STATE.reconcile_image_edit_counters(
+            image_state,
+            "git_blob:abc123",
+        )
+        self.assertEqual(edit_count, 2)
+        self.assertEqual(total_edits, 9)
+        self.assertFalse(incremented)
+        self.assertEqual(image_state["last_counted_image_revision"], "git_blob:abc123")
+
+    def test_reconcile_image_edit_counters_increments_only_on_new_revision(self) -> None:
+        image_state = {
+            "edit_count_since_reset": 2,
+            "total_edits_all_time": 9,
+            "last_counted_image_revision": "git_blob:abc123",
+        }
+
+        same_count, same_total, same_incremented = PREPARE_WEBHOOK_STATE.reconcile_image_edit_counters(
+            image_state,
+            "git_blob:abc123",
+        )
+        self.assertEqual(same_count, 2)
+        self.assertEqual(same_total, 9)
+        self.assertFalse(same_incremented)
+
+        new_count, new_total, new_incremented = PREPARE_WEBHOOK_STATE.reconcile_image_edit_counters(
+            image_state,
+            "git_blob:def456",
+        )
+        self.assertEqual(new_count, 3)
+        self.assertEqual(new_total, 10)
+        self.assertTrue(new_incremented)
+        self.assertEqual(image_state["last_counted_image_revision"], "git_blob:def456")
+
     def test_main_returns_error_when_state_is_missing(self) -> None:
         exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"})
         self.assertEqual(exit_code, 1)
@@ -178,6 +224,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
                     "total_edits_all_time": 4,
                     "reset_count": 1,
                     "last_reset_at": None,
+                    "last_counted_image_revision": "git_blob:prev",
                 },
                 "regrounding": {
                     "should_reground": False,
@@ -189,12 +236,16 @@ class PrepareWebhookStateTests(unittest.TestCase):
         )
         Path(".codepet/codepet.png").write_bytes(b"current-image")
 
-        exit_code, outputs = self.run_main({"FORCE_REGROUND": "true", "REGROUND_THRESHOLD": "6"})
+        exit_code, outputs = self.run_main(
+            {"FORCE_REGROUND": "true", "REGROUND_THRESHOLD": "6"},
+            image_revision="git_blob:next",
+        )
         self.assertEqual(exit_code, 0)
 
         state = self.read_state()
         self.assertEqual(state["image_state"]["edit_count_since_reset"], 1)
         self.assertEqual(state["image_state"]["total_edits_all_time"], 5)
+        self.assertEqual(state["image_state"]["last_counted_image_revision"], "git_blob:next")
         self.assertTrue(state["regrounding"]["should_reground"])
         self.assertEqual(state["regrounding"]["reason"], "force_reground")
         self.assertEqual(state["regrounding"]["threshold"], 6)
@@ -237,7 +288,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
         )
         Path(".codepet/codepet.png").write_bytes(b"current-image")
 
-        exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"})
+        exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"}, image_revision="git_blob:temporal")
         self.assertEqual(exit_code, 0)
         self.assertEqual(outputs["timezone"], "America/Chicago")
         self.assertEqual(outputs["local_timestamp"], "2026-02-13T22:30:00-06:00")
@@ -257,6 +308,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
                     "total_edits_all_time": 1,
                     "reset_count": 0,
                     "last_reset_at": None,
+                    "last_counted_image_revision": "git_blob:before-threshold",
                 },
                 "regrounding": {
                     "should_reground": False,
@@ -266,7 +318,10 @@ class PrepareWebhookStateTests(unittest.TestCase):
                 "evolution": {"just_occurred": False},
             }
         )
-        threshold_code, threshold_outputs = self.run_main({"FORCE_REGROUND": "false"})
+        threshold_code, threshold_outputs = self.run_main(
+            {"FORCE_REGROUND": "false"},
+            image_revision="git_blob:at-threshold",
+        )
         self.assertEqual(threshold_code, 0)
         threshold_state = self.read_state()
         self.assertEqual(threshold_state["image_state"]["edit_count_since_reset"], 2)
@@ -282,6 +337,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
                     "total_edits_all_time": 10,
                     "reset_count": 2,
                     "last_reset_at": None,
+                    "last_counted_image_revision": "git_blob:same",
                 },
                 "regrounding": {
                     "should_reground": True,
@@ -291,10 +347,13 @@ class PrepareWebhookStateTests(unittest.TestCase):
                 "evolution": {"just_occurred": False},
             }
         )
-        reset_code, reset_outputs = self.run_main({"FORCE_REGROUND": "false"})
+        reset_code, reset_outputs = self.run_main(
+            {"FORCE_REGROUND": "false"},
+            image_revision="git_blob:same",
+        )
         self.assertEqual(reset_code, 0)
         reset_state = self.read_state()
-        self.assertEqual(reset_state["image_state"]["edit_count_since_reset"], 1)
+        self.assertEqual(reset_state["image_state"]["edit_count_since_reset"], 0)
         self.assertFalse(reset_state["regrounding"]["should_reground"])
         self.assertIsNone(reset_state["regrounding"]["reason"])
         self.assertEqual(reset_outputs["reason_json"], "null")

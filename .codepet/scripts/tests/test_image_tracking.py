@@ -95,6 +95,7 @@ class ImageTrackingTests(unittest.TestCase):
                 "total_edits_all_time": 3,
                 "last_reset_at": None,
                 "reset_count": 0,
+                "last_counted_image_revision": "git_blob:abc123",
                 "current_stage_reference": ".codepet/stage_images/custom_anchor.png",
             },
             "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
@@ -109,6 +110,7 @@ class ImageTrackingTests(unittest.TestCase):
 
         self.assertFalse(evolution["just_occurred"])
         self.assertEqual(image_state["current_stage_reference"], ".codepet/stage_images/custom_anchor.png")
+        self.assertEqual(image_state["last_counted_image_revision"], "git_blob:abc123")
 
     def test_build_image_tracking_state_clears_stale_threshold_reason(self) -> None:
         stage_dir = Path(".codepet/stage_images")

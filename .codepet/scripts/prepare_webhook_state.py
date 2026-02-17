@@ -3,14 +3,16 @@
 CodePet Pre-Webhook State Preparation
 
 Mutates .codepet/state.json immediately before webhook execution:
-- increments image edit counters (anticipating image edit)
+- reconciles image edit counters against the latest codepet.png revision
 - updates re-grounding flags based on threshold
 - optionally forces re-grounding via FORCE_REGROUND=true
 - exposes outputs for GitHub Actions
 """
 
+import hashlib
 import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -24,6 +26,8 @@ from state_calc.time_utils import to_int
 
 
 DEFAULT_THRESHOLD = 6
+CODEPET_IMAGE_PATH = ".codepet/codepet.png"
+LAST_COUNTED_IMAGE_REVISION_KEY = "last_counted_image_revision"
 
 
 def is_truthy(value: Any) -> bool:
@@ -38,6 +42,65 @@ def is_truthy(value: Any) -> bool:
 def set_output(key: str, value: str) -> None:
     """Compatibility wrapper around the shared output helper."""
     _set_output(key, value)
+
+
+def get_current_image_revision(image_path: str = CODEPET_IMAGE_PATH) -> str | None:
+    """
+    Resolve a stable revision id for the current image.
+
+    Preferred source is the git blob id at HEAD. This works with shallow clones
+    and tracks committed image versions. If git metadata is unavailable, fall
+    back to a content hash of the working-tree file.
+    """
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--verify", f"HEAD:{image_path}"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except OSError:
+        result = None
+
+    blob_id = result.stdout.strip() if result else ""
+    if result and result.returncode == 0 and blob_id:
+        return f"git_blob:{blob_id}"
+
+    image_file = Path(image_path)
+    if not image_file.exists():
+        return None
+
+    try:
+        digest = hashlib.sha256(image_file.read_bytes()).hexdigest()
+    except OSError:
+        return None
+
+    return f"file_sha256:{digest}"
+
+
+def reconcile_image_edit_counters(image_state: dict, current_revision: str | None) -> tuple[int, int, bool]:
+    """
+    Increment counters only when a new image revision appears.
+
+    A missing marker is treated as migration/bootstrap and does not increment.
+    """
+    edit_count = max(0, to_int(image_state.get("edit_count_since_reset"), 0))
+    total_edits = max(0, to_int(image_state.get("total_edits_all_time"), 0))
+    last_counted_revision = image_state.get(LAST_COUNTED_IMAGE_REVISION_KEY)
+    incremented = False
+
+    if current_revision:
+        if isinstance(last_counted_revision, str) and last_counted_revision:
+            if current_revision != last_counted_revision:
+                edit_count += 1
+                total_edits += 1
+                incremented = True
+
+        image_state[LAST_COUNTED_IMAGE_REVISION_KEY] = current_revision
+
+    image_state["edit_count_since_reset"] = edit_count
+    image_state["total_edits_all_time"] = total_edits
+    return edit_count, total_edits, incremented
 
 
 def resolve_reground_base(state: dict, image_state: dict) -> tuple[str, str, bool]:
@@ -117,11 +180,10 @@ def main() -> int:
     threshold = max(1, threshold)
     force_reground = is_truthy(os.environ.get("FORCE_REGROUND", "false"))
 
-    edit_count = max(0, to_int(image_state.get("edit_count_since_reset"), 0)) + 1
-    total_edits = max(0, to_int(image_state.get("total_edits_all_time"), 0)) + 1
-
-    image_state["edit_count_since_reset"] = edit_count
-    image_state["total_edits_all_time"] = total_edits
+    current_image_revision = get_current_image_revision()
+    edit_count, total_edits, image_count_incremented = reconcile_image_edit_counters(
+        image_state, current_image_revision
+    )
 
     previous_reason = regrounding.get("reason")
     should_reground = bool(regrounding.get("should_reground", False))
@@ -168,6 +230,8 @@ def main() -> int:
     print("Pre-webhook state prepared:")
     print(f"  edit_count_since_reset={edit_count}")
     print(f"  total_edits_all_time={total_edits}")
+    print(f"  current_image_revision={current_image_revision}")
+    print(f"  image_count_incremented={image_count_incremented}")
     print(f"  threshold={threshold}")
     print(f"  force_reground={force_reground}")
     print(f"  should_reground={should_reground}")

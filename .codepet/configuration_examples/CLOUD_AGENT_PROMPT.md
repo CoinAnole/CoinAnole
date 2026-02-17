@@ -68,8 +68,8 @@ When triggered, the following variables are available from the webhook payload:
 - `{{regrounding_should_reground}}` - Runner-computed re-grounding flag from `state.json` (available in both scheduler and manual flows)
 - `{{regrounding_reason}}` - Re-ground reason (`force_reground`, `edit_threshold_reached`, or `null`)
 - `{{regrounding_threshold}}` - Active threshold value (default `6`)
-- `{{image_edit_count_since_reset}}` - Counter value after pre-webhook increment
-- `{{image_total_edits_all_time}}` - Lifetime edit counter after pre-webhook increment
+- `{{image_edit_count_since_reset}}` - Counter value after runner-side image revision reconciliation
+- `{{image_total_edits_all_time}}` - Lifetime edit counter after runner-side image revision reconciliation
 - `{{evolution_just_occurred}}` - Whether a stage transition was detected in latest state calculation
 - `{{current_stage_reference}}` - Current stage anchor path used for re-grounding base selection
 - `{{reground_base_image}}` - Runner-selected base image path for re-grounding

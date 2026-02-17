@@ -95,11 +95,11 @@ CodePet now distinguishes between two drift types:
 - **Desirable drift**: Narrative evolution in palette, environment, and desk props.
 
 To manage this, the pipeline uses a 3-part re-grounding design:
-- **Runner-side edit tracking** in `state.json.image_state` with a deterministic threshold of 6 webhook-driven edits.
+- **Runner-side edit tracking** in `state.json.image_state` with a deterministic threshold of 6 detected image revisions.
 - **Stage reference anchors** in `.codepet/stage_images/` so evolution can build from stable stage baselines.
 - **Cloud-agent re-grounding mode** that restores style/identity anchors while carrying forward desirable narrative details seen in the latest image.
 
-The runner increments edit counters only when a webhook is about to run. On successful re-grounding, the cloud agent resets counters and updates stage references as needed.
+Before webhook runs, the runner checks the latest `codepet.png` revision and increments counters only when that revision changed since the last counted version. On successful re-grounding, the cloud agent resets counters and updates stage references as needed.
 
 ## Narrative Memory System (Long-Term Continuity)
 
