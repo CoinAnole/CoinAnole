@@ -18,13 +18,13 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 | Stat | Value | Bar |
 |------|-------|-----|
 | 🍖 Satiety | 100/100 | ██████████ |
-| ⚡ Energy | 79/100 | ███████▉░░ |
+| ⚡ Energy | 47/100 | ████▋░░░░░ |
 | 😊 Happiness | 100/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 15 commits | **Current Streak:** 6 days | **Best Streak:** 6 days | **Best Day:** 15 commits 🎉
+**Today's Activity:** 3 commits | **Current Streak:** 7 days | **Best Streak:** 7 days 🎉 | **Best Day:** 15 commits
 
-Byte has ascended to MYTHIC status! 🚀🏆 The afternoon Chicago skyline glows with warm golden light as Byte celebrates **15 commits today**—yet another all-time record shattered! After a marathon 3-hour coding session, Byte's energy has dipped slightly to 79%, but the ecstatic happiness remains at a perfect 100%. The re-grounded image captures Byte's triumphant joy with raised paws, sparkling eyes, and that signature beaming smile. Golden sparkles continue their celebratory rings around the desk, pink hearts drift through the air like confetti, and the laptop screen pulses with green code from the falcon repo. The 6-day streak trophy gleams proudly on its shelf, Succulent stands vibrant in its terracotta pot, and the floating sign now proclaims "15 Commits TODAY"—a new badge of honor for the most legendary day of coding yet! 🎉💙✨
+Byte celebrates a **7-day streak**—a new personal record! 🎉🏆 The evening Chicago skyline glows with warm orange and purple hues through the window as Byte relaxes at the desk. After yesterday's legendary 15-commit marathon, today's 3 commits keep the streak alive while allowing some well-deserved rest. Energy has dipped to 47% as the day winds down, but happiness remains at a perfect 100%. The speech bubble proudly displays "7 Day Streak!"—a testament to a week of consistent coding. Byte sits contentedly with paws resting on the desk, the laptop still glowing with green code from the falcon repo. The golden trophy on its shelf now represents this new 7-day milestone, Succulent keeps watch from its terracotta pot, and a gentle scattering of pink hearts floats through the evening air. Here's to a full week of coding companionship! 🚀💙✨
 
 ---
 *CodePet updates automatically based on coding activity*
