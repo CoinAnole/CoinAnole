@@ -1,39 +1,39 @@
 {
-  "timestamp": "2026-02-17T03:17:21.904528+00:00",
+  "timestamp": "2026-02-17T05:07:21.882948+00:00",
   "period": {
-    "start": "2026-02-16T23:49:31.983034+00:00",
-    "end": "2026-02-17T03:17:21.904528+00:00"
+    "start": "2026-02-17T03:17:41.136246+00:00",
+    "end": "2026-02-17T05:07:21.882948+00:00"
   },
   "activity": {
-    "commits_detected": 3,
-    "commits_today_detected": 3,
+    "commits_detected": 1,
+    "commits_today_detected": 1,
     "repos_touched": [
       "CoinAnole/falcon"
     ],
-    "session_duration_minutes": 292,
-    "session_duration_today_minutes": 28,
-    "marathon_detected": true,
+    "session_duration_minutes": 10,
+    "session_duration_today_minutes": 10,
+    "marathon_detected": false,
     "session_split_timeout_minutes": 45,
     "session_count_detected": 1,
     "primary_session": {
-      "start": "2026-02-16T20:31:48+00:00",
-      "end": "2026-02-17T01:23:56+00:00",
-      "duration_minutes": 292,
-      "commit_count": 10
+      "start": "2026-02-17T04:07:02+00:00",
+      "end": "2026-02-17T04:07:02+00:00",
+      "duration_minutes": 10,
+      "commit_count": 1
     },
     "detected_sessions": [
       {
-        "start": "2026-02-16T20:31:48+00:00",
-        "end": "2026-02-17T01:23:56+00:00",
-        "duration_minutes": 292,
-        "commit_count": 10
+        "start": "2026-02-17T04:07:02+00:00",
+        "end": "2026-02-17T04:07:02+00:00",
+        "duration_minutes": 10,
+        "commit_count": 1
       }
     ],
     "session_tracker": {
       "open_session": null,
       "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-17T01:23:56+00:00",
+    "last_commit_timestamp": "2026-02-17T04:07:02+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -41,7 +41,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-16T23:49:31.983034+00:00",
-    "hours_since_last_check": 3.46
+    "previous_check": "2026-02-17T03:17:41.136246+00:00",
+    "hours_since_last_check": 1.83
   }
 }
