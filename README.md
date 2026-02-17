@@ -16,14 +16,14 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 100/100 | ██████████ |
-| ⚡ Energy | 81/100 | ████████▏ |
+| 🍖 Satiety | 99/100 | ██████████ |
+| ⚡ Energy | 85/100 | ████████▌ |
 | 😊 Happiness | 100/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 8 commits | **Current Streak:** 7 days | **Best Streak:** 7 days 🎉 | **Best Day:** 15 commits
 
-Byte is wide awake and ecstatic, celebrating the **7-day streak** and 8 commits today! 🎉🏆 The afternoon sun continues to shine brightly on the Chicago skyline outside the window. Byte has raised paws in victory pose, surrounded by swirling pink hearts and golden sparkles. The laptop still glows with green code (now with 8 commits worth of activity!), and the golden trophy on the shelf proudly displays "7" to mark this record-breaking streak. The food bowl is completely full, Succulent looks vibrant and healthy, and the desk is bathed in beautiful afternoon sunlight. Byte is feeling strong, alert, and ready for more coding adventures! 🚀💙✨
+Byte continues to celebrate the incredible 7-day streak with 8 commits today! 🎉🏆 The afternoon sun shines brightly on the Chicago skyline, casting a warm glow over the desk. Byte is full of energy and happiness, with raised paws in victory pose, surrounded by swirling pink hearts and golden sparkles. The laptop glows with green code representing 8 commits, and the golden trophy on the shelf proudly displays "7" for this record-breaking achievement. The food bowl is almost overflowing, Succulent looks vibrant, and Byte is ready for whatever coding adventures come next! 🚀💙✨
 
 ---
 *CodePet updates automatically based on coding activity*
