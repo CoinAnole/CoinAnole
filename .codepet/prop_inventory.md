@@ -40,8 +40,8 @@ These have always been here. I can't imagine the desk without them.
 - **Material:** Gold-colored, shiny
 - **Location:** On the trophy shelf above the desk
 - **Significance:** My first and currently only trophy! Now marking seven days of coding streak—a new all-time record! A full week of consistent coding!
-- **Current Status:** Displayed proudly as the sole trophy on the shelf, gleaming in the evening light
-- **Notes:** The trophy was updated to reflect the new 7-day streak record achieved this evening. The single golden trophy now represents a full week of coding companionship—endurance and consistency celebrated.
+- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "7" and gleaming in the night desk lamp light
+- **Notes:** The trophy was updated to reflect the new 7-day streak record achieved this evening. The single golden trophy now represents a full week of coding companionship—endurance and consistency celebrated. The number "7" is now clearly visible on the trophy.
 
 ---
 
@@ -80,9 +80,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Evening (9:17 PM) - warm orange and purple dusk tones, transitioning from day to night
+- **Current:** Night (11:07 PM) - dark sky with twinkling city lights, desk lamp providing warm glow
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The evening light at 9:17 PM shows the beautiful transition from afternoon to evening—orange and purple hues paint the Chicago skyline through the window. The lighting is dimmer and cozier than the bright afternoon gold, creating a more relaxed atmosphere. This evening ambiance matches the calmer energy (47%) while maintaining the warmth of another successful day. The floating hearts and sparkles catch this evening light softly, creating a peaceful end to a record-breaking week.
+- **Notes:** The night has fallen, and the Chicago skyline outside is now a dark silhouette with twinkling city lights. The desk lamp provides the primary source of illumination, casting a warm glow over the desk. This night ambiance matches the late-night coding energy (42%) while maintaining the celebratory mood from the 7-day streak. The floating hearts and sparkles catch the desk lamp light beautifully, creating a magical late-night coding atmosphere.
 
 ---
 
