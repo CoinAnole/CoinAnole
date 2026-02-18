@@ -1,44 +1,39 @@
 {
-  "timestamp": "2026-02-18T05:08:31.083916+00:00",
+  "timestamp": "2026-02-18T06:34:31.689200+00:00",
   "period": {
-    "start": "2026-02-18T03:20:40.697086+00:00",
-    "end": "2026-02-18T05:08:31.083916+00:00"
+    "start": "2026-02-18T05:08:48.945524+00:00",
+    "end": "2026-02-18T06:34:31.689200+00:00"
   },
   "activity": {
-    "commits_detected": 9,
-    "commits_today_detected": 9,
+    "commits_detected": 4,
+    "commits_today_detected": 4,
     "repos_touched": [
       "CoinAnole/AndroidTVAI"
     ],
-    "session_duration_minutes": 152,
-    "session_duration_today_minutes": 92,
+    "session_duration_minutes": 198,
+    "session_duration_today_minutes": 27,
     "marathon_detected": true,
     "session_split_timeout_minutes": 45,
     "session_count_detected": 1,
     "primary_session": {
       "start": "2026-02-18T02:24:21+00:00",
-      "end": "2026-02-18T04:56:38+00:00",
-      "duration_minutes": 152,
-      "commit_count": 10
+      "end": "2026-02-18T05:42:31+00:00",
+      "duration_minutes": 198,
+      "commit_count": 14
     },
     "detected_sessions": [
       {
         "start": "2026-02-18T02:24:21+00:00",
-        "end": "2026-02-18T04:56:38+00:00",
-        "duration_minutes": 152,
-        "commit_count": 10
+        "end": "2026-02-18T05:42:31+00:00",
+        "duration_minutes": 198,
+        "commit_count": 14
       }
     ],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-02-18T02:24:21+00:00",
-        "last_commit": "2026-02-18T04:56:38+00:00",
-        "commit_count": 10,
-        "split_timeout_minutes": 45
-      },
+      "open_session": null,
       "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-18T04:56:38+00:00",
+    "last_commit_timestamp": "2026-02-18T05:42:31+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +41,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-18T03:20:40.697086+00:00",
-    "hours_since_last_check": 1.8
+    "previous_check": "2026-02-18T05:08:48.945524+00:00",
+    "hours_since_last_check": 1.43
   }
 }
