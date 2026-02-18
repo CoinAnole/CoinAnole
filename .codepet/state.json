@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-02-18T06:34:48.716460+00:00",
+  "last_updated": "2026-02-18T08:02:26.084556+00:00",
   "updated_by": "github-actions-runner",
   "pet": {
     "name": "Byte",
     "stage": "baby",
     "stats": {
-      "satiety": 100,
-      "energy": 30.376281852083295,
-      "happiness": 100,
+      "satiety": 98.7868455863426,
+      "energy": 37.65520833402774,
+      "happiness": 99.87868455863426,
       "social": 50
     },
     "mood": "ecstatic",
     "derived_state": {
-      "is_sleeping": false,
+      "is_sleeping": true,
       "is_ghost": false,
       "days_inactive": 0
     }
@@ -45,22 +45,22 @@
   },
   "temporal": {
     "timezone": "America/Chicago",
-    "local_timestamp": "2026-02-18T00:34:48.716460-06:00",
+    "local_timestamp": "2026-02-18T02:02:26.084556-06:00",
     "local_date": "2026-02-18",
-    "local_hour": 0,
+    "local_hour": 2,
     "time_of_day": "night",
     "time_of_day_transition": "none",
-    "hours_since_last_commit": 0.87,
+    "hours_since_last_commit": 2.33,
     "is_quiet_hours": true,
-    "is_late_night_coding": true,
-    "inactive_overnight": false
+    "is_late_night_coding": false,
+    "inactive_overnight": true
   },
   "image_state": {
-    "edit_count_since_reset": 0,
-    "total_edits_all_time": 62,
+    "edit_count_since_reset": 1,
+    "total_edits_all_time": 63,
     "last_reset_at": "2026-02-18T06:34:48.716460+00:00",
     "reset_count": 11,
-    "last_counted_image_revision": "git_blob:ef8ca737ff64ef20004212dce156564652b06d60",
+    "last_counted_image_revision": "git_blob:d7781f15485cbc0fa5b2f3824416346bd38a9723",
     "current_stage_reference": ".codepet/stage_images/baby.png"
   },
   "regrounding": {
