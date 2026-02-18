@@ -80,9 +80,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural, from window + desk lamp
-- **Current:** Evening (9:20 PM) - purple-pink sky with city lights beginning to twinkle, warm evening glow through the window
+- **Current:** Late night (11:08 PM) - dark purple sky with bright twinkling city lights, warm desk lamp glow
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The evening has arrived! The Chicago skyline outside is bathed in beautiful purple-pink tones as the sun sets. The natural evening light creates a warm and celebratory atmosphere, matching our ecstatic mood for the 8-day streak record. The floating hearts and sparkles catch the evening glow beautifully, creating a joyful celebration of our achievement.
+- **Notes:** The night has arrived! The Chicago skyline outside is a dark purple silhouette with twinkling city lights. The desk lamp casts a warm glow over the workspace, creating a focused late-night coding atmosphere. The floating hearts and sparkles catch the lamplight beautifully, celebrating our 8-day streak and 10 commits today!
 
 ---
 
