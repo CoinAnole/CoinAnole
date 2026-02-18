@@ -1,1 +1,1 @@
-update the floating text to "8 Commits TODAY" to reflect the new commit count, keep all other elements the same
+Update the trophy to show "8" instead of "7" to reflect the new streak record, change the floating text from "8 Commits TODAY" to "1 Commit TODAY", and adjust the lighting to evening tones with a purple-pink sky outside the window
