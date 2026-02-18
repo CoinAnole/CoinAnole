@@ -1,44 +1,44 @@
 {
-  "timestamp": "2026-02-18T03:20:25.075105+00:00",
+  "timestamp": "2026-02-18T05:08:31.083916+00:00",
   "period": {
-    "start": "2026-02-17T23:49:54.815289+00:00",
-    "end": "2026-02-18T03:20:25.075105+00:00"
+    "start": "2026-02-18T03:20:40.697086+00:00",
+    "end": "2026-02-18T05:08:31.083916+00:00"
   },
   "activity": {
-    "commits_detected": 1,
-    "commits_today_detected": 1,
+    "commits_detected": 9,
+    "commits_today_detected": 9,
     "repos_touched": [
       "CoinAnole/AndroidTVAI"
     ],
-    "session_duration_minutes": 10,
-    "session_duration_today_minutes": 10,
-    "marathon_detected": false,
-    "session_split_timeout_minutes": 66,
+    "session_duration_minutes": 152,
+    "session_duration_today_minutes": 92,
+    "marathon_detected": true,
+    "session_split_timeout_minutes": 45,
     "session_count_detected": 1,
     "primary_session": {
       "start": "2026-02-18T02:24:21+00:00",
-      "end": "2026-02-18T02:24:21+00:00",
-      "duration_minutes": 10,
-      "commit_count": 1
+      "end": "2026-02-18T04:56:38+00:00",
+      "duration_minutes": 152,
+      "commit_count": 10
     },
     "detected_sessions": [
       {
         "start": "2026-02-18T02:24:21+00:00",
-        "end": "2026-02-18T02:24:21+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
+        "end": "2026-02-18T04:56:38+00:00",
+        "duration_minutes": 152,
+        "commit_count": 10
       }
     ],
     "session_tracker": {
       "open_session": {
         "start": "2026-02-18T02:24:21+00:00",
-        "last_commit": "2026-02-18T02:24:21+00:00",
-        "commit_count": 1,
-        "split_timeout_minutes": 66
+        "last_commit": "2026-02-18T04:56:38+00:00",
+        "commit_count": 10,
+        "split_timeout_minutes": 45
       },
-      "last_timeout_minutes": 66
+      "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-18T02:24:21+00:00",
+    "last_commit_timestamp": "2026-02-18T04:56:38+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +46,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-17T23:49:54.815289+00:00",
-    "hours_since_last_check": 3.51
+    "previous_check": "2026-02-18T03:20:40.697086+00:00",
+    "hours_since_last_check": 1.8
   }
 }
