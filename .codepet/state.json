@@ -56,16 +56,16 @@
     "inactive_overnight": false
   },
   "image_state": {
-    "edit_count_since_reset": 7,
-    "total_edits_all_time": 61,
-    "last_reset_at": "2026-02-17T16:13:35.266262+00:00",
-    "reset_count": 10,
+    "edit_count_since_reset": 0,
+    "total_edits_all_time": 62,
+    "last_reset_at": "2026-02-18T06:34:48.716460+00:00",
+    "reset_count": 11,
     "last_counted_image_revision": "git_blob:ef8ca737ff64ef20004212dce156564652b06d60",
     "current_stage_reference": ".codepet/stage_images/baby.png"
   },
   "regrounding": {
-    "should_reground": true,
-    "reason": "edit_threshold_reached",
+    "should_reground": false,
+    "reason": null,
     "threshold": 6
   },
   "evolution": {
