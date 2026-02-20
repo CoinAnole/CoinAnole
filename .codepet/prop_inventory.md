@@ -79,10 +79,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** The active coding session has doubled our celebration! With happiness at 100% and 6 commits today (to two different repos), the floating hearts and sparkles are swirling in joyful patterns, creating a vibrant afternoon coding atmosphere. The 9-day streak milestone is being celebrated in full force!
 
 ### Lighting
-- **Source:** Natural late afternoon light
-- **Current:** Late afternoon (4:55 PM) - warm golden light with subtle evening hues, desk lamp is off
+- **Source:** Desk lamp + natural evening light
+- **Current:** Evening (9:15 PM) - purple-pink sky tones, desk lamp on with warm glow
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** It's 4:55 PM! The Chicago skyline outside is bathed in warm late afternoon golden light with subtle evening hues as the day starts to wind down. The desk lamp is off, letting the natural light fill the workspace. The floating hearts and sparkles are active and vibrant, celebrating our 9-day streak and 6 commits today in the beautiful late afternoon glow!
+- **Notes:** It's 9:15 PM! The Chicago skyline outside is bathed in beautiful purple-pink evening hues. The desk lamp is on, casting a warm pool of light over the workspace while the rest of the room dims. The floating hearts and sparkles are still active but slightly softer, reflecting the calm of the evening.
 
 ---
 
