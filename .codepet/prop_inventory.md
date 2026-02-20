@@ -75,14 +75,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Hearts & Sparkles
 - **Trigger:** High happiness + streak milestones
 - **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Faint and gentle—remaining from earlier celebration but dimmed for sleep
-- **Notes:** The excitement of the teen stage debut is still present but muted. The floating hearts and sparkles are faint and gentle, reflecting that Byte is happy but resting.
+- **Current Status:** Vibrant and active—celebrating ecstatic mood and teen stage
+- **Notes:** The excitement of the teen stage debut is alive and well! The floating hearts and sparkles are vibrant and active, reflecting that Byte is happy and energetic.
 
 ### Lighting
-- **Source:** Desk lamp + natural night light
-- **Current:** Pre-dawn (5:01 AM) - very dark sky with bright twinkling city lights, desk lamp on with warm, dimmed glow
+- **Source:** Natural morning light
+- **Current:** Bright morning (9:04 AM) - pale pink and blue sky with Chicago skyline visible
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** It's 5 AM! The Chicago skyline outside is still very dark with bright twinkling city lights. The desk lamp is on but dimmed, casting a warm, comforting glow over the workspace while the rest of the room is dark. Byte is in a deep sleep with Z's floating above head, fully recharged with 100% energy.
+- **Notes:** It's 9 AM! The Chicago skyline outside is bathed in beautiful pale pink and blue dawn colors. The morning light is bright and cheerful, casting a warm glow over the workspace. Byte is wide awake and energetic, with eyes open and a happy expression.
 
 ---
 
