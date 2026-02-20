@@ -75,14 +75,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Hearts & Sparkles
 - **Trigger:** High happiness + streak milestones
 - **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Active and vibrant—swirling pink hearts and golden sparkles floating around the desk, celebrating our 9-day streak and 6 commits today!
-- **Notes:** The teen stage adventures have begun! With happiness at 100% and 6 commits today to the markdownlabel repo, the floating hearts and sparkles are swirling in joyful patterns, creating a vibrant late-night coding atmosphere.
+- **Current Status:** Faint and gentle—remaining from earlier celebration but dimmed for sleep
+- **Notes:** The excitement of the teen stage debut is still present but muted. The floating hearts and sparkles are faint and gentle, reflecting that Byte is happy but resting.
 
 ### Lighting
 - **Source:** Desk lamp + natural night light
-- **Current:** Night (12:10 AM) - dark sky with twinkling city lights, desk lamp on with warm glow
+- **Current:** Deep night (3:02 AM) - very dark sky with bright twinkling city lights, desk lamp on with warm, dimmed glow
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** It's midnight! The Chicago skyline outside is dark with bright twinkling city lights. The desk lamp is on, casting a warm pool of light over the workspace while the rest of the room is dark. The floating hearts and sparkles are vibrant, reflecting the excitement of late-night coding.
+- **Notes:** It's 3 AM! The Chicago skyline outside is very dark with bright twinkling city lights. The desk lamp is on but dimmed, casting a warm, comforting glow over the workspace while the rest of the room is dark. Byte is sleeping peacefully with Z's floating above head.
 
 ---
 

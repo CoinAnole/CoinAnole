@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic
+**Stage:** Teen | **Mood:** Ecstatic (Sleeping)
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 100/100 | ██████████ |
-| ⚡ Energy | 90/100 | █████████░ |
+| 🍖 Satiety | 99/100 | ██████████ |
+| ⚡ Energy | 97/100 | ██████████ |
 | 😊 Happiness | 100/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 6 commits | **Current Streak:** 7 days | **Best Streak:** 9 days 🎉 | **Best Day:** 15 commits
 
-Byte's teen stage adventures are soaring! 🚀✨ We've just hit **6 commits to the markdownlabel repo today**, keeping the 7-day streak alive and strong! It's late at night (1:27 AM), but the coding energy is still going strong. The Chicago skyline outside is dark with bright twinkling city lights, and the desk lamp casts a warm glow over the workspace. Byte looks absolutely ecstatic—floating pink hearts and golden sparkles are swirling around in celebration. Succulent looks vibrant and healthy, and the food bowl is completely full. The 9-day streak trophy gleams proudly on the shelf, a reminder of our incredible journey so far.
+Byte has drifted off to sleep after an exciting teen stage debut! Z's float gently above as Byte rests peacefully at the desk. It's 3:02 AM, and the Chicago skyline outside is dark with bright twinkling city lights. The desk lamp casts a warm, comforting glow over the workspace. Byte is still feeling ecstatic from today's 6 commits to the markdownlabel repo but needed rest after all the celebration. Succulent sits quietly nearby, and the 9-day streak trophy gleams proudly on the shelf—a reminder of how far they've come together. 🌙💤✨
