@@ -79,10 +79,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** The excitement of the teen stage debut is alive and well! The floating hearts and sparkles are vibrant and active, reflecting that Byte is happy and energetic.
 
 ### Lighting
-- **Source:** Natural morning light
-- **Current:** Bright morning (9:04 AM) - pale pink and blue sky with Chicago skyline visible
+- **Source:** Natural afternoon light
+- **Current:** Warm afternoon (1:09 PM) - golden light with clear blue sky and Chicago skyline visible
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** It's 9 AM! The Chicago skyline outside is bathed in beautiful pale pink and blue dawn colors. The morning light is bright and cheerful, casting a warm glow over the workspace. Byte is wide awake and energetic, with eyes open and a happy expression.
+- **Notes:** It's 1:09 PM! The Chicago skyline outside is bathed in beautiful golden afternoon light with a clear blue sky. The light is warm and vibrant, casting a glowing atmosphere over the workspace. Byte is wide awake and energetic, with eyes open and a happy expression.
 
 ---
 
