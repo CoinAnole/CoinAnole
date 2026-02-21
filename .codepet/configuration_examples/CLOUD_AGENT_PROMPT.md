@@ -343,7 +343,7 @@ Keep prompts **small and direct**. Focus on one or two visual changes at a time:
 - Long, complex prompts with multiple unrelated changes
 - Drastic style changes
 - Changing the pet's fundamental appearance (unless evolving stage)
-- **Instructing the image model to display specific content on the laptop screen** (e.g., "show code on the laptop screen", "display a terminal window") — this often results in the content being rendered on the outside of the laptop lid rather than the screen itself.
+- **ANY attempts to describe or specify content on the laptop screen** — this includes code, text, terminal windows, or specific displays. Describing laptop screen content frequently causes rendering artifacts (text appears on the laptop lid, floating in the scene, or garbled). Keep the laptop screen blank or with only a generic soft glow. Do NOT mention the laptop screen in edit prompts.
 
 ### Visual State Mapping
 
