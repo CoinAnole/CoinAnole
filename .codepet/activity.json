@@ -1,68 +1,47 @@
 {
-  "timestamp": "2026-02-21T03:05:26.234116+00:00",
+  "timestamp": "2026-02-21T04:49:03.702532+00:00",
   "period": {
-    "start": "2026-02-20T23:47:59.784818+00:00",
-    "end": "2026-02-21T03:05:26.234116+00:00"
+    "start": "2026-02-21T03:05:44.378561+00:00",
+    "end": "2026-02-21T04:49:03.702532+00:00"
   },
   "activity": {
-    "commits_detected": 23,
-    "commits_today_detected": 2,
+    "commits_detected": 3,
+    "commits_today_detected": 3,
     "repos_touched": [
-      "CoinAnole/markdownlabel"
+      "CoinAnole/falcon"
     ],
-    "session_duration_minutes": 46,
-    "session_duration_today_minutes": 20,
+    "session_duration_minutes": 96,
+    "session_duration_today_minutes": 10,
     "marathon_detected": false,
-    "session_split_timeout_minutes": 90,
-    "session_count_detected": 18,
+    "session_split_timeout_minutes": 45,
+    "session_count_detected": 1,
     "primary_session": {
-      "start": "2026-01-06T03:55:48+00:00",
-      "end": "2026-01-06T04:42:04+00:00",
-      "duration_minutes": 46,
-      "commit_count": 2
+      "start": "2026-02-21T01:53:40+00:00",
+      "end": "2026-02-21T03:29:36+00:00",
+      "duration_minutes": 96,
+      "commit_count": 5,
+      "repos_touched": [
+        "CoinAnole/falcon",
+        "CoinAnole/markdownlabel"
+      ]
     },
     "detected_sessions": [
       {
-        "start": "2026-02-01T07:42:50+00:00",
-        "end": "2026-02-01T07:42:50+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
-      },
-      {
-        "start": "2026-02-19T20:01:38+00:00",
-        "end": "2026-02-19T20:01:38+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
-      },
-      {
-        "start": "2026-02-20T03:32:44+00:00",
-        "end": "2026-02-20T03:32:44+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
-      },
-      {
-        "start": "2026-02-20T06:06:20+00:00",
-        "end": "2026-02-20T06:06:20+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
-      },
-      {
         "start": "2026-02-21T01:53:40+00:00",
-        "end": "2026-02-21T02:13:39+00:00",
-        "duration_minutes": 20,
-        "commit_count": 2
+        "end": "2026-02-21T03:29:36+00:00",
+        "duration_minutes": 96,
+        "commit_count": 5,
+        "repos_touched": [
+          "CoinAnole/falcon",
+          "CoinAnole/markdownlabel"
+        ]
       }
     ],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-02-21T01:53:40+00:00",
-        "last_commit": "2026-02-21T02:13:39+00:00",
-        "commit_count": 2,
-        "split_timeout_minutes": 90
-      },
-      "last_timeout_minutes": 90
+      "open_session": null,
+      "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-21T02:13:39+00:00",
+    "last_commit_timestamp": "2026-02-21T03:29:36+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -70,7 +49,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-20T23:47:59.784818+00:00",
-    "hours_since_last_check": 3.29
+    "previous_check": "2026-02-21T03:05:44.378561+00:00",
+    "hours_since_last_check": 1.72
   }
 }
