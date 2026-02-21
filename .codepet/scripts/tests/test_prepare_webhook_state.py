@@ -198,7 +198,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
             {
                 "pet": {"stage": "adult"},
                 "image_state": {"edit_count_since_reset": 0, "total_edits_all_time": 0},
-                "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+                "regrounding": {"should_reground": False, "reason": None, "threshold": 4},
                 "evolution": {"just_occurred": False},
             }
         )
@@ -281,7 +281,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
                 "regrounding": {
                     "should_reground": False,
                     "reason": None,
-                    "threshold": 6,
+                    "threshold": 4,
                 },
                 "evolution": {"just_occurred": False},
             }

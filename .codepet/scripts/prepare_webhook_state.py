@@ -21,11 +21,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
+from state_calc.constants import DEFAULT_REGROUND_THRESHOLD
 from state_calc.output_utils import set_output as _set_output
 from state_calc.time_utils import to_int
 
 
-DEFAULT_THRESHOLD = 6
+DEFAULT_THRESHOLD = DEFAULT_REGROUND_THRESHOLD
 CODEPET_IMAGE_PATH = ".codepet/codepet.png"
 LAST_COUNTED_IMAGE_REVISION_KEY = "last_counted_image_revision"
 

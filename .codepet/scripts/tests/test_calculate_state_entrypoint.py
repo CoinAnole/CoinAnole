@@ -93,7 +93,7 @@ class CalculateStateEntrypointSmokeTests(unittest.TestCase):
                 "reset_count": 0,
                 "current_stage_reference": ".codepet/stage_images/baby.png",
             },
-            "regrounding": {"should_reground": False, "reason": None, "threshold": 6},
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 4},
             "evolution": {
                 "just_occurred": False,
                 "previous_stage": None,

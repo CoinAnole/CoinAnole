@@ -85,7 +85,7 @@ class ImageTrackingTests(unittest.TestCase):
 
         with patch.dict(os.environ, {}, clear=True):
             self.assertEqual(get_reground_threshold(previous_state={"regrounding": {"threshold": "7"}}), 7)
-            self.assertEqual(get_reground_threshold(previous_state=None), 6)
+            self.assertEqual(get_reground_threshold(previous_state=None), 4)
 
     def test_build_image_tracking_state_keeps_previous_reference_when_anchor_missing(self) -> None:
         Path(".codepet/stage_images").mkdir(parents=True, exist_ok=True)
