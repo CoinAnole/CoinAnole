@@ -79,9 +79,9 @@ These aren't exactly "objects" but they're part of my space.
 
 ### Lighting
 - **Source:** Natural night light + desk lamp
-- **Current:** Night with dark sky and bright twinkling city lights over Chicago skyline, slightly dimmed for sleep
+- **Current:** Night with dark starry sky and bright twinkling city lights over Chicago skyline, desk lamp casting warm glow
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside shows dark sky with bright twinkling city lights. The desk lamp casts a warm glow over the workspace. Byte rests peacefully, with the streak achievements celebrated even in dreams.
+- **Notes:** The Chicago skyline outside shows dark starry night with bright twinkling city lights. The desk lamp casts a warm glow over the workspace. Byte is wide awake and ecstatic, surrounded by floating hearts and sparkles, actively engaging with the laptop.
 
 ---
 
