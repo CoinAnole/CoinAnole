@@ -181,6 +181,226 @@ class StateBuilderTests(unittest.TestCase):
         self.assertEqual(state["github"]["longest_streak"], 8)
         self.assertEqual(state["github"]["highest_commits_in_day"], 1)
 
+    def test_calculate_state_preserves_streak_on_first_no_commit_tick_after_rollover(self) -> None:
+        previous_state = {
+            "last_updated": "2026-02-12T23:55:00+00:00",
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 4,
+                "longest_session_today_minutes": 30,
+                "repos_touched_today": ["old/repo"],
+                "total_commits_all_time": 20,
+                "recent_active_days": [
+                    "2026-02-06",
+                    "2026-02-07",
+                    "2026-02-08",
+                    "2026-02-09",
+                    "2026-02-10",
+                    "2026-02-11",
+                    "2026-02-12",
+                ],
+                "active_days_total": 7,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 7,
+                "longest_streak": 7,
+                "last_commit_timestamp": "2026-02-12T22:30:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 4},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=FIXED_NOW), patch.object(
+            state_builder, "get_today_date", return_value=FIXED_TODAY
+        ):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=0.5)
+
+        self.assertEqual(state["github"]["current_streak"], 7)
+        self.assertEqual(state["github"]["longest_streak"], 7)
+
+    def test_calculate_state_resets_streak_after_full_missed_day(self) -> None:
+        now = datetime(2026, 2, 14, 12, 0, tzinfo=timezone.utc)
+        previous_state = {
+            "last_updated": "2026-02-13T23:55:00+00:00",
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 0,
+                "longest_session_today_minutes": 0,
+                "repos_touched_today": [],
+                "total_commits_all_time": 20,
+                "recent_active_days": [
+                    "2026-02-06",
+                    "2026-02-07",
+                    "2026-02-08",
+                    "2026-02-09",
+                    "2026-02-10",
+                    "2026-02-11",
+                    "2026-02-12",
+                ],
+                "active_days_total": 7,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 7,
+                "longest_streak": 7,
+                "last_commit_timestamp": "2026-02-12T22:30:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 4},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+
+        with patch.object(state_builder, "get_current_time", return_value=now), patch.object(
+            state_builder, "get_today_date", return_value="2026-02-14"
+        ):
+            state = state_builder.calculate_state(previous_state, activity, hours_passed=1.0)
+
+        self.assertEqual(state["github"]["current_streak"], 0)
+        self.assertEqual(state["github"]["longest_streak"], 7)
+
+    def test_calculate_state_streak_continuity_survives_rollover_tick_before_commit(self) -> None:
+        previous_state = {
+            "last_updated": "2026-02-12T23:55:00+00:00",
+            "pet": {
+                "name": "Byte",
+                "stage": "baby",
+                "stats": {"satiety": 60, "energy": 70, "happiness": 65, "social": 50},
+                "mood": "content",
+                "derived_state": {"is_sleeping": False, "is_ghost": False, "days_inactive": 0},
+            },
+            "github": {
+                "commits_today": 4,
+                "longest_session_today_minutes": 30,
+                "repos_touched_today": ["old/repo"],
+                "total_commits_all_time": 20,
+                "recent_active_days": [
+                    "2026-02-06",
+                    "2026-02-07",
+                    "2026-02-08",
+                    "2026-02-09",
+                    "2026-02-10",
+                    "2026-02-11",
+                    "2026-02-12",
+                ],
+                "active_days_total": 7,
+                "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+                "current_streak": 7,
+                "longest_streak": 7,
+                "last_commit_timestamp": "2026-02-12T22:30:00+00:00",
+            },
+            "image_state": {
+                "edit_count_since_reset": 1,
+                "total_edits_all_time": 1,
+                "last_reset_at": None,
+                "reset_count": 0,
+                "current_stage_reference": ".codepet/stage_images/baby.png",
+            },
+            "regrounding": {"should_reground": False, "reason": None, "threshold": 4},
+            "evolution": {
+                "just_occurred": False,
+                "previous_stage": None,
+                "new_stage": None,
+                "base_reference": None,
+                "target_reference": None,
+            },
+        }
+        rollover_activity = {
+            "commits_detected": 0,
+            "commits_today_detected": 0,
+            "session_duration_minutes": 0,
+            "session_duration_today_minutes": 0,
+            "repos_touched": [],
+            "repos_touched_today": [],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": None,
+        }
+        later_commit_activity = {
+            "commits_detected": 1,
+            "commits_today_detected": 1,
+            "session_duration_minutes": 10,
+            "session_duration_today_minutes": 10,
+            "repos_touched": ["new/repo"],
+            "repos_touched_today": ["new/repo"],
+            "marathon_detected": False,
+            "session_tracker": {"open_session": None, "last_timeout_minutes": 45},
+            "last_commit_timestamp": "2026-02-13T10:00:00+00:00",
+        }
+
+        with patch.object(
+            state_builder,
+            "get_current_time",
+            return_value=datetime(2026, 2, 13, 0, 30, tzinfo=timezone.utc),
+        ), patch.object(state_builder, "get_today_date", return_value="2026-02-13"):
+            rolled_state = state_builder.calculate_state(previous_state, rollover_activity, hours_passed=0.5)
+
+        with patch.object(
+            state_builder,
+            "get_current_time",
+            return_value=datetime(2026, 2, 13, 11, 0, tzinfo=timezone.utc),
+        ), patch.object(state_builder, "get_today_date", return_value="2026-02-13"):
+            committed_state = state_builder.calculate_state(rolled_state, later_commit_activity, hours_passed=1.0)
+
+        self.assertEqual(rolled_state["github"]["current_streak"], 7)
+        self.assertEqual(committed_state["github"]["current_streak"], 8)
+        self.assertEqual(committed_state["github"]["longest_streak"], 8)
+
     def test_calculate_state_migrates_legacy_hunger_stat_to_satiety(self) -> None:
         previous_state = {
             "last_updated": YESTERDAY,

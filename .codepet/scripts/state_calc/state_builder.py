@@ -2,7 +2,7 @@
 
 import copy
 import math
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from .constants import (
     DEFAULT_PET_STATS,
@@ -60,6 +60,7 @@ def _resolve_streaks(
     today: str,
     previous_day: str | None,
     commits_detected_today: int,
+    had_today_before_update: bool,
 ) -> tuple[int, int]:
     """
     Resolve current/longest streak with migration-safe continuity.
@@ -67,7 +68,8 @@ def _resolve_streaks(
     `recent_active_days` is intentionally trimmed for state size, so we preserve
     day-to-day continuity using the prior persisted streak when appropriate.
     """
-    calculated_current = calculate_current_streak(set(github_stats.get("recent_active_days", [])), today)
+    recent_active_days = set(github_stats.get("recent_active_days", []))
+    calculated_current = calculate_current_streak(recent_active_days, today)
     previous_current = max(0, to_int(github_stats.get("current_streak"), 0))
     previous_longest = max(0, to_int(github_stats.get("longest_streak"), previous_current))
 
@@ -84,11 +86,24 @@ def _resolve_streaks(
     current_streak = calculated_current
     if commits_detected_today > 0:
         if day_delta == 0:
+            if not had_today_before_update and previous_current > 0:
+                try:
+                    yesterday = (
+                        datetime.strptime(today, "%Y-%m-%d").date() - timedelta(days=1)
+                    ).isoformat()
+                except ValueError:
+                    yesterday = None
+                if yesterday and yesterday in recent_active_days:
+                    current_streak = max(current_streak, previous_current + 1)
             current_streak = max(current_streak, previous_current)
         elif day_delta == 1 and previous_current > 0:
             current_streak = max(current_streak, previous_current + 1)
     elif day_delta == 0:
         # Preserve same-day streak across no-commit runner ticks.
+        current_streak = max(current_streak, previous_current)
+    elif day_delta == 1 and previous_current > 0 and previous_day in recent_active_days:
+        # Preserve streak through the first no-commit tick after day rollover so
+        # a later commit today can still extend streaks beyond recent-day trim.
         current_streak = max(current_streak, previous_current)
 
     longest_streak = max(previous_longest, current_streak)
@@ -150,6 +165,7 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
         # Prefer new key; fall back to legacy `active_days` for migration.
         existing_recent_days = github_stats.get("recent_active_days", github_stats.get("active_days", []))
         active_days_set = set(existing_recent_days)
+        had_today_before_update = today in active_days_set
         active_days_total = max(
             to_int(github_stats.get("active_days_total"), len(active_days_set)),
             len(active_days_set),
@@ -195,6 +211,7 @@ def calculate_state(previous_state: dict | None, activity: dict, hours_passed: f
             today=today,
             previous_day=previous_day,
             commits_detected_today=commits_detected_today,
+            had_today_before_update=had_today_before_update,
         )
         github_stats["current_streak"] = current_streak
         github_stats["longest_streak"] = longest_streak
