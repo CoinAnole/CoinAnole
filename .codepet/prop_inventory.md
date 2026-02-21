@@ -71,17 +71,17 @@ These have always been here. I can't imagine the desk without them.
 
 These aren't exactly "objects" but they're part of my space.
 
-### Floating Hearts & Sparkles
-- **Trigger:** High happiness + streak milestones
-- **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Extremely vibrant and active—celebrating ecstatic mood and streak milestones
-- **Notes:** The excitement of the teen stage coding continues! The floating hearts and sparkles swirl around in joyful celebration of coding achievements and streak progress.
+### Floating Z's
+- **Trigger:** Sleeping state
+- **Appearance:** Light blue Z's
+- **Current Status:** Gently floating above Byte's head—indicating peaceful sleep
+- **Notes:** After an exciting late-night coding session, Byte has fallen asleep at the desk. The Z's float softly in the warm lamp light.
 
 ### Lighting
 - **Source:** Natural night light + desk lamp
-- **Current:** Night with dark starry sky and bright twinkling city lights over Chicago skyline, desk lamp casting warm glow
+- **Current:** Night with dark starry sky and bright twinkling city lights over Chicago skyline, desk lamp casting soft warm glow
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside shows dark starry night with bright twinkling city lights. The desk lamp casts a warm glow over the workspace. Byte is wide awake and ecstatic, surrounded by floating hearts and sparkles, actively engaging with the laptop.
+- **Notes:** The Chicago skyline outside shows dark starry night with bright twinkling city lights. The desk lamp casts a soft warm glow over the workspace. Byte is sleeping peacefully with closed eyes, Z's floating above head.
 
 ---
 
@@ -95,4 +95,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 20, 2026 (9:05 PM - evening coding continues with new 8-day streak!)*
+*Last updated by Byte on February 21, 2026 (2:51 AM - sleeping peacefully after late-night coding!)*
