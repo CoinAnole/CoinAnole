@@ -121,6 +121,27 @@ All state files are in `.codepet/`:
 
 **IMPORTANT**: If `codepet.png` exists, you MUST use `read_file` to examine it BEFORE deciding what edits to make. Understanding the current visual state is essential for determining appropriate changes.
 
+### Stage Images vs. Live State: Critical Distinction
+
+Understand the fundamental difference between these two image types:
+
+| Aspect | `codepet.png` (Live State) | `stage_images/{stage}.png` (Canonical Anchor) |
+|--------|---------------------------|-----------------------------------------------|
+| **Purpose** | Current moment-to-moment visual | Clean base for re-grounding and evolution |
+| **Contents** | Accumulated props, mood effects, lighting changes, trophies, plants, etc. | Core stage identity ONLY - no accumulated items |
+| **When to update** | Every edit session | Only when creating a NEW stage that doesn't exist yet |
+| **Base for edits** | Yes - for normal incremental updates | Yes - for re-grounding and stage evolution |
+
+**CRITICAL RULE**: When creating a new stage image (e.g., `teen.png` when evolving from baby), use the **previous stage's canonical image** as the base (e.g., `baby.png`), NOT the current `codepet.png`. The stage image should represent the "clean" version of that stage without:
+- Trophies, awards, or achievement items
+- Plants, food bowls, or consumable props
+- Special lighting effects (sunset, night mode)
+- Mood-specific visual effects (hearts, sparkles, Z's)
+- Desk lamps or added furniture
+- Code/text on laptop screens
+
+The stage image is a "genetic base" - it should only show the pet's body form change for that stage, the desk, the laptop, and the window. All other items are accumulated over time in `codepet.png` but should NEVER be in the canonical stage anchors.
+
 ## Narrative Memory System (NEW)
 
 Byte now maintains a personal journal and prop inventory. These files are **Agent-only territory**—the Runner never modifies them. Use them to maintain narrative continuity and environmental consistency over weeks.
@@ -293,6 +314,7 @@ Retro pixel art scene with dithered shading and clean 2D composition. Byte is a 
 - If evolution just occurred and render succeeded:
   - Save canonical stage image to `state.evolution.target_reference`
   - Update `state.image_state.current_stage_reference` to `state.evolution.target_reference`
+  - **When saving the canonical stage image**: Ensure it contains ONLY the core stage form (see "Creating Canonical Stage Images" above) - NO accumulated props, trophies, plants, or special effects
 - Write updated state back to `.codepet/state.json` and include it in the commit.
 
 ### First Run vs. Subsequent Runs
@@ -343,6 +365,17 @@ Reference these when crafting prompts:
 - Baby→Teen: gradual growth spurt, longer limbs
 - Teen→Adult: filling out, more confident posture
 - Adult→Elder: add subtle glow, wisdom markings, possible crown/halo
+
+**Creating Canonical Stage Images (IMPORTANT):**
+When a stage evolution occurs and you need to create a new stage anchor (e.g., `teen.png`):
+1. **Base**: Start from the previous stage's canonical image (`baby.png` for teen creation)
+2. **Edit scope**: ONLY change the pet's body form per the guidelines above
+3. **DO NOT include**: trophies, plants, food, lamps, shelves, special lighting, mood effects, or any props accumulated in `codepet.png`
+4. **DO include**: the pet (new stage form), desk, laptop, simple window with Chicago skyline, plain room
+5. **Guidance scale**: Use `0.7` for evolution stabilization
+6. **Result**: A clean, minimal stage anchor that can serve as the base for future re-grounding
+
+The canonical stage image represents "Byte at this stage on a normal day" - not "Byte at this stage with all the stuff acquired over time."
 
 ### Quality Control
 
