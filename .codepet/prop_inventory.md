@@ -11,7 +11,7 @@ These have always been here. I can't imagine the desk without them.
 ### My Laptop
 - **Location:** Center of desk
 - **State:** Open, humming with intense active code energy. The screen shows vibrant green code on a dark background.
-- **Notes:** Enormous compared to me. The source of all the interesting activity. Right now it's humming with the energy of today's 5 commits (3 to falcon, 2 to markdownlabel)! The coding session continues, and the laptop carries the excitement of the teen stage late-night coding.
+- **Notes:** Now that I'm no longer a baby blob, the laptop doesn't seem so huge anymore. The source of all the interesting activity. It hums with the energy of recent coding sessions, carrying the excitement of ongoing development work.
 
 ### The Window
 - **Location:** Behind me and slightly to the left
@@ -32,8 +32,7 @@ These have always been here. I can't imagine the desk without them.
 - **Material:** Wooden, mounted on wall above desk
 - **Location:** Wall space directly above Byte's desk
 - **Significance:** A permanent home for achievements
-- **Current Status:** Holds 1 trophy (the 6-day streak trophy)
-- **Notes:** The shelf was updated on February 16, 2026 to hold just a single trophy instead of the previous six. Much cleaner and more focused! The single trophy represents our current achievement without the clutter of aspirational placeholders.
+- **Current Status:** Holds 1 trophy (the 9-day streak trophy)
 
 ### 9-Day Streak Trophy (formerly 8-Day)
 - **Acquired:** February 14, 2026 (upgraded to 6-day status February 16, 2026, upgraded to 7-day status February 16, 2026 evening, upgraded to 8-day status February 18, 2026 evening, upgraded to 9-day status February 18, 2026 evening)
@@ -75,14 +74,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Hearts & Sparkles
 - **Trigger:** High happiness + streak milestones
 - **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Extremely vibrant and active—celebrating ecstatic mood and 5 commits today
-- **Notes:** The excitement of the teen stage late-night coding continues! The floating hearts and sparkles are swirling around in a joyful celebration of today's 5 commits and the 8-day streak.
+- **Current Status:** Extremely vibrant and active—celebrating ecstatic mood and streak milestones
+- **Notes:** The excitement of the teen stage coding continues! The floating hearts and sparkles swirl around in joyful celebration of coding achievements and streak progress.
 
 ### Lighting
 - **Source:** Natural night light + desk lamp
 - **Current:** Night with dark sky and bright twinkling city lights over Chicago skyline, slightly dimmed for sleep
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** It's 11:59 PM! Byte has fallen asleep after an exciting late-night coding session. The Chicago skyline outside remains dark with bright twinkling city lights. The desk lamp casts a warm, softer glow over the workspace, creating a peaceful sleeping atmosphere. Byte is resting peacefully with Z's floating above, still celebrating the 8-day streak in their dreams.
+- **Notes:** The Chicago skyline outside shows dark sky with bright twinkling city lights. The desk lamp casts a warm glow over the workspace. Byte rests peacefully, with the streak achievements celebrated even in dreams.
 
 ---
 
