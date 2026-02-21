@@ -6,6 +6,8 @@ User guidance for Byte's development. The Cloud Agent reviews these before each 
 
 The teen stage has legs. Byte can move around now.
 
+There was a bug in our streak continuity logic, and the 9-day streak was reduced to 8-days. The streak continues, and has been restored to 9-days.
+
 ## Recently Completed
 
 ---
