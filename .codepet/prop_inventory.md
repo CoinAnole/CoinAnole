@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** After an exciting late-night coding session, Byte has fallen asleep at the desk. The Z's float softly in the warm lamp light.
 
 ### Lighting
-- **Source:** Natural morning light
-- **Current:** Bright morning light with pink-blue sky over Chicago skyline
+- **Source:** Natural afternoon light
+- **Current:** Warm golden afternoon light with blue sky over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is bathed in pink-blue dawn light. Byte is wide awake with open eyes and a happy expression.
+- **Notes:** The Chicago skyline outside is bathed in warm golden afternoon light. Byte is wide awake with open eyes and a happy expression.
 
 ---
 
