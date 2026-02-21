@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** After an exciting late-night coding session, Byte has fallen asleep at the desk. The Z's float softly in the warm lamp light.
 
 ### Lighting
-- **Source:** Natural night light + desk lamp
-- **Current:** Night with dark starry sky and bright twinkling city lights over Chicago skyline, desk lamp casting soft warm glow
+- **Source:** Natural morning light
+- **Current:** Bright morning light with pink-blue sky over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside shows dark starry night with bright twinkling city lights. The desk lamp casts a soft warm glow over the workspace. Byte is sleeping peacefully with closed eyes, Z's floating above head.
+- **Notes:** The Chicago skyline outside is bathed in pink-blue dawn light. Byte is wide awake with open eyes and a happy expression.
 
 ---
 
