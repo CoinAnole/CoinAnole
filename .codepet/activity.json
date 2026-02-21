@@ -1,47 +1,26 @@
 {
-  "timestamp": "2026-02-21T04:49:03.702532+00:00",
+  "timestamp": "2026-02-21T05:59:34.563840+00:00",
   "period": {
-    "start": "2026-02-21T03:05:44.378561+00:00",
-    "end": "2026-02-21T04:49:03.702532+00:00"
+    "start": "2026-02-21T04:49:19.219216+00:00",
+    "end": "2026-02-21T05:59:34.563840+00:00"
   },
   "activity": {
-    "commits_detected": 3,
-    "commits_today_detected": 3,
-    "repos_touched": [
-      "CoinAnole/falcon"
-    ],
-    "session_duration_minutes": 96,
-    "session_duration_today_minutes": 10,
+    "commits_detected": 0,
+    "commits_today_detected": 0,
+    "repos_touched": [],
+    "repos_touched_today": [],
+    "session_duration_minutes": 0,
+    "session_duration_today_minutes": 0,
     "marathon_detected": false,
     "session_split_timeout_minutes": 45,
-    "session_count_detected": 1,
-    "primary_session": {
-      "start": "2026-02-21T01:53:40+00:00",
-      "end": "2026-02-21T03:29:36+00:00",
-      "duration_minutes": 96,
-      "commit_count": 5,
-      "repos_touched": [
-        "CoinAnole/falcon",
-        "CoinAnole/markdownlabel"
-      ]
-    },
-    "detected_sessions": [
-      {
-        "start": "2026-02-21T01:53:40+00:00",
-        "end": "2026-02-21T03:29:36+00:00",
-        "duration_minutes": 96,
-        "commit_count": 5,
-        "repos_touched": [
-          "CoinAnole/falcon",
-          "CoinAnole/markdownlabel"
-        ]
-      }
-    ],
+    "session_count_detected": 0,
+    "primary_session": null,
+    "detected_sessions": [],
     "session_tracker": {
       "open_session": null,
       "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-02-21T03:29:36+00:00",
+    "last_commit_timestamp": null,
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -49,7 +28,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-21T03:05:44.378561+00:00",
-    "hours_since_last_check": 1.72
+    "previous_check": "2026-02-21T04:49:19.219216+00:00",
+    "hours_since_last_check": 1.17
   }
 }
