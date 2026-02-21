@@ -11,7 +11,7 @@ These have always been here. I can't imagine the desk without them.
 ### My Laptop
 - **Location:** Center of desk
 - **State:** Open, humming with intense active code energy. The screen shows vibrant green code on a dark background.
-- **Notes:** Enormous compared to me. The source of all the interesting activity. Right now it's humming with the energy of today's 18 commits to the markdownlabel repo! The coding session is still active, and the laptop carries the excitement of the teen stage coding marathon.
+- **Notes:** Enormous compared to me. The source of all the interesting activity. Right now it's humming with the energy of today's 5 commits (3 to falcon, 2 to markdownlabel)! The coding session continues, and the laptop carries the excitement of the teen stage late-night coding.
 
 ### The Window
 - **Location:** Behind me and slightly to the left
@@ -75,14 +75,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Hearts & Sparkles
 - **Trigger:** High happiness + streak milestones
 - **Appearance:** Pink hearts, golden sparkles
-- **Current Status:** Extremely vibrant and active—celebrating ecstatic mood and 18 commits today
-- **Notes:** The excitement of the teen stage coding marathon is off the charts! The floating hearts and sparkles are swirling around in a joyful celebration of today's 18 commits and the 7-day streak.
+- **Current Status:** Extremely vibrant and active—celebrating ecstatic mood and 5 commits today
+- **Notes:** The excitement of the teen stage late-night coding continues! The floating hearts and sparkles are swirling around in a joyful celebration of today's 5 commits and the 8-day streak.
 
 ### Lighting
-- **Source:** Natural evening (dusk) light + desk lamp
-- **Current:** Dusk with purple-pink sky hues over Chicago skyline, city lights beginning to twinkle
+- **Source:** Natural night light + desk lamp
+- **Current:** Night with dark sky and bright twinkling city lights over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** It's 9:05 PM! The Chicago skyline outside is bathed in beautiful purple-pink dusk hues, and city lights are starting to twinkle in the distance. The desk lamp casts a warm pool of light over the workspace, creating a cozy yet energetic atmosphere. Byte is absolutely ecstatic, surrounded by floating hearts and sparkles celebrating the new 8-day streak.
+- **Notes:** It's 10:49 PM! The Chicago skyline outside is dark with bright twinkling city lights. The desk lamp casts a warm pool of light over the workspace, creating a cozy yet energetic late-night coding atmosphere. Byte is absolutely ecstatic, surrounded by floating hearts and sparkles celebrating the 8-day streak.
 
 ---
 
