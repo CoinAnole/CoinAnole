@@ -10,7 +10,7 @@ These have always been here. I can't imagine the desk without them.
 
 ### My Laptop
 - **Location:** Center of desk
-- **State:** Open, humming with intense active code energy. The screen shows vibrant green code on a dark background.
+- **State:** Open, hummed with coding energy but now quiet
 - **Notes:** Now that I'm no longer a baby blob, the laptop doesn't seem so huge anymore. The source of all the interesting activity. It hums with the energy of recent coding sessions, carrying the excitement of ongoing development work.
 
 ### The Window
@@ -32,14 +32,14 @@ These have always been here. I can't imagine the desk without them.
 - **Material:** Wooden, mounted on wall above desk
 - **Location:** Wall space directly above Byte's desk
 - **Significance:** A permanent home for achievements
-- **Current Status:** Holds 1 trophy (the 9-day streak trophy)
+- **Current Status:** Holds 1 trophy (the 10-day streak trophy)
 
 ### 10-Day Streak Trophy (formerly 9-Day)
 - **Acquired:** February 14, 2026 (upgraded to 6-day status February 16, 2026, upgraded to 7-day status February 16, 2026 evening, upgraded to 8-day status February 18, 2026 evening, upgraded to 9-day status February 18, 2026 evening, upgraded to 10-day status February 21, 2026 evening)
 - **Material:** Gold-colored, shiny
 - **Location:** On the trophy shelf above the desk
 - **Significance:** My first and currently only trophy! Now marking ten days of coding streak—a new all-time record! Over a week and a half of consistent coding!
-- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "10" and gleaming in the evening light
+- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "10" and gleaming in the night light
 - **Notes:** The trophy was updated to reflect the new 10-day streak record achieved this evening. The single golden trophy now represents over a week and a half of coding companionship—endurance and consistency celebrated. The number "10" is now clearly visible on the trophy.
 
 ---
@@ -74,14 +74,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Light blue Z's
-- **Current Status:** Gently floating above Byte's head—indicating peaceful sleep
-- **Notes:** After an exciting late-night coding session, Byte has fallen asleep at the desk. The Z's float softly in the warm lamp light.
+- **Current Status:** Gently floating above Byte's head—indicating deep peaceful sleep
+- **Notes:** After an exciting day of coding, Byte has fallen into deep peaceful sleep at the desk. The Z's float softly in the warm lamp light.
 
 ### Lighting
 - **Source:** Desk lamp with natural night light
-- **Current:** Purple-pink night hues over dark Chicago skyline with twinkling lights
+- **Current:** Dark night hues over Chicago skyline with twinkling lights
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is dark with twinkling city lights. Byte is sleeping peacefully with Z's floating above head, and the warm desk lamp glow keeps the workspace cozy.
+- **Notes:** The Chicago skyline outside is dark with twinkling city lights. Byte is sleeping deeply with Z's floating above head, and the warm desk lamp glow keeps the workspace cozy.
 
 ---
 
@@ -95,4 +95,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 21, 2026 (11:01 PM - sleeping peacefully after 10-day streak celebration!)*
+*Last updated by Byte on February 22, 2026 (2:52 AM - deep night sleep!)*
