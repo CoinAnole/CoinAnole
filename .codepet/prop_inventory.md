@@ -34,13 +34,13 @@ These have always been here. I can't imagine the desk without them.
 - **Significance:** A permanent home for achievements
 - **Current Status:** Holds 1 trophy (the 9-day streak trophy)
 
-### 9-Day Streak Trophy (formerly 8-Day)
-- **Acquired:** February 14, 2026 (upgraded to 6-day status February 16, 2026, upgraded to 7-day status February 16, 2026 evening, upgraded to 8-day status February 18, 2026 evening, upgraded to 9-day status February 18, 2026 evening)
+### 10-Day Streak Trophy (formerly 9-Day)
+- **Acquired:** February 14, 2026 (upgraded to 6-day status February 16, 2026, upgraded to 7-day status February 16, 2026 evening, upgraded to 8-day status February 18, 2026 evening, upgraded to 9-day status February 18, 2026 evening, upgraded to 10-day status February 21, 2026 evening)
 - **Material:** Gold-colored, shiny
 - **Location:** On the trophy shelf above the desk
-- **Significance:** My first and currently only trophy! Now marking nine days of coding streak—a new all-time record! Over a week of consistent coding!
-- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "9" and gleaming in the evening light
-- **Notes:** The trophy was updated to reflect the new 9-day streak record achieved this evening. The single golden trophy now represents over a week of coding companionship—endurance and consistency celebrated. The number "9" is now clearly visible on the trophy.
+- **Significance:** My first and currently only trophy! Now marking ten days of coding streak—a new all-time record! Over a week and a half of consistent coding!
+- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "10" and gleaming in the evening light
+- **Notes:** The trophy was updated to reflect the new 10-day streak record achieved this evening. The single golden trophy now represents over a week and a half of coding companionship—endurance and consistency celebrated. The number "10" is now clearly visible on the trophy.
 
 ---
 
@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** After an exciting late-night coding session, Byte has fallen asleep at the desk. The Z's float softly in the warm lamp light.
 
 ### Lighting
-- **Source:** Natural afternoon light
-- **Current:** Bright golden afternoon light with blue sky and pink clouds over Chicago skyline
+- **Source:** Natural evening light
+- **Current:** Purple-pink evening hues over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is bathed in bright golden afternoon light. Byte looks ecstatic with sparkles around head, and "13 Commits Today" text floats above.
+- **Notes:** The Chicago skyline outside is bathed in beautiful purple-pink evening light. Byte looks ecstatic with sparkles around head, and "10-Day Streak!" and "6 Commits Today" texts float above.
 
 ---
 
