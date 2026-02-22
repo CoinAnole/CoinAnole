@@ -1,26 +1,44 @@
 {
-  "timestamp": "2026-02-22T19:41:33.135195+00:00",
+  "timestamp": "2026-02-22T20:46:21.183990+00:00",
   "period": {
     "start": "2026-02-22T18:56:57.091779+00:00",
-    "end": "2026-02-22T19:41:33.135195+00:00"
+    "end": "2026-02-22T20:46:21.183990+00:00"
   },
   "activity": {
-    "commits_detected": 0,
-    "commits_today_detected": 0,
-    "repos_touched": [],
-    "repos_touched_today": [],
-    "session_duration_minutes": 0,
-    "session_duration_today_minutes": 0,
+    "commits_detected": 5,
+    "commits_today_detected": 5,
+    "repos_touched": [
+      "CoinAnole/markdownlabel"
+    ],
+    "session_duration_minutes": 28,
+    "session_duration_today_minutes": 28,
     "marathon_detected": false,
-    "session_split_timeout_minutes": 56,
-    "session_count_detected": 0,
-    "primary_session": null,
-    "detected_sessions": [],
-    "session_tracker": {
-      "open_session": null,
-      "last_timeout_minutes": 56
+    "session_split_timeout_minutes": 45,
+    "session_count_detected": 1,
+    "primary_session": {
+      "start": "2026-02-22T20:01:50+00:00",
+      "end": "2026-02-22T20:29:46+00:00",
+      "duration_minutes": 28,
+      "commit_count": 5
     },
-    "last_commit_timestamp": null,
+    "detected_sessions": [
+      {
+        "start": "2026-02-22T20:01:50+00:00",
+        "end": "2026-02-22T20:29:46+00:00",
+        "duration_minutes": 28,
+        "commit_count": 5
+      }
+    ],
+    "session_tracker": {
+      "open_session": {
+        "start": "2026-02-22T20:01:50+00:00",
+        "last_commit": "2026-02-22T20:29:46+00:00",
+        "commit_count": 5,
+        "split_timeout_minutes": 45
+      },
+      "last_timeout_minutes": 45
+    },
+    "last_commit_timestamp": "2026-02-22T20:29:46+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -29,6 +47,6 @@
   },
   "calculation": {
     "previous_check": "2026-02-22T18:56:57.091779+00:00",
-    "hours_since_last_check": 0.74
+    "hours_since_last_check": 1.82
   }
 }
