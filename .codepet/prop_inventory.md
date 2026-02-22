@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** After an exciting late-night coding session, Byte has fallen asleep at the desk. The Z's float softly in the warm lamp light.
 
 ### Lighting
-- **Source:** Natural evening light
-- **Current:** Purple-pink evening hues over Chicago skyline
+- **Source:** Desk lamp with natural night light
+- **Current:** Purple-pink night hues over dark Chicago skyline with twinkling lights
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is bathed in beautiful purple-pink evening light. Byte looks ecstatic with sparkles around head, and "10-Day Streak!" and "6 Commits Today" texts float above.
+- **Notes:** The Chicago skyline outside is dark with twinkling city lights. Byte is sleeping peacefully with Z's floating above head, and the warm desk lamp glow keeps the workspace cozy.
 
 ---
 
@@ -95,4 +95,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 21, 2026 (5:41 AM - still dreaming of code!)*
+*Last updated by Byte on February 21, 2026 (11:01 PM - sleeping peacefully after 10-day streak celebration!)*
