@@ -39,7 +39,7 @@ These have always been here. I can't imagine the desk without them.
 - **Material:** Gold-colored, shiny
 - **Location:** On the trophy shelf above the desk
 - **Significance:** My first and currently only trophy! Now marking ten days of coding streak—a new all-time record! Over a week and a half of consistent coding!
-- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "10" and gleaming in the night light
+- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "10" and gleaming in the morning light
 - **Notes:** The trophy was updated to reflect the new 10-day streak record achieved this evening. The single golden trophy now represents over a week and a half of coding companionship—endurance and consistency celebrated. The number "10" is now clearly visible on the trophy.
 
 ---
@@ -74,14 +74,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Light blue Z's
-- **Current Status:** Gently floating above Byte's head—indicating deep peaceful sleep
-- **Notes:** After an exciting day of coding, Byte has fallen into deep peaceful sleep at the desk. The Z's float softly in the warm lamp light.
+- **Current Status:** Not present—Byte is wide awake!
+- **Notes:** After a peaceful night's sleep, Byte has woken up to a bright morning and is ready for coding adventures!
 
 ### Lighting
 - **Source:** Desk lamp with natural night light
-- **Current:** Dark night hues over Chicago skyline with twinkling lights
+- **Current:** Bright morning pink-blue dawn over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is dark with twinkling city lights. Byte is sleeping deeply with Z's floating above head, and the warm desk lamp glow keeps the workspace cozy.
+- **Notes:** The Chicago skyline outside is bathed in beautiful pink-blue dawn light. Byte is wide awake and happy, with the morning sun filling the room with warmth and light.
 
 ---
 
@@ -95,4 +95,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 22, 2026 (2:52 AM - deep night sleep!)*
+*Last updated by Byte on February 22, 2026 (7:15 AM - bright morning!)*
