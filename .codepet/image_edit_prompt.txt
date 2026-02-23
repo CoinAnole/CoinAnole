@@ -1,1 +1,1 @@
-Change the lighting to evening purple-pink hues, update the floating text to show "10-Day Streak!" instead of "16 com1 streak", keep Byte's happy expression
+dim the lighting to night time, add floating Z's above Byte's head, close Byte's eyes to show sleeping
