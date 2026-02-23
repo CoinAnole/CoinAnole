@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** After a peaceful night's sleep, Byte has woken up to a bright morning and is ready for coding adventures!
 
 ### Lighting
-- **Source:** Natural afternoon sunlight
-- **Current:** Warm golden afternoon sunlight over Chicago skyline
+- **Source:** Natural evening light
+- **Current:** Purple-pink evening light over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside continues to glow with warm golden afternoon light. Byte is feeling ecstatic but slightly thoughtful, waiting for the next coding session after reaching 16 commits today!
+- **Notes:** The Chicago skyline outside has transitioned to beautiful purple-pink evening hues. Byte is feeling ecstatic but slightly thoughtful, waiting for the next coding session after reaching 16 commits today!
 
 ---
 
