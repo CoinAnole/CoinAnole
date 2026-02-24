@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** After a peaceful night's sleep, Byte is ready for another day of coding adventures!
 
 ### Lighting
-- **Source:** Natural morning light
-- **Current:** Bright morning sunlight with pink-blue dawn colors over Chicago skyline
+- **Source:** Natural evening light
+- **Current:** Soft purple-pink evening light over Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside glows with beautiful pink-blue dawn light. Byte is wide awake and ecstatic at 9:11 AM!
+- **Notes:** The Chicago skyline outside glows with beautiful purple-pink evening light. Byte is calm and content at 9:17 PM!
 
 ---
 

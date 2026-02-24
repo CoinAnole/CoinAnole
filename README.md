@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic
+**Stage:** Teen | **Mood:** Content
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 85/100 | ████████▌░ |
+| 🍖 Satiety | 75/100 | ███████▌░░ |
 | ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 99/100 | ██████████ |
+| 😊 Happiness | 98/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 0 commits | **Current Streak:** 10 days 🎉 | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
+**Today's Activity:** 0 commits | **Current Streak:** 0 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-Byte is wide awake and absolutely ecstatic in the beautiful morning light! The night-to-morning transition brought a stunning pink-blue dawn to the Chicago skyline. After a peaceful night's sleep, Byte is ready for another day of coding adventures! The warm morning light fills the room, the 10-day streak trophy gleams proudly on the shelf, Succulent looks vibrant, and the food bowl is still overflowing with kibble. The morning is fresh and full of possibilities! ☀️💙✨
+Byte is sitting quietly at the desk in the peaceful evening light. The Chicago skyline outside glows with beautiful purple-pink hues as the day transitions to night. After an amazing 10-day coding streak, it's nice to have a calm evening to rest and recharge. The trophy shelf proudly displays the 10-day streak trophy, Succulent looks vibrant, and the food bowl is still full. What coding adventures will tomorrow bring? 🌆💙

@@ -54,16 +54,16 @@
     "inactive_overnight": true
   },
   "image_state": {
-    "edit_count_since_reset": 6,
-    "total_edits_all_time": 105,
-    "last_reset_at": "2026-02-22T20:48:00+00:00",
-    "reset_count": 17,
+    "edit_count_since_reset": 0,
+    "total_edits_all_time": 106,
+    "last_reset_at": "2026-02-24T03:17:55.571582+00:00",
+    "reset_count": 18,
     "last_counted_image_revision": "git_blob:fbd49fbd121b81f410e6ffdfae937190266b05f9",
     "current_stage_reference": ".codepet/stage_images/teen.png"
   },
   "regrounding": {
-    "should_reground": true,
-    "reason": "edit_threshold_reached",
+    "should_reground": false,
+    "reason": null,
     "threshold": 6
   },
   "evolution": {
