@@ -74,14 +74,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Light blue Z's
-- **Current Status:** Present—Byte is fast asleep!
-- **Notes:** Byte is sleeping peacefully after a long break from coding!
+- **Current Status:** Not present—Byte is wide awake!
+- **Notes:** Byte woke up to the beautiful morning light!
 
 ### Lighting
-- **Source:** Natural night light
-- **Current:** Soft night lighting with dark purple skyline and twinkling city lights
+- **Source:** Natural morning light
+- **Current:** Bright pink-blue dawn lighting with clear skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is dark with twinkling city lights. Byte is fast asleep at 3:10 AM!
+- **Notes:** The Chicago skyline outside is bathed in pink-blue dawn light. Byte is wide awake at 9:13 AM!
 
 ---
 
