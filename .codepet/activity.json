@@ -1,44 +1,26 @@
 {
-  "timestamp": "2026-02-24T19:28:43.421526+00:00",
+  "timestamp": "2026-02-24T20:59:01.486388+00:00",
   "period": {
-    "start": "2026-02-24T18:12:19.373888+00:00",
-    "end": "2026-02-24T19:28:43.421526+00:00"
+    "start": "2026-02-24T19:28:59.745599+00:00",
+    "end": "2026-02-24T20:59:01.486388+00:00"
   },
   "activity": {
-    "commits_detected": 3,
-    "commits_today_detected": 3,
-    "repos_touched": [
-      "CoinAnole/falcon"
-    ],
-    "session_duration_minutes": 35,
-    "session_duration_today_minutes": 35,
+    "commits_detected": 0,
+    "commits_today_detected": 0,
+    "repos_touched": [],
+    "repos_touched_today": [],
+    "session_duration_minutes": 0,
+    "session_duration_today_minutes": 0,
     "marathon_detected": false,
     "session_split_timeout_minutes": 53,
-    "session_count_detected": 1,
-    "primary_session": {
-      "start": "2026-02-24T18:24:35+00:00",
-      "end": "2026-02-24T18:59:42+00:00",
-      "duration_minutes": 35,
-      "commit_count": 3
-    },
-    "detected_sessions": [
-      {
-        "start": "2026-02-24T18:24:35+00:00",
-        "end": "2026-02-24T18:59:42+00:00",
-        "duration_minutes": 35,
-        "commit_count": 3
-      }
-    ],
+    "session_count_detected": 0,
+    "primary_session": null,
+    "detected_sessions": [],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-02-24T18:24:35+00:00",
-        "last_commit": "2026-02-24T18:59:42+00:00",
-        "commit_count": 3,
-        "split_timeout_minutes": 53
-      },
+      "open_session": null,
       "last_timeout_minutes": 53
     },
-    "last_commit_timestamp": "2026-02-24T18:59:42+00:00",
+    "last_commit_timestamp": null,
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +28,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-24T18:12:19.373888+00:00",
-    "hours_since_last_check": 1.27
+    "previous_check": "2026-02-24T19:28:59.745599+00:00",
+    "hours_since_last_check": 1.5
   }
 }
