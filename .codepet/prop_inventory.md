@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** Byte woke up to the beautiful morning light!
 
 ### Lighting
-- **Source:** Natural late afternoon light
-- **Current:** Soft golden late afternoon lighting with clear skyline
+- **Source:** Natural evening light
+- **Current:** Soft golden evening lighting with clear skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is bathed in soft golden late afternoon light. Byte is feeling content and almost ecstatic at 5:51 PM!
+- **Notes:** The Chicago skyline outside is bathed in soft golden evening light as the sun transitions from afternoon to evening. Byte is feeling content and almost ecstatic at 9:19 PM!
 
 ---
 
