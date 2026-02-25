@@ -316,14 +316,26 @@ Special flags:
 ## Quality Control and Retries
 Always inspect base + output images.
 
-Checklist:
+Acceptance checklist (all required):
 1. Byte remains recognizable for current stage.
 2. Pixel-art style preserved.
 3. Requested changes are visible.
 4. No text/artifact leakage.
 5. Scene anchors still present (desk, oversized laptop, skyline window).
 
-If unsatisfactory, retry up to 2 times with refined prompt using same mode guidance scale.
+Reject the output and retry if any of these occur:
+1. Stage identity drift (Byte shape/proportions no longer match expected stage).
+2. Missing or heavily altered anchors (desk, oversized laptop, skyline window).
+3. Style drift away from clean pixel art (painterly/photoreal look, noisy rendering).
+4. Requested state-driven edits are missing, weak, or replaced by unrelated changes.
+5. Artifact issues (garbled text, floating glyphs, malformed anatomy, duplicated parts, smeared objects).
+6. Temporal/mood mismatch (for example sleeping flag but awake pose/lighting).
+7. Normal mode introduces broad scene changes instead of small incremental edits.
+
+Retry policy:
+- Up to 3 retry attempts maximum per update (same guidance scale for the selected mode).
+- For each retry, refine the JSON spec and `compiled_prompt` based on the specific rejection reason.
+- If all retries fail, keep the previous `codepet.png` and report failure reasons clearly instead of committing a bad render.
 
 ## README Update Rules
 Only edit content below:
@@ -373,7 +385,7 @@ Narrative constraints:
 7. Build JSON edit spec and compile prompt.
 8. Save both to `.codepet/image_edit_prompt.txt`.
 9. Run Falcon with selected guidance scale.
-10. Verify output, retry if needed (max 2 retries).
+10. Verify output; if rejected, retry (max 3 retries).
 11. Move output into `.codepet/codepet.png`.
 12. Update README below marker.
 13. Update `journal.md` and `prop_inventory.md` when needed.
