@@ -114,7 +114,7 @@ You must use multi-image inputs whenever both files exist:
 - `image1` = live base image (or re-ground base)
 - `image2` = current stage anchor reference
 
-This gives FLUX.2 [dev] both local continuity (`codepet.png`) and canonical identity (`stage_images/{stage}.png`).
+This gives the model both local continuity (`codepet.png`) and canonical identity (`stage_images/{stage}.png`).
 
 ### Input pair selection
 1. Resolve `stage_anchor`:
@@ -209,7 +209,7 @@ Before calling Falcon, produce a JSON object and save it to `.codepet/image_edit
   },
   "compiled_prompt": "single paragraph prompt string in natural language",
   "falcon": {
-    "model": "flux2Dev",
+    "model": "flux2Flash",
     "resolution": "512x512",
     "guidance_scale": 0.5
   }
@@ -246,26 +246,26 @@ Reject and rewrite if any check fails:
 5. Normal mode prompt tries to apply >2 unrelated scene changes.
 
 ## Image Generation Commands
-Use FLUX.2 [dev] Falcon command.
+Use Falcon command.
 
 ### Normal mode (`guidance_scale=0.5`)
 ```bash
-/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Dev --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
 Single-image fallback when no distinct anchor exists:
 ```bash
-/tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Dev --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
 ### Re-ground / Evolution stabilization (`guidance_scale=0.7`)
 ```bash
-/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Dev --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
 ```
 
 Single-image fallback when no distinct anchor exists:
 ```bash
-/tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Dev --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
 ```
 
 Only use `0.7` for re-grounding or stage-transition stabilization.
