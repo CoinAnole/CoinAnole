@@ -74,14 +74,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Light blue Z's
-- **Current Status:** Not present—Byte is wide awake!
-- **Notes:** Byte woke up to the beautiful morning light!
+- **Current Status:** Present—Byte is sleeping peacefully!
+- **Notes:** Z's float gently above Byte's head in the night-time scene.
 
 ### Lighting
-- **Source:** Natural evening light
-- **Current:** Soft golden evening lighting with clear skyline
+- **Source:** Night-time city lights
+- **Current:** Dark night lighting with twinkling city lights
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is bathed in soft golden evening light as the sun transitions from afternoon to evening. Byte is feeling content and almost ecstatic at 9:19 PM!
+- **Notes:** The Chicago skyline outside is dark with twinkling city lights, and the room is bathed in soft night lighting. Byte is sleeping peacefully at 2:04 AM!
 
 ---
 
