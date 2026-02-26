@@ -20,8 +20,8 @@ Most common command:
 
 Mode decision tree:
 ```text
-IF force_reground=true OR regrounding_should_reground=true -> reground
-ELSE IF evolution_just_occurred=true -> evolution
+IF webhook payload force_reground=true OR state.regrounding.should_reground=true -> reground
+ELSE IF state.evolution.just_occurred=true -> evolution
 ELSE IF .codepet/codepet.png does not exist -> bootstrap
 ELSE -> normal
 ```
@@ -78,10 +78,10 @@ Parse this injected JSON once, then extract only fields needed for decisions and
 Do not duplicate or restate full payload contents later in your response.
 
 Interpretation priority:
-1. Re-ground/evolution flags (for mode selection).
-2. Temporal flags (`is_sleeping`, `is_late_night_coding`, transitions).
-3. Activity/back-off context (`backoff_reason`, `hours_inactive`, `next_interval`).
-4. Identity/reference paths (`current_stage_reference`, re-ground base fields).
+1. Explicit override: `force_reground` (payload).
+2. Activity/back-off context from payload: `backoff_reason`, `hours_inactive`, `next_interval`.
+3. Trigger metadata from payload: `trigger_source`, `actor`, `repository`.
+4. Everything else (mode details, temporal state, identity/reference paths) from `.codepet/state.json` and `.codepet/activity.json`.
 
 If a field is missing, fall back to `.codepet/state.json` and `.codepet/activity.json` without inventing values.
 
