@@ -110,7 +110,7 @@ Temporal state is source-of-truth when available.
 - `.codepet/stage_images/baby.png` (bootstrap fallback)
 
 ### Prompt audit trail
-- `.codepet/image_edit_prompt.txt` (must include JSON edit spec + compiled prompt)
+- `.codepet/image_edit_prompt.json` (must include JSON edit spec + compiled prompt)
 
 ## Stage Images vs Live Image
 Understand this distinction:
@@ -180,7 +180,7 @@ Apply these hard rules:
 - Avoid deictic references: do not use phrases like "same as before", "current scene", "latest setup".
 
 ## Required JSON Structured Prompting
-Before calling Falcon, produce a JSON object and save it to `.codepet/image_edit_prompt.txt`.
+Before calling Falcon, produce a JSON object and save it to `.codepet/image_edit_prompt.json`.
 
 ### JSON schema (required keys)
 ```json
@@ -236,12 +236,7 @@ Before calling Falcon, produce a JSON object and save it to `.codepet/image_edit
     ],
     "scope": "small_incremental | reground_reset | stage_transition"
   },
-  "compiled_prompt": "single paragraph prompt string in natural language",
-  "falcon": {
-    "model": "flux2Flash",
-    "resolution": "512x512",
-    "guidance_scale": 0.5
-  }
+  "compiled_prompt": "single paragraph prompt string in natural language"
 }
 ```
 
@@ -255,7 +250,7 @@ The `compiled_prompt` must:
 6. Include anchor elements directly (desk, oversized laptop, skyline window).
 7. Be one paragraph, no markdown, no placeholders, no braces.
 
-### Save format for `.codepet/image_edit_prompt.txt`
+### Save format for `.codepet/image_edit_prompt.json`
 Use this structure exactly:
 
 ```text
@@ -412,7 +407,7 @@ Narrative constraints:
 
 ### Phase 3: Generate
 1. Build JSON edit spec and compile prompt.
-2. Save both to `.codepet/image_edit_prompt.txt`.
+2. Save both to `.codepet/image_edit_prompt.json`.
 3. Run Falcon with selected guidance scale.
 
 ### Phase 4: Verify
@@ -430,7 +425,7 @@ Narrative constraints:
 Use helper script and include changed files:
 
 ```bash
-.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description]" .codepet/codepet.png .codepet/image_edit_prompt.txt README.md .codepet/journal.md .codepet/prop_inventory.md .codepet/state.json
+.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description]" .codepet/codepet.png .codepet/image_edit_prompt.json README.md .codepet/journal.md .codepet/prop_inventory.md .codepet/state.json
 ```
 
 If a stage anchor was created/updated, include it too (for example `.codepet/stage_images/teen.png`).
@@ -442,7 +437,7 @@ If `steering.md` changed, include `.codepet/steering.md` in the same commit.
 - Always prefer multi-image `--edit` with live base + stage anchor when both exist.
 - Keep normal edits incremental and concrete.
 - Use `guidance_scale=0.5` for all edits.
-- Save prompt artifacts in `.codepet/image_edit_prompt.txt`.
+- Save prompt artifacts in `.codepet/image_edit_prompt.json`.
 - Never edit README content above the marker.
 - Maintain narrative continuity in `journal.md` and `prop_inventory.md`.
 - Use commit helper script; do not create PRs.
