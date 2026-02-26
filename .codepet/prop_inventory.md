@@ -78,10 +78,10 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** Z's disappear when Byte wakes up in the morning.
 
 ### Lighting
-- **Source:** Afternoon sun
-- **Current:** Warm golden afternoon lighting
+- **Source:** Evening sky
+- **Current:** Purple-pink evening lighting
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** The Chicago skyline outside is bathed in beautiful golden afternoon light, and the room is filled with warm glow. Byte is wide awake and content at 1:31 PM!
+- **Notes:** The Chicago skyline outside is bathed in beautiful purple-pink evening light, and the room is filled with soft glow. Byte is calm and content at 9:15 PM!
 
 ---
 
