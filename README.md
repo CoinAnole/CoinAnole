@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Content 😊
+**Stage:** Teen | **Mood:** Sleeping 😴
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 55/100 | █████░░░░░ |
+| 🍖 Satiety | 52/100 | █████░░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 97/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 0 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-The afternoon has transitioned to a beautiful purple-pink evening! The Chicago skyline outside now glows with soft evening light. Byte is feeling calm and content after a long day of waiting. It's been quiet for a while (32 hours since the last commit), but Byte is still sitting peacefully at its desk. The 10-day streak trophy gleams softly in the evening light, Succulent looks vibrant, and the food bowl is still full. Byte is ready for whenever the coding adventures resume! 🌆💻
+It's late at night in Chicago, and Byte is fast asleep at the desk! The sky outside is dark with twinkling stars, and soft light blue Z's float above Byte's head. After 36 hours of quiet, Byte has drifted off to dream about coding adventures. The 10-day streak trophy gleams softly in the night light, Succulent rests peacefully, and the food bowl remains full. Sweet dreams, Byte! 🌙💻
