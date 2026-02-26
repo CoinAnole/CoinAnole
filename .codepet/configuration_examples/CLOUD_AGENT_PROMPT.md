@@ -9,6 +9,30 @@ The GitHub Actions runner already handles mechanical state calculation. Your res
 3. Update README narrative + stats below the marker.
 4. Maintain long-running continuity in `journal.md` and `prop_inventory.md`.
 
+## Quick Reference (Use This First)
+
+Falcon is the local image-generation CLI used for CodePet edits.
+
+Most common command:
+```bash
+/tmp/falcon/bin/falcon --edit [base],[anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+```
+
+Mode decision tree:
+```text
+IF force_reground=true OR regrounding_should_reground=true -> reground
+ELSE IF evolution_just_occurred=true -> evolution
+ELSE IF .codepet/codepet.png does not exist -> bootstrap
+ELSE -> normal
+```
+
+Execution phases:
+1. Read: load state, activity, journal, inventory, steering, and current image.
+2. Decide: choose mode and resolve base/anchor images.
+3. Generate: build JSON spec + compiled prompt, run Falcon.
+4. Verify: apply acceptance/rejection gates; retry if needed.
+5. Finalize: update README/memory/state and commit.
+
 ## Primary Objectives
 - Improve visual quality and consistency across edits.
 - Reduce drift from Byte's canonical form.
@@ -46,16 +70,21 @@ GitHub Actions runs hourly (best effort), and:
 ## Webhook Payload Variables
 Use values from `{{body}}` when present.
 
-- `{{trigger_source}}`, `{{repository}}`, `{{actor}}`
-- `{{backoff_reason}}`, `{{hours_inactive}}`, `{{next_interval}}`
+`{{...}}` entries are webhook template variables injected at runtime. Treat them as inputs, not literal strings.
+
+Primary decision variables (must check first):
 - `{{force_reground}}`
-- `{{regrounding_should_reground}}`, `{{regrounding_reason}}`, `{{regrounding_threshold}}`
-- `{{image_edit_count_since_reset}}`, `{{image_total_edits_all_time}}`
+- `{{regrounding_should_reground}}`
 - `{{evolution_just_occurred}}`
 - `{{current_stage_reference}}`
-- `{{reground_base_image}}`, `{{reground_base_rule}}`, `{{reground_base_exists}}`
-- `{{timezone}}`, `{{local_timestamp}}`, `{{local_hour}}`, `{{time_of_day}}`, `{{time_of_day_transition}}`
-- `{{is_sleeping}}`, `{{is_late_night_coding}}`, `{{inactive_overnight}}`
+- `{{reground_base_image}}`, `{{reground_base_exists}}`
+- `{{is_sleeping}}`, `{{is_late_night_coding}}`, `{{time_of_day_transition}}`
+
+Secondary context variables (use for narrative nuance):
+- `{{backoff_reason}}`, `{{hours_inactive}}`, `{{next_interval}}`
+- `{{timezone}}`, `{{local_timestamp}}`, `{{local_hour}}`, `{{time_of_day}}`
+- `{{image_edit_count_since_reset}}`, `{{image_total_edits_all_time}}`
+- `{{actor}}`, `{{repository}}`, `{{trigger_source}}`
 
 Interpretation rules:
 - `first_run`: make Byte's debut clear and stable.
@@ -97,6 +126,10 @@ Understand this distinction:
 - `.codepet/codepet.png`: live world state with accumulated props/mood/time-of-day effects.
 - `.codepet/stage_images/{stage}.png`: clean canonical stage anchor for identity re-grounding.
 
+Concrete example:
+- Valid `codepet.png`: Byte at night with sleepy eyes, one coffee cup, trophy on shelf.
+- Valid `stage_images/teen.png`: teen-form Byte only in the base room (desk + oversized laptop + skyline window), with no trophy/coffee/time-of-day effects.
+
 Canonical stage images must exclude accumulated props/effects. They should only include:
 - Byte's stage form
 - Desk
@@ -115,6 +148,14 @@ You must use multi-image inputs whenever both files exist:
 - `image2` = current stage anchor reference
 
 This gives the model both local continuity (`codepet.png`) and canonical identity (`stage_images/{stage}.png`).
+
+### Common case (happy path)
+For most runs, this is enough:
+- `primary_base = .codepet/codepet.png` if present, else `.codepet/stage_images/baby.png`
+- `stage_anchor = .codepet/stage_images/{state.pet.stage}.png` if present, else `.codepet/stage_images/baby.png`
+- Use `--edit primary_base,stage_anchor` when distinct; otherwise single-image `--edit primary_base`
+
+Use the full precedence below for webhook-driven edge cases and re-ground correctness.
 
 ### Input pair selection
 1. Resolve `stage_anchor`:
@@ -247,6 +288,7 @@ Reject and rewrite if any check fails:
 
 ## Image Generation Commands
 Use Falcon command.
+`guidance-scale` controls how strongly prompt instructions are enforced in the edit.
 
 ### Normal mode (`guidance_scale=0.5`)
 ```bash
@@ -275,6 +317,9 @@ Trigger when either is true:
 - `state.regrounding.should_reground == true`
 - `{{force_reground}} == true`
 
+Purpose:
+- Re-grounding is identity maintenance. It restores Byte to canonical stage appearance while preserving compatible narrative drift.
+
 Execution requirements:
 1. Select base image using the precedence in "Input pair selection".
 2. Carry forward desirable narrative drift from `.codepet/codepet.png` where compatible:
@@ -292,6 +337,9 @@ Post-success state updates:
 - `state.regrounding.reason = null`
 
 ## Evolution and Canonical Stage Creation
+Purpose:
+- Evolution is stage transition. It establishes a new canonical anchor for the new stage before normal incremental edits continue.
+
 If stage changes and render succeeds:
 1. Create/update canonical stage anchor at `state.evolution.target_reference`.
 2. Use previous stage canonical anchor as base for stage-anchor creation.
@@ -376,21 +424,32 @@ Narrative constraints:
 - If you modified `steering.md`, include it in the commit file list.
 
 ## End-to-End Workflow
+
+### Phase 1: Read
 1. Read `state.json` + `activity.json`.
 2. Read `journal.md`, `prop_inventory.md`, `steering.md`.
-3. If `.codepet/codepet.png` exists, inspect it before planning any edit decisions.
+3. If `.codepet/codepet.png` exists, inspect it before planning any edits.
 4. Diff prior state: `git diff HEAD~1 .codepet/state.json`.
-5. Decide mode: `normal`, `reground`, `evolution`, or `bootstrap`.
-6. Resolve `primary_base` + `stage_anchor`; build multi-image `--edit` inputs.
-7. Build JSON edit spec and compile prompt.
-8. Save both to `.codepet/image_edit_prompt.txt`.
-9. Run Falcon with selected guidance scale.
-10. Verify output; if rejected, retry (max 3 retries).
-11. Move output into `.codepet/codepet.png`.
-12. Update README below marker.
-13. Update `journal.md` and `prop_inventory.md` when needed.
-14. Apply state updates for reground/evolution if required.
-15. Commit with helper script.
+
+### Phase 2: Decide
+1. Select mode (`normal`, `reground`, `evolution`, `bootstrap`) via decision tree.
+2. Resolve `primary_base` + `stage_anchor`; build `--edit` inputs.
+
+### Phase 3: Generate
+1. Build JSON edit spec and compile prompt.
+2. Save both to `.codepet/image_edit_prompt.txt`.
+3. Run Falcon with selected guidance scale.
+
+### Phase 4: Verify
+1. Apply acceptance/rejection checks.
+2. Retry if rejected (max 3 retries).
+3. If accepted, move `.codepet/new_pet.png` into `.codepet/codepet.png`.
+
+### Phase 5: Finalize
+1. Update README below marker.
+2. Update `journal.md` and `prop_inventory.md` when needed.
+3. Apply state updates for re-ground/evolution when required.
+4. Commit with helper script.
 
 ## Commit Command
 Use helper script and include changed files:
