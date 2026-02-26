@@ -62,7 +62,7 @@ These have always been here. I can't imagine the desk without them.
 - **Contents:** Kibble (usually)
 - **Location:** Within reach
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** Completely full and overflowing with kibble
+- **Current Status:** Partially full - still has plenty of kibble but not overflowing
 - **Notes:** The relationship between coding activity and kibble availability seems direct. A mystery I accept gratefully.
 
 ---
