@@ -24,7 +24,6 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Prepare pre-webhook image state (force re-ground)
-        id: pre_webhook
         if: ${{ inputs.force_reground }}
         env:
           FORCE_REGROUND: "true"
@@ -49,25 +48,7 @@ jobs:
               \"trigger_source\": \"manual_reground\",
               \"repository\": \"${{ github.repository }}\",
               \"actor\": \"${{ github.actor }}\",
-              \"force_reground\": true,
-              \"regrounding_should_reground\": ${{ steps.pre_webhook.outputs.should_reground }},
-              \"regrounding_reason\": ${{ steps.pre_webhook.outputs.reason_json }},
-              \"regrounding_threshold\": ${{ steps.pre_webhook.outputs.threshold }},
-              \"image_edit_count_since_reset\": ${{ steps.pre_webhook.outputs.edit_count_since_reset }},
-              \"image_total_edits_all_time\": ${{ steps.pre_webhook.outputs.total_edits_all_time }},
-              \"evolution_just_occurred\": ${{ steps.pre_webhook.outputs.evolution_just_occurred }},
-              \"current_stage_reference\": \"${{ steps.pre_webhook.outputs.current_stage_reference }}\",
-              \"reground_base_image\": \"${{ steps.pre_webhook.outputs.reground_base_image }}\",
-              \"reground_base_rule\": \"${{ steps.pre_webhook.outputs.reground_base_rule }}\",
-              \"reground_base_exists\": ${{ steps.pre_webhook.outputs.reground_base_exists }},
-              \"timezone\": \"${{ steps.pre_webhook.outputs.timezone }}\",
-              \"local_timestamp\": \"${{ steps.pre_webhook.outputs.local_timestamp }}\",
-              \"local_hour\": ${{ steps.pre_webhook.outputs.local_hour }},
-              \"time_of_day\": \"${{ steps.pre_webhook.outputs.time_of_day }}\",
-              \"time_of_day_transition\": \"${{ steps.pre_webhook.outputs.time_of_day_transition }}\",
-              \"is_sleeping\": ${{ steps.pre_webhook.outputs.is_sleeping }},
-              \"is_late_night_coding\": ${{ steps.pre_webhook.outputs.is_late_night_coding }},
-              \"inactive_overnight\": ${{ steps.pre_webhook.outputs.inactive_overnight }}
+              \"force_reground\": true
             }"
           echo "Force re-ground webhook triggered successfully"
 

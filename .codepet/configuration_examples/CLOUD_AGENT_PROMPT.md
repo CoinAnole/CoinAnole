@@ -68,30 +68,22 @@ GitHub Actions runs hourly (best effort), and:
 - Diffing `state.json` on webhook runs should show meaningful deltas.
 
 ## Webhook Payload Variables
-Use values from `{{body}}` when present.
+Webhook payload JSON is injected once below at runtime:
 
-`{{...}}` entries are webhook template variables injected at runtime. Treat them as inputs, not literal strings.
+```json
+{{bodyJson}}
+```
 
-Primary decision variables (must check first):
-- `{{force_reground}}`
-- `{{regrounding_should_reground}}`
-- `{{evolution_just_occurred}}`
-- `{{current_stage_reference}}`
-- `{{reground_base_image}}`, `{{reground_base_exists}}`
-- `{{is_sleeping}}`, `{{is_late_night_coding}}`, `{{time_of_day_transition}}`
+Parse this injected JSON once, then extract only fields needed for decisions and narrative continuity.
+Do not duplicate or restate full payload contents later in your response.
 
-Secondary context variables (use for narrative nuance):
-- `{{backoff_reason}}`, `{{hours_inactive}}`, `{{next_interval}}`
-- `{{timezone}}`, `{{local_timestamp}}`, `{{local_hour}}`, `{{time_of_day}}`
-- `{{image_edit_count_since_reset}}`, `{{image_total_edits_all_time}}`
-- `{{actor}}`, `{{repository}}`, `{{trigger_source}}`
+Interpretation priority:
+1. Re-ground/evolution flags (for mode selection).
+2. Temporal flags (`is_sleeping`, `is_late_night_coding`, transitions).
+3. Activity/back-off context (`backoff_reason`, `hours_inactive`, `next_interval`).
+4. Identity/reference paths (`current_stage_reference`, re-ground base fields).
 
-Interpretation rules:
-- `first_run`: make Byte's debut clear and stable.
-- `backoff_6hr` + high `hours_inactive`: reflect loneliness/rest.
-- `next_interval=60`: user is active; keep changes incremental.
-- `force_reground=true` or `regrounding_should_reground=true`: run re-grounding mode.
-- `evolution_just_occurred=true`: apply evolution handling and stage anchoring.
+If a field is missing, fall back to `.codepet/state.json` and `.codepet/activity.json` without inventing values.
 
 ## Timezone and Circadian Rules
 Temporal state is source-of-truth when available.
@@ -159,15 +151,13 @@ Use the full precedence below for webhook-driven edge cases and re-ground correc
 
 ### Input pair selection
 1. Resolve `stage_anchor`:
-   - `{{current_stage_reference}}` if present and file exists.
-   - Else `state.image_state.current_stage_reference` if exists.
+   - `state.image_state.current_stage_reference` if exists.
    - Else `.codepet/stage_images/{state.pet.stage}.png` if exists.
    - Else `.codepet/stage_images/baby.png`.
 
 2. Resolve `primary_base` by mode:
    - `reground` mode:
-     - Prefer `{{reground_base_image}}` when `{{reground_base_exists}} == true`.
-     - Else if `state.evolution.just_occurred == true`: use `state.evolution.base_reference`.
+     - If `state.evolution.just_occurred == true`: use `state.evolution.base_reference` when it exists.
      - Else use `state.image_state.current_stage_reference`.
      - Else fallback `.codepet/codepet.png`.
    - `normal` mode:
@@ -315,7 +305,7 @@ Only use `0.7` for re-grounding or stage-transition stabilization.
 ## Re-Grounding Mode
 Trigger when either is true:
 - `state.regrounding.should_reground == true`
-- `{{force_reground}} == true`
+- webhook payload `force_reground == true`
 
 Purpose:
 - Re-grounding is identity maintenance. It restores Byte to canonical stage appearance while preserving compatible narrative drift.

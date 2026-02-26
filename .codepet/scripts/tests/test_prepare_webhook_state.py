@@ -215,7 +215,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertEqual(exit_code, 1)
         self.assertEqual(outputs, {})
 
-    def test_main_force_reground_updates_state_and_outputs(self) -> None:
+    def test_main_force_reground_updates_state_without_outputs(self) -> None:
         self.write_state(
             {
                 "pet": {"stage": "baby"},
@@ -250,13 +250,9 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertEqual(state["regrounding"]["reason"], "force_reground")
         self.assertEqual(state["regrounding"]["threshold"], 6)
 
-        self.assertEqual(outputs["should_reground"], "true")
-        self.assertEqual(outputs["reason_json"], "\"force_reground\"")
-        self.assertIn("reground_base_image", outputs)
-        self.assertIn("reground_base_rule", outputs)
-        self.assertIn("reground_base_exists", outputs)
+        self.assertEqual(outputs, {})
 
-    def test_main_emits_temporal_outputs(self) -> None:
+    def test_main_preserves_temporal_state_without_outputs(self) -> None:
         self.write_state(
             {
                 "pet": {
@@ -290,14 +286,16 @@ class PrepareWebhookStateTests(unittest.TestCase):
 
         exit_code, outputs = self.run_main({"FORCE_REGROUND": "false"}, image_revision="git_blob:temporal")
         self.assertEqual(exit_code, 0)
-        self.assertEqual(outputs["timezone"], "America/Chicago")
-        self.assertEqual(outputs["local_timestamp"], "2026-02-13T22:30:00-06:00")
-        self.assertEqual(outputs["local_hour"], "22")
-        self.assertEqual(outputs["time_of_day"], "night")
-        self.assertEqual(outputs["time_of_day_transition"], "evening_to_night")
-        self.assertEqual(outputs["is_sleeping"], "true")
-        self.assertEqual(outputs["is_late_night_coding"], "true")
-        self.assertEqual(outputs["inactive_overnight"], "false")
+        self.assertEqual(outputs, {})
+        state = self.read_state()
+        self.assertEqual(state["temporal"]["timezone"], "America/Chicago")
+        self.assertEqual(state["temporal"]["local_timestamp"], "2026-02-13T22:30:00-06:00")
+        self.assertEqual(state["temporal"]["local_hour"], 22)
+        self.assertEqual(state["temporal"]["time_of_day"], "night")
+        self.assertEqual(state["temporal"]["time_of_day_transition"], "evening_to_night")
+        self.assertTrue(state["pet"]["derived_state"]["is_sleeping"])
+        self.assertTrue(state["temporal"]["is_late_night_coding"])
+        self.assertFalse(state["temporal"]["inactive_overnight"])
 
     def test_main_threshold_trigger_and_stale_reason_reset(self) -> None:
         self.write_state(
@@ -327,7 +325,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertEqual(threshold_state["image_state"]["edit_count_since_reset"], 2)
         self.assertTrue(threshold_state["regrounding"]["should_reground"])
         self.assertEqual(threshold_state["regrounding"]["reason"], "edit_threshold_reached")
-        self.assertEqual(threshold_outputs["reason_json"], "\"edit_threshold_reached\"")
+        self.assertEqual(threshold_outputs, {})
 
         self.write_state(
             {
@@ -356,7 +354,7 @@ class PrepareWebhookStateTests(unittest.TestCase):
         self.assertEqual(reset_state["image_state"]["edit_count_since_reset"], 0)
         self.assertFalse(reset_state["regrounding"]["should_reground"])
         self.assertIsNone(reset_state["regrounding"]["reason"])
-        self.assertEqual(reset_outputs["reason_json"], "null")
+        self.assertEqual(reset_outputs, {})
 
 
 if __name__ == "__main__":
