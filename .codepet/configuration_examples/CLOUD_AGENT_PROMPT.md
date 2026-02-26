@@ -183,82 +183,30 @@ Apply these hard rules:
 Before calling Falcon, produce a JSON object and save it to `.codepet/image_edit_prompt.json`.
 
 ### JSON schema (required keys)
+Use a model-facing schema only. Do not include runtime metadata (for example `state_summary`, raw stats, or file paths) inside this JSON block.
+
 ```json
 {
-  "mode": "normal | reground | evolution | bootstrap",
-  "references": {
-    "primary_base": "path",
-    "stage_anchor": "path or null",
-    "edit_inputs": ["path1", "path2?"]
-  },
-  "state_summary": {
-    "stage": "baby | teen | adult | elder",
-    "mood": "string",
-    "stats": {
-      "satiety": 0,
-      "energy": 0,
-      "happiness": 0,
-      "social": 0
+  "scene": "single-sentence overview of the final image edit",
+  "subjects": [
+    {
+      "description": "Byte with explicit stage identity and appearance details",
+      "position": "primary foreground placement",
+      "action": "what Byte is doing right now"
     },
-    "temporal": {
-      "time_of_day": "morning | afternoon | evening | night",
-      "transition": "none | evening_to_night | night_to_morning",
-      "is_sleeping": false,
-      "is_late_night_coding": false
+    {
+      "description": "anchor environment: desk, oversized laptop, Chicago skyline window",
+      "position": "room/background placement",
+      "action": "static environment anchor"
     }
-  },
-  "identity_anchors": {
-    "must_keep": [
-      "Byte remains recognizable for stage",
-      "desk + oversized laptop + Chicago skyline window",
-      "pixel art, clean 2D, dithered shading"
-    ],
-    "drift_guard": "how stage anchor will be used to prevent form drift"
-  },
-  "scene_plan": {
-    "subject": "Byte description first",
-    "action": "what Byte is doing",
-    "style": "pixel-art rendering style details",
-    "context": "lighting, room mood, small environmental cues",
-    "changes_to_apply": [
-      "concrete change 1",
-      "concrete change 2"
-    ],
-    "props_to_show": [
-      "items from prop inventory that should remain visible"
-    ]
-  },
-  "constraints": {
-    "forbidden": [
-      "laptop screen text/code/UI details",
-      "major camera/composition changes unless reground/evolution",
-      "non-pixel-art style shift"
-    ],
-    "scope": "small_incremental | reground_reset | stage_transition"
-  },
-  "compiled_prompt": "single paragraph prompt string in natural language"
+  ],
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "time-of-day and light quality",
+  "mood": "emotional tone reflected in pose and palette",
+  "background": "room details and persistent props to keep visible",
+  "composition": "framing and layout instructions",
+  "color_palette": ["#hex1", "#hex2", "#hex3"]
 }
-```
-
-### Prompt compiler rules
-The `compiled_prompt` must:
-1. Start with Byte subject + stage identity.
-2. State the key action.
-3. State pixel-art style and quality terms.
-4. State context (time-of-day, mood, environment).
-5. State 1-2 concrete edit deltas (normal mode) or explicit restoration goals (reground mode).
-6. Include anchor elements directly (desk, oversized laptop, skyline window).
-7. Be one paragraph, no markdown, no placeholders, no braces.
-
-### Save format for `.codepet/image_edit_prompt.json`
-Use this structure exactly:
-
-```text
-JSON_EDIT_SPEC:
-{...valid JSON...}
-
-COMPILED_PROMPT:
-...single paragraph prompt...
 ```
 
 ### Prompt lint gate (required before Falcon call)
