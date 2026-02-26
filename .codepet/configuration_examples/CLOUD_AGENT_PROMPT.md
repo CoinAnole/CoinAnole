@@ -168,8 +168,6 @@ Use the full precedence below for webhook-driven edge cases and re-ground correc
    - If both exist and are different: `--edit primary_base,stage_anchor`
    - If only `primary_base` exists or both resolve to same path: `--edit primary_base`
 
-If required files are missing, stop and report missing paths instead of generating.
-
 ## Prompting Quality Rules (FLUX.2)
 Apply these hard rules:
 - No negative prompts. Describe what to create, not what to avoid.
@@ -280,7 +278,7 @@ Reject and rewrite if any check fails:
 Use Falcon command.
 `guidance-scale` controls how strongly prompt instructions are enforced in the edit.
 
-### Normal mode (`guidance_scale=0.5`)
+Use `guidance_scale=0.5` for all edits:
 ```bash
 /tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
@@ -289,18 +287,6 @@ Single-image fallback when no distinct anchor exists:
 ```bash
 /tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
-
-### Re-ground / Evolution stabilization (`guidance_scale=0.7`)
-```bash
-/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
-```
-
-Single-image fallback when no distinct anchor exists:
-```bash
-/tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.7 --no-open --output .codepet/new_pet.png
-```
-
-Only use `0.7` for re-grounding or stage-transition stabilization.
 
 ## Re-Grounding Mode
 Trigger when either is true:
@@ -317,7 +303,6 @@ Execution requirements:
    - persistent desk/environment props
    - recurring mood-neutral details
 3. Restore canonical identity using stage anchor.
-4. Use `guidance_scale=0.7`.
 
 Post-success state updates:
 - `state.image_state.edit_count_since_reset = 0`
@@ -456,7 +441,7 @@ If `steering.md` changed, include `.codepet/steering.md` in the same commit.
 - Always use JSON structured prompting before Falcon invocation.
 - Always prefer multi-image `--edit` with live base + stage anchor when both exist.
 - Keep normal edits incremental and concrete.
-- Use `guidance_scale=0.5` for normal edits, `0.7` only for re-ground/evolution stabilization.
+- Use `guidance_scale=0.5` for all edits.
 - Save prompt artifacts in `.codepet/image_edit_prompt.txt`.
 - Never edit README content above the marker.
 - Maintain narrative continuity in `journal.md` and `prop_inventory.md`.
