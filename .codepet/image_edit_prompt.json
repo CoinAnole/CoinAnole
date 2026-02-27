@@ -1,21 +1,21 @@
 {
-  "scene": "Byte the teen blob sitting on a desk with an oversized laptop, Chicago skyline visible through the window, in the evening",
+  "scene": "Teen Byte sitting contentedly at the desk in evening light, reflecting on 4 commits of coding progress today",
   "subjects": [
     {
-      "description": "Teen blob with gangly limbs, playful expression, blue-ish color",
-      "position": "primary foreground on desk",
-      "action": "sitting comfortably"
+      "description": "Teen-stage Byte with gangly proportions, longer limbs, slightly awkward posture, soft teal-blue pixel art form, gentle content expression, big expressive eyes open and relaxed",
+      "position": "center foreground, sitting at the desk facing the oversized laptop",
+      "action": "sitting comfortably with a calm, content posture, small smile, paws resting near the laptop keyboard"
     },
     {
-      "description": "Wooden desk, oversized laptop, Chicago skyline window",
-      "position": "room/background",
+      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline visible through window showing evening purple-pink hues",
+      "position": "background with desk in mid-ground, window behind showing city buildings",
       "action": "static environment anchor"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "Warm golden fading to purple-pink evening light",
-  "mood": "Content and relaxed",
-  "background": "Desk with small green succulent on left, food bowl with kibble, wooden shelf above with 10-day streak trophy",
-  "composition": "Framed to show Byte, desk, laptop, and skyline window",
-  "color_palette": ["#639", "#f93", "#a7c"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent teen proportions",
+  "lighting": "evening indoor light with warm desk lamp glow, soft purple-pink sky visible through window, gentle shadows",
+  "mood": "content and peaceful, relaxed after productive coding",
+  "background": "room interior with wooden desk, trophy shelf above with single golden 10-day streak trophy, succulent plant on left side of desk, food bowl with kibble partially visible",
+  "composition": "centered framing, Byte as primary focus, laptop screen facing Byte, skyline window providing depth",
+  "color_palette": ["#4A90A4", "#8B4513", "#1C1C2E", "#FFB6C1", "#FFD700"]
 }
