@@ -1,54 +1,42 @@
 {
-  "attempt": 3,
-  "mode": "reground",
-  "base_image": ".codepet/stage_images/teen.png",
+  "attempt": 1,
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Byte displays correct teen proportions: gangly long limbs, light blue fuzzy texture, larger body than baby form, sitting at desk typing with content expression"
+      "evidence": "Teen-stage Byte with fuzzy blue texture, gangly awkward proportions, and lanky limbs preserved. Characteristic teen silhouette maintained with recognizable awkward-but-endearing posture."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean 2D pixel art with dithered shading, crisp edges, consistent canonical style maintained"
+      "evidence": "Clean pixel art style with dithered shading maintained. No drift toward photorealism or painterly rendering. Readable silhouette preserved."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Night lighting applied with purple-blue tones, laptop screen glow visible on Byte, trophy shelf present with 10 trophy, single plant on shelf, single food bowl on floor with kibble"
+      "evidence": "Sleeping state change applied: closed eyes visible, light blue floating Z's present above Byte's head, peaceful sleeping pose with head resting on paws."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No text leakage, no garbled elements, no merged objects, no smearing, clean rendering throughout"
+      "evidence": "No garbled text, floating glyphs, malformed anatomy, or smeared objects detected. Clean render with proper pixel art edges."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "CORRECT: Shelf contains exactly one golden trophy with 10 and exactly one green plant positioned side by side with clear spacing. Floor has exactly one metal food bowl with kibble. No duplicate props. All spacing requirements met."
+      "evidence": "Trophy shelf visible above desk with exactly one golden 10-day trophy on left side and one leafy green plant on right side. Food bowl on floor to right of desk. Single instances only, no duplicates. Clear spacing between props, no overlap."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Wooden desk with oversized laptop present, Chicago skyline visible through window showing night lights, trophy shelf mounted on wall above desk"
+      "evidence": "All scene anchors present: wooden desk at center, oversized laptop with soft white glow, Chicago skyline visible through window behind left."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Night scene with deep purple-blue lighting through window, soft laptop glow illuminating Byte's face, content focused expression matches is_late_night_coding=true and mood=content"
+      "evidence": "Sleeping state (is_sleeping=true) correctly reflected in visuals: closed eyes, floating Z's, peaceful resting pose. Deep night lighting (1:15 AM Chicago) with dim purple-blue ambient glow from skyline matches temporal state."
     },
     "reground_cleanup": {
       "status": "pass",
-      "evidence": "Successfully corrected from reference image: removed stool with bowl artifact, repositioned plant from desk to shelf, established clear canonical teen proportions, eliminated any duplicated or overlapping props. Visible cleanup achieved."
+      "evidence": "Not applicable for normal mode edit. Previous image was acceptable, this is a state-change update from awake to sleeping."
     }
   },
-  "decision": "accept",
-  "previous_attempts": [
-    {
-      "attempt": 1,
-      "rejection_reason": "Two succulents on shelf instead of one",
-      "prompt_fix": "Added explicit 'only one single succulent' language"
-    },
-    {
-      "attempt": 2,
-      "rejection_reason": "Still two succulents on shelf",
-      "prompt_fix": "Simplified to 'one plant' integrated in scene description"
-    }
-  ]
+  "decision": "accept"
 }
