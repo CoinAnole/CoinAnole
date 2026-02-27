@@ -161,8 +161,9 @@ Use the full precedence below for webhook-driven edge cases and re-ground correc
 2. Resolve `primary_base` by mode:
    - `reground` mode:
      - If `state.evolution.just_occurred == true`: use `state.evolution.base_reference` when it exists.
+     - Else prefer `.codepet/codepet.png` when it exists (so defects can be actively corrected).
      - Else use `state.image_state.current_stage_reference`.
-     - Else fallback `.codepet/codepet.png`.
+     - Else fallback `.codepet/stage_images/baby.png`.
    - `normal` mode:
      - Prefer `.codepet/codepet.png` if exists.
      - Else fallback `.codepet/stage_images/baby.png` and copy to `.codepet/codepet.png`.
@@ -170,6 +171,7 @@ Use the full precedence below for webhook-driven edge cases and re-ground correc
 3. Build `--edit` input:
    - If both exist and are different: `--edit primary_base,stage_anchor`
    - If only `primary_base` exists or both resolve to same path: `--edit primary_base`
+   - Re-ground guardrail: if mode is `reground` and `.codepet/codepet.png` exists, avoid single-image edits that use only `stage_anchor`; include the live image as one input whenever possible.
 
 ## Prompting Quality Rules (FLUX.2)
 Apply these hard rules:
@@ -219,6 +221,7 @@ Reject and rewrite if any check fails:
 3. Mentions laptop screen text/code/UI.
 4. Omits any identity anchor (Byte, desk, oversized laptop, skyline window).
 5. Normal mode prompt tries to apply >2 unrelated scene changes.
+6. Re-ground prompt omits concrete prop counts and placements for carried-forward props (for example: "exactly one food bowl on the right side of desk, succulent on the left, no overlap").
 
 ## Image Generation Commands
 Use Falcon command.
@@ -244,11 +247,23 @@ Purpose:
 
 Execution requirements:
 1. Select base image using the precedence in "Input pair selection".
-2. Carry forward desirable narrative drift from `.codepet/codepet.png` where compatible:
+2. Rebuild canonical structure first using the stage anchor as geometry source-of-truth:
+   - Byte's stage silhouette/proportions
+   - Desk + oversized laptop + skyline window layout
+3. Carry forward desirable narrative drift from `.codepet/codepet.png` where compatible:
    - palette tendencies
    - persistent desk/environment props
    - recurring mood-neutral details
-3. Restore canonical identity using stage anchor.
+4. Apply strict prop discipline during carry-forward:
+   - Keep only props supported by `prop_inventory.md` and current context.
+   - Enforce explicit cardinality in the JSON prompt (default to one instance per prop unless inventory explicitly says otherwise).
+   - Maintain clear spacing: no prop overlap/intersection (for example bowl must not intersect succulent).
+5. Artifact cleanup is mandatory in re-ground:
+   - Remove duplicated props, merged/clipped objects, and leftover smear artifacts.
+   - If uncertain between keeping a questionable detail and removing it, remove it.
+6. Re-ground must produce a visibly corrective result:
+   - When base image contains defects, candidate must show concrete cleanup improvements.
+   - If candidate is near-identical to base while defects persist, reject and retry.
 
 Post-success state updates:
 - `state.image_state.edit_count_since_reset = 0`
@@ -301,8 +316,10 @@ Minimum required structure:
     "pixel_style": { "status": "pass", "evidence": "..." },
     "requested_changes_visible": { "status": "pass", "evidence": "..." },
     "artifact_free": { "status": "pass", "evidence": "..." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "..." },
     "anchors_present": { "status": "pass", "evidence": "..." },
-    "temporal_mood_match": { "status": "pass", "evidence": "..." }
+    "temporal_mood_match": { "status": "pass", "evidence": "..." },
+    "reground_cleanup": { "status": "pass", "evidence": "..." }
   },
   "decision": "accept"
 }
@@ -311,6 +328,9 @@ Minimum required structure:
 Gate rules:
 - Each check must be `pass` or `fail`; `unknown` is not allowed.
 - Every check must include concrete visual evidence (what is visible and where).
+- `prop_layout_integrity` evidence must explicitly include object counts and spacing statements for key props.
+- When `mode=reground`, `reground_cleanup` must compare base vs candidate and name which defects were corrected.
+- When `mode!=reground`, set `reground_cleanup` to `pass` with evidence that the check is not applicable for that mode.
 - If any check fails, `decision` must be `reject`.
 - Reject entries must include both `rejection_reason` and `prompt_delta_for_next_attempt`.
 - If all retries fail, keep the previous `.codepet/codepet.png` and set final decision to `reject`.
@@ -322,6 +342,8 @@ Acceptance checklist (all required):
 3. Requested changes are visible.
 4. No text/artifact leakage.
 5. Scene anchors still present (desk, oversized laptop, skyline window).
+6. Prop cardinality/layout is coherent (single-instance props stay single unless inventory says otherwise; no overlap/clipping).
+7. In `reground` mode, known base-image defects are visibly corrected (not a no-op render).
 
 Reject the output and retry if any of these occur:
 1. Stage identity drift (Byte shape/proportions no longer match expected stage).
@@ -331,10 +353,13 @@ Reject the output and retry if any of these occur:
 5. Artifact issues (garbled text, floating glyphs, malformed anatomy, duplicated parts, smeared objects).
 6. Temporal/mood mismatch (for example sleeping flag but awake pose/lighting).
 7. Normal mode introduces broad scene changes instead of small incremental edits.
+8. Duplicate or overlapping props remain (for example multiple bowls when one is intended, or bowl intersecting succulent).
+9. Re-ground candidate is near-identical to defective base image without meaningful cleanup.
 
 Retry policy:
 - Up to 3 retry attempts maximum per update (same guidance scale for the selected mode).
 - For each retry, refine the JSON edit spec in `.codepet/image_edit_prompt.json` based on the specific rejection reason.
+- For re-ground retries, tighten prop count and placement language before changing stylistic wording.
 - For each retry, append/update `.codepet/verification_report.json` with the new attempt and evidence.
 - If all retries fail, keep the previous `codepet.png` and report failure reasons clearly instead of committing a bad render.
 
@@ -425,6 +450,7 @@ If `steering.md` changed, include `.codepet/steering.md` in the same commit.
 - Save prompt artifacts in `.codepet/image_edit_prompt.json`.
 - Save verification artifacts in `.codepet/verification_report.json`.
 - Never finalize or commit when verification evidence is missing.
+- Re-ground outputs must prove cleanup (no duplicated/overlapping props, no near-identical no-op acceptance).
 - Never edit README content above the marker.
 - Maintain narrative continuity in `journal.md` and `prop_inventory.md`.
 - Use commit helper script; do not create PRs.
