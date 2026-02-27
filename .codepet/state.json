@@ -74,8 +74,8 @@
     "current_stage_reference": ".codepet/stage_images/teen.png"
   },
   "regrounding": {
-    "should_reground": false,
-    "reason": null,
+    "should_reground": true,
+    "reason": "manual_force_next_run",
     "threshold": 6
   },
   "evolution": {
