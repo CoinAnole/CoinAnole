@@ -1,21 +1,31 @@
 {
-  "scene": "Teen Byte awake and alert at the desk during golden morning hours after restful sleep",
+  "scene": "Byte the teen coding blob sits content at a wooden desk in early evening, freshly re-grounded with crisp canonical proportions and all props correctly positioned",
   "subjects": [
     {
-      "description": "Teen-stage Byte, gangly fuzzy blue blob with long limbs, big expressive eyes now wide open and alert, characteristic awkward-but-endearing posture",
-      "position": "centered at desk in primary foreground",
-      "action": "sitting attentively at the laptop, awake and refreshed from sleep, no Z's floating above head"
+      "description": "Byte in teen stage form with long gangly limbs, fuzzy blue texture, big expressive eyes open and alert, characteristic awkward-but-endearing posture sitting at desk",
+      "position": "center foreground at desk",
+      "action": "sitting upright and content, gazing toward laptop with gentle satisfaction"
     },
     {
-      "description": "Anchor environment: wooden desk, oversized laptop with soft glow, Chicago skyline visible through simple window behind",
-      "position": "room backdrop with window to the left",
-      "action": "static environment anchor with morning light streaming through"
+      "description": "anchor environment: wooden desk with oversized laptop centered, Chicago skyline visible through window behind, evening purple-pink light filtering in",
+      "position": "desk spans middle ground, window behind left",
+      "action": "static environment anchor"
+    },
+    {
+      "description": "wooden trophy shelf mounted on wall above desk with exactly one golden 10-day streak trophy on the left side and exactly one leafy green plant on the right side, clear space between them",
+      "position": "wall above desk",
+      "action": "displaying achievements with proper spacing"
+    },
+    {
+      "description": "single food bowl containing kibble positioned on floor to the right of the desk legs, no overlap with desk",
+      "position": "floor right of desk",
+      "action": "waiting with sustenance"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm golden morning sunlight streaming through Chicago skyline window, soft ambient glow replacing night purple-blue tones",
-  "mood": "peaceful contentment, refreshed and ready for the day",
-  "background": "wooden trophy shelf above desk with golden 10-day trophy on left side and leafy green plant on right side with clear spacing between them, food bowl with kibble on floor to the right of desk",
-  "composition": " centered framing with Byte at desk, window showing morning skyline to the left, shelf with props above",
-  "color_palette": ["#4A90D9", "#FFD700", "#7CB342", "#FFA726", "#87CEEB"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, crisp edges without artifacts",
+  "lighting": "early evening purple-pink ambient light from Chicago skyline through window, warm white glow from laptop screen illuminating Byte, soft city lights twinkling outside",
+  "mood": "content and peaceful after re-grounding, relaxed posture, gentle satisfaction",
+  "background": "room interior with wooden desk, oversized laptop open, Chicago skyline window showing evening city lights, trophy shelf with single trophy and single plant",
+  "composition": "Byte centered at desk in foreground, laptop directly in front, window behind showing skyline, trophy shelf above, food bowl on floor to the right",
+  "color_palette": ["#4A90D9", "#8B7355", "#2D2D3A", "#D4A574", "#FFD700", "#4CAF50", "#E8DCC4"]
 }
