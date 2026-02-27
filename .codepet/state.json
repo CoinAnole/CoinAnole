@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-27T06:08:49.166768+00:00",
+  "last_updated": "2026-02-27T06:09:50.094000+00:00",
   "updated_by": "github-actions-runner",
   "pet": {
     "name": "Byte",
@@ -65,16 +65,16 @@
     "inactive_overnight": false
   },
   "image_state": {
-    "edit_count_since_reset": 1,
-    "total_edits_all_time": 130,
-    "last_reset_at": "2026-02-27T05:01:00.000Z",
-    "reset_count": 22,
+    "edit_count_since_reset": 0,
+    "total_edits_all_time": 131,
+    "last_reset_at": "2026-02-27T06:09:50.094Z",
+    "reset_count": 23,
     "last_counted_image_revision": "git_blob:be0b7a2bb7dada193920193c1c5c8eecbc2ac471",
     "current_stage_reference": ".codepet/stage_images/teen.png"
   },
   "regrounding": {
-    "should_reground": true,
-    "reason": "manual_force_next_run",
+    "should_reground": false,
+    "reason": null,
     "threshold": 6
   },
   "evolution": {
