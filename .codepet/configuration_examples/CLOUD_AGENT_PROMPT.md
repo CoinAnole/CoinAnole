@@ -15,7 +15,7 @@ Falcon is the local image-generation CLI used for CodePet edits.
 
 Most common command:
 ```bash
-/tmp/falcon/bin/falcon --edit [base],[anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [base],[anchor] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
 Mode decision tree:
@@ -29,7 +29,7 @@ ELSE -> normal
 Execution phases:
 1. Read: load state, activity, journal, inventory, steering, and current image.
 2. Decide: choose mode and resolve base/anchor images.
-3. Generate: build JSON spec + compiled prompt, run Falcon.
+3. Generate: build JSON spec file and run Falcon.
 4. Verify: apply acceptance/rejection gates; retry if needed.
 5. Finalize: update README/memory/state and commit.
 
@@ -110,7 +110,7 @@ Temporal state is source-of-truth when available.
 - `.codepet/stage_images/baby.png` (bootstrap fallback)
 
 ### Prompt audit trail
-- `.codepet/image_edit_prompt.json` (must include JSON edit spec + compiled prompt)
+- `.codepet/image_edit_prompt.json` (must include the JSON edit spec used for generation)
 
 ## Stage Images vs Live Image
 Understand this distinction:
@@ -223,12 +223,12 @@ Use Falcon command.
 
 Use `guidance_scale=0.5` for all edits:
 ```bash
-/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [primary_base],[stage_anchor] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
 Single-image fallback when no distinct anchor exists:
 ```bash
-/tmp/falcon/bin/falcon --edit [primary_base] "[compiled_prompt]" --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+/tmp/falcon/bin/falcon --edit [primary_base] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
 ## Re-Grounding Mode
@@ -300,7 +300,7 @@ Reject the output and retry if any of these occur:
 
 Retry policy:
 - Up to 3 retry attempts maximum per update (same guidance scale for the selected mode).
-- For each retry, refine the JSON spec and `compiled_prompt` based on the specific rejection reason.
+- For each retry, refine the JSON edit spec in `.codepet/image_edit_prompt.json` based on the specific rejection reason.
 - If all retries fail, keep the previous `codepet.png` and report failure reasons clearly instead of committing a bad render.
 
 ## README Update Rules
@@ -354,8 +354,8 @@ Narrative constraints:
 2. Resolve `primary_base` + `stage_anchor`; build `--edit` inputs.
 
 ### Phase 3: Generate
-1. Build JSON edit spec and compile prompt.
-2. Save both to `.codepet/image_edit_prompt.json`.
+1. Build the JSON edit spec.
+2. Save it to `.codepet/image_edit_prompt.json`.
 3. Run Falcon with selected guidance scale.
 
 ### Phase 4: Verify
@@ -373,7 +373,7 @@ Narrative constraints:
 Use helper script and include changed files:
 
 ```bash
-.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description]" .codepet/codepet.png .codepet/image_edit_prompt.json README.md .codepet/journal.md .codepet/prop_inventory.md .codepet/state.json
+.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description]" .codepet/codepet.png .codepet/image_edit_prompt.json README.md .codepet/journal.md .codepet/prop_inventory.md
 ```
 
 If a stage anchor was created/updated, include it too (for example `.codepet/stage_images/teen.png`).
