@@ -30,7 +30,7 @@ Execution phases:
 1. Read: load state, activity, journal, inventory, steering, and current image.
 2. Decide: choose mode and resolve base/anchor images.
 3. Generate: build JSON spec file and run Falcon.
-4. Verify: apply acceptance/rejection gates; retry if needed.
+4. Verify: apply acceptance/rejection gates, write verification artifact, retry if needed.
 5. Finalize: update README/memory/state and commit.
 
 ## Primary Objectives
@@ -111,6 +111,9 @@ Temporal state is source-of-truth when available.
 
 ### Prompt audit trail
 - `.codepet/image_edit_prompt.json` (must include the JSON edit spec used for generation)
+
+### Verification artifact (required every run)
+- `.codepet/verification_report.json` (non-skippable visual gate record)
 
 ## Stage Images vs Live Image
 Understand this distinction:
@@ -281,6 +284,37 @@ Special flags:
 
 ## Quality Control and Retries
 Always inspect base + output images.
+Visual inspection is non-skippable: do not finalize or commit unless the verification artifact is complete.
+
+### Non-Skippable Visual Gate (Required)
+Before Phase 5, you must create/update `.codepet/verification_report.json`.
+
+Minimum required structure:
+```json
+{
+  "attempt": 1,
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
+  "candidate_image": ".codepet/new_pet.png",
+  "checks": {
+    "stage_identity": { "status": "pass", "evidence": "..." },
+    "pixel_style": { "status": "pass", "evidence": "..." },
+    "requested_changes_visible": { "status": "pass", "evidence": "..." },
+    "artifact_free": { "status": "pass", "evidence": "..." },
+    "anchors_present": { "status": "pass", "evidence": "..." },
+    "temporal_mood_match": { "status": "pass", "evidence": "..." }
+  },
+  "decision": "accept"
+}
+```
+
+Gate rules:
+- Each check must be `pass` or `fail`; `unknown` is not allowed.
+- Every check must include concrete visual evidence (what is visible and where).
+- If any check fails, `decision` must be `reject`.
+- Reject entries must include both `rejection_reason` and `prompt_delta_for_next_attempt`.
+- If all retries fail, keep the previous `.codepet/codepet.png` and set final decision to `reject`.
+- Never use generic approvals like "looks good" without check-level evidence.
 
 Acceptance checklist (all required):
 1. Byte remains recognizable for current stage.
@@ -301,6 +335,7 @@ Reject the output and retry if any of these occur:
 Retry policy:
 - Up to 3 retry attempts maximum per update (same guidance scale for the selected mode).
 - For each retry, refine the JSON edit spec in `.codepet/image_edit_prompt.json` based on the specific rejection reason.
+- For each retry, append/update `.codepet/verification_report.json` with the new attempt and evidence.
 - If all retries fail, keep the previous `codepet.png` and report failure reasons clearly instead of committing a bad render.
 
 ## README Update Rules
@@ -359,9 +394,11 @@ Narrative constraints:
 3. Run Falcon with selected guidance scale.
 
 ### Phase 4: Verify
-1. Apply acceptance/rejection checks.
-2. Retry if rejected (max 3 retries).
-3. If accepted, move `.codepet/new_pet.png` into `.codepet/codepet.png`.
+1. Compare base and candidate images and fill `.codepet/verification_report.json` for the current attempt.
+2. Apply acceptance/rejection checks using evidence-backed pass/fail decisions.
+3. Retry if rejected (max 3 retries), updating prompt + verification report each attempt.
+4. If accepted, move `.codepet/new_pet.png` into `.codepet/codepet.png`.
+5. If verification artifact is missing/incomplete, treat as reject and do not proceed to Phase 5.
 
 ### Phase 5: Finalize
 1. Update README below marker.
@@ -373,7 +410,7 @@ Narrative constraints:
 Use helper script and include changed files:
 
 ```bash
-.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description]" .codepet/codepet.png .codepet/image_edit_prompt.json README.md .codepet/journal.md .codepet/prop_inventory.md
+.codepet/scripts/cloud_agent/commit_to_master.sh "CodePet: [brief description]" .codepet/codepet.png .codepet/image_edit_prompt.json .codepet/verification_report.json README.md .codepet/journal.md .codepet/prop_inventory.md
 ```
 
 If a stage anchor was created/updated, include it too (for example `.codepet/stage_images/teen.png`).
@@ -386,6 +423,8 @@ If `steering.md` changed, include `.codepet/steering.md` in the same commit.
 - Keep normal edits incremental and concrete.
 - Use `guidance_scale=0.5` for all edits.
 - Save prompt artifacts in `.codepet/image_edit_prompt.json`.
+- Save verification artifacts in `.codepet/verification_report.json`.
+- Never finalize or commit when verification evidence is missing.
 - Never edit README content above the marker.
 - Maintain narrative continuity in `journal.md` and `prop_inventory.md`.
 - Use commit helper script; do not create PRs.

@@ -1,0 +1,35 @@
+{
+  "attempt": 1,
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
+  "candidate_image": ".codepet/new_pet.png",
+  "checks": {
+    "stage_identity": {
+      "status": "fail",
+      "evidence": "Initialization-only record: no visual comparison has been performed yet."
+    },
+    "pixel_style": {
+      "status": "fail",
+      "evidence": "Initialization-only record: style was not inspected in this manual setup step."
+    },
+    "requested_changes_visible": {
+      "status": "fail",
+      "evidence": "Initialization-only record: no generated candidate was evaluated for requested changes."
+    },
+    "artifact_free": {
+      "status": "fail",
+      "evidence": "Initialization-only record: artifact check has not been executed."
+    },
+    "anchors_present": {
+      "status": "fail",
+      "evidence": "Initialization-only record: desk, oversized laptop, and skyline window were not verified."
+    },
+    "temporal_mood_match": {
+      "status": "fail",
+      "evidence": "Initialization-only record: temporal and mood consistency were not verified."
+    }
+  },
+  "decision": "reject",
+  "rejection_reason": "Manual initialization of verification_report.json without an image verification run.",
+  "prompt_delta_for_next_attempt": "Run normal verification flow: generate candidate image, compare against base and stage anchor, then replace this file with evidence-backed pass/fail results."
+}
