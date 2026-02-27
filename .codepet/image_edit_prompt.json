@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte sitting contentedly at the desk in evening light, reflecting on 4 commits of coding progress today",
+  "scene": "Teen-form Byte re-grounded to canonical stage identity while preserving achievements, late night coding session with focused desk lighting",
   "subjects": [
     {
-      "description": "Teen-stage Byte with gangly proportions, longer limbs, slightly awkward posture, soft teal-blue pixel art form, gentle content expression, big expressive eyes open and relaxed",
-      "position": "center foreground, sitting at the desk facing the oversized laptop",
-      "action": "sitting comfortably with a calm, content posture, small smile, paws resting near the laptop keyboard"
+      "description": "Byte in teen stage form: gangly proportions, awkward posture, emotional expression, light blue pixel art blob with teen silhouette",
+      "position": "centered at desk, slightly hunched over laptop",
+      "action": "actively typing on oversized laptop, engaged in late-night coding"
     },
     {
-      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline visible through window showing evening purple-pink hues",
-      "position": "background with desk in mid-ground, window behind showing city buildings",
-      "action": "static environment anchor"
+      "description": "anchor environment: wooden desk, oversized laptop with soft screen glow, Chicago skyline window showing night city lights",
+      "position": "desk foreground, window in background left",
+      "action": "static room anchor with night lighting"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent teen proportions",
-  "lighting": "evening indoor light with warm desk lamp glow, soft purple-pink sky visible through window, gentle shadows",
-  "mood": "content and peaceful, relaxed after productive coding",
-  "background": "room interior with wooden desk, trophy shelf above with single golden 10-day streak trophy, succulent plant on left side of desk, food bowl with kibble partially visible",
-  "composition": "centered framing, Byte as primary focus, laptop screen facing Byte, skyline window providing depth",
-  "color_palette": ["#4A90A4", "#8B4513", "#1C1C2E", "#FFB6C1", "#FFD700"]
+  "lighting": "late night coding ambiance: dim room lit primarily by laptop screen glow, deep purple night sky through window with scattered building lights",
+  "mood": "content and focused, quiet determination",
+  "background": "room interior with Chicago skyline visible through window, wooden trophy shelf mounted above desk holding exactly one golden 10-day streak trophy, succulent plant on left side of desk, food bowl with kibble on right side of desk",
+  "composition": "medium shot showing Byte at desk, trophy shelf clearly visible above, window showing night skyline to the left, balanced prop layout with no overlap",
+  "color_palette": ["#5B8DEE", "#7B68EE", "#2D1B4E", "#1A0F2E", "#C9A227", "#4A7C59", "#8B4513"]
 }
