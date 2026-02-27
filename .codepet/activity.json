@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-27T03:11:26.130957+00:00",
+  "timestamp": "2026-02-27T04:58:10.057512+00:00",
   "period": {
-    "start": "2026-02-27T01:48:01.322263+00:00",
-    "end": "2026-02-27T03:11:26.130957+00:00"
+    "start": "2026-02-27T03:11:39.696775+00:00",
+    "end": "2026-02-27T04:58:10.057512+00:00"
   },
   "activity": {
     "commits_detected": 1,
@@ -10,16 +10,16 @@
     "repos_touched": [
       "CoinAnole/challenge1"
     ],
-    "session_duration_minutes": 117,
+    "session_duration_minutes": 186,
     "session_duration_today_minutes": 10,
-    "marathon_detected": false,
+    "marathon_detected": true,
     "session_split_timeout_minutes": 79,
     "session_count_detected": 1,
     "primary_session": {
       "start": "2026-02-27T00:19:23+00:00",
-      "end": "2026-02-27T02:16:29+00:00",
-      "duration_minutes": 117,
-      "commit_count": 4,
+      "end": "2026-02-27T03:25:01+00:00",
+      "duration_minutes": 186,
+      "commit_count": 5,
       "repos_touched": [
         "CoinAnole/challenge1",
         "CoinAnole/falcon"
@@ -28,9 +28,9 @@
     "detected_sessions": [
       {
         "start": "2026-02-27T00:19:23+00:00",
-        "end": "2026-02-27T02:16:29+00:00",
-        "duration_minutes": 117,
-        "commit_count": 4,
+        "end": "2026-02-27T03:25:01+00:00",
+        "duration_minutes": 186,
+        "commit_count": 5,
         "repos_touched": [
           "CoinAnole/challenge1",
           "CoinAnole/falcon"
@@ -38,19 +38,10 @@
       }
     ],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-02-27T00:19:23+00:00",
-        "last_commit": "2026-02-27T02:16:29+00:00",
-        "commit_count": 4,
-        "repos_touched": [
-          "CoinAnole/challenge1",
-          "CoinAnole/falcon"
-        ],
-        "split_timeout_minutes": 79
-      },
+      "open_session": null,
       "last_timeout_minutes": 79
     },
-    "last_commit_timestamp": "2026-02-27T02:16:29+00:00",
+    "last_commit_timestamp": "2026-02-27T03:25:01+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -58,7 +49,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-02-27T01:48:01.322263+00:00",
-    "hours_since_last_check": 1.39
+    "previous_check": "2026-02-27T03:11:39.696775+00:00",
+    "hours_since_last_check": 1.78
   }
 }
