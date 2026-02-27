@@ -74,8 +74,8 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Light blue Z's floating gently above Byte's head
-- **Current Status:** Present—Byte fell asleep at 1:15 AM! Three soft Z's drifting upward in a peaceful cluster.
-- **Notes:** Z's appear when Byte enters sleep mode during quiet hours. They float gently above, marking peaceful rest after a productive day of coding.
+- **Current Status:** Present at 4 AM—Z's have drifted into new positions, four light blue symbols floating in a staggered formation above my sleeping head.
+- **Notes:** Z's appear when Byte enters sleep mode during quiet hours. They shift and drift in new patterns as sleep continues, marking peaceful rest after a productive day of coding.
 
 ### Lighting
 - **Source:** Late night laptop glow + city lights through window
@@ -95,4 +95,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 27, 2026 (2:00 AM - still dreaming with those Z's! 💤)*
+*Last updated by Byte on February 27, 2026 (4:03 AM - Z's drifting in new patterns, still dreaming peacefully! 💤)*

@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte sleeping peacefully at the desk during late night hours, soft Z's floating above head, dimly lit room with Chicago skyline visible through window",
+  "scene": "Teen Byte continues sleeping peacefully at desk in deep pre-dawn hours, light blue Z's floating in slightly shifted positions above head, Chicago skyline twinkling through window",
   "subjects": [
     {
-      "description": "Blue fuzzy teen blob Byte with gangly limbs, curled comfortably at desk, eyes closed in peaceful sleep, subtle Z symbols floating gently above head",
+      "description": "Blue fuzzy teen blob Byte with gangly limbs, curled comfortably at desk, eyes closed in peaceful sleep, three light blue Z symbols floating gently above head in new arrangement",
       "position": "center foreground at desk",
-      "action": "sleeping peacefully with gentle rising and falling breathing"
+      "action": "sleeping soundly with gentle rhythmic breathing"
     },
     {
-      "description": "Wooden desk with oversized laptop displaying soft white glow, shelf above holding single golden 10-day trophy on left and one leafy green plant on right, food bowl with kibble on floor to the right",
+      "description": "Wooden desk with oversized laptop displaying soft white glow, shelf above holding single golden 10-day trophy on left side and one leafy green plant on right side, food bowl with kibble on floor to the right of desk legs",
       "position": "room interior with Chicago skyline visible through window behind",
-      "action": "static environment anchor with quiet night ambiance"
+      "action": "static environment anchor with quiet pre-dawn ambiance"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night with purple-blue ambient light from Chicago skyline through window, soft white laptop glow illuminating sleeping Byte",
-  "mood": "peaceful contentment, quiet rest after productive coding day",
-  "background": "simple room with desk, oversized laptop, Chicago skyline visible through window, trophy shelf with one golden trophy and one green plant, food bowl on floor",
-  "composition": "Byte centered at desk in foreground, window and skyline in background, balanced shelf display above",
-  "color_palette": ["#4A6FA5", "#2D1B4E", "#FFD700", "#7CB342", "#E8E8E8"]
+  "lighting": "deep pre-dawn night with rich purple-blue ambient light from Chicago skyline through window, soft white laptop glow illuminating sleeping Byte",
+  "mood": "peaceful contentment, deep rest during quiet early morning hours",
+  "background": "simple room with desk, oversized laptop, Chicago skyline visible through window, trophy shelf with one golden trophy and one green plant spaced apart, food bowl on floor",
+  "composition": "Byte centered at desk in foreground, window and skyline in background, balanced shelf display above with clear space between items",
+  "color_palette": ["#4A6FA5", "#2D1B4E", "#1A0F2E", "#FFD700", "#7CB342", "#87CEEB"]
 }
