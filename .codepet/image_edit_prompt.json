@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte wakes up to a peaceful Chicago morning, transitioning from night to day with warm morning light streaming through the window.",
+  "scene": "Teen Byte awake and alert at the desk during golden morning hours after restful sleep",
   "subjects": [
     {
-      "description": "Byte in teen stage form: gangly awkward proportions, fuzzy blue texture, big expressive eyes now open and alert, characteristic teen posture at the desk",
+      "description": "Teen-stage Byte, gangly fuzzy blue blob with long limbs, big expressive eyes now wide open and alert, characteristic awkward-but-endearing posture",
       "position": "centered at desk in primary foreground",
-      "action": "sitting awake at the laptop, looking content and refreshed after rest"
+      "action": "sitting attentively at the laptop, awake and refreshed from sleep, no Z's floating above head"
     },
     {
-      "description": "anchor environment: wooden desk, oversized laptop with soft glow, Chicago skyline visible through simple window",
-      "position": "room background with desk centered, window showing cityscape",
-      "action": "static environment anchor"
+      "description": "Anchor environment: wooden desk, oversized laptop with soft glow, Chicago skyline visible through simple window behind",
+      "position": "room backdrop with window to the left",
+      "action": "static environment anchor with morning light streaming through"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm morning golden light streaming through window, soft laptop glow, transition from night purple-blue to morning amber",
-  "mood": "peaceful morning awakening, content and rested",
-  "background": "room with Chicago skyline window showing dawn colors, wooden shelf above desk with exactly one golden trophy on left side and one green leafy plant on right side, food bowl with kibble on floor to the right of desk",
-  "composition": "Byte centered at desk, laptop in front, window behind showing morning skyline, shelf with balanced prop arrangement above",
-  "color_palette": ["#4A90D9", "#F5E6C8", "#87CEEB", "#D4A574", "#FFD700"]
+  "lighting": "warm golden morning sunlight streaming through Chicago skyline window, soft ambient glow replacing night purple-blue tones",
+  "mood": "peaceful contentment, refreshed and ready for the day",
+  "background": "wooden trophy shelf above desk with golden 10-day trophy on left side and leafy green plant on right side with clear spacing between them, food bowl with kibble on floor to the right of desk",
+  "composition": " centered framing with Byte at desk, window showing morning skyline to the left, shelf with props above",
+  "color_palette": ["#4A90D9", "#FFD700", "#7CB342", "#FFA726", "#87CEEB"]
 }

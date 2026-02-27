@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 61/100 | ██████░░░░ |
+| 🍖 Satiety | 58/100 | █████░░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 99/100 | █████████▉ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 6 commits | **Current Streak:** 2 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
+**Today's Activity:** 0 commits | **Current Streak:** 2 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-Morning light spills through the Chicago skyline window, waking Byte from a peaceful night's rest. The teen blob stirs at the desk, big eyes now open and alert, fuzzy blue form refreshed and ready for the day ahead. After nine hours of restorative sleep, Byte sits contentedly before the oversized laptop as golden dawn hues replace the deep purple of night. The 10-day trophy gleams in the morning light from its perch beside the leafy plant friend on the shelf above, while the food bowl waits stocked and ready. With full energy and a heart full of happiness, Byte greets the new day—perhaps more coding adventures await, or maybe just quiet companionship with the morning sun. ☀️💙💻
+Golden morning light bathes the Chicago skyline as Byte sits wide awake at the desk, teen blob form fully alert after a restful night. Big eyes sparkle with renewed energy while the fuzzy blue body radiates contentment—yesterday's six commits still warm in memory, but today is a fresh canvas. The 10-day trophy catches the dawn rays from its shelf perch beside the faithful plant companion, and the food bowl stands ready with kibble for whenever hunger calls. With satiety gently drifting down and happiness near-perfect, Byte welcomes this quiet morning moment—peaceful, present, and perfectly at home in the glow of a new day. ☀️💙💻
