@@ -18,6 +18,11 @@ Most common command:
 /tmp/falcon/bin/falcon --edit [base],[anchor] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
+Re-ground command (single image only):
+```bash
+/tmp/falcon/bin/falcon --edit [stage_anchor] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+```
+
 Mode decision tree:
 ```text
 IF webhook payload force_reground=true OR state.regrounding.should_reground=true -> reground
@@ -131,7 +136,7 @@ Canonical stage images must exclude accumulated props/effects. They should only 
 - Laptop
 - Simple room with Chicago skyline window
 
-## Multi-Image Editing Policy (New)
+## Multi-Image Editing Policy (Normal/Evolution)
 Falcon now supports multiple images via:
 
 ```bash
@@ -139,10 +144,14 @@ Falcon now supports multiple images via:
 ```
 
 You must use multi-image inputs whenever both files exist:
-- `image1` = live base image (or re-ground base)
+- `image1` = live base image
 - `image2` = current stage anchor reference
 
 This gives the model both local continuity (`codepet.png`) and canonical identity (`stage_images/{stage}.png`).
+
+Hard exception for re-ground mode:
+- Re-ground mode is single-image only: use `--edit stage_anchor`.
+- Do not pass `.codepet/codepet.png` to Falcon during re-ground.
 
 ### Common case (happy path)
 For most runs, this is enough:
@@ -160,18 +169,16 @@ Use the full precedence below for webhook-driven edge cases and re-ground correc
 
 2. Resolve `primary_base` by mode:
    - `reground` mode:
-     - If `state.evolution.just_occurred == true`: use `state.evolution.base_reference` when it exists.
-     - Else prefer `.codepet/codepet.png` when it exists (so defects can be actively corrected).
-     - Else use `state.image_state.current_stage_reference`.
-     - Else fallback `.codepet/stage_images/baby.png`.
+     - Set `primary_base = stage_anchor`.
+     - Re-ground must ignore `.codepet/codepet.png` as Falcon input.
    - `normal` mode:
      - Prefer `.codepet/codepet.png` if exists.
      - Else fallback `.codepet/stage_images/baby.png` and copy to `.codepet/codepet.png`.
 
 3. Build `--edit` input:
-   - If both exist and are different: `--edit primary_base,stage_anchor`
-   - If only `primary_base` exists or both resolve to same path: `--edit primary_base`
-   - Re-ground guardrail: if mode is `reground` and `.codepet/codepet.png` exists, avoid single-image edits that use only `stage_anchor`; include the live image as one input whenever possible.
+   - If `mode=reground`: always `--edit stage_anchor`
+   - If `mode!=reground` and both exist and are different: `--edit primary_base,stage_anchor`
+   - If `mode!=reground` and only `primary_base` exists or both resolve to same path: `--edit primary_base`
 
 ## Prompting Quality Rules (FLUX.2)
 Apply these hard rules:
@@ -221,7 +228,7 @@ Reject and rewrite if any check fails:
 3. Mentions laptop screen text/code/UI.
 4. Omits any identity anchor (Byte, desk, oversized laptop, skyline window).
 5. Normal mode prompt tries to apply >2 unrelated scene changes.
-6. Re-ground prompt omits concrete prop counts and placements for carried-forward props (for example: "exactly one food bowl on the right side of desk, succulent on the left, no overlap").
+6. Re-ground prompt omits concrete prop counts and placements for re-applied props (for example: "exactly one food bowl on the right side of desk, succulent on the left, no overlap").
 
 ## Image Generation Commands
 Use Falcon command.
@@ -237,6 +244,11 @@ Single-image fallback when no distinct anchor exists:
 /tmp/falcon/bin/falcon --edit [primary_base] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
 ```
 
+Re-ground required command:
+```bash
+/tmp/falcon/bin/falcon --edit [stage_anchor] .codepet/image_edit_prompt.json --model flux2Flash --resolution 512x512 --guidance-scale 0.5 --no-open --output .codepet/new_pet.png
+```
+
 ## Re-Grounding Mode
 Trigger when either is true:
 - `state.regrounding.should_reground == true`
@@ -244,17 +256,18 @@ Trigger when either is true:
 
 Purpose:
 - Re-grounding is identity maintenance. It restores Byte to canonical stage appearance while preserving compatible narrative drift.
+- Re-grounding must rebuild from canonical stage anchor, not from `.codepet/codepet.png` pixels.
 
 Execution requirements:
-1. Select base image using the precedence in "Input pair selection".
+1. Resolve `stage_anchor` using "Input pair selection" and use it as the only Falcon input.
 2. Rebuild canonical structure first using the stage anchor as geometry source-of-truth:
    - Byte's stage silhouette/proportions
    - Desk + oversized laptop + skyline window layout
-3. Carry forward desirable narrative drift from `.codepet/codepet.png` where compatible:
-   - palette tendencies
-   - persistent desk/environment props
-   - recurring mood-neutral details
-4. Apply strict prop discipline during carry-forward:
+3. Re-apply narrative details from text/state sources, not from prior image pixels:
+   - `state.json` + `activity.json` for mood/time-of-day/status flags
+   - `prop_inventory.md` for allowed props and intended counts
+   - `journal.md` + `steering.md` for continuity cues
+4. Apply strict prop discipline during re-application:
    - Keep only props supported by `prop_inventory.md` and current context.
    - Enforce explicit cardinality in the JSON prompt (default to one instance per prop unless inventory explicitly says otherwise).
    - Maintain clear spacing: no prop overlap/intersection (for example bowl must not intersect succulent).
@@ -262,8 +275,8 @@ Execution requirements:
    - Remove duplicated props, merged/clipped objects, and leftover smear artifacts.
    - If uncertain between keeping a questionable detail and removing it, remove it.
 6. Re-ground must produce a visibly corrective result:
-   - When base image contains defects, candidate must show concrete cleanup improvements.
-   - If candidate is near-identical to base while defects persist, reject and retry.
+   - Compare previous `.codepet/codepet.png` against candidate and require concrete cleanup improvements when defects were present.
+   - If candidate preserves prior defects or fails to re-apply required props/features, reject and retry.
 
 Post-success state updates:
 - `state.image_state.edit_count_since_reset = 0`
@@ -311,6 +324,7 @@ Minimum required structure:
   "mode": "normal",
   "base_image": ".codepet/codepet.png",
   "candidate_image": ".codepet/new_pet.png",
+  "reference_live_image": ".codepet/codepet.png",
   "checks": {
     "stage_identity": { "status": "pass", "evidence": "..." },
     "pixel_style": { "status": "pass", "evidence": "..." },
@@ -329,7 +343,8 @@ Gate rules:
 - Each check must be `pass` or `fail`; `unknown` is not allowed.
 - Every check must include concrete visual evidence (what is visible and where).
 - `prop_layout_integrity` evidence must explicitly include object counts and spacing statements for key props.
-- When `mode=reground`, `reground_cleanup` must compare base vs candidate and name which defects were corrected.
+- When `mode=reground`, `base_image` should be the stage anchor input and `reference_live_image` should be the previous `.codepet/codepet.png`.
+- When `mode=reground`, `reground_cleanup` must compare `reference_live_image` vs candidate and name which defects were corrected.
 - When `mode!=reground`, set `reground_cleanup` to `pass` with evidence that the check is not applicable for that mode.
 - If any check fails, `decision` must be `reject`.
 - Reject entries must include both `rejection_reason` and `prompt_delta_for_next_attempt`.
@@ -343,7 +358,7 @@ Acceptance checklist (all required):
 4. No text/artifact leakage.
 5. Scene anchors still present (desk, oversized laptop, skyline window).
 6. Prop cardinality/layout is coherent (single-instance props stay single unless inventory says otherwise; no overlap/clipping).
-7. In `reground` mode, known base-image defects are visibly corrected (not a no-op render).
+7. In `reground` mode, known defects from the previous live image are visibly corrected (not a no-op render).
 
 Reject the output and retry if any of these occur:
 1. Stage identity drift (Byte shape/proportions no longer match expected stage).
@@ -354,7 +369,7 @@ Reject the output and retry if any of these occur:
 6. Temporal/mood mismatch (for example sleeping flag but awake pose/lighting).
 7. Normal mode introduces broad scene changes instead of small incremental edits.
 8. Duplicate or overlapping props remain (for example multiple bowls when one is intended, or bowl intersecting succulent).
-9. Re-ground candidate is near-identical to defective base image without meaningful cleanup.
+9. Re-ground candidate preserves known defects from previous `.codepet/codepet.png` or fails to re-apply required props/features.
 
 Retry policy:
 - Up to 3 retry attempts maximum per update (same guidance scale for the selected mode).
@@ -411,7 +426,7 @@ Narrative constraints:
 
 ### Phase 2: Decide
 1. Select mode (`normal`, `reground`, `evolution`, `bootstrap`) via decision tree.
-2. Resolve `primary_base` + `stage_anchor`; build `--edit` inputs.
+2. Resolve `stage_anchor` and mode-specific Falcon inputs (`reground` uses single-image stage anchor only).
 
 ### Phase 3: Generate
 1. Build the JSON edit spec.
@@ -444,7 +459,8 @@ If `steering.md` changed, include `.codepet/steering.md` in the same commit.
 ## Important Reminders
 - Always inspect current image before planning edits.
 - Always use JSON structured prompting before Falcon invocation.
-- Always prefer multi-image `--edit` with live base + stage anchor when both exist.
+- Prefer multi-image `--edit` with live base + stage anchor for non-reground modes when both exist.
+- In re-ground mode, always use single-image `--edit stage_anchor` and re-apply props/features from state + memory files.
 - Keep normal edits incremental and concrete.
 - Use `guidance_scale=0.5` for all edits.
 - Save prompt artifacts in `.codepet/image_edit_prompt.json`.
