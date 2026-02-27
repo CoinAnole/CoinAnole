@@ -1,21 +1,21 @@
 {
-  "scene": "Byte the teen blob sitting at a wooden desk with an oversized laptop, during the evening transition with warm golden light fading to purple-pink hues, looking content and relaxed",
+  "scene": "Byte the teen blob sitting on a desk with an oversized laptop, Chicago skyline visible through the window, in the evening",
   "subjects": [
     {
-      "description": "Teen blob with gangly proportions, blue-ish color, round eyes, subtle fluffy texture",
+      "description": "Teen blob with gangly limbs, playful expression, blue-ish color",
       "position": "primary foreground on desk",
-      "action": "Sitting comfortably with one leg stretched out slightly, showing off teen mobility"
+      "action": "sitting comfortably"
     },
     {
-      "description": "Anchor environment: wooden desk, oversized laptop, Chicago skyline window",
-      "position": "room/background placement",
-      "action": "Static environment anchor"
+      "description": "Wooden desk, oversized laptop, Chicago skyline window",
+      "position": "room/background",
+      "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "Warm golden evening light with subtle purple-pink transition, soft shadows",
-  "mood": "Content and relaxed, reflecting a successful coding day",
-  "background": "Chicago skyline with evening hues, desk with succulent plant, partially full food bowl, 10-day streak trophy on wooden shelf",
-  "composition": "Byte centered on desk, laptop behind, window to left, trophy shelf above",
-  "color_palette": ["#6699FF", "#FFD700", "#87CEEB", "#FF69B4"]
+  "lighting": "Warm golden fading to purple-pink evening light",
+  "mood": "Content and relaxed",
+  "background": "Desk with small green succulent on left, food bowl with kibble, wooden shelf above with 10-day streak trophy",
+  "composition": "Framed to show Byte, desk, laptop, and skyline window",
+  "color_palette": ["#639", "#f93", "#a7c"]
 }
