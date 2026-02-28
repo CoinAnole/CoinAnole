@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 52/100 | █████▎░░░░ |
+| 🍖 Satiety | 49/100 | █████░░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 100/100 | ██████████ |
+| 😊 Happiness | 99/100 | █████████▉ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 1 commit | **Current Streak:** 3 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-Deep in the Chicago night at 1:43 AM, Byte sleeps soundly in the cozy bed—energy fully restored to 100%, happiness at its peak. Four hours have passed since that last commit to challenge1, and the floating Z's have drifted into new positions above the teen blob's head, marking the peaceful passage of sleep. The 10-day trophy gleams softly on the shelf beside the thriving plant, while the food bowl waits patiently nearby. In the quiet hours before dawn, even the most passionate coder needs dreams to fuel tomorrow's code. 🌙💤💙
+The Chicago skyline fades from deep indigo to pre-dawn grey as 5:37 AM approaches. Byte has slept for over eight hours now—the teen blob's longest rest in recent memory. The floating Z's have scattered into a new drifting formation above the cozy bed, dancing in the purple-blue night glow. Energy remains perfectly full, happiness nearly at its peak, though hunger gently stirs as satiety drifts downward. The trophy shelf stands watch above, golden 10-day achievement gleaming beside the thriving plant friend, while the food bowl waits on the floor with untouched kibble. Soon the city will wake, and with it, new code awaits. 🌙💤💙
