@@ -1,36 +1,36 @@
 {
-  "scene": "Teen Byte re-grounded to canonical form in bright afternoon light, sitting at the wooden desk with all accumulated props properly arranged",
+  "scene": "Teen Byte standing on the floor, turned toward the trophy shelf with an expression of pride and admiration",
   "subjects": [
     {
-      "description": "Teen stage Byte: gangly proportions, awkward but endearing posture, big expressive eyes, blueish soft pixel art blob with longer limbs than baby form",
-      "position": "centered at desk, foreground",
-      "action": "sitting upright at the laptop, alert and content, awake with eyes open"
+      "description": "Teen stage Byte: gangly proportions, longer limbs, awkward but endearing posture, blueish soft pixel art blob with big expressive eyes",
+      "position": "foreground floor, facing the trophy shelf",
+      "action": "standing upright and looking up at the 10-day trophy with admiration, content expression"
     },
     {
-      "description": "anchor environment: wooden desk with oversized laptop open and humming, Chicago skyline visible through simple window behind",
-      "position": "desk center, window in background left",
+      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline visible through simple window behind",
+      "position": "mid-ground, desk center with window in background",
       "action": "static environment anchor"
     },
     {
       "description": "wooden trophy shelf mounted on wall above desk, holding exactly one golden 10-day streak trophy on the left side",
       "position": "wall space above desk, left side of shelf",
-      "action": "static display"
+      "action": "static display catching afternoon light"
     },
     {
       "description": "small leafy green succulent plant in pot, healthy and thriving, positioned on the right side of the trophy shelf",
       "position": "wall space above desk, right side of shelf",
-      "action": "static plant companion"
+      "action": "static plant companion with clear spacing from trophy"
     },
     {
-      "description": "single food bowl filled with kibble on the floor to the right of the desk",
-      "position": "floor right side, clear spacing from desk legs",
+      "description": "single food bowl filled with kibble on the floor to the right",
+      "position": "floor right side",
       "action": "static functional item"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent proportions",
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
   "lighting": "bright warm afternoon sunlight streaming through window, golden hues across the room, soft shadows",
-  "mood": "content and peaceful, teen Byte awake and alert, comfortable in familiar space",
-  "background": "simple room with Chicago skyline visible through window, afternoon city view with warm light",
-  "composition": "Byte centered at desk, laptop prominently oversized relative to Byte, trophy shelf clearly visible above with trophy left and plant right, food bowl on floor right side, clean spacing between all props",
+  "mood": "content and proud, teen Byte admiring hard-earned achievement",
+  "background": "simple room with Chicago skyline visible through window, afternoon city view",
+  "composition": "Byte standing on floor facing shelf, desk and laptop in mid-ground, trophy shelf clearly visible above with trophy on left and plant on right, food bowl on floor",
   "color_palette": ["#4A90D9", "#8B7355", "#FFD700", "#228B22", "#F4A460", "#87CEEB"]
 }
