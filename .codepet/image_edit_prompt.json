@@ -1,41 +1,21 @@
 {
-  "scene": "Teen Byte sleeping peacefully in a cozy bed at deep night, floating Z's shifted into a new scattered formation above",
+  "scene": "Teen Byte waking up to a peaceful Saturday morning in Chicago, transitioning from deep sleep to alert contentment",
   "subjects": [
     {
-      "description": "Teen Byte with gangly long limbs, blue-ish blob form, closed peaceful eyes",
-      "position": "centered in cozy bed in foreground",
-      "action": "sleeping deeply with gentle breathing"
+      "description": "Teen Byte: gangly blue blob with long limbs, big expressive eyes now open and alert, body stretched in a relaxed waking pose",
+      "position": "center foreground at desk or just beside it",
+      "action": "stretching awake with content expression, no floating Z's present"
     },
     {
-      "description": "Four light blue floating Z symbols in staggered scattered formation drifting upward",
-      "position": "above Byte's head at varying heights",
-      "action": "gently floating in sleep rhythm"
-    },
-    {
-      "description": "Cozy bed with blankets and pillow sized for teen form",
-      "position": "foreground center where desk was",
-      "action": "supporting sleeping Byte"
-    },
-    {
-      "description": "Wooden trophy shelf mounted on wall with golden 10-day trophy on left and green leafy plant on right",
-      "position": "wall space above bed area",
-      "action": "static display with trophy gleaming and plant thriving"
-    },
-    {
-      "description": "Food bowl with kibble on floor to the right of bed",
-      "position": "floor right side",
-      "action": "waiting untouched"
-    },
-    {
-      "description": "anchor environment: simple room with Chicago skyline visible through window, desk and laptop tucked away for sleep",
-      "position": "background room setting",
-      "action": "quiet night scene with city lights twinkling"
+      "description": "anchor environment: wooden desk with oversized laptop open and humming, Chicago skyline visible through window behind",
+      "position": "center to background",
+      "action": "static workspace ready for morning coding"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night with dim purple-blue ambient glow from Chicago skyline through window, soft shadows",
-  "mood": "peaceful contentment, deep restorative rest after coding",
-  "background": "simple room interior, window showing Chicago skyline with twinkling city lights, dark night sky",
-  "composition": "Byte centered in bed, trophy shelf above, food bowl to the side, window skyline in background",
-  "color_palette": ["#2D1B4E", "#1a1a2e", "#4A90A4", "#5C8D5C", "#D4AF37", "#8B7355"]
+  "lighting": "soft morning sunlight streaming through window, warm golden-pink dawn hues replacing night colors, gentle ambient glow",
+  "mood": "peacefully content and refreshed after deep rest",
+  "background": "wooden trophy shelf mounted on wall above desk with single golden 10-day trophy on left side and thriving green plant on right side, food bowl with kibble on floor to the right, Chicago skyline visible through window with morning light",
+  "composition": "Byte prominently in foreground, desk and laptop as central anchor, trophy shelf above, window with city view providing depth",
+  "color_palette": ["#4A90D9", "#F5E6D3", "#87CEEB", "#FFD700", "#90EE90"]
 }

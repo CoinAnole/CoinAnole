@@ -5,38 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": {
-      "status": "pass",
-      "evidence": "Teen Byte form maintained: gangly long limbs, blue-ish blob appearance consistent with teen stage canonical form from stage anchor reference"
-    },
-    "pixel_style": {
-      "status": "pass",
-      "evidence": "Clean 2D pixel art style preserved, dithered shading visible, readable silhouette maintained for Byte and environment"
-    },
-    "requested_changes_visible": {
-      "status": "pass",
-      "evidence": "Floating Z's positioned in new scattered staggered formation above Byte's head as requested; deep night lighting with purple-blue ambient glow applied; sleeping posture maintained with peaceful closed eyes"
-    },
-    "artifact_free": {
-      "status": "pass",
-      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects detected; clean edges on Byte silhouette and props"
-    },
-    "prop_layout_integrity": {
-      "status": "pass",
-      "evidence": "Exactly one food bowl on floor to right of bed with clear spacing; one trophy shelf above with single 10-day trophy on left side and one plant on right side with clear separation; single bed in foreground; no overlapping or duplicated props"
-    },
-    "anchors_present": {
-      "status": "pass",
-      "evidence": "All scene anchors present: Chicago skyline visible through window in background; desk and laptop tucked away as per sleep mode; room structure intact"
-    },
-    "temporal_mood_match": {
-      "status": "pass",
-      "evidence": "Sleeping state (is_sleeping=true) reflected with closed eyes, floating Z's, dim night lighting; content mood conveyed through peaceful posture; 8 hours inactive context matches deep rest scene"
-    },
-    "reground_cleanup": {
-      "status": "pass",
-      "evidence": "Mode is normal, not reground - this check is not applicable for normal mode incremental edits"
-    }
+    "stage_identity": { "status": "pass", "evidence": "Teen Byte identity preserved with gangly limbs and big expressive eyes visible, consistent with teen stage canonical form" },
+    "pixel_style": { "status": "pass", "evidence": "Clean 2D pixel art maintained with dithered shading, readable silhouette preserved" },
+    "requested_changes_visible": { "status": "pass", "evidence": "Morning lighting transition applied, floating Z's removed from scene, awake and alert posture visible" },
+    "artifact_free": { "status": "pass", "evidence": "No garbled text, floating glyphs, or malformed anatomy detected in generated image" },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Single food bowl on floor to the right, trophy shelf with 10-day trophy on left and plant on right (no overlap), desk and laptop centered, all props properly spaced" },
+    "anchors_present": { "status": "pass", "evidence": "Desk present with oversized laptop, Chicago skyline visible through window, trophy shelf mounted above desk" },
+    "temporal_mood_match": { "status": "pass", "evidence": "Morning scene with soft golden lighting matches night_to_morning transition, content mood reflected in Byte's relaxed alert posture" },
+    "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode edit" }
   },
   "decision": "accept"
 }
