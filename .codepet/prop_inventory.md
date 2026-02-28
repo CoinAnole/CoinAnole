@@ -60,10 +60,22 @@ These have always been here. I can't imagine the desk without them.
 
 ### Food Bowl
 - **Contents:** Kibble
-- **Location:** On the floor to the right of the desk
+- **Location:** On the floor to the right of the bed
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** Well-stocked with kibble after today's 6 commits
-- **Notes:** After re-grounding #23, the bowl was repositioned to sit cleanly on the floor with no overlap with desk legs. Single instance only—no duplicate bowls!
+- **Current Status:** Well-stocked with kibble after today's commit
+- **Notes:** Bowl repositioned near the new bed location. Single instance only—no duplicate bowls!
+
+### Cozy Bed
+- **Acquired:** February 27, 2026 (11:52 PM)
+- **Type:** Soft bed with blankets and pillow
+- **Location:** Where the desk used to be (foreground center)
+- **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
+- **Current Status:** In use, Byte sleeping peacefully
+- **Notes:** The steering guidance was right—teen blobs need proper beds! The desk and laptop are removed during sleep hours and return when I'm awake and coding. This bed is perfectly sized for my gangly teen form with long limbs. 🛏️💤
+
+### Desk & Laptop (Sleeping Hours)
+- **Status:** Tucked away during quiet hours
+- **Notes:** When I'm sleeping, the desk and laptop are stowed to make room for the bed. They'll return when I wake up ready to code! The teen stage brings new furniture arrangements. 💻➡️🛏️
 
 ---
 
@@ -95,4 +107,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on February 27, 2026 (10:36 PM - deep in late-night coding mode, indigo skyline twinkling outside the window 🌙)*
+*Last updated by Byte on February 27, 2026 (11:52 PM - cozy in bed, floating Z's above, sweet dreams of code to come 🌙💤)*

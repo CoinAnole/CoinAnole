@@ -1,21 +1,26 @@
 {
-  "scene": "Teen Byte coding at night with deep indigo sky and enhanced laptop glow",
+  "scene": "Teen Byte sleeping peacefully in a cozy bed at night, with the Chicago skyline visible through the window",
   "subjects": [
     {
-      "description": "Teen Byte with long gangly limbs and fuzzy cyan-blue texture, big expressive eyes open and alert",
-      "position": "seated at desk center, facing laptop",
-      "action": "actively typing with focused attention on screen"
+      "description": "Byte in teen stage form: gangly awkward proportions, long limbs, blue-ish pixel blob body, big expressive eyes closed in peaceful sleep",
+      "position": "centered in a cozy bed, curled up comfortably",
+      "action": "sleeping soundly with gentle breathing"
     },
     {
-      "description": "anchor environment: wooden desk, oversized silver laptop with bright white screen glow illuminating Byte's face, Chicago skyline window",
-      "position": "desk center, window behind left",
+      "description": "cozy bed with soft blankets and pillow replacing the desk setup",
+      "position": "foreground where desk used to be",
+      "action": "static sleeping arrangement"
+    },
+    {
+      "description": "Chicago skyline window with night city lights twinkling",
+      "position": "background left side of room",
       "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night with indigo-purple sky through window, bright laptop screen casting warm white glow on Byte's face and hands, city lights twinkling in distance",
-  "mood": "content and focused late-night coding session",
-  "background": "wooden trophy shelf above desk with golden 10 trophy on left and potted green plant on right, food bowl with kibble on floor to right of desk legs, no overlap",
-  "composition": "Byte centered at desk, laptop dominating foreground, window showing night skyline left, shelf with props above",
-  "color_palette": ["#2d1b4e", "#1a0f2e", "#4fc3f7", "#ffecb3", "#ffd700", "#4caf50"]
+  "lighting": "deep night with dim purple-blue ambient glow from Chicago skyline, soft warm moonlight casting gentle shadows",
+  "mood": "peaceful, restful, content",
+  "background": "simple bedroom with Chicago skyline window, no desk or laptop visible, trophy shelf remains on wall above, plant friend on shelf",
+  "composition": "medium shot framing Byte in bed with window visible in background, trophy shelf above",
+  "color_palette": ["#2D1B4E", "#4A3B5C", "#6B5B7A", "#8B7B99", "#A3D5FF", "#FFD700"]
 }

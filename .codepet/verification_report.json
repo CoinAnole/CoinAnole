@@ -7,35 +7,35 @@
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Byte maintains teen stage identity: long gangly limbs, fuzzy cyan-blue texture, big expressive eyes, awkward-but-endearing posture at desk"
+      "evidence": "Teen Byte form maintained with gangly proportions, long limbs, blue-ish pixel blob appearance. Multi-image edit with stage anchor preserved canonical identity."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean pixel art with 2D forms, dithered shading on Byte's body, readable silhouette against dark background"
+      "evidence": "Clean pixel art style preserved, 512x512 resolution maintained, dithered shading visible in output"
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Night lighting transition complete: room now deep indigo-purple (was evening purple-pink), city lights twinkling through window. Laptop glow enhanced: bright white illumination casts on Byte's face and hands"
+      "evidence": "Scene transformed from desk-sleeping to bed-sleeping per steering guidance. Cozy bed visible, desk/laptop removed as requested for teen sleeping state."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects detected"
+      "evidence": "No garbled text, floating glyphs, or malformed anatomy detected. Clean generation with proper proportions."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Trophy shelf: exactly one golden 10 trophy positioned on left side, exactly one green potted plant on right side with clear spacing between. Food bowl: exactly one bowl with kibble on floor to right of desk legs, no overlap with desk structure"
+      "evidence": "Trophy shelf preserved above, plant friend visible on shelf, single food bowl on floor. No duplicate props, no overlapping objects."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Desk (wooden, center), oversized laptop (silver, dominating foreground), Chicago skyline window (left background with twinkling lights) all present and recognizable"
+      "evidence": "Chicago skyline window visible in background, room setting maintained, Byte recognizable as teen stage."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Late night coding state matched: Byte has alert open eyes, active typing posture, bright laptop glow appropriate for is_late_night_coding=true. Deep night sky visible through window matches temporal.time_of_day=night"
+      "evidence": "Night scene with dim purple-blue lighting matches is_sleeping=true and local hour 23 (11:52 PM). Peaceful sleeping mood conveyed."
     },
     "reground_cleanup": {
       "status": "pass",
-      "evidence": "Not applicable for normal mode - no reground performed"
+      "evidence": "Mode is normal, not re-ground. This check is not applicable for normal mode edits."
     }
   },
   "decision": "accept"
