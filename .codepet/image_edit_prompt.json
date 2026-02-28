@@ -1,26 +1,36 @@
 {
-  "scene": "Teen Byte sleeping peacefully in a cozy bed at night, with the Chicago skyline visible through the window",
+  "scene": "Teen Byte sleeping peacefully in cozy bed at 1:43 AM with floating Z's shifted to new drifting positions above head",
   "subjects": [
     {
-      "description": "Byte in teen stage form: gangly awkward proportions, long limbs, blue-ish pixel blob body, big expressive eyes closed in peaceful sleep",
-      "position": "centered in a cozy bed, curled up comfortably",
-      "action": "sleeping soundly with gentle breathing"
+      "description": "Teen stage Byte, gangly blue blob with long limbs, relaxed sleeping posture on cozy bed with soft blankets and fluffy pillow",
+      "position": "center foreground on bed",
+      "action": "sleeping peacefully with gentle rise and fall breathing"
     },
     {
-      "description": "cozy bed with soft blankets and pillow replacing the desk setup",
-      "position": "foreground where desk used to be",
-      "action": "static sleeping arrangement"
+      "description": "Four light blue floating Z symbols in new staggered drift formation higher above Byte's head",
+      "position": "floating in arc formation above sleeping Byte",
+      "action": "drifting gently in sleep"
     },
     {
-      "description": "Chicago skyline window with night city lights twinkling",
-      "position": "background left side of room",
-      "action": "static environment anchor"
+      "description": "Wooden trophy shelf mounted on wall with golden 10-day streak trophy on left side and green leafy plant on right side with clear spacing between",
+      "position": "wall space above bed area",
+      "action": "static display of achievements"
+    },
+    {
+      "description": "Food bowl with kibble on floor to the right of the bed",
+      "position": "floor right of bed",
+      "action": "stationary"
+    },
+    {
+      "description": "Cozy bed with soft blankets and fluffy pillow perfectly sized for teen blob form",
+      "position": "center foreground",
+      "action": "supporting sleeping Byte"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night with dim purple-blue ambient glow from Chicago skyline, soft warm moonlight casting gentle shadows",
-  "mood": "peaceful, restful, content",
-  "background": "simple bedroom with Chicago skyline window, no desk or laptop visible, trophy shelf remains on wall above, plant friend on shelf",
-  "composition": "medium shot framing Byte in bed with window visible in background, trophy shelf above",
-  "color_palette": ["#2D1B4E", "#4A3B5C", "#6B5B7A", "#8B7B99", "#A3D5FF", "#FFD700"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, crisp edges",
+  "lighting": "Deep night at 1:43 AM with purple-blue ambient glow from Chicago skyline through window, soft dim illumination",
+  "mood": "content peaceful rest, quiet late night tranquility",
+  "background": "Simple room with Chicago skyline visible through window, deep indigo night sky with twinkling city lights",
+  "composition": "Medium shot showing sleeping Byte on bed with trophy shelf above and skyline window behind, Z's floating in upper portion",
+  "color_palette": ["#2D1B4E", "#4A3B5C", "#87CEEB", "#1E3A5F", "#FFD700", "#228B22"]
 }
