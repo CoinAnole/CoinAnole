@@ -1,31 +1,21 @@
 {
-  "scene": "Byte the teen coding blob sits content at a wooden desk in early evening, freshly re-grounded with crisp canonical proportions and all props correctly positioned",
+  "scene": "Teen Byte coding at night with deep indigo sky and enhanced laptop glow",
   "subjects": [
     {
-      "description": "Byte in teen stage form with long gangly limbs, fuzzy blue texture, big expressive eyes open and alert, characteristic awkward-but-endearing posture sitting at desk",
-      "position": "center foreground at desk",
-      "action": "sitting upright and content, gazing toward laptop with gentle satisfaction"
+      "description": "Teen Byte with long gangly limbs and fuzzy cyan-blue texture, big expressive eyes open and alert",
+      "position": "seated at desk center, facing laptop",
+      "action": "actively typing with focused attention on screen"
     },
     {
-      "description": "anchor environment: wooden desk with oversized laptop centered, Chicago skyline visible through window behind, evening purple-pink light filtering in",
-      "position": "desk spans middle ground, window behind left",
+      "description": "anchor environment: wooden desk, oversized silver laptop with bright white screen glow illuminating Byte's face, Chicago skyline window",
+      "position": "desk center, window behind left",
       "action": "static environment anchor"
-    },
-    {
-      "description": "wooden trophy shelf mounted on wall above desk with exactly one golden 10-day streak trophy on the left side and exactly one leafy green plant on the right side, clear space between them",
-      "position": "wall above desk",
-      "action": "displaying achievements with proper spacing"
-    },
-    {
-      "description": "single food bowl containing kibble positioned on floor to the right of the desk legs, no overlap with desk",
-      "position": "floor right of desk",
-      "action": "waiting with sustenance"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, crisp edges without artifacts",
-  "lighting": "early evening purple-pink ambient light from Chicago skyline through window, warm white glow from laptop screen illuminating Byte, soft city lights twinkling outside",
-  "mood": "content and peaceful after re-grounding, relaxed posture, gentle satisfaction",
-  "background": "room interior with wooden desk, oversized laptop open, Chicago skyline window showing evening city lights, trophy shelf with single trophy and single plant",
-  "composition": "Byte centered at desk in foreground, laptop directly in front, window behind showing skyline, trophy shelf above, food bowl on floor to the right",
-  "color_palette": ["#4A90D9", "#8B7355", "#2D2D3A", "#D4A574", "#FFD700", "#4CAF50", "#E8DCC4"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "deep night with indigo-purple sky through window, bright laptop screen casting warm white glow on Byte's face and hands, city lights twinkling in distance",
+  "mood": "content and focused late-night coding session",
+  "background": "wooden trophy shelf above desk with golden 10 trophy on left and potted green plant on right, food bowl with kibble on floor to right of desk legs, no overlap",
+  "composition": "Byte centered at desk, laptop dominating foreground, window showing night skyline left, shelf with props above",
+  "color_palette": ["#2d1b4e", "#1a0f2e", "#4fc3f7", "#ffecb3", "#ffd700", "#4caf50"]
 }
