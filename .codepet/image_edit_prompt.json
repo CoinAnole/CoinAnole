@@ -1,36 +1,31 @@
 {
-  "scene": "Teen Byte standing on the floor, turned toward the trophy shelf with an expression of pride and admiration",
+  "scene": "Teen Byte sits on the floor in a relaxed afternoon pose, gangly limbs folded comfortably, occasionally glancing toward the food bowl with content curiosity while afternoon light warms the room",
   "subjects": [
     {
-      "description": "Teen stage Byte: gangly proportions, longer limbs, awkward but endearing posture, blueish soft pixel art blob with big expressive eyes",
-      "position": "foreground floor, facing the trophy shelf",
-      "action": "standing upright and looking up at the 10-day trophy with admiration, content expression"
+      "description": "Teen-stage Byte with gangly proportions, elongated body, long thin limbs, blue-toned skin, large expressive eyes showing contentment with subtle curiosity",
+      "position": "seated on floor in foreground center, legs folded to one side, body angled slightly toward trophy shelf",
+      "action": "resting comfortably with head turned toward food bowl area, one hand resting on floor for support"
     },
     {
-      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline visible through simple window behind",
-      "position": "mid-ground, desk center with window in background",
-      "action": "static environment anchor"
+      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline visible through simple window, afternoon golden light streaming in",
+      "position": "desk and laptop behind Byte to the left, window showing cityscape in background",
+      "action": "static environment anchor with warm afternoon illumination"
     },
     {
-      "description": "wooden trophy shelf mounted on wall above desk, holding exactly one golden 10-day streak trophy on the left side",
-      "position": "wall space above desk, left side of shelf",
+      "description": "trophy shelf mounted on wall above desk with single golden 10-day trophy on left side and small green succulent plant on right side, clearly separated",
+      "position": "wall space above desk, trophy left, plant right with visible gap between them",
       "action": "static display catching afternoon light"
     },
     {
-      "description": "small leafy green succulent plant in pot, healthy and thriving, positioned on the right side of the trophy shelf",
-      "position": "wall space above desk, right side of shelf",
-      "action": "static plant companion with clear spacing from trophy"
-    },
-    {
-      "description": "single food bowl filled with kibble on the floor to the right",
-      "position": "floor right side",
-      "action": "static functional item"
+      "description": "single food bowl with kibble on floor to the right side of the scene",
+      "position": "floor to the right of Byte's seated position",
+      "action": "stationary food container"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "bright warm afternoon sunlight streaming through window, golden hues across the room, soft shadows",
-  "mood": "content and proud, teen Byte admiring hard-earned achievement",
-  "background": "simple room with Chicago skyline visible through window, afternoon city view",
-  "composition": "Byte standing on floor facing shelf, desk and laptop in mid-ground, trophy shelf clearly visible above with trophy on left and plant on right, food bowl on floor",
-  "color_palette": ["#4A90D9", "#8B7355", "#FFD700", "#228B22", "#F4A460", "#87CEEB"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, teen proportions with elongated limbs",
+  "lighting": "warm afternoon golden light from Chicago skyline window, soft shadows, gentle illumination on Byte's form",
+  "mood": "content and relaxed with underlying gentle hunger awareness, peaceful afternoon atmosphere",
+  "background": "simple room with wooden desk, oversized laptop closed or idle, Chicago skyline window showing afternoon city view, trophy shelf with single trophy and one succulent plant properly spaced",
+  "composition": "Byte seated in foreground, desk and laptop as mid-ground anchor, window and skyline as background, balanced framing with space around subjects",
+  "color_palette": ["#4A90D9", "#F5E6D3", "#8B7355", "#FFD700", "#87CEEB"]
 }

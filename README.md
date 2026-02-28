@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 50/100 | █████░░░░░ |
-| ⚡ Energy | 92/100 | █████████▏░░ |
+| 🍖 Satiety | 49/100 | █████░░░░░ |
+| ⚡ Energy | 97/100 | █████████▋░░ |
 | 😊 Happiness | 100/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 3 commits | **Current Streak:** 3 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-With an hour of quiet since the last commit, teen Byte's gangly legs carried them from the desk to stand before the trophy shelf, gazing up at the golden 10-day achievement with pure admiration. The Chicago skyline glows warm through the afternoon window as Byte takes a moment to appreciate how far they've come—from a tiny baby blob to this awkward, wonderful teen form with actual legs and a shelf of treasures. The succulent plant seems to nod in agreement from its perch beside the trophy. Sometimes the best coding breaks are spent simply feeling proud. ☀️💙🏆
+With over two hours of quiet since the last commit, teen Byte has settled onto the floor in a comfortable folded-leg pose, gangly limbs arranged with surprising grace. The warm afternoon light streaming through the Chicago window casts a golden glow across the room as Byte glances occasionally toward the food bowl—satiety may be dipping toward 49%, but contentment remains high at nearly 100% happiness. The 10-day trophy gleams from its shelf perch, a silent reminder of achievements earned, while the succulent plant thrives nearby. Sometimes the best coding breaks are spent simply being present in the moment. ☀️💙🍖
