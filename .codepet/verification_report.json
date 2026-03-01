@@ -1,41 +1,41 @@
 {
   "attempt": 1,
-  "mode": "reground",
-  "base_image": ".codepet/stage_images/teen.png",
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Byte displays teen stage characteristics: gangly proportions, awkward but energetic posture, larger form than baby stage. Silhouette matches expected teen morphology with elongated limbs and expressive facial features."
+      "evidence": "Byte displays teen stage characteristics: gangly proportions, elongated limbs, awkward but energetic posture, larger form than baby stage. Facial expression shows big expressive eyes typical of teen form."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean 2D pixel art style maintained with dithered shading, readable silhouette, and consistent color palette. No photorealistic or painterly artifacts detected."
+      "evidence": "Clean 2D pixel art style maintained with dithered shading, readable silhouette, and consistent color palette. No photorealistic or painterly artifacts detected. Style matches expected pixel art aesthetic."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Ecstatic mood reflected in bright eye expression and alert posture. Morning golden-pink lighting visible through Chicago skyline window. Trophy shelf with golden trophy and green plant both present. Food bowl positioned on floor. All re-ground props successfully re-applied."
+      "evidence": "Ecstatic mood reflected in bright eye expression and energetic posture. Posture shows slight shift indicating movement/animation between moments. Late morning bright lighting visible through Chicago skyline window. Trophy shelf with golden trophy and green plant present. Food bowl positioned on floor. All requested elements present."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No garbled text, floating glyphs, or malformed anatomy detected. No smeared objects or duplicated parts. Clean render with distinct object boundaries."
+      "evidence": "No garbled text, floating glyphs, or malformed anatomy detected. No smeared objects or duplicated parts. Clean render with distinct object boundaries. Byte's form is coherent and properly proportioned."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Trophy shelf: exactly 1 golden 10-day trophy on left side, exactly 1 green plant on right side, clear spacing between them with no overlap. Desk: 1 wooden desk center stage with 1 oversized silver laptop. Food bowl: 1 bowl on floor to right of desk. All single-instance props maintained as single instances."
+      "evidence": "Trophy shelf: exactly 1 golden 10-day trophy on left side, exactly 1 green plant on right side, clear spacing between them with no overlap. Desk: 1 wooden desk center stage with 1 oversized silver laptop. Food bowl: 1 bowl on floor to right of desk. All single-instance props maintained correctly."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "All three required anchors visible: wooden desk with medium-tone finish center stage, oversized silver laptop open on desk, Chicago skyline visible through window in background providing environmental context."
+      "evidence": "All three required anchors visible: wooden desk with medium-tone finish center stage, oversized silver laptop open on desk, Chicago skyline visible through window in background. Room structure intact."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Morning time (10:47 AM Chicago) correctly reflected with warm golden-pink lighting. Awake state confirmed with alert posture, open eyes, no Z symbols. Ecstatic mood (happiness 100%) visible in bright expression and energetic stance."
+      "evidence": "Late morning time (11:43 AM Chicago) correctly reflected with bright warm lighting. Awake state confirmed with alert posture, open eyes, no Z symbols. Ecstatic mood (happiness 100%) visible in bright expression and energetic confident stance. Energy at 100% reflected in upright dynamic posture."
     },
     "reground_cleanup": {
       "status": "pass",
-      "evidence": "Re-ground successfully corrected layout from previous live image: prop positions normalized with clear spacing, trophy and plant properly positioned on shelf without ambiguity, food bowl clearly placed on floor. Removed any accumulated drift from 6 previous incremental edits. Fresh canonical structure established from stage anchor with narrative props re-applied cleanly."
+      "evidence": "Not applicable for normal mode edit. This is an incremental edit (attempt 1 of normal mode), not a re-ground operation."
     }
   },
   "decision": "accept"
