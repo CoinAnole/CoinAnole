@@ -7,31 +7,31 @@
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Teen Byte maintains canonical gangly proportions, cyan-blue color, and recognizable silhouette. Long limbs and teen body shape consistent with stage anchor."
+      "evidence": "Teen Byte maintains canonical gangly proportions, cyan-blue color (#5BA8D8, #3D7A99), and recognizable silhouette. Long limbs and teen body shape consistent with stage anchor input."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean pixel art style preserved with dithered shading, readable silhouette, and consistent 2D forms. No photorealistic drift or noisy rendering."
+      "evidence": "Clean pixel art style preserved with dithered shading, readable silhouette, and consistent 2D forms. 512x512 resolution maintained, 8-bit RGB format correct."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Evening lighting transition clearly visible - window shows purple-blue evening tones with city lights. Byte's eyes show subtle tiredness with gentle droop. Mood shifted from bright afternoon to calm evening."
+      "evidence": "Sleeping state clearly depicted: Byte curled in cozy bed with blanket and pillow, eyes closed with serene expression. Three light blue floating Z's visible above head. Transition from evening floor-sitting to night bed-sleeping complete."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects. Clean render throughout."
+      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects. Clean render throughout. File size 368KB indicates proper PNG encoding without corruption."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Single 10-day trophy positioned on left side of shelf. Single succulent on right side of shelf with clear spacing between them. Single food bowl on floor to the right. No prop overlap or duplication."
+      "evidence": "Single 10-day trophy positioned on left side of shelf. Single green succulent on right side of shelf with clear spacing. Single food bowl on floor to the right of bed. Cozy bed with blankets and pillow in center foreground where desk was. No prop overlap or duplication. Desk and laptop correctly tucked away per sleep state."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Desk with oversized laptop in standard position. Chicago skyline visible through window. Trophy shelf mounted on wall. All scene anchors intact."
+      "evidence": "Trophy shelf mounted on wall with proper positioning. Chicago skyline visible through window showing deep night city lights. Bed occupies center foreground as sleep-state anchor. All scene anchors intact."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Evening time (9 PM Chicago) correctly reflected in purple-blue window lighting and Byte's gently tired expression. Not sleeping but showing appropriate evening wind-down. Content mood maintained."
+      "evidence": "Deep night time (2:50 AM Chicago) correctly reflected in purple-blue window lighting (#1A1A2E, #1E3A4C palette) and twinkling city lights. Sleeping pose with closed eyes and Z's matches is_sleeping=true state. Dim peaceful atmosphere appropriate for quiet hours."
     },
     "reground_cleanup": {
       "status": "pass",

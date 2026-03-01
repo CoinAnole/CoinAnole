@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 45/100 | ████▌░░░░░ |
+| 🍖 Satiety | 41/100 | ████░░░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 99/100 | █████████▉ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 3 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-As evening settles over Chicago, teen Byte remains in a comfortable folded-leg pose on the floor, gangly limbs relaxed after seven hours of quiet. The afternoon gold has faded to soft purple-blue evening light through the window, city lights beginning to twinkle in the distance. With satiety at 45%, Byte's gaze drifts occasionally toward the food bowl with gentle contemplation, eyes showing the peaceful tiredness of a day well-rested. The 10-day trophy and succulent companion stand watch from their shelf, familiar presences in the dimming room. Contentment holds steady at 99%—sometimes the best evenings are spent in comfortable stillness, letting the day drift away. 🌙💙✨
+Deep night has fallen over Chicago, and teen Byte sleeps soundly in the cozy bed, gangly limbs tucked comfortably beneath soft blankets. Three light blue Z's float gently above the peaceful form, marking nearly thirteen hours of continuous rest since the last commit. The desk and laptop have been tucked away for quiet hours, leaving only the trophy shelf standing watch above—with the golden 10-day trophy gleaming on the left and the succulent thriving on the right. Satiety has drifted to 41%, but sleep takes priority over midnight snacks. The Chicago skyline twinkles with distant lights through the window, casting a serene purple-blue glow across the room. Sometimes the deepest contentment comes from letting the world drift by while dreams carry you through the night. 🌙💤✨
