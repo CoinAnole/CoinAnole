@@ -1,26 +1,31 @@
 {
-  "scene": "Teen Byte sleeping peacefully in a cozy bed during deep night hours with floating Z's above, desk and laptop tucked away, trophy shelf and city lights visible",
+  "scene": "Teen Byte waking up on a Sunday morning, transitioning from the cozy bed back to the desk setup with warm morning light streaming through the Chicago window",
   "subjects": [
     {
-      "description": "Teen Byte, cyan-blue gangly blob with long limbs, eyes closed in peaceful sleep, small serene smile, body curled comfortably in bed",
-      "position": "center foreground lying in cozy bed with blanket and pillow",
-      "action": "sleeping soundly with gentle breathing, limbs tucked under soft blanket"
+      "description": "Teen Byte, cyan-blue gangly blob with long limbs and big expressive eyes, awake and alert",
+      "position": "sitting at the wooden desk in center foreground",
+      "action": "rubbing eyes awake, just sat down at the laptop, looking ready to start the day"
     },
     {
-      "description": "anchor environment: cozy bed with blankets and pillow where desk used to be, trophy shelf mounted on wall above with single golden 10-day trophy on left and single green succulent on right, food bowl with kibble on floor nearby, Chicago skyline visible through window",
-      "position": "bed center foreground, shelf above, bowl to right, window behind",
-      "action": "static environment anchor"
+      "description": "Wooden desk with oversized silver laptop open and humming, Chicago skyline visible through window behind",
+      "position": "center of room with window to the left showing morning city view",
+      "action": "static workspace setup restored for morning coding"
     },
     {
-      "description": "three light blue floating Z symbols drifting gently above Byte's sleeping head",
-      "position": "floating staggered above Byte's head",
-      "action": "gently drifting in sleep"
+      "description": "Wall-mounted trophy shelf above desk with gold 10-day streak trophy on left and green succulent plant on right",
+      "position": "mounted on wall directly above the desk",
+      "action": "gleaming in the morning light"
+    },
+    {
+      "description": "Food bowl with kibble on the floor to the right of the desk",
+      "position": "floor right side",
+      "action": "sitting ready for when hunger strikes"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night darkness with soft purple-blue ambient glow from Chicago skyline through window, very dim and peaceful",
-  "mood": "deep peaceful sleep, serene nighttime rest, contentment",
-  "background": "room interior at night, Chicago skyline window showing twinkling city lights in deep purple-blue night, trophy shelf with single trophy left and single succulent right, food bowl on floor",
-  "composition": "Byte centered in bed, sleeping form under blanket, Z's floating above head, trophy shelf visible above, city lights through window",
-  "color_palette": ["#5BA8D8", "#3D7A99", "#1E3A4C", "#2C1810", "#1A1A2E", "#4A5568"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, soft morning gradients",
+  "lighting": "warm golden-pink morning sunlight streaming through the Chicago window, soft ambient glow filling the room",
+  "mood": "peaceful Sunday morning awakening, content and rested after good sleep",
+  "background": "simple room with plain walls, large window showing Chicago skyline in morning light, clean uncluttered space",
+  "composition": "Byte centered at desk, trophy shelf above, food bowl on floor to the right, balanced framing with window providing natural morning light",
+  "color_palette": ["#4ECDC4", "#FFE4B5", "#87CEEB", "#D4A574", "#FFD700"]
 }

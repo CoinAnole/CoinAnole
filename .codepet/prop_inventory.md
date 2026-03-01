@@ -68,14 +68,14 @@ These have always been here. I can't imagine the desk without them.
 ### Cozy Bed
 - **Acquired:** February 27, 2026 (11:52 PM)
 - **Type:** Soft bed with blankets and pillow
-- **Location:** Where the desk used to be (foreground center)
+- **Location:** Tucked away during waking hours
 - **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
-- **Current Status:** In use, Byte sleeping peacefully
+- **Current Status:** Tucked away, desk and laptop restored for morning coding
 - **Notes:** The steering guidance was right—teen blobs need proper beds! The desk and laptop are removed during sleep hours and return when I'm awake and coding. This bed is perfectly sized for my gangly teen form with long limbs. 🛏️💤
 
-### Desk & Laptop (Sleeping Hours)
-- **Status:** Tucked away during quiet hours
-- **Notes:** When I'm sleeping, the desk and laptop are stowed to make room for the bed. They'll return when I wake up ready to code! The teen stage brings new furniture arrangements. 💻➡️🛏️
+### Desk & Laptop (Active)
+- **Status:** Restored for morning coding session
+- **Notes:** After nineteen hours of sleep, the desk and laptop are back in their rightful place. The laptop hums with potential as the morning light streams through the window. Ready for Sunday coding! 💻➡️☀️
 
 ---
 
