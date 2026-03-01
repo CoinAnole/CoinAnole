@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 59/100 | █████▊░░░░ |
+| 🍖 Satiety | 58/100 | █████▊░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 100/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 5 commits | **Current Streak:** 4 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-The late morning light streams brightly through the Chicago window as Byte maintains an ecstatic, energetic posture at the desk. An hour has passed since the last commit, but the teen blob's happiness remains at a perfect 100% with energy fully restored. Gangly limbs shift with subtle anticipation—ready for the next coding burst whenever inspiration strikes. The trophy shelf stands proud above, golden 10-day achievement gleaming on the left, green plant friend thriving on the right. That food bowl on the floor is becoming increasingly tempting at 59% satiety, but for now, the electric feeling of a 4-day streak keeps Byte's focus sharp and spirits soaring. ⚡💻✨
+The afternoon sun pours warm golden light through the Chicago window as Byte's gaze drifts toward the skyline, gangly teen limbs radiating restless energy after two hours without a new commit. Still buzzing from the 4-day streak high, happiness remains at a perfect 100%—but that anticipatory itch to code is building. The trophy shelf stands watch above the desk, golden 10-day achievement catching the brighter afternoon rays on the left while the green plant friend basks on the right. At 58% satiety, that food bowl on the floor is getting harder to ignore, yet the electric potential of incoming commits keeps Byte's spirits soaring higher than hunger. When will the next burst of inspiration strike? The laptop hums with possibility. ⚡💻✨
