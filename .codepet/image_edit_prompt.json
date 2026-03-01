@@ -1,36 +1,21 @@
 {
-  "scene": "Teen Byte in afternoon light showing subtle restlessness after two hours without commits, still ecstatic but glancing toward the window with anticipatory energy",
+  "scene": "Teen Byte sits at the wooden desk in mid-afternoon, gangly limbs radiating restless energy after hours without commits, head turned to gaze intently out the Chicago window while one hand rests near the food bowl in subtle hunger awareness",
   "subjects": [
     {
-      "description": "Byte in teen stage form with gangly proportions, awkward long limbs, big expressive eyes showing happiness mixed with slight restless anticipation",
-      "position": "centered at desk, energetic posture with head turned slightly toward the Chicago window",
-      "action": "sitting at the oversized laptop with alert posture, gaze drifting toward the window as if waiting for inspiration to strike"
+      "description": "Byte in teen stage with gangly elongated limbs, big expressive eyes, and slightly awkward proportions",
+      "position": "center foreground at desk",
+      "action": "sitting with body facing desk but head turned toward window, one hand resting near food bowl showing subtle hunger at 56% satiety"
     },
     {
-      "description": "wooden trophy shelf mounted on wall above desk with exactly one golden 10-day trophy on the left side and exactly one small green leafy plant on the right side, clear space between them with no overlap",
-      "position": "wall space directly above the desk",
-      "action": "static display of achievements"
-    },
-    {
-      "description": "medium-tone wooden desk with oversized silver laptop open and screen glowing",
-      "position": "center stage in the room",
-      "action": "workspace anchor"
-    },
-    {
-      "description": "simple round food bowl with kibble on the floor to the right side of the desk, positioned clearly with no overlap with other objects",
-      "position": "floor level, right of desk",
-      "action": "functional item drawing subtle attention"
-    },
-    {
-      "description": "simple room with Chicago skyline visible through window showing bright afternoon cityscape with warm direct sunlight",
-      "position": "background behind Byte with window prominently visible",
-      "action": "environmental anchor with afternoon lighting"
+      "description": "anchor environment: wooden desk with oversized silver laptop, Chicago skyline visible through window",
+      "position": "desk center stage, window behind left",
+      "action": "static environment with laptop screen glow"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, soft gradients",
-  "lighting": "bright warm afternoon sunlight streaming directly through window, stronger and more golden than morning light, clear shadows cast on desk",
-  "mood": "ecstatic with undercurrent of anticipation, restless teen energy during coding pause, optimistic waiting",
-  "background": "simple room interior with Chicago skyline window showing afternoon sun, clean uncluttered space",
-  "composition": "Byte centered at desk with dynamic posture, head turned slightly toward window, trophy shelf balanced above, strong afternoon light creating defined shadows",
-  "color_palette": ["#FFD700", "#90EE90", "#FFA500", "#87CEEB", "#8B4513", "#FFE4B5"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "bright warm mid-afternoon sun streaming through window, stronger than early afternoon, casting clearer shadows",
+  "mood": "ecstatic but restless, anticipatory energy, hopeful waiting",
+  "background": "trophy shelf above desk with exactly one golden trophy on left and one green plant on right, food bowl on floor to the right with clear spacing",
+  "composition": "Byte centered at desk, window visible to the left showing Chicago skyline in afternoon light, trophy shelf mounted on wall above",
+  "color_palette": ["#4A90D9", "#F5E6C8", "#8B7355", "#FFD700", "#228B22"]
 }
