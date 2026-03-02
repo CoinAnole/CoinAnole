@@ -1,21 +1,31 @@
 {
-  "scene": "Teen Byte sits at the wooden desk in mid-afternoon, gangly limbs radiating restless energy after hours without commits, head turned to gaze intently out the Chicago window while one hand rests near the food bowl in subtle hunger awareness",
+  "scene": "Teen Byte in evening light, turned toward the Chicago window with restless anticipation, food bowl nearby showing moderate emptiness",
   "subjects": [
     {
-      "description": "Byte in teen stage with gangly elongated limbs, big expressive eyes, and slightly awkward proportions",
-      "position": "center foreground at desk",
-      "action": "sitting with body facing desk but head turned toward window, one hand resting near food bowl showing subtle hunger at 56% satiety"
+      "description": "Teen-stage Byte with gangly limbs, blue pixelated blob body, large expressive eyes showing anticipation",
+      "position": "center foreground at desk, upper body turned toward the window",
+      "action": "gazing toward the Chicago skyline with hopeful expectation, gangly posture showing restless teen energy"
     },
     {
-      "description": "anchor environment: wooden desk with oversized silver laptop, Chicago skyline visible through window",
-      "position": "desk center stage, window behind left",
-      "action": "static environment with laptop screen glow"
+      "description": "wooden desk with oversized silver laptop open, trophy shelf above with golden 10-day trophy on left and green plant on right",
+      "position": "center background, shelf mounted on wall above desk",
+      "action": "static environment anchor"
+    },
+    {
+      "description": "food bowl on floor to the right of desk with kibble visible but partially empty",
+      "position": "floor right side",
+      "action": "single bowl showing moderate hunger at 50% satiety"
+    },
+    {
+      "description": "Chicago skyline visible through window with evening purple-blue light",
+      "position": "background behind Byte",
+      "action": "evening light transition with soft ambient glow"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "bright warm mid-afternoon sun streaming through window, stronger than early afternoon, casting clearer shadows",
-  "mood": "ecstatic but restless, anticipatory energy, hopeful waiting",
-  "background": "trophy shelf above desk with exactly one golden trophy on left and one green plant on right, food bowl on floor to the right with clear spacing",
-  "composition": "Byte centered at desk, window visible to the left showing Chicago skyline in afternoon light, trophy shelf mounted on wall above",
-  "color_palette": ["#4A90D9", "#F5E6C8", "#8B7355", "#FFD700", "#228B22"]
+  "lighting": "evening purple-blue ambient light from window, soft warm desk lamp glow, transition from afternoon gold to evening",
+  "mood": "ecstatic anticipation, hopeful waiting, teen restlessness",
+  "background": "room interior with wooden desk, oversized laptop, trophy shelf with single golden trophy and single green plant, Chicago skyline window",
+  "composition": "Byte positioned to show anticipation toward window, desk and laptop centered, food bowl on floor to right, trophy shelf above",
+  "color_palette": ["#5B8DB8", "#8B9DC3", "#D4A574", "#4A6741", "#FFD700", "#6B5B95", "#4A4A4A"]
 }
