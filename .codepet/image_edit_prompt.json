@@ -1,20 +1,20 @@
 {
-  "scene": "Teen Byte sleeping peacefully in a cozy bed with floating Z's above head, surrounded by canonical room elements in deep night lighting",
+  "scene": "Teen Byte awake and energetic at the desk in morning light, having just risen from sleep, with bright warm sunlight streaming through the window",
   "subjects": [
     {
-      "description": "Teen Byte with gangly proportions, fluffy texture, closed peaceful eyes, soft smile, curled under blankets in cozy bed",
-      "position": "center-foreground on cozy bed",
-      "action": "sleeping with three light blue Z symbols floating in scattered formation above head"
+      "description": "Teen Byte with gangly proportions, fluffy texture, bright open eyes, wide ecstatic smile, sitting upright at the desk",
+      "position": "center-foreground at desk",
+      "action": "awake and alert, looking toward the laptop with excited anticipation"
     },
     {
-      "description": "Wooden desk with oversized silver laptop open, centered in room",
-      "position": "middle ground behind bed",
-      "action": "static workspace anchor"
+      "description": "Wooden desk with oversized silver laptop open and glowing, centered in room",
+      "position": "middle ground center",
+      "action": "static workspace anchor with active laptop glow"
     },
     {
-      "description": "Chicago skyline visible through window showing deep night with twinkling building lights",
+      "description": "Chicago skyline visible through window showing bright morning light with warm golden-pink hues",
       "position": "background left",
-      "action": "ambient night backdrop"
+      "action": "ambient morning backdrop with streaming sunlight"
     },
     {
       "description": "Trophy shelf mounted on wall above desk with exactly one golden 10-day trophy on left side and exactly one small green plant on right side",
@@ -22,15 +22,15 @@
       "action": "achievement display with clear spacing between items"
     },
     {
-      "description": "Food bowl with kibble on floor to right of bed area",
+      "description": "Food bowl with reduced kibble on floor to right of desk",
       "position": "floor right side",
-      "action": "static prop"
+      "action": "static prop indicating 39 percent satiety"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent teen proportions",
-  "lighting": "deep night ambiance with purple-blue darkness, soft twinkling city lights through window, gentle dim glow",
-  "mood": "ecstatic peacefulness, content dreams, serene happiness",
-  "background": "simple room interior with wooden desk, oversized laptop, Chicago skyline window view, cozy bed with blankets",
-  "composition": "Byte centered on bed in foreground, desk and laptop middle ground, skyline window background, trophy shelf above desk",
-  "color_palette": ["#2D1B4E", "#1A0F2E", "#4A90A4", "#FFD700", "#228B22", "#8B7355", "#C0C0C0"]
+  "lighting": "bright morning sunlight with warm golden-pink tones streaming through window, soft illumination on Byte",
+  "mood": "ecstatic energy, morning excitement, hopeful anticipation for the coding day",
+  "background": "simple room interior with wooden desk, oversized laptop, Chicago skyline window view",
+  "composition": "Byte centered at desk in foreground, desk and laptop middle ground, skyline window background, trophy shelf above desk",
+  "color_palette": ["#FFD700", "#87CEEB", "#FFE4B5", "#228B22", "#8B7355", "#C0C0C0", "#FFF8DC"]
 }
