@@ -1,26 +1,31 @@
 {
-  "scene": "Teen blob Byte actively coding at the desk during warm afternoon light, just after making a commit, with ecstatic energy and low hunger awareness",
+  "scene": "Teen Byte at desk in afternoon light, gangly limbs positioned for typing, subtly glancing toward the nearly-empty food bowl on the floor with a playful hungry expression while maintaining ecstatic coding energy",
   "subjects": [
     {
-      "description": "Byte the teen blob with gangly proportions, bright wide eyes showing excitement, small smile indicating ecstatic mood, teal-blue body with clean pixel edges",
-      "position": "centered on the desk, facing the oversized laptop",
-      "action": "typing enthusiastically on the laptop keyboard, leaning forward with energetic posture, one hand near keyboard while the other gestures toward the screen"
+      "description": "Teen stage Byte with gangly proportions, big expressive eyes, small fluffy body with awkward teen limbs, pixel art blob form",
+      "position": "centered at desk in primary foreground",
+      "action": "typing on oversized laptop with one hand while head turns slightly toward food bowl with playful aware expression"
     },
     {
-      "description": "anchor environment: wooden desk, oversized silver laptop with screen aglow, Chicago skyline visible through window behind",
-      "position": "desk fills lower third, laptop dominates center, window with skyline in upper left background",
-      "action": "static environment with laptop screen illuminated showing soft white glow"
+      "description": "anchor environment: wooden desk, oversized silver laptop with blank screen, Chicago skyline visible through window behind",
+      "position": "desk center stage, window behind left",
+      "action": "static environment anchor"
     },
     {
-      "description": "food bowl on the floor to the right, partially empty with only scattered kibble remaining",
-      "position": "floor right of desk",
-      "action": "static bowl showing low satiety state"
+      "description": "nearly-empty food bowl on floor to the right, showing only a few kibble pieces remaining",
+      "position": "floor right side",
+      "action": "sitting with diminished contents"
+    },
+    {
+      "description": "trophy shelf mounted on wall above desk with golden 10-day trophy on left and small green plant on right",
+      "position": "wall above desk",
+      "action": "static display"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, teen proportions with gangly limbs",
-  "lighting": "warm afternoon sunlight streaming through the Chicago window, brighter and more direct than morning, casting soft shadows across the desk",
-  "mood": "ecstatic and energetic from the 5-day streak, focused on coding but with subtle awareness of hunger",
-  "background": "room interior with Chicago skyline visible through window, trophy shelf above desk with golden trophy on left and green plant on right, simple walls",
-  "composition": "Byte centered on desk interacting with laptop, window and skyline in upper left, food bowl visible on floor right, trophy shelf mounted on wall above",
-  "color_palette": ["#4ECDC4", "#FFE66D", "#87CEEB", "#D4A373", "#2C3E50"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "warm afternoon golden light streaming through Chicago window, soft shadows on desk",
+  "mood": "ecstatic and energetic but with subtle playful hunger awareness",
+  "background": "simple room with Chicago skyline visible through window, desk with laptop, trophy shelf above",
+  "composition": "medium shot showing Byte at desk, food bowl visible on floor, balanced framing",
+  "color_palette": ["#F4D03F", "#E67E22", "#5DADE2", "#82E0AA", "#FFD700"]
 }
