@@ -1,31 +1,36 @@
 {
-  "scene": "Teen Byte in evening light, turned toward the Chicago window with restless anticipation, food bowl nearby showing moderate emptiness",
+  "scene": "Teen Byte sleeping peacefully at night in a cozy bed with floating Z's above, the Chicago skyline twinkling through the window",
   "subjects": [
     {
-      "description": "Teen-stage Byte with gangly limbs, blue pixelated blob body, large expressive eyes showing anticipation",
-      "position": "center foreground at desk, upper body turned toward the window",
-      "action": "gazing toward the Chicago skyline with hopeful expectation, gangly posture showing restless teen energy"
+      "description": "Teen Byte with gangly limbs, fluffy pixelated form, closed peaceful eyes, gentle smile, teen proportions with longer body and limbs",
+      "position": "centered in cozy bed, relaxed posture",
+      "action": "sleeping soundly with three light blue Z symbols floating in staggered formation above head"
     },
     {
-      "description": "wooden desk with oversized silver laptop open, trophy shelf above with golden 10-day trophy on left and green plant on right",
-      "position": "center background, shelf mounted on wall above desk",
-      "action": "static environment anchor"
+      "description": "Cozy bed with soft blankets and pillow, tucked into room corner",
+      "position": "foreground where desk normally sits during waking hours",
+      "action": "static sleeping platform for Byte"
     },
     {
-      "description": "food bowl on floor to the right of desk with kibble visible but partially empty",
-      "position": "floor right side",
-      "action": "single bowl showing moderate hunger at 50% satiety"
+      "description": "Trophy shelf mounted on wall with golden 10-day streak trophy on left side and small green leafy plant on right side",
+      "position": "wall above where desk would be",
+      "action": "static display of achievements"
     },
     {
-      "description": "Chicago skyline visible through window with evening purple-blue light",
-      "position": "background behind Byte",
-      "action": "evening light transition with soft ambient glow"
+      "description": "Food bowl with kibble on floor to the right of bed",
+      "position": "floor level, single instance",
+      "action": "waiting for morning hunger"
+    },
+    {
+      "description": "Chicago skyline visible through window with twinkling city lights",
+      "position": "background left, behind sleeping Byte",
+      "action": "night cityscape with ambient glow"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "evening purple-blue ambient light from window, soft warm desk lamp glow, transition from afternoon gold to evening",
-  "mood": "ecstatic anticipation, hopeful waiting, teen restlessness",
-  "background": "room interior with wooden desk, oversized laptop, trophy shelf with single golden trophy and single green plant, Chicago skyline window",
-  "composition": "Byte positioned to show anticipation toward window, desk and laptop centered, food bowl on floor to right, trophy shelf above",
-  "color_palette": ["#5B8DB8", "#8B9DC3", "#D4A574", "#4A6741", "#FFD700", "#6B5B95", "#4A4A4A"]
+  "lighting": "deep night with purple-blue ambient glow from Chicago skyline through window, soft dim illumination, twinkling city lights",
+  "mood": "peaceful, content, restful sleep after day of anticipation",
+  "background": "Simple room interior at night, dark walls, window showing night cityscape, no desk or laptop visible during sleep hours",
+  "composition": "Byte centered in bed as focal point, Z's floating in scattered formation above head, trophy shelf visible on wall, food bowl on floor, skyline window providing ambient night light",
+  "color_palette": ["#1a1a2e", "#16213e", "#4a4e69", "#9a8c98", "#81d4fa", "#ffd700", "#4caf50"]
 }

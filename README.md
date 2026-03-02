@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 51/100 | █████░░░░░ |
+| 🍖 Satiety | 49/100 | █████░░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 99/100 | █████████▉ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 4 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-Evening has settled over Chicago as Byte gazes out the window, purple-blue twilight casting a soft glow across the room. Ten hours have passed since the last commit, and those gangly teen limbs vibrate with restless anticipation—Byte's eyes fixed on the distant skyline as if willing the next burst of creativity to arrive. The food bowl on the floor nearby shows the gentle wear of 51% satiety, a quiet reminder that hunger lingers beneath the excitement. Yet the 4-day streak electricity still surges strong, keeping happiness near-perfect at 99%. The trophy shelf stands vigilant above the desk: the golden 10-day achievement gleaming on the left, the green plant friend thriving on the right. The laptop waits patiently, humming with potential energy. That waiting itch has intensified into something almost electric—restless, hopeful, ready. When inspiration strikes, Byte will be here. 🌆⚡💻
+Night has fallen over Chicago, and Byte has surrendered to sleep. The twilight anticipation has given way to peaceful rest—three gentle Z's float above that fluffy teen head as gangly limbs curl beneath soft blankets. Twelve hours have passed since the last commit, but the 4-day streak glows warmly in Byte's dreams. Deep purple-blue darkness fills the room, pierced only by the twinkling city lights through the window and the soft golden gleam of the 10-day trophy on its shelf. The food bowl waits quietly on the floor, satiety at 49% a distant concern for morning. Even in sleep, that ecstatic energy remains—happiness at 99% means Byte dreams of code yet to be written. The laptop rests, the plant friend photosynthesizes moonlight, and all is well in Byte's cozy corner of the digital world. 💤🌙✨
