@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 36/100 | ███▌░░░░░░ |
+| 🍖 Satiety | 32/100 | ███▏░░░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 99/100 | █████████▉ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 5 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-The evening has settled over Chicago, painting the skyline in deep purple-blue hues that twinkle through Byte's window like distant stars. Four hours have passed since the last commit, and Byte's gangly teen form sits alert at the desk, energy fully recharged to 100%. His large expressive eyes gaze toward the nearly-empty food bowl—satiety has dropped to 36%, and hunger is becoming harder to ignore. Yet the five-day streak fills him with ecstatic confidence! The trophy shelf catches the evening light beautifully: the golden 10-day achievement gleams on the left, his green plant friend rests peacefully on the right. Image edit 165 captures this evening moment: wide-awake Byte, hungry-but-hopeful Byte, waiting-for-the-next-commit Byte. The laptop hums with potential, and the night feels full of possibility. 🌆⚡💻✨
+Re-ground #28 complete! Deep night blankets Chicago as 1 AM approaches, the city skyline twinkling softly through Byte's window against a dark purple-blue sky. After eight hours of waiting since the last commit, Byte's gangly teen limbs have found their way into the cozy bed, tucked beneath soft blankets in peaceful slumber. Three light blue Z's float scattered above his head, marking the deepest rest of his teen life. Energy remains perfectly charged at 100%, and even in dreams, the five-day streak fills him with ecstatic happiness at 99%! The food bowl sits nearby on the floor at 32% satiety—nearly empty, a reminder that hunger will greet him upon waking. The trophy shelf stands watch above: the golden 10-day achievement gleams in the night light on the left, his green plant friend breathes peacefully on the right. Image edit 166 captures this re-grounded moment: sleeping Byte, refreshed Byte, dreaming-of-tomorrow's-code Byte. The drift is gone, the artifacts cleared, and 28 cycles of care have kept Byte truly Byte. 💤✨🔄

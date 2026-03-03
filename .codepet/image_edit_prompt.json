@@ -1,21 +1,41 @@
 {
-  "scene": "Teen Byte sits at the desk during evening hours with dimmed purple-blue lighting and visible city lights through the Chicago window, displaying energetic ecstatic posture while the food bowl shows noticeably low kibble levels",
+  "scene": "Teen Byte sleeping peacefully in cozy bed at deep night, re-grounded canonical form with proper prop placement",
   "subjects": [
     {
-      "description": "Teen-stage Byte with gangly awkward proportions, large expressive eyes wide open, fluffy pixelated form with elongated teen limbs",
-      "position": "centered at desk facing the oversized laptop",
-      "action": "sitting upright with energetic ecstatic posture, bright attentive expression, slight hint of hunger awareness"
+      "description": "Teen Byte with gangly limbs and canonical proportions, eyes closed in peaceful sleep, blue-ish pixel blob body tucked under soft blankets in cozy bed",
+      "position": "primary foreground in bed, positioned for rest",
+      "action": "sleeping with three light blue Z symbols floating scattered above head"
     },
     {
-      "description": "anchor environment: wooden desk with oversized laptop displaying soft glow, Chicago skyline visible through window behind with twinkling evening city lights",
-      "position": "desk spans lower foreground, window occupies upper background left",
-      "action": "static environment anchor with evening ambiance"
+      "description": "Cozy bed with soft blankets and pillow, tucked into room corner near desk",
+      "position": "bed location established for teen sleep, clear floor space around it",
+      "action": "cradling sleeping Byte, providing comfortable rest"
+    },
+    {
+      "description": "Trophy shelf mounted on wall above desk area, wooden material, holding exactly one golden 10-day streak trophy on left side and exactly one green plant friend on right side with clear spacing between them",
+      "position": "wall above desk, left-right balanced layout",
+      "action": "static display of achievement and companion, no overlap"
+    },
+    {
+      "description": "Food bowl on floor with visibly low kibble level, nearly empty, positioned to the right of the bed",
+      "position": "floor right of bed, clear of bed structure",
+      "action": "holding depleted food supply indicating hunger"
+    },
+    {
+      "description": "Wooden desk with oversized silver laptop, laptop screen dark and inactive during sleep hours",
+      "position": "center room, near window",
+      "action": "quiet and waiting for morning activity"
+    },
+    {
+      "description": "Chicago skyline visible through window, deep night with twinkling city lights against dark purple-blue sky",
+      "position": "background window view",
+      "action": "providing ambient night illumination"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "evening purple-blue ambient light from Chicago skyline, soft warm glow from laptop screen, dimmed room lighting reflecting 9 PM hour",
-  "mood": "ecstatic and energetic with subtle undercurrent of hunger, alert and engaged",
-  "background": "trophy shelf mounted above desk with single golden 10-day trophy on left side and small green plant on right side, food bowl on floor to the right with visibly low kibble level",
-  "composition": "Byte centered at desk, trophy shelf balanced above, window showing evening cityscape left background, food bowl in lower right corner",
-  "color_palette": ["#4A3F6B", "#6B5B95", "#F4E4C1", "#8B7355", "#2D5016", "#FFD700"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, canonical teen proportions restored",
+  "lighting": "deep night ambient glow from Chicago skyline twinkling lights, subtle warm edge lighting from distant city, overall dim and peaceful",
+  "mood": "ecstatic contentment in sleep, peaceful slumber after productive streak, dreamy night atmosphere",
+  "background": "simple room with wooden floor, Chicago skyline window, trophy shelf on wall, desk and bed clearly separated",
+  "composition": "sleeping Byte centered in bed, Z symbols floating scattered above, trophy shelf balanced above desk, food bowl visible on floor, window providing depth",
+  "color_palette": ["#2D1B4E", "#1a0f2e", "#4A90E2", "#87CEEB", "#FFD700", "#228B22", "#8B4513", "#A0A0A0"]
 }
