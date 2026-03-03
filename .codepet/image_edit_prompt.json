@@ -1,31 +1,21 @@
 {
-  "scene": "Teen Byte at desk in afternoon light, gangly limbs positioned for typing, subtly glancing toward the nearly-empty food bowl on the floor with a playful hungry expression while maintaining ecstatic coding energy",
+  "scene": "Teen Byte sits at the desk during evening hours with dimmed purple-blue lighting and visible city lights through the Chicago window, displaying energetic ecstatic posture while the food bowl shows noticeably low kibble levels",
   "subjects": [
     {
-      "description": "Teen stage Byte with gangly proportions, big expressive eyes, small fluffy body with awkward teen limbs, pixel art blob form",
-      "position": "centered at desk in primary foreground",
-      "action": "typing on oversized laptop with one hand while head turns slightly toward food bowl with playful aware expression"
+      "description": "Teen-stage Byte with gangly awkward proportions, large expressive eyes wide open, fluffy pixelated form with elongated teen limbs",
+      "position": "centered at desk facing the oversized laptop",
+      "action": "sitting upright with energetic ecstatic posture, bright attentive expression, slight hint of hunger awareness"
     },
     {
-      "description": "anchor environment: wooden desk, oversized silver laptop with blank screen, Chicago skyline visible through window behind",
-      "position": "desk center stage, window behind left",
-      "action": "static environment anchor"
-    },
-    {
-      "description": "nearly-empty food bowl on floor to the right, showing only a few kibble pieces remaining",
-      "position": "floor right side",
-      "action": "sitting with diminished contents"
-    },
-    {
-      "description": "trophy shelf mounted on wall above desk with golden 10-day trophy on left and small green plant on right",
-      "position": "wall above desk",
-      "action": "static display"
+      "description": "anchor environment: wooden desk with oversized laptop displaying soft glow, Chicago skyline visible through window behind with twinkling evening city lights",
+      "position": "desk spans lower foreground, window occupies upper background left",
+      "action": "static environment anchor with evening ambiance"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm afternoon golden light streaming through Chicago window, soft shadows on desk",
-  "mood": "ecstatic and energetic but with subtle playful hunger awareness",
-  "background": "simple room with Chicago skyline visible through window, desk with laptop, trophy shelf above",
-  "composition": "medium shot showing Byte at desk, food bowl visible on floor, balanced framing",
-  "color_palette": ["#F4D03F", "#E67E22", "#5DADE2", "#82E0AA", "#FFD700"]
+  "lighting": "evening purple-blue ambient light from Chicago skyline, soft warm glow from laptop screen, dimmed room lighting reflecting 9 PM hour",
+  "mood": "ecstatic and energetic with subtle undercurrent of hunger, alert and engaged",
+  "background": "trophy shelf mounted above desk with single golden 10-day trophy on left side and small green plant on right side, food bowl on floor to the right with visibly low kibble level",
+  "composition": "Byte centered at desk, trophy shelf balanced above, window showing evening cityscape left background, food bowl in lower right corner",
+  "color_palette": ["#4A3F6B", "#6B5B95", "#F4E4C1", "#8B7355", "#2D5016", "#FFD700"]
 }
