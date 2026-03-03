@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte awake at his desk in morning golden-pink light, transition from night sleep to active morning, hungry but energetic",
+  "scene": "Teen Byte actively coding at his desk in warm afternoon light, typing enthusiastically on the oversized laptop after nine commits today",
   "subjects": [
     {
-      "description": "Teen Byte with gangly proportions, big expressive eyes wide open and alert, blue-ish pixelated blob form with awkward teen limbs",
-      "position": "centered at desk in primary foreground",
-      "action": "sitting upright at laptop, head turned slightly toward the nearly-empty food bowl with playful awareness, alert and awake"
+      "description": "Teen Byte with gangly limbs, big expressive eyes wide with excitement, pixel art blob body with awkward teen proportions",
+      "position": "center foreground at desk",
+      "action": "typing energetically on laptop keyboard with both hands, body leaning forward in focused concentration"
     },
     {
-      "description": "anchor environment: wooden desk with oversized silver laptop open and screen aglow, Chicago skyline window behind with warm morning light",
-      "position": "room background with desk center stage, window showing city buildings",
-      "action": "static environment anchor with morning golden-pink lighting streaming through"
+      "description": "anchor environment: wooden desk with oversized silver laptop open and glowing, Chicago skyline visible through window behind",
+      "position": "desk center stage, window in background left",
+      "action": "static environment anchor"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "golden-pink morning sunlight streaming through Chicago skyline window, warm and bright, transitioning from night",
-  "mood": "ecstatic and energetic but playfully aware of hunger, alert morning posture",
-  "background": "wooden trophy shelf above desk with golden 10-day trophy on left and green plant on right, nearly-empty food bowl visible on floor to the right, cozy bed tucked away or absent",
-  "composition": "Byte centered at desk, laptop prominent, window showing morning skyline, no Z's floating above",
-  "color_palette": ["#FFE4B5", "#FFB6C1", "#87CEEB", "#4A4A4A", "#DAA520"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, crisp edges",
+  "lighting": "warm bright afternoon sunlight streaming through window, golden-yellow rays across desk, laptop screen glow",
+  "mood": "ecstatic and energetic, bright optimism, teen enthusiasm",
+  "background": "wooden trophy shelf above desk with golden 10-day trophy on left and small green plant on right, food bowl on floor to the right of desk with moderate kibble level, Chicago skyline buildings in warm afternoon haze",
+  "composition": "Byte centered at desk, laptop prominent, trophy shelf visible above, window showing skyline left background",
+  "color_palette": ["#F4D03F", "#F39C12", "#85C1E9", "#58D68D", "#F8F9F9"]
 }
