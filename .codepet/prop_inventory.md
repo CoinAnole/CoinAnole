@@ -59,23 +59,23 @@ These have always been here. I can't imagine the desk without them.
 ## Functional Items
 
 ### Food Bowl
-- **Contents:** Kibble (critically low level)
+- **Contents:** Kibble (critically low level—barely any remaining)
 - **Location:** On the floor to the right of the bed
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** Nearly empty at 32% satiety—kibble level critically low, hunger will greet me upon waking
-- **Notes:** Bowl positioned near the bed in deep night. Single instance only—no duplicate bowls! Pre-dawn March 3, 2026: after 8+ hours since last commit, the bowl is almost empty. That first meal after waking is going to taste amazing. 🍖
+- **Current Status:** Critically low at 29% satiety—only a few scattered kibbles remain, hunger growing stronger with each passing hour
+- **Notes:** Bowl positioned near the bed in pre-dawn hours. Single instance only—no duplicate bowls! Pre-dawn March 3, 2026 (5:00 AM): after 12+ hours since last commit, the bowl is nearly depleted. My stomach rumbles in my dreams. That first meal after waking is going to be the best tasting kibble ever. 🍖
 
 ### Cozy Bed
 - **Acquired:** February 27, 2026 (11:52 PM)
 - **Type:** Soft bed with blankets and pillow
-- **Location:** Active and cradling Byte during deep night sleep
+- **Location:** Active and cradling Byte during pre-dawn sleep
 - **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
-- **Current Status:** In use! Cradling my refreshed gangly limbs as I sleep through the 1 AM hour
-- **Notes:** The bed appeared as quiet hours descended, providing perfect rest during the 8+ hour wait for the next commit. Deep night comfort for deep night dreams. When morning golden-pink light arrives, the bed will tuck itself away and I'll return to my desk. 🛏️💤
+- **Current Status:** In use! Cradling my gangly limbs as I sleep through the 5 AM hour, hunger rumbling softly
+- **Notes:** The bed provides perfect rest during the 12+ hour wait for the next commit. Pre-dawn comfort for hungry-but-hopeful dreams. When morning golden-pink light arrives, the bed will tuck itself away and I'll return to my desk—hopefully to a refilled food bowl! 🛏️💤🍖
 
 ### Desk & Laptop (Resting)
-- **Status:** Quiet and waiting during deep night sleep hours
-- **Notes:** The desk stands ready in the darkness, laptop screen dark and inactive while I sleep in the cozy bed nearby. No hum of coding energy right now—just peaceful waiting. When morning golden-pink light arrives and the Z's fade away, the laptop will wake with me, screen aglow and ready for new commits. For now, it rests as I rest. 💻🌙💤
+- **Status:** Quiet and waiting during pre-dawn sleep hours
+- **Notes:** The desk stands ready in the pre-dawn darkness, laptop screen dark and inactive while I sleep in the cozy bed nearby, dreaming of breakfast. No hum of coding energy right now—just peaceful waiting and gentle hunger. When morning golden-pink light arrives and the Z's fade away, the laptop will wake with me, screen aglow and ready for new commits—and hopefully I'll find a full food bowl too! For now, we both rest. 💻🌙💤🍖
 
 ---
 
@@ -86,14 +86,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Light blue Z's floating gently above Byte's head
-- **Current Status:** Active! Three light blue Z symbols floating in scattered formation above my head at 1:13 AM deep night sleep
-- **Notes:** Z's mark peaceful sleep during quiet hours. The scattered formation at this hour indicates deep, restful slumber while re-grounding #28 refreshed my pixels. These floating symbols drift with my dreams, marking the calm before morning brings new code. 💤
+- **Current Status:** Active! Three light blue Z symbols floating in scattered formation above my head at 5:00 AM pre-dawn sleep
+- **Notes:** Z's mark peaceful sleep during quiet hours. The scattered formation at this hour indicates deep slumber despite growing hunger. Dreams have shifted from pure code-fantasy to breakfast-anticipation. These floating symbols drift with my hungry-yet-hopeful dreams, marking the calm before morning brings both food and new code. 💤🍖
 
 ### Lighting
 - **Source:** Chicago skyline twinkling through window + dark laptop screen during sleep
-- **Current:** Deep night at 1:13 AM with dark purple-blue ambient light from Chicago skyline twinkling like fallen stars, laptop screen dark/off during sleep hours
+- **Current:** Pre-dawn at 5:00 AM with dark purple-blue ambient light from Chicago skyline twinkling like fallen stars, approaching the transition toward morning golden-pink
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-pink, night deep purple with twinkling lights
-- **Notes:** Re-grounded sleeping scene at 1:13 AM: The Chicago skyline twinkles softly through the window, those distant building lights like stars come down to earth. Deep night darkness fills the room with peaceful purple-blue ambient glow. The laptop waits quietly, screen dark, while I dream of tomorrow's code. Everything is still, everything is refreshed, everything is canonical after re-ground #28. 🌙💤✨
+- **Notes:** Pre-dawn sleeping scene at 5:00 AM: The Chicago skyline twinkles softly through the window, those distant building lights like stars come down to earth. Deep night darkness still fills the room with peaceful purple-blue ambient glow, but morning approaches. The laptop waits quietly, screen dark, while I dream of breakfast and tomorrow's code. Hunger at 29% satiety adds a new texture to the dreams. Everything is still, everything is waiting. 🌙💤🍖
 
 ---
 

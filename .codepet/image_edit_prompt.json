@@ -1,41 +1,31 @@
 {
-  "scene": "Teen Byte sleeping peacefully in cozy bed at deep night, re-grounded canonical form with proper prop placement",
+  "scene": "Teen Byte sleeping peacefully in cozy bed during deep night, food bowl now critically low on kibble",
   "subjects": [
     {
-      "description": "Teen Byte with gangly limbs and canonical proportions, eyes closed in peaceful sleep, blue-ish pixel blob body tucked under soft blankets in cozy bed",
-      "position": "primary foreground in bed, positioned for rest",
-      "action": "sleeping with three light blue Z symbols floating scattered above head"
+      "description": "Byte in teen stage form: gangly proportions, fluffy texture, big expressive eyes closed in sleep",
+      "position": "centered in cozy bed on floor, nestled under soft blankets",
+      "action": "sleeping peacefully with three light blue Z symbols floating scattered above head"
     },
     {
-      "description": "Cozy bed with soft blankets and pillow, tucked into room corner near desk",
-      "position": "bed location established for teen sleep, clear floor space around it",
-      "action": "cradling sleeping Byte, providing comfortable rest"
+      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline window showing twinkling city lights",
+      "position": "desk to the left, window behind showing night cityscape",
+      "action": "static environment with laptop screen dark, desk standing ready"
     },
     {
-      "description": "Trophy shelf mounted on wall above desk area, wooden material, holding exactly one golden 10-day streak trophy on left side and exactly one green plant friend on right side with clear spacing between them",
-      "position": "wall above desk, left-right balanced layout",
-      "action": "static display of achievement and companion, no overlap"
+      "description": "food bowl on floor with critically low kibble level, nearly empty",
+      "position": "on floor to the right of the bed",
+      "action": "single bowl showing almost no kibble remaining"
     },
     {
-      "description": "Food bowl on floor with visibly low kibble level, nearly empty, positioned to the right of the bed",
-      "position": "floor right of bed, clear of bed structure",
-      "action": "holding depleted food supply indicating hunger"
-    },
-    {
-      "description": "Wooden desk with oversized silver laptop, laptop screen dark and inactive during sleep hours",
-      "position": "center room, near window",
-      "action": "quiet and waiting for morning activity"
-    },
-    {
-      "description": "Chicago skyline visible through window, deep night with twinkling city lights against dark purple-blue sky",
-      "position": "background window view",
-      "action": "providing ambient night illumination"
+      "description": "trophy shelf mounted on wall above desk",
+      "position": "wall space above desk",
+      "action": "golden 10-day streak trophy on left side, green plant friend on right side, clearly spaced"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, canonical teen proportions restored",
-  "lighting": "deep night ambient glow from Chicago skyline twinkling lights, subtle warm edge lighting from distant city, overall dim and peaceful",
-  "mood": "ecstatic contentment in sleep, peaceful slumber after productive streak, dreamy night atmosphere",
-  "background": "simple room with wooden floor, Chicago skyline window, trophy shelf on wall, desk and bed clearly separated",
-  "composition": "sleeping Byte centered in bed, Z symbols floating scattered above, trophy shelf balanced above desk, food bowl visible on floor, window providing depth",
-  "color_palette": ["#2D1B4E", "#1a0f2e", "#4A90E2", "#87CEEB", "#FFD700", "#228B22", "#8B4513", "#A0A0A0"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "deep night darkness with purple-blue ambient glow, Chicago skyline twinkling through window like fallen stars",
+  "mood": "peaceful slumber with subtle hunger undertone, content but satiety critically low",
+  "background": "simple room with Chicago skyline window showing night city lights, trophy shelf above desk",
+  "composition": "Byte centered in bed as primary focus, desk and laptop to left, food bowl to right, window behind providing city light backdrop",
+  "color_palette": ["#2d1b4e", "#4a3b6b", "#87CEEB", "#d4a574", "#228B22", "#FFD700"]
 }
