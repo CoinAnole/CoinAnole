@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-03-03T03:17:04.478437+00:00",
+  "last_updated": "2026-03-03T07:12:56.217148+00:00",
   "updated_by": "github-actions-runner",
   "pet": {
     "name": "Byte",
     "stage": "teen",
     "stats": {
-      "satiety": 35.62472622962963,
+      "satiety": 32.35220490416667,
       "energy": 100,
-      "happiness": 99.13293203967591,
+      "happiness": 98.80567990712962,
       "social": 50
     },
     "mood": "ecstatic",
     "derived_state": {
-      "is_sleeping": false,
+      "is_sleeping": true,
       "is_ghost": false,
       "days_inactive": 0
     }
@@ -43,27 +43,27 @@
   },
   "temporal": {
     "timezone": "America/Chicago",
-    "local_timestamp": "2026-03-02T21:17:04.478437-06:00",
-    "local_date": "2026-03-02",
-    "local_hour": 21,
-    "time_of_day": "evening",
-    "time_of_day_transition": "afternoon_to_evening",
-    "hours_since_last_commit": 4.65,
-    "is_quiet_hours": false,
+    "local_timestamp": "2026-03-03T01:12:56.217148-06:00",
+    "local_date": "2026-03-03",
+    "local_hour": 1,
+    "time_of_day": "night",
+    "time_of_day_transition": "evening_to_night",
+    "hours_since_last_commit": 8.59,
+    "is_quiet_hours": true,
     "is_late_night_coding": false,
-    "inactive_overnight": false
+    "inactive_overnight": true
   },
   "image_state": {
-    "edit_count_since_reset": 5,
-    "total_edits_all_time": 164,
+    "edit_count_since_reset": 6,
+    "total_edits_all_time": 165,
     "last_reset_at": "2026-03-02T11:09:35Z",
     "reset_count": 27,
-    "last_counted_image_revision": "git_blob:df6d69fc1e24598b2e7e14a39440afbae70d0888",
+    "last_counted_image_revision": "git_blob:d4901dd9c674e271d50e6750d83e419211cf08c8",
     "current_stage_reference": ".codepet/stage_images/teen.png"
   },
   "regrounding": {
-    "should_reground": false,
-    "reason": null,
+    "should_reground": true,
+    "reason": "edit_threshold_reached",
     "threshold": 6
   },
   "evolution": {
