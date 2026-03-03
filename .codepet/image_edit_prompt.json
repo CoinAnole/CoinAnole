@@ -1,31 +1,21 @@
 {
-  "scene": "Teen Byte sleeping peacefully in cozy bed during deep night, food bowl now critically low on kibble",
+  "scene": "Teen Byte awake at his desk in morning golden-pink light, transition from night sleep to active morning, hungry but energetic",
   "subjects": [
     {
-      "description": "Byte in teen stage form: gangly proportions, fluffy texture, big expressive eyes closed in sleep",
-      "position": "centered in cozy bed on floor, nestled under soft blankets",
-      "action": "sleeping peacefully with three light blue Z symbols floating scattered above head"
+      "description": "Teen Byte with gangly proportions, big expressive eyes wide open and alert, blue-ish pixelated blob form with awkward teen limbs",
+      "position": "centered at desk in primary foreground",
+      "action": "sitting upright at laptop, head turned slightly toward the nearly-empty food bowl with playful awareness, alert and awake"
     },
     {
-      "description": "anchor environment: wooden desk with oversized laptop, Chicago skyline window showing twinkling city lights",
-      "position": "desk to the left, window behind showing night cityscape",
-      "action": "static environment with laptop screen dark, desk standing ready"
-    },
-    {
-      "description": "food bowl on floor with critically low kibble level, nearly empty",
-      "position": "on floor to the right of the bed",
-      "action": "single bowl showing almost no kibble remaining"
-    },
-    {
-      "description": "trophy shelf mounted on wall above desk",
-      "position": "wall space above desk",
-      "action": "golden 10-day streak trophy on left side, green plant friend on right side, clearly spaced"
+      "description": "anchor environment: wooden desk with oversized silver laptop open and screen aglow, Chicago skyline window behind with warm morning light",
+      "position": "room background with desk center stage, window showing city buildings",
+      "action": "static environment anchor with morning golden-pink lighting streaming through"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night darkness with purple-blue ambient glow, Chicago skyline twinkling through window like fallen stars",
-  "mood": "peaceful slumber with subtle hunger undertone, content but satiety critically low",
-  "background": "simple room with Chicago skyline window showing night city lights, trophy shelf above desk",
-  "composition": "Byte centered in bed as primary focus, desk and laptop to left, food bowl to right, window behind providing city light backdrop",
-  "color_palette": ["#2d1b4e", "#4a3b6b", "#87CEEB", "#d4a574", "#228B22", "#FFD700"]
+  "lighting": "golden-pink morning sunlight streaming through Chicago skyline window, warm and bright, transitioning from night",
+  "mood": "ecstatic and energetic but playfully aware of hunger, alert morning posture",
+  "background": "wooden trophy shelf above desk with golden 10-day trophy on left and green plant on right, nearly-empty food bowl visible on floor to the right, cozy bed tucked away or absent",
+  "composition": "Byte centered at desk, laptop prominent, window showing morning skyline, no Z's floating above",
+  "color_palette": ["#FFE4B5", "#FFB6C1", "#87CEEB", "#4A4A4A", "#DAA520"]
 }

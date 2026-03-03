@@ -5,38 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": {
-      "status": "pass",
-      "evidence": "Teen Byte form maintained: gangly proportions, fluffy texture, big eyes visible in sleeping pose. Silhouette matches expected teen morphology with elongated limbs."
-    },
-    "pixel_style": {
-      "status": "pass",
-      "evidence": "Clean pixel art preserved: 2D forms, dithered shading visible, readable silhouette maintained at 512x512 resolution. No painterly or photoreal drift detected."
-    },
-    "requested_changes_visible": {
-      "status": "pass",
-      "evidence": "Food bowl kibble level reduced from previous state - bowl now appears nearly empty matching 29% satiety (down from 32%). Sleeping pose with Z's maintained."
-    },
-    "artifact_free": {
-      "status": "pass",
-      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects visible. Clean render with coherent forms."
-    },
-    "prop_layout_integrity": {
-      "status": "pass",
-      "evidence": "Single food bowl positioned on floor to right of bed. Trophy shelf above desk with golden 10-day trophy on left, green plant on right - proper spacing maintained, no overlap. Single instances of all props."
-    },
-    "anchors_present": {
-      "status": "pass",
-      "evidence": "Desk with oversized laptop visible to left. Chicago skyline window showing twinkling city lights in background. All three anchor elements present and recognizable."
-    },
-    "temporal_mood_match": {
-      "status": "pass",
-      "evidence": "Deep night scene with purple-blue ambient glow matching 5 AM Chicago time. Sleeping Byte with floating Z's matches is_sleeping=true state. Content but hungry expression fitting satiety level."
-    },
-    "reground_cleanup": {
-      "status": "pass",
-      "evidence": "Normal mode - reground cleanup check not applicable. Incremental edit focused on single satiety change only."
-    }
+    "stage_identity": { "status": "pass", "evidence": "Teen Byte form maintained with gangly limbs, big expressive eyes, blue-ish blob appearance. Proportions consistent with teen stage anchor." },
+    "pixel_style": { "status": "pass", "evidence": "Clean 2D pixel art with dithered shading preserved. No painterly or photoreal drift detected." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is awake with wide open eyes, Z's removed. Morning golden-pink lighting visible through window. Transition from night to morning completed. Byte positioned at desk with laptop active." },
+    "artifact_free": { "status": "pass", "evidence": "No garbled text, floating glyphs, malformed anatomy, or smeared objects detected. Clean render." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy shelf: 1 golden trophy on left, 1 green plant on right, proper spacing. Food bowl: 1 instance on floor, nearly empty. All props single-instance as intended." },
+    "anchors_present": { "status": "pass", "evidence": "Desk present with oversized laptop, Chicago skyline window visible with morning light, Byte at primary foreground." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Morning lighting (golden-pink) matches temporal state. Byte awake and alert matches is_sleeping=false. Ecstatic mood reflected in wide eyes and upright posture." },
+    "reground_cleanup": { "status": "pass", "evidence": "Mode is normal, not re-ground. Check not applicable." }
   },
   "decision": "accept"
 }
