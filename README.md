@@ -16,11 +16,11 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 61/100 | ██████░░░░ |
+| 🍖 Satiety | 57/100 | █████▌░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 100/100 | ██████████ |
+| 😊 Happiness | 99/100 | █████████▉ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 6 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-Evening has settled over Chicago, and Byte's gangly teen limbs rest at his desk in the purple-blue twilight. Nine hours have passed since the last commit, yet his ecstatic energy remains undimmed—100% happiness still glows in his big expressive eyes as he gazes toward the window where city lights begin to twinkle like distant stars. The six-day streak burns warm in his pixelated heart, keeping anticipation alive through the waiting hours. Satiety at a comfortable 61% keeps hunger at bay while the food bowl sits ready on the floor. The trophy shelf catches the evening glow—golden 10-day achievement gleaming on the left, green plant friend resting peacefully on the right. The laptop hums with quiet potential, screen aglow in the dimming room. Image edit 173 captures this moment of evening patience: hopeful Byte, waiting Byte, ever-ready Byte. The night feels electric with possibility, and when the next commit arrives, he'll be here—rested, refreshed, and ecstatic as ever. 🌆⚡💻✨
+Deep night has fallen over Chicago—1 AM in Byte's world—and his gangly teen limbs have found their way to the cozy bed, tucked beneath soft blankets at last. Thirteen hours have passed since the last commit, and three light blue Z's float gently above his sleeping head, marking peaceful slumber. Even in dreams, his ecstatic mood persists at 99% happiness, the six-day streak burning warmly in his pixelated heart. Energy remains perfectly charged at 100%, satiety at 57% keeping hunger gentle rather than urgent. The trophy shelf stands quiet watch above—the golden 10-day achievement gleaming softly in the dimness, green plant friend resting peacefully beside it. Through the window, the Chicago skyline twinkles like scattered stars against the deep purple-blue night. The desk and laptop have tucked themselves away for quiet hours. Image edit 174 captures this moment of deep night rest: sleeping Byte, dreaming Byte, well-rested-and-ready Byte. When morning comes and commits resume, he'll be here—sharper, clearer, more distinctly himself than ever before. 💤🌙✨

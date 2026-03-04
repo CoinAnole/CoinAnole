@@ -1,21 +1,31 @@
 {
-  "scene": "Teen Byte in evening hours, transitioning from warm afternoon to purple-blue twilight, watching the Chicago skyline as city lights begin to twinkle",
+  "scene": "Teen Byte sleeping peacefully in a cozy bed at 1 AM deep night, three light blue Z's floating scattered above his head, room dimly lit by twinkling Chicago skyline",
   "subjects": [
     {
-      "description": "Teen-stage Byte with gangly proportions, big expressive eyes, blue-ish pixel blob form",
-      "position": "seated at desk center, body slightly turned toward the window",
-      "action": "gazing toward the Chicago skyline with hopeful anticipation, hands resting near laptop"
+      "description": "Teen stage Byte with gangly proportions, fluffy form, closed peaceful eyes, relaxed expression",
+      "position": "centered in cozy bed with soft blankets",
+      "action": "sleeping peacefully, body tucked under blankets, teen limbs relaxed"
     },
     {
-      "description": "anchor environment: wooden desk, oversized silver laptop, Chicago skyline window with evening city lights",
-      "position": "desk center stage, window behind and left",
-      "action": "static environment with laptop screen glowing softly"
+      "description": "Three light blue Z symbols floating in scattered formation above Byte's head",
+      "position": "above sleeping Byte at staggered heights",
+      "action": "gently floating to indicate deep sleep"
+    },
+    {
+      "description": "Cozy bed with soft blankets and pillow, teen-sized for gangly limbs",
+      "position": "replacing desk area, bed visible with Byte nestled inside",
+      "action": "cradling sleeping Byte comfortably"
+    },
+    {
+      "description": "Anchor environment: trophy shelf with golden 10-day trophy on left and green plant on right, food bowl on floor",
+      "position": "trophy shelf above, food bowl to right on floor, desk tucked away",
+      "action": "static room elements watching over sleeping Byte"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "evening purple-blue twilight streaming through window, warm interior glow from laptop screen, city lights twinkling in distance",
-  "mood": "ecstatic anticipation, peaceful evening waiting, optimistic patience",
-  "background": "wooden trophy shelf above desk with golden 10-day trophy on left and green plant on right, food bowl on floor to the right with moderate kibble, Chicago skyline visible through window with evening illumination",
-  "composition": "Byte centered at desk, skyline prominent through window, balanced prop placement with clear spacing",
-  "color_palette": ["#4A5568", "#805AD5", "#F6AD55", "#48BB78", "#ECC94B"]
+  "lighting": "deep night at 1 AM, dim room with purple-blue darkness, Chicago skyline twinkling through window like scattered stars, soft ambient glow from distant city lights",
+  "mood": "peaceful slumber, content and ecstatic even in dreams, tranquil night rest",
+  "background": "Room interior with Chicago skyline visible through window, buildings with twinkling lights against dark sky, trophy shelf with golden trophy left and green plant right, food bowl on floor to right, desk and laptop tucked away for quiet hours",
+  "composition": "Sleeping Byte centered in cozy bed, Z's floating above in scattered trio, deep night atmosphere with window showing twinkling skyline",
+  "color_palette": ["#1a1a2e", "#16213e", "#4a4e69", "#9a8c98", "#c9b037", "#5d8c5d", "#87CEEB"]
 }
