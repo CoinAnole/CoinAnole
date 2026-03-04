@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte sitting at his desk in afternoon light, waiting patiently for commits after 25 hours of inactivity, showing eager anticipation with a touch of hunger",
+  "scene": "Teen Byte actively coding at his desk during a productive afternoon session, typing energetically on the oversized laptop with an ecstatic expression and celebratory posture",
   "subjects": [
     {
-      "description": "Byte in teen stage form: gangly proportions, long limbs, big expressive eyes showing anticipation, slightly slumped posture from waiting, mouth in a hopeful expression",
-      "position": "center foreground at desk",
-      "action": "sitting with chin resting on hands, looking toward laptop with patient expectation"
+      "description": "Byte in teen stage form with gangly proportions, big expressive eyes wide with excitement, mouth curved in an ecstatic smile, fluffy rounded body with elongated limbs",
+      "position": "centered at desk, leaning slightly forward toward laptop",
+      "action": "both hands actively typing on laptop keyboard with energetic finger movement, body posture alert and engaged"
     },
     {
-      "description": "anchor environment: wooden desk, oversized silver laptop with glowing screen, Chicago skyline window with warm afternoon light streaming in",
-      "position": "room setup with desk center, window behind left",
-      "action": "static environment anchor"
+      "description": "anchor environment: wooden desk surface, oversized silver laptop with glowing screen, Chicago skyline visible through simple window behind",
+      "position": "desk center stage, window in background showing city buildings",
+      "action": "static environment anchor with laptop screen emitting soft glow"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm golden afternoon light transitioning from morning, brighter and more insistent than pale morning glow, streaming across desk from Chicago window",
-  "mood": "ecstatic but patient, hopeful anticipation, slight hunger awareness",
-  "background": "wooden trophy shelf above desk with golden 10-day trophy on left and green leafy plant on right, food bowl with moderate kibble on floor to right of desk, clear spacing between all props",
-  "composition": "Byte centered at desk, laptop open before him, skyline visible through window, shelf clearly above with balanced trophy and plant placement",
-  "color_palette": ["#F5E6C8", "#D4A574", "#8B9A6B", "#FFD700", "#87CEEB"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent with teen stage proportions",
+  "lighting": "warm golden afternoon sunlight streaming through Chicago window, bright and energetic illumination across desk and Byte",
+  "mood": "ecstatic and celebratory, seven-day streak energy, productive afternoon coding session",
+  "background": "wooden trophy shelf mounted on wall above desk with golden 10-day trophy on left side and green leafy plant on right side with clear spacing between them, food bowl with satisfying kibble portions on floor to right of desk",
+  "composition": "Byte centered at desk in primary foreground, laptop prominent and oversized relative to Byte, trophy shelf clearly visible above, window showing Chicago skyline in background",
+  "color_palette": ["#FFD700", "#4CAF50", "#8B4513", "#87CEEB", "#F4A460", "#E6E6FA"]
 }
