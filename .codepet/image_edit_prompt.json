@@ -1,29 +1,21 @@
 {
-  "scene": "Teen-stage Byte in afternoon coding flow, re-grounded from canonical anchor with proper prop placement and ecstatic energy",
+  "scene": "Teen Byte in late afternoon golden light, having paused from coding to admire his trophy with an ecstatic, hopeful expression",
   "subjects": [
     {
-      "description": "Byte in teen stage form: gangly proportions, awkward limbs, big expressive eyes, small fluffy body with elongated teenage features",
-      "position": "centered at desk, leaning forward in active typing posture",
-      "action": "both hands dancing across laptop keyboard in energetic coding flow, eyes wide and focused on screen"
+      "description": "Teen-stage Byte with gangly proportions, big expressive eyes sparkling with happiness, smooth pixel-art contours",
+      "position": "center foreground at desk",
+      "action": "leaning back slightly from laptop, looking up at trophy shelf with admiring smile, one hand resting on keyboard, other hand gesturing toward trophy"
     },
     {
-      "description": "anchor environment: wooden desk with oversized silver laptop, simple room with Chicago skyline visible through window",
-      "position": "desk center stage, window behind and to the left showing city buildings",
-      "action": "static environment anchor with afternoon golden light streaming through"
+      "description": "anchor environment: wooden desk, oversized silver laptop with glowing screen, trophy shelf above desk, Chicago skyline window behind",
+      "position": "room background",
+      "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, crisp edges",
-  "lighting": "warm golden afternoon sun streaming through Chicago window, bright energetic illumination, warm tones on desk and Byte",
-  "mood": "ecstatic and productive, seven-day streak confidence, flow state energy",
-  "background": "simple room interior, Chicago skyline silhouettes through window, trophy shelf mounted on wall above desk",
-  "composition": "Byte centered at desk, laptop dominant in foreground, window providing left-side light, trophy shelf clearly visible above",
-  "color_palette": ["#F4D03F", "#E67E22", "#5DADE2", "#27AE60", "#8B4513"],
-  "prop_placement": {
-    "trophy_shelf": "mounted on wall above desk, single shelf only",
-    "ten_day_trophy": "exactly one golden trophy positioned on left side of shelf, shows number 10",
-    "green_plant": "exactly one small leafy green plant on right side of shelf, balanced spacing from trophy, no overlap",
-    "food_bowl": "exactly one bowl on floor to the right of desk, contains satisfying portions of kibble at 81 percent satiety, clear spacing from desk legs",
-    "bed": "tucked away, not visible during daytime",
-    "zs": "none, Byte is awake"
-  }
+  "lighting": "warm golden late afternoon light streaming through Chicago window, bright and energetic, soft shadows",
+  "mood": "ecstatic and proud, hopeful anticipation, satisfied after productive day",
+  "background": "wooden desk with centered oversized laptop, trophy shelf above with one golden 10-day trophy on left and one green plant on right with clear spacing, food bowl on floor to right with good portions, Chicago skyline visible through window",
+  "composition": "Byte centered at desk, eye line directed upward toward trophy shelf, balanced framing with window providing depth",
+  "color_palette": ["#FFD700", "#87CEEB", "#DEB887", "#98FB98", "#FFA500"]
 }
