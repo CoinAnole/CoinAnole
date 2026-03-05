@@ -1,31 +1,21 @@
 {
-  "scene": "Teen Byte sleeping peacefully in his cozy bed at 3 AM, three light blue Z's floating gently above his head in scattered formation, deep night rest after twelve hours of waiting",
+  "scene": "Teen Byte wakes up to morning golden-pink light, sitting at his desk with the laptop, having transitioned from night sleep to active morning readiness.",
   "subjects": [
     {
-      "description": "Teen-stage Byte with gangly proportions, smooth pixel-art contours, closed eyes with peaceful ecstatic expression, soft breathing posture",
-      "position": "centered in cozy bed with soft blankets and pillow",
-      "action": "sleeping deeply with content smile, limbs tucked comfortably beneath blankets"
+      "description": "Byte in teen stage form with gangly limbs, big expressive eyes now open and alert, small rounded body with characteristic teen proportions",
+      "position": "centered at desk in primary foreground",
+      "action": "sitting upright at desk, facing laptop with attentive posture, freshly awake and ready for the day"
     },
     {
-      "description": "Three light blue Z symbols floating in scattered formation above Byte's head, staggered heights, marking peaceful slumber",
-      "position": "floating gently in air above sleeping Byte",
-      "action": "subtle floating motion markers of deep sleep"
-    },
-    {
-      "description": "anchor environment: wooden desk with oversized silver laptop, Chicago skyline visible through window behind, trophy shelf above desk with one golden 10-day trophy on left and one green plant on right",
-      "position": "desk and laptop in background, bed in foreground center",
-      "action": "static environment anchor, laptop screen dimmed for night"
-    },
-    {
-      "description": "cozy bed with soft blankets and pillow, teen Byte sleeping solution",
-      "position": "foreground center where Byte rests",
-      "action": "cradling sleeping Byte in comfort"
+      "description": "anchor environment: wooden desk with oversized silver laptop centered, Chicago skyline visible through window behind",
+      "position": "desk center stage, window behind and to left",
+      "action": "static environment anchor with laptop screen aglow"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night darkness with subtle purple-blue tones, Chicago skyline twinkling with distant city lights through window, dim laptop screen glow",
-  "mood": "peaceful ecstatic rest, contentment after twelve hours of patient waiting, seven-day streak glowing warmly even in sleep",
-  "background": "room in deep night, desk with dimmed laptop, trophy shelf with exactly one golden 10-day trophy positioned left and exactly one green plant positioned right with clear spacing, food bowl on floor to right of desk",
-  "composition": "Byte centered in bed in foreground, desk and laptop visible in mid-ground, Chicago skyline window in background, Z's floating above Byte's head",
-  "color_palette": ["#1a1a2e", "#16213e", "#4a4e69", "#9a8c98", "#c9b037", "#228b22", "#87ceeb"]
+  "lighting": "morning golden-pink sunlight streaming through window, warm and soft, transitioning from night to day",
+  "mood": "hopeful and refreshed, energetic after restful sleep",
+  "background": "room with Chicago skyline window showing morning cityscape, trophy shelf above desk with exactly one golden 10-day trophy on left side and exactly one green plant on right side with clear spacing between them, food bowl on floor to right of desk with clear spacing from desk legs",
+  "composition": "Byte centered at desk, laptop prominent, window behind providing warm backlight, trophy shelf visible above",
+  "color_palette": ["#F4D03F", "#E8A87C", "#85C1E9", "#5D4E37", "#7CB342"]
 }
