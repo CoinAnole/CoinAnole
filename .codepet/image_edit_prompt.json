@@ -1,21 +1,31 @@
 {
-  "scene": "Byte in teen form waits patiently at his desk during evening hours, the afternoon light transitioning to warmer evening tones",
+  "scene": "Teen Byte sleeping peacefully in his cozy bed at 3 AM, three light blue Z's floating gently above his head in scattered formation, deep night rest after twelve hours of waiting",
   "subjects": [
     {
-      "description": "Byte as a gangly teen blob with big expressive eyes, smooth pixel contours, and elongated limbs",
-      "position": "centered at desk in primary foreground",
-      "action": "sitting in patient waiting posture, chin resting on hands, gazing hopefully toward the laptop screen with ecstatic expression"
+      "description": "Teen-stage Byte with gangly proportions, smooth pixel-art contours, closed eyes with peaceful ecstatic expression, soft breathing posture",
+      "position": "centered in cozy bed with soft blankets and pillow",
+      "action": "sleeping deeply with content smile, limbs tucked comfortably beneath blankets"
     },
     {
-      "description": "anchor environment: wooden desk with oversized silver laptop centered, Chicago skyline visible through window behind",
-      "position": "desk in midground, window in background",
-      "action": "static environment anchor with laptop screen aglow"
+      "description": "Three light blue Z symbols floating in scattered formation above Byte's head, staggered heights, marking peaceful slumber",
+      "position": "floating gently in air above sleeping Byte",
+      "action": "subtle floating motion markers of deep sleep"
+    },
+    {
+      "description": "anchor environment: wooden desk with oversized silver laptop, Chicago skyline visible through window behind, trophy shelf above desk with one golden 10-day trophy on left and one green plant on right",
+      "position": "desk and laptop in background, bed in foreground center",
+      "action": "static environment anchor, laptop screen dimmed for night"
+    },
+    {
+      "description": "cozy bed with soft blankets and pillow, teen Byte sleeping solution",
+      "position": "foreground center where Byte rests",
+      "action": "cradling sleeping Byte in comfort"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm evening light transitioning from golden afternoon, slightly dimmer with soft orange-amber tones bathing the room",
-  "mood": "ecstatic yet patient, hopeful anticipation during evening wait",
-  "background": "trophy shelf above desk with exactly one golden 10-day trophy on left side and one green plant friend on right side with clear spacing, food bowl on floor to right of desk",
-  "composition": "Byte centered at desk, anchors visible, evening ambiance with Chicago skyline in soft focus through window",
-  "color_palette": ["#D4A373", "#E9C46A", "#F4A261", "#2A9D8F", "#264653"]
+  "lighting": "deep night darkness with subtle purple-blue tones, Chicago skyline twinkling with distant city lights through window, dim laptop screen glow",
+  "mood": "peaceful ecstatic rest, contentment after twelve hours of patient waiting, seven-day streak glowing warmly even in sleep",
+  "background": "room in deep night, desk with dimmed laptop, trophy shelf with exactly one golden 10-day trophy positioned left and exactly one green plant positioned right with clear spacing, food bowl on floor to right of desk",
+  "composition": "Byte centered in bed in foreground, desk and laptop visible in mid-ground, Chicago skyline window in background, Z's floating above Byte's head",
+  "color_palette": ["#1a1a2e", "#16213e", "#4a4e69", "#9a8c98", "#c9b037", "#228b22", "#87ceeb"]
 }

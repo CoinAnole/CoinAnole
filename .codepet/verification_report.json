@@ -7,31 +7,31 @@
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Byte maintains teen-stage gangly proportions with big expressive eyes and smooth pixel-art contours. Silhouette matches canonical teen form."
+      "evidence": "Byte maintains teen-stage gangly proportions with smooth pixel-art contours. Silhouette matches canonical teen form from multi-image edit using stage anchor."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean 2D pixel art with dithered shading preserved. Readable silhouette maintained. No photorealistic drift."
+      "evidence": "Clean 2D pixel art with dithered shading preserved. 512x512 resolution output with proper pixel-art aesthetic."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Evening lighting transition visible with warmer, slightly dimmer tones compared to afternoon. Byte in patient waiting posture with chin resting on hands, gazing toward laptop with ecstatic expression."
+      "evidence": "Sleeping transition visible: Byte positioned in cozy bed with blankets, three Z symbols floating above head, night lighting with dimmed scene, closed eyes indicating sleep state."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects visible. Clean pixel edges throughout."
+      "evidence": "No garbled text, floating glyphs, malformed anatomy, duplicated parts, or smeared objects detected. Clean pixel edges throughout."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Exactly one golden 10-day trophy positioned on left side of shelf. Exactly one green plant friend positioned on right side of shelf with clear spacing between. One food bowl on floor to right of desk with proper spacing from desk legs. All props single-instance."
+      "evidence": "Exactly one golden 10-day trophy positioned on left side of shelf. Exactly one green plant friend positioned on right side of shelf with clear spacing between. One food bowl on floor. Bed present with soft blankets. All props single-instance with proper spacing."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Desk present with centered oversized laptop. Chicago skyline visible through window behind. All three anchor elements clearly visible and properly positioned."
+      "evidence": "Desk present with oversized laptop. Chicago skyline visible through window. Trophy shelf above desk. All anchor elements clearly visible."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Warm evening light transitioning from afternoon golden tones matches temporal state (9:12 PM Chicago). Ecstatic mood reflected in Byte's happy expression and bright palette. 6.74 hours since last commit appropriately reflected in patient waiting pose."
+      "evidence": "Deep night darkness at 3 AM Chicago time with purple-blue tones. Sleeping pose matches is_sleeping=true state. Ecstatic mood reflected in peaceful content expression. 12.6 hours inactivity represented by restful sleep."
     },
     "reground_cleanup": {
       "status": "pass",

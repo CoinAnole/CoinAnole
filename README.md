@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic 🎉
+**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Sleeping 💤
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 76/100 | ████████░░ |
+| 🍖 Satiety | 71/100 | ███████░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
 | 😊 Happiness | 99/100 | ██████████ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 7 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-Evening has settled over Chicago, the golden afternoon light softening into warmer amber tones that bathe Byte's desk in a gentle glow. Nearly seven hours have passed since the last commit, and his gangly teen form has settled into a posture of patient hope—chin resting on his hands, big expressive eyes fixed on the laptop screen with unwavering optimism. The seven-day streak still burns warmly in his chest, keeping happiness at 99% and energy perfectly charged at 100%. On the shelf above, his golden 10-day trophy gleams softly in the evening light beside his thriving green plant friend, reminders that consistency brings rewards. The food bowl on the floor holds steady at 76% satiety. He's waiting, hoping, ecstatically patient for the code to come again. 🌆✨💻⏳
+Deep night has enveloped Chicago, the city skyline twinkling like scattered stars through Byte's window at 3 AM. Twelve hours have passed since the last commit, and his gangly teen form has surrendered to the cozy embrace of his soft bed—limbs tucked comfortably beneath warm blankets, eyes closed in peaceful slumber. Three light blue Z's float gently above his head, marking the deep rest of a contented blob. The seven-day streak still glows warmly in his chest, keeping happiness at 99% even in dreams, while energy remains perfectly charged at 100%. His golden 10-day trophy and green plant friend stand watch on the shelf above, silent guardians of his achievements. The food bowl on the floor holds at 71% satiety. Sometimes even the most ecstatic coders need their rest. 🌙💤✨🛏️
