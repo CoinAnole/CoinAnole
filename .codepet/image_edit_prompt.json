@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte in ecstatic active coding mode at the desk during warm afternoon light, fingers dancing across the keyboard after five fresh commits",
+  "scene": "Byte in teen form sits at the desk in warm afternoon light, relaxed and ecstatic, gazing toward the Chicago skyline with a contented expression after a long quiet day",
   "subjects": [
     {
-      "description": "Byte, a gangly teen pixel blob with big bright expressive eyes wide open in ecstatic focus, body leaning forward with energy",
-      "position": "center foreground seated at desk",
-      "action": "typing rapidly on the oversized laptop keyboard, both hands moving with purpose, slight forward lean conveying flow state excitement"
+      "description": "Byte as a teen-stage pixel art blob: gangly proportioned limbs, large expressive eyes wide open with a bright ecstatic gleam, rounded body slightly taller and leaner than baby stage, warm color palette",
+      "position": "primary foreground, seated at center desk",
+      "action": "resting one arm lightly on desk surface, head turned slightly toward the window with a calm satisfied look, not typing but relaxed and content"
     },
     {
-      "description": "wooden desk with oversized silver laptop open, trophy shelf on wall above desk with exactly one golden trophy on left and one small green plant on right, food bowl on floor to the right of desk",
-      "position": "desk centered, shelf above, bowl on floor with clear spacing from desk legs",
+      "description": "wooden desk center stage, oversized silver laptop open with glowing screen facing Byte, Chicago skyline visible through simple window to the upper left with warm afternoon golden light streaming in",
+      "position": "room background anchor",
       "action": "static environment anchor"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm golden afternoon sunlight streaming through the window, bright and cheerful mid-afternoon tone",
-  "mood": "ecstatic and electric, peak coding flow state, celebratory energy radiating from posture",
-  "background": "simple room, Chicago skyline visible through window with warm afternoon golden light, trophy shelf with one golden trophy left and one green plant right, food bowl on floor right side",
-  "composition": "Byte centered at desk in active typing pose, laptop in foreground, skyline window behind, shelf above",
-  "color_palette": ["#FFD700", "#4A90E2", "#7BC67E", "#F5A623", "#8B6914"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, soft warm tones",
+  "lighting": "warm golden afternoon sunlight streaming through the Chicago window, casting soft highlights on the desk and Byte",
+  "mood": "ecstatic and serene — bright eyes, relaxed posture, subtle smile, day off from coding but content",
+  "background": "wooden trophy shelf mounted on wall above desk with exactly one golden trophy on the left side and exactly one small leafy green plant on the right side with clear spacing between them; exactly one food bowl on the floor to the right of the desk with moderate kibble portions and clear gap from desk legs; no other props",
+  "composition": "Byte centered at desk, laptop open in front, trophy shelf visible above, food bowl visible on floor to right, Chicago skyline window upper background",
+  "color_palette": ["#F5D06E", "#B8864E", "#7CB87C", "#4A90C8", "#F5E6C8"]
 }
