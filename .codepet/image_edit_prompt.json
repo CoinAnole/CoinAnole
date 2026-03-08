@@ -1,21 +1,21 @@
 {
-  "scene": "Byte in teen form sits at the desk in warm afternoon light, relaxed and ecstatic, gazing toward the Chicago skyline with a contented expression after a long quiet day",
+  "scene": "Teen blob Byte sits at desk in warm golden afternoon light, turning head upward to admire the trophy shelf while the laptop waits open beside them",
   "subjects": [
     {
-      "description": "Byte as a teen-stage pixel art blob: gangly proportioned limbs, large expressive eyes wide open with a bright ecstatic gleam, rounded body slightly taller and leaner than baby stage, warm color palette",
-      "position": "primary foreground, seated at center desk",
-      "action": "resting one arm lightly on desk surface, head turned slightly toward the window with a calm satisfied look, not typing but relaxed and content"
+      "description": "Byte, a small round blue blob with gangly teen limbs, big expressive eyes, sitting upright on a chair",
+      "position": "primary foreground center, seated at desk",
+      "action": "head tilted upward, eyes gazing admiringly at the trophy shelf above, one hand resting on desk near laptop keyboard"
     },
     {
-      "description": "wooden desk center stage, oversized silver laptop open with glowing screen facing Byte, Chicago skyline visible through simple window to the upper left with warm afternoon golden light streaming in",
-      "position": "room background anchor",
-      "action": "static environment anchor"
+      "description": "wooden desk with oversized silver laptop open, Chicago skyline visible through a simple window to the left",
+      "position": "mid-ground room anchor",
+      "action": "static environment anchor, laptop screen softly glowing"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, soft warm tones",
-  "lighting": "warm golden afternoon sunlight streaming through the Chicago window, casting soft highlights on the desk and Byte",
-  "mood": "ecstatic and serene — bright eyes, relaxed posture, subtle smile, day off from coding but content",
-  "background": "wooden trophy shelf mounted on wall above desk with exactly one golden trophy on the left side and exactly one small leafy green plant on the right side with clear spacing between them; exactly one food bowl on the floor to the right of the desk with moderate kibble portions and clear gap from desk legs; no other props",
-  "composition": "Byte centered at desk, laptop open in front, trophy shelf visible above, food bowl visible on floor to right, Chicago skyline window upper background",
-  "color_palette": ["#F5D06E", "#B8864E", "#7CB87C", "#4A90C8", "#F5E6C8"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "warm golden afternoon sunlight streaming through the window, casting soft warm tones across the room and desk",
+  "mood": "ecstatic admiration and patient pride, upward gaze conveying pride in achievement",
+  "background": "trophy shelf on wall above desk with exactly one golden trophy on the left and exactly one small green plant on the right, clearly spaced apart; exactly one food bowl on the floor to the right of the desk with moderate kibble",
+  "composition": "Byte centered at desk facing viewer slightly, head angled up toward shelf; shelf visible in upper area; window with Chicago skyline to the left; food bowl on floor lower right",
+  "color_palette": ["#89C4E1", "#F5C842", "#8B5E3C", "#4A9E6B", "#F0A050"]
 }
