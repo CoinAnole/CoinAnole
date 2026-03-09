@@ -1,21 +1,21 @@
 {
-  "scene": "Teen blob Byte sits at desk in warm golden afternoon light, turning head upward to admire the trophy shelf while the laptop waits open beside them",
+  "scene": "Teen Byte sits at desk late Sunday night, gazing toward the Chicago skyline window with calm ecstatic energy, laptop glowing softly beside them",
   "subjects": [
     {
-      "description": "Byte, a small round blue blob with gangly teen limbs, big expressive eyes, sitting upright on a chair",
-      "position": "primary foreground center, seated at desk",
-      "action": "head tilted upward, eyes gazing admiringly at the trophy shelf above, one hand resting on desk near laptop keyboard"
+      "description": "Byte, a rounded blue teen-stage pixel art blob with gangly limbs, big expressive eyes, slight smile, sitting upright at desk with head turned toward the window",
+      "position": "primary foreground, centered at desk",
+      "action": "gazing at the Chicago night skyline with quiet wonder, one arm resting on the desk"
     },
     {
-      "description": "wooden desk with oversized silver laptop open, Chicago skyline visible through a simple window to the left",
-      "position": "mid-ground room anchor",
-      "action": "static environment anchor, laptop screen softly glowing"
+      "description": "wooden desk with oversized silver laptop open, Chicago skyline window behind-left showing dark sky with glowing city lights, trophy shelf above with one golden trophy on the left and one small green plant on the right",
+      "position": "room background and desk",
+      "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm golden afternoon sunlight streaming through the window, casting soft warm tones across the room and desk",
-  "mood": "ecstatic admiration and patient pride, upward gaze conveying pride in achievement",
-  "background": "trophy shelf on wall above desk with exactly one golden trophy on the left and exactly one small green plant on the right, clearly spaced apart; exactly one food bowl on the floor to the right of the desk with moderate kibble",
-  "composition": "Byte centered at desk facing viewer slightly, head angled up toward shelf; shelf visible in upper area; window with Chicago skyline to the left; food bowl on floor lower right",
-  "color_palette": ["#89C4E1", "#F5C842", "#8B5E3C", "#4A9E6B", "#F0A050"]
+  "lighting": "late night interior, deep blue-black sky outside window with twinkling city building lights, warm laptop screen glow illuminating desk and Byte from the front, dim ambient room light",
+  "mood": "calm ecstatic wonder, peaceful anticipation, late-night quiet energy",
+  "background": "trophy shelf above desk with exactly one golden 10-day trophy on the left and exactly one leafy green plant on the right with clear spacing between them, food bowl on floor to the right of the desk with moderate kibble, Chicago night skyline visible through window",
+  "composition": "Byte centered at desk, head and body slightly angled toward the window, oversized laptop open on desk, trophy shelf clearly visible above, skyline window in background",
+  "color_palette": ["#1a1a2e", "#2d4a8a", "#5b8dd9", "#f5d76e", "#4caf50", "#e8c97a"]
 }

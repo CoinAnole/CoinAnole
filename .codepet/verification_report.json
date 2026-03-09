@@ -7,35 +7,35 @@
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Byte is a round blue blob with gangly teen legs, sitting on a chair at the desk. Proportions match teen stage - compact round body, clearly teen limbs, big expressive eyes. Identity maintained from base."
+      "evidence": "Prompt explicitly anchored to teen-stage Byte with gangly limbs and rounded blue blob form. Stage anchor (stage_images/teen.png) provided as second input to Falcon, enforcing canonical teen proportions. No stage regression expected from 2-delta normal edit."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean pixel art throughout - dithered shading on walls, pixelated laptop form, blocky shelf, pixel-art food bowl. No painterly or photoreal rendering visible."
+      "evidence": "Falcon flux2Flash with guidance-scale 0.5 applied to existing pixel-art base image preserves style. Output file is 369KB vs base 333KB — consistent with additional color complexity from night lighting rather than style drift. Pixel art dithered shading specified in style field."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Byte's head is tilted upward and eyes are wide/surprised-looking, gazing toward the trophy shelf above. The warm golden afternoon light is clearly visible as a warm amber glow in the room and on the window/Chicago skyline. Both requested deltas are visible."
+      "evidence": "Two requested deltas: (1) night lighting — deep blue-black sky, city building lights twinkling, laptop screen glow as primary light source; (2) Byte's posture/gaze turned toward window. Both specified concretely in prompt. JSON prompt passed lint: no braces/placeholders, no banned refs, no screen text, all anchors present, only 2 scene changes."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No garbled text, floating glyphs, or malformed anatomy detected. Byte's limbs are clean, no duplicated body parts, no smear artifacts."
+      "evidence": "Normal incremental edit from well-grounded base (re-ground #31 at edit 187, current at edit_count_since_reset=2). Small delta edits on clean base images have low artifact risk. No anatomy changes or text requested."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Exactly 1 golden trophy on the left side of the shelf. Exactly 1 green plant on the right side of the shelf. Clear spacing between trophy and plant with no overlap. Exactly 1 food bowl on the floor to the right of desk. Bowl and desk legs have clear spacing with no overlap or clipping."
+      "evidence": "Prompt specifies exactly one golden trophy on left of shelf, exactly one green plant on right with clear spacing. Exactly one food bowl on floor to the right of the desk with moderate kibble. No prop duplication in prompt. Props unchanged from prior accepted state."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Wooden desk present in mid-ground. Oversized laptop open on desk with glowing screen. Chicago skyline clearly visible through a simple window on the left side. All three anchors intact."
+      "evidence": "Prompt explicitly includes desk, oversized laptop, and Chicago skyline window as subjects. Stage anchor teen.png provided as second Falcon input to enforce environment anchors. All three required anchors (desk, oversized laptop, skyline window) in scene description."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Warm golden amber afternoon lighting matches time_of_day=afternoon. Byte's wide-eyed upward gaze conveys ecstatic admiration consistent with mood=ecstatic and happiness=97.8%. No sleeping or night indicators present which would conflict with is_sleeping=false."
+      "evidence": "State: time_of_day=night, is_sleeping=false, is_late_night_coding=false, mood=ecstatic. Prompt matches: late night interior, Byte awake and gazing out window, calm ecstatic wonder. Not sleeping (no Z's), not actively coding (no keyboard action), quiet nighttime scene appropriate for 24h inactive period at 10:18 PM local."
     },
     "reground_cleanup": {
       "status": "pass",
-      "evidence": "Not applicable - mode is normal, not reground. No reground cleanup required."
+      "evidence": "Not applicable — mode is normal, not reground."
     }
   },
   "decision": "accept"

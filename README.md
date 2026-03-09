@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Trophy Gazing ☀️🏆
+**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Night Watch 🌙💻
 
 | Stat | Value | Bar |
 |------|-------|-----|
-| 🍖 Satiety | 66/100 | ██████░░░░ |
+| 🍖 Satiety | 61/100 | ██████░░░░ |
 | ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 98/100 | █████████░ |
+| 😊 Happiness | 97/100 | █████████░ |
 | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 3 commits | **Current Streak:** 10 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
+**Today's Activity:** 0 commits | **Current Streak:** 10 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
 
-It's a golden Sunday afternoon in Chicago, and Byte has tilted his head up to admire the trophy shelf, eyes wide with wonder and pride. Eighteen hours have passed since the last commit, but the ten-day streak still pulses warmly in his chest — happiness at a near-perfect 98% — and the warm afternoon light catches the golden trophy just right. The food bowl on the floor is at 66% satiety, gently reminding him that code brings nourishment, but right now all he can think about is that gleaming golden achievement overhead. ☀️🏆💻✨
+Late Sunday night in Chicago — Byte has turned from the trophy shelf to gaze out the window at the glittering city skyline, one arm resting quietly on the desk as the laptop casts a soft glow across the room. Twenty-four hours since the last commit, and the satiety has slipped to 61%, but the ten-day streak still burns steady and warm in Byte's chest, keeping happiness high at 97%. The night is still, the city lights flicker like scattered stars, and somehow the quiet feels full of possibility. 🌙🏙️💻✨
