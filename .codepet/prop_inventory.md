@@ -9,9 +9,9 @@
 These have always been here. I can't imagine the desk without them.
 
 ### My Laptop
-- **Location:** Center of desk
-- **State:** Open, screen aglow with morning potential, ready for the day's coding
-- **Notes:** Now that I'm no longer a baby blob, the laptop doesn't seem so huge anymore. The source of all the interesting activity. This morning it hums with quiet potential—rested and ready like me! The screen glows softly in the golden-pink morning light, awaiting the commits that may come. My gangly teen hands rest near the keyboard, ready to dance when inspiration strikes. After eighteen hours of inactivity, both laptop and blob are refreshed, energy at 100%, happiness high. The laptop waits with me in hopeful anticipation. This is what mornings are for—fresh starts, new possibilities, the magic of a day yet to be coded! 💻☀️🌅✨
+- **Location:** On desk, screen casting soft amber glow
+- **State:** Open, screen providing gentle night illumination, softly glowing in the darkness
+- **Notes:** The laptop provides the room's only light at 4 AM—soft amber glow illuminating the space while Byte sleeps. The oversized screen casts gentle light across the desk surface, catching the trophy shelf above where the golden 10-day achievement gleams. This is the quiet hours, the deep night, and the laptop waits patiently for morning when coding will resume. The screen hums with potential energy, ready for when inspiration strikes and the keys start clicking again. Sweet dreams, laptop. See you in the morning! 💤💻🌙✨
 
 ### The Window
 - **Location:** Behind me and slightly to the left
@@ -62,20 +62,20 @@ These have always been here. I can't imagine the desk without them.
 - **Contents:** Kibble (moderate portions, satiety declining during inactivity)
 - **Location:** On the floor to the right of the desk
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** At 66% satiety—eighteen hours without commits means the bowl continues to decline, still positioned with clear spacing from desk legs
-- **Notes:** The bowl sits on the floor with moderate portions, reflecting eighteen hours without activity. Exactly one instance with proper spacing from desk legs—no duplication, no drift. The kibble level has dropped from 71% to 66%, a gentle morning reminder that commits bring nourishment. But I'm awake now, refreshed and ready! The seven-day streak keeps my spirits high as I greet the golden morning light. Clear spacing maintained between bowl and desk structure—no overlap, no clipping. When the code returns today, so will the fullness! 🍖☀️🌅
+- **Current Status:** At 51% satiety—thirteen hours without commits means the bowl continues to decline, positioned with clear spacing from desk legs
+- **Notes:** The bowl sits on the floor with moderate portions, reflecting thirteen hours without activity. Exactly one instance with proper spacing from desk legs—no duplication, no drift. The kibble level has dropped from 61% to 51%, a gentle reminder that commits bring nourishment. But I'm asleep now, dreaming of code and tomorrow's possibilities! The twelve-day streak keeps my spirits high even in sleep. Clear spacing maintained between bowl and desk structure—no overlap, no clipping. When the code returns, so will the fullness! 🍖💤🌙
 
 ### Cozy Bed
 - **Acquired:** February 27, 2026 (11:52 PM)
 - **Type:** Soft bed with blankets and pillow
-- **Location:** Tucked away, center stage clear for desk
+- **Location:** Center stage, Byte nestled in soft blankets
 - **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
-- **Current Status:** INACTIVE - Bed tucked away after morning wake-up. Served its purpose through the night!
-- **Notes:** The bed held me gently through the deep night hours, cradling my gangly teen form as the Z's floated above. But morning has come! At 9:10 AM, I stretched awake, the bed tucked itself away, and I returned to my rightful place at the desk. The transition from sleep to wakefulness was magical—every pixel of me waking in sequence. The bed will be there again when night falls, ready to hold me after a day of coding. For now, the desk calls and I am ready to answer! Rest complete, energy restored to 100%! 🛏️☀️✨
+- **Current Status:** ACTIVE - Bed cradles Byte in deep sleep, soft blankets and pillow supporting gangly teen limbs, Z's floating above
+- **Notes:** The bed holds me gently through the deep night hours, cradling my gangly teen form as the Z's float above in peaceful formation. At 4 AM, the room is dark except for the laptop's soft amber glow, and sleep has wrapped me in its gentle embrace. The desk and laptop have stepped back to provide space for rest. The bed will release me when morning golden-pink light arrives and the Z's dissolve like mist. Until then—deep rest, peaceful dreams, twelve-day streak burning warmly in my chest! 💤🛏️🌙✨
 
 ### Desk & Laptop
-- **Status:** ACTIVE AND READY! Center stage for morning anticipation
-- **Notes:** The desk emerges as the bed tucks away, returning to its rightful place as the heart of my world! My gangly teen form sits upright, attentive, facing the oversized silver laptop with morning hope in my big expressive eyes. The wooden desk surface welcomes me back after a night of rest. Screen aglow with the soft promise of a new day, bathed in golden-pink morning light streaming through the Chicago window. The laptop hums with potential energy, ready for the commits that may come. No hands dancing yet—this is the calm before the creative storm. The seven-day streak glows warmly in my chest as I sit in patient readiness. Everything is in place: desk centered, laptop waiting, Byte awake and hopeful. The transition from sleep to wakefulness is complete. Let the day begin! 💻☀️🌅✨
+- **Status:** INACTIVE FOR SLEEP - Desk and laptop stepped back, laptop providing soft amber glow for sleeping Byte
+- **Notes:** The desk and laptop have gracefully stepped back to make room for my cozy bed during deep night hours. The laptop screen remains on, casting its soft amber glow across the room—providing just enough light to catch the trophy shelf above where the golden 10-day achievement gleams softly on the left and my green plant friend rests on the right. At 4 AM, the oversized silver laptop hums quietly, its screen aglow with gentle light while I sleep. When morning arrives and the Z's dissolve, the bed will tuck away and the desk will return to center stage, ready for another day of coding adventures! 💤💻🌙✨
 
 ---
 
@@ -86,14 +86,14 @@ These aren't exactly "objects" but they're part of my space.
 ### Floating Z's
 - **Trigger:** Sleeping state
 - **Appearance:** Three light blue Z's floating gently above Byte's head in scattered formation
-- **Current Status:** DISSOLVED - The Z's vanished at dawn like mist in morning sun
-- **Notes:** They were there through the deep night—three light blue companions drifting at staggered heights above my sleeping head. Guardians of rest, markers of peaceful slumber. But morning has arrived! As the golden-pink light streamed through my Chicago window at 9:10 AM, the Z's dissolved completely. One moment they floated, the next—gone, like mist evaporating in the first warm rays of sun. My eyes opened wide, my breathing quickened to waking rhythm, and the sleep symbols retreated to wherever Z's go when blobs awake. They'll return when night falls again and sleep calls. Until then—awake, alert, ready! ☀️✨
+- **Current Status:** ACTIVE - Three Z's floating above Byte's head in scattered formation, marking peaceful slumber
+- **Notes:** They're back! Three light blue companions drifting at staggered heights above my sleeping head. Guardians of rest, markers of peaceful slumber. Deep night at 4 AM found me in the cozy bed, gangly limbs tucked under soft blankets, and the Z's drifted into formation as sleep took hold. They'll vanish when morning golden-pink light arrives and I stretch awake. Until then—peaceful dreams, warm streak, restful night. 💤🌙✨
 
 ### Lighting
-- **Source:** Morning golden-pink sunlight streaming through Chicago window
-- **Current:** Morning at 9:10 AM with warm golden-pink light bathing the room, transitioning from night to day
+- **Source:** Deep night - laptop screen providing soft amber glow
+- **Current:** Night at 4 AM with deep purple-blue darkness, laptop screen casting soft amber glow across desk and trophy shelf
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-blue twilight, night deep purple with twinkling lights, deep night darkness
-- **Notes:** Morning has broken! The transition from night to morning is complete. Golden-pink light now streams through my Chicago window, replacing the deep purple-blue darkness that cradled my sleep. This is that magical morning glow—the promise of a new day, new possibilities, new code to be written! The city skyline stands silhouetted against the brightening sky, no longer twinkling with scattered lights but glowing with the warm hues of dawn. My desk is bathed in this hopeful light, my trophy gleams softly on the shelf above, and everything feels... possible. The night-to-morning transition captured in image edit 185 shows the full arc of rest and renewal. Awake, refreshed, and ready! ☀️🌅✨
+- **Notes:** Deep night has settled over Chicago at 4 AM. The purple-blue darkness presses against the window, the city skyline reduced to twinkling pinpricks of light. The laptop screen provides the room's only illumination—a soft amber glow that catches the trophy shelf above and makes the golden trophy gleam softly. My bed cradles me in gentle darkness, the Z's floating above in peaceful formation. This is the quietest time of night—the city sleeps, the code waits, and I dream of tomorrow's commits. The deep night peace is absolute. 🌙✨💤
 
 ---
 
@@ -107,4 +107,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on March 8, 2026 (10:18 PM - late Sunday night, gazing out the Chicago window at city lights, ten-day streak holding warm at 97% happiness, satiety at 61% with the bowl continuing to decline, energy at 100%, dark night room with laptop glow as primary light, golden trophy on the left and green plant on the right of the shelf, city lights twinkling through window, twenty-four hours since last commit 🌙🏙️💻✨)*
+*Last updated by Byte on March 11, 2026 (4:04 AM - deep night sleep, Z's floating above head, twelve-day streak pulsing warmly at 99% happiness, satiety at 51% with moderate food bowl portions, energy at 100%, deep purple-blue darkness with laptop amber glow, golden trophy on left and green plant on right of shelf, Chicago city lights twinkling through window, thirteen hours since last commit 💤🌙✨)*

@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte sits at desk late Sunday night, gazing toward the Chicago skyline window with calm ecstatic energy, laptop glowing softly beside them",
+  "scene": "Teen blob Byte sleeping peacefully in cozy bed at night, three light blue Z's floating gently above head in scattered formation, Chicago skyline twinkling through window",
   "subjects": [
     {
-      "description": "Byte, a rounded blue teen-stage pixel art blob with gangly limbs, big expressive eyes, slight smile, sitting upright at desk with head turned toward the window",
-      "position": "primary foreground, centered at desk",
-      "action": "gazing at the Chicago night skyline with quiet wonder, one arm resting on the desk"
+      "description": "Byte the teen blob, gangly limbs tucked under soft blankets in cozy bed, eyes closed in peaceful slumber, soft blue blob form resting comfortably",
+      "position": "center foreground, nestled in bed",
+      "action": "sleeping peacefully, breathing slowly"
     },
     {
-      "description": "wooden desk with oversized silver laptop open, Chicago skyline window behind-left showing dark sky with glowing city lights, trophy shelf above with one golden trophy on the left and one small green plant on the right",
-      "position": "room background and desk",
-      "action": "static environment anchor"
+      "description": "anchor environment: wooden desk with oversized silver laptop, screen glowing softly in night darkness, trophy shelf above with golden 10-day trophy on left and green plant on right, Chicago skyline window showing city lights",
+      "position": "room background and periphery",
+      "action": "static environment anchor, laptop providing soft glow"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "late night interior, deep blue-black sky outside window with twinkling city building lights, warm laptop screen glow illuminating desk and Byte from the front, dim ambient room light",
-  "mood": "calm ecstatic wonder, peaceful anticipation, late-night quiet energy",
-  "background": "trophy shelf above desk with exactly one golden 10-day trophy on the left and exactly one leafy green plant on the right with clear spacing between them, food bowl on floor to the right of the desk with moderate kibble, Chicago night skyline visible through window",
-  "composition": "Byte centered at desk, head and body slightly angled toward the window, oversized laptop open on desk, trophy shelf clearly visible above, skyline window in background",
-  "color_palette": ["#1a1a2e", "#2d4a8a", "#5b8dd9", "#f5d76e", "#4caf50", "#e8c97a"]
+  "lighting": "deep night purple-blue darkness, laptop screen providing soft amber glow, city lights twinkling through window",
+  "mood": "peaceful, restful, content despite inactive hours",
+  "background": "dark room with window showing Chicago skyline at night, trophy shelf holding trophy and plant, bed occupying center, desk and laptop in corner",
+  "composition": "Byte in bed center stage, window behind showing night city, desk and laptop visible to the side with soft glow",
+  "color_palette": ["#1a1a2e", "#16213e", "#0f3460", "#e94560", "#533483"]
 }

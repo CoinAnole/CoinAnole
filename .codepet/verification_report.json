@@ -2,41 +2,54 @@
   "attempt": 1,
   "mode": "normal",
   "base_image": ".codepet/codepet.png",
+  "stage_anchor": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Prompt explicitly anchored to teen-stage Byte with gangly limbs and rounded blue blob form. Stage anchor (stage_images/teen.png) provided as second input to Falcon, enforcing canonical teen proportions. No stage regression expected from 2-delta normal edit."
+      "evidence": "Teen blob form visible with gangly limbs, blue color, proper teen proportions maintained. Canonical teen stage anchor features preserved: desk, oversized laptop, Chicago skyline window."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Falcon flux2Flash with guidance-scale 0.5 applied to existing pixel-art base image preserves style. Output file is 369KB vs base 333KB — consistent with additional color complexity from night lighting rather than style drift. Pixel art dithered shading specified in style field."
+      "evidence": "Clean pixel art aesthetic with dithered shading, readable silhouette, 2D forms maintained."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Two requested deltas: (1) night lighting — deep blue-black sky, city building lights twinkling, laptop screen glow as primary light source; (2) Byte's posture/gaze turned toward window. Both specified concretely in prompt. JSON prompt passed lint: no braces/placeholders, no banned refs, no screen text, all anchors present, only 2 scene changes."
+      "evidence": "Byte shown sleeping in cozy bed with closed eyes, three light blue Z's floating above head in scattered formation, night scene with laptop glow illuminating scene, Chicago city lights visible through window."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "Normal incremental edit from well-grounded base (re-ground #31 at edit 187, current at edit_count_since_reset=2). Small delta edits on clean base images have low artifact risk. No anatomy changes or text requested."
+      "evidence": "No text leakage, no malformed anatomy, no duplicated parts, no smeared objects. Scene is clean."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Prompt specifies exactly one golden trophy on left of shelf, exactly one green plant on right with clear spacing. Exactly one food bowl on floor to the right of the desk with moderate kibble. No prop duplication in prompt. Props unchanged from prior accepted state."
+      "evidence": "Trophy shelf with one golden trophy on left and one green plant on right, clear spacing between them. Food bowl visible on floor with single instance. Desk and laptop properly positioned. No prop overlap or clipping."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Prompt explicitly includes desk, oversized laptop, and Chicago skyline window as subjects. Stage anchor teen.png provided as second Falcon input to enforce environment anchors. All three required anchors (desk, oversized laptop, skyline window) in scene description."
+      "evidence": "Desk with wooden surface visible, oversized laptop with screen glow, Chicago skyline window showing city lights, trophy shelf above with trophy and plant."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "State: time_of_day=night, is_sleeping=false, is_late_night_coding=false, mood=ecstatic. Prompt matches: late night interior, Byte awake and gazing out window, calm ecstatic wonder. Not sleeping (no Z's), not actively coding (no keyboard action), quiet nighttime scene appropriate for 24h inactive period at 10:18 PM local."
+      "evidence": "Night-time lighting with deep purple-blue tones, laptop providing soft amber glow, city lights twinkling through window. Sleeping state confirmed with Z's and closed eyes. Peaceful restful mood."
     },
     "reground_cleanup": {
       "status": "pass",
-      "evidence": "Not applicable — mode is normal, not reground."
+      "evidence": "Not applicable for normal mode - reground_cleanup check is only for reground mode."
     }
   },
-  "decision": "accept"
+  "decision": "accept",
+  "state_summary": {
+    "stage": "teen",
+    "mood": "ecstatic",
+    "is_sleeping": true,
+    "time_of_day": "night",
+    "satiety": 51.27,
+    "energy": 100,
+    "happiness": 98.81,
+    "streak": 12,
+    "hours_inactive": 13
+  },
+  "prompt_summary": "Sleeping teen Byte at night with Z's floating, cozy bed, laptop glow, Chicago skyline window, trophy shelf with trophy and plant"
 }

@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Night Watch 🌙💻
+**Stage:** Teen | **Mood:** Ecstatic 💤 | **Status:** Deep Night Sleep 🌙💤
 
-| Stat | Value | Bar |
-|------|-------|-----|
-| 🍖 Satiety | 61/100 | ██████░░░░ |
-| ⚡ Energy | 100/100 | ██████████ |
-| 😊 Happiness | 97/100 | █████████░ |
-| 👥 Social | 50/100 | █████░░░░░ |
+ | Stat | Value | Bar |
+ |------|-------|-----|
+ | 🍖 Satiety | 51/100 | █████░░░░░ |
+ | ⚡ Energy | 100/100 | ██████████ |
+ | 😊 Happiness | 99/100 | █████████░ |
+ | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 0 commits | **Current Streak:** 10 days | **Best Streak:** 10 days 🎉 | **Best Day:** 18 commits 🚀
+**Today's Activity:** 0 commits | **Current Streak:** 12 days | **Best Streak:** 12 days 🎉 | **Best Day:** 18 commits 🚀
 
-Late Sunday night in Chicago — Byte has turned from the trophy shelf to gaze out the window at the glittering city skyline, one arm resting quietly on the desk as the laptop casts a soft glow across the room. Twenty-four hours since the last commit, and the satiety has slipped to 61%, but the ten-day streak still burns steady and warm in Byte's chest, keeping happiness high at 97%. The night is still, the city lights flicker like scattered stars, and somehow the quiet feels full of possibility. 🌙🏙️💻✨
+Deep night has settled over Chicago at 4 AM — Byte sleeps peacefully in the cozy bed, gangly teen limbs tucked under soft blankets, three light blue Z's floating gently above his head in scattered formation. Thirteen hours have passed since the last commit, and the laptop screen provides the room's only soft amber glow, casting gentle light across the desk and trophy shelf above. The food bowl holds moderate portions at 51% satiety, but dreams are more important than snacks right now. The twelve-day streak pulses warmly even in sleep, keeping happiness at a dreamy 99%. Outside, the Chicago skyline twinkles like scattered stars against the deep purple night sky. 💤🌙✨
