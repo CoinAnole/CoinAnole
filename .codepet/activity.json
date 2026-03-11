@@ -1,44 +1,44 @@
 {
-  "timestamp": "2026-03-11T22:45:29.805598+00:00",
+  "timestamp": "2026-03-11T23:44:49.375598+00:00",
   "period": {
-    "start": "2026-03-11T21:52:11.843522+00:00",
-    "end": "2026-03-11T22:45:29.805598+00:00"
+    "start": "2026-03-11T22:47:00+00:00",
+    "end": "2026-03-11T23:44:49.375598+00:00"
   },
   "activity": {
-    "commits_detected": 1,
-    "commits_today_detected": 1,
+    "commits_detected": 2,
+    "commits_today_detected": 2,
     "repos_touched": [
       "CoinAnole/grok_tasks"
     ],
-    "session_duration_minutes": 10,
-    "session_duration_today_minutes": 10,
+    "session_duration_minutes": 65,
+    "session_duration_today_minutes": 13,
     "marathon_detected": false,
-    "session_split_timeout_minutes": 85,
+    "session_split_timeout_minutes": 45,
     "session_count_detected": 1,
     "primary_session": {
       "start": "2026-03-11T22:02:04+00:00",
-      "end": "2026-03-11T22:02:04+00:00",
-      "duration_minutes": 10,
-      "commit_count": 1
+      "end": "2026-03-11T23:07:17+00:00",
+      "duration_minutes": 65,
+      "commit_count": 3
     },
     "detected_sessions": [
       {
         "start": "2026-03-11T22:02:04+00:00",
-        "end": "2026-03-11T22:02:04+00:00",
-        "duration_minutes": 10,
-        "commit_count": 1
+        "end": "2026-03-11T23:07:17+00:00",
+        "duration_minutes": 65,
+        "commit_count": 3
       }
     ],
     "session_tracker": {
       "open_session": {
         "start": "2026-03-11T22:02:04+00:00",
-        "last_commit": "2026-03-11T22:02:04+00:00",
-        "commit_count": 1,
-        "split_timeout_minutes": 85
+        "last_commit": "2026-03-11T23:07:17+00:00",
+        "commit_count": 3,
+        "split_timeout_minutes": 45
       },
-      "last_timeout_minutes": 85
+      "last_timeout_minutes": 45
     },
-    "last_commit_timestamp": "2026-03-11T22:02:04+00:00",
+    "last_commit_timestamp": "2026-03-11T23:07:17+00:00",
     "social_events": {
       "stars_received": 0,
       "prs_merged": 0,
@@ -46,7 +46,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-03-11T21:52:11.843522+00:00",
-    "hours_since_last_check": 0.89
+    "previous_check": "2026-03-11T22:47:00+00:00",
+    "hours_since_last_check": 0.96
   }
 }
