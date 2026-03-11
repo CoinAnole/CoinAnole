@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte re-grounded in canonical afternoon state at desk with Chicago skyline view",
+  "scene": "Byte the teen coding companion sits at his desk in warm evening light, ecstatic after a productive day of commits",
   "subjects": [
     {
-      "description": "Byte the teen-stage pixel art blob with gangly proportions, big expressive eyes, and confident posture. Blue body with clean 2D forms and dithered shading. Ecstatic mood with bright, energetic expression.",
-      "position": "sitting at wooden desk in primary foreground, centered composition",
-      "action": "one hand resting on oversized laptop keyboard, body turned slightly toward window, gazing at Chicago skyline with hopeful anticipation"
+      "description": "Byte, a teen-stage pixel art blob with gangly proportions, big expressive eyes showing ecstatic joy, blue body with dithered shading, sitting upright at desk with relaxed but energized posture",
+      "position": "center foreground, seated at desk",
+      "action": "sitting at desk with hands resting on keyboard, head turned slightly toward window, eyes wide with happy anticipation, subtle smile showing ecstatic mood"
     },
     {
-      "description": "Anchor environment: wooden desk with medium-tone finish, oversized silver laptop with soft amber screen glow, simple room with Chicago skyline visible through window",
-      "position": "desk occupies center stage, laptop centered on desk surface, window behind and slightly to left showing city buildings",
-      "action": "static environment anchor - desk and laptop ready for coding, window showing afternoon cityscape"
+      "description": "anchor environment: wooden desk with oversized silver laptop, Chicago skyline visible through window in background",
+      "position": "room background and midground",
+      "action": "static environment anchor with warm evening lighting"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, no painterly or photoreal elements",
-  "lighting": "warm golden afternoon light streaming through Chicago window, soft amber laptop glow illuminating desk surface, bright and energetic afternoon tones",
-  "mood": "ecstatic and hopeful, energetic teen posture, bright and optimistic expression",
-  "background": "room with trophy shelf mounted on wall above desk, exactly one golden 10-day streak trophy on left side of shelf, exactly one small leafy green plant on right side of shelf with clear spacing between them, food bowl on floor to right of desk with moderate kibble portions, no prop overlap or duplication",
-  "composition": "medium shot framing Byte at desk, desk and laptop centered, trophy shelf visible above, window with skyline in background, clear visual hierarchy with Byte as primary subject",
-  "color_palette": ["#4A90D9", "#87CEEB", "#D4A574", "#F5DEB3", "#2F4F4F", "#1C3A5E"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "warm golden evening light streaming through window, transitioning from afternoon brightness to softer amber tones, laptop screen casting gentle glow on desk surface",
+  "mood": "ecstatic and hopeful, bright palette with warm evening tones, energetic but relaxed posture reflecting 100% happiness",
+  "background": "room with wooden desk, oversized silver laptop open and centered, trophy shelf above with golden 10-day trophy on left and green plant on right with clear spacing, food bowl on floor to right of desk with moderate kibble, Chicago skyline visible through window",
+  "composition": "medium shot framing Byte at desk, desk and laptop centered, window with skyline in upper left background, trophy shelf visible above, clear visual hierarchy with Byte as primary subject",
+  "color_palette": ["#4A90D9", "#F5A623", "#7ED321", "#D0021B", "#9013FE"]
 }

@@ -1,41 +1,41 @@
 {
   "attempt": 1,
-  "mode": "reground",
-  "base_image": ".codepet/stage_images/teen.png",
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
     "stage_identity": {
       "status": "pass",
-      "evidence": "Teen Byte with gangly proportions, big expressive eyes, and confident blue blob form clearly visible. Canonical teen silhouette matches stage anchor geometry."
+      "evidence": "Byte displays canonical teen form with gangly proportions, blue body, big expressive eyes. Silhouette matches teen stage anchor."
     },
     "pixel_style": {
       "status": "pass",
-      "evidence": "Clean 2D pixel art forms with dithered shading preserved. No painterly or photoreal drift detected."
+      "evidence": "Clean 2D pixel art forms preserved with dithered shading. No painterly or photoreal artifacts."
     },
     "requested_changes_visible": {
       "status": "pass",
-      "evidence": "Afternoon lighting with warm golden tones visible. Ecstatic mood expressed through bright energetic posture. Byte positioned at desk with one hand on laptop keyboard."
+      "evidence": "Evening warm golden lighting visible. Ecstatic mood reflected in wide eyes and relaxed posture. Hands on keyboard position maintained."
     },
     "artifact_free": {
       "status": "pass",
-      "evidence": "No text leakage, no floating glyphs, no malformed anatomy, no duplicated parts, no smeared objects detected."
+      "evidence": "No text leakage, no floating glyphs, no malformed anatomy, no duplicated parts, no smeared objects."
     },
     "prop_layout_integrity": {
       "status": "pass",
-      "evidence": "Exactly one golden 10-day trophy on left side of shelf, exactly one green plant on right side of shelf with clear spacing between them. Food bowl on floor to right of desk with moderate kibble portions. No prop overlap or duplication. Bowl properly spaced from desk legs."
+      "evidence": "Exactly one golden 10-day trophy on left of shelf, exactly one green plant on right of shelf with clear spacing between them. Exactly one food bowl on floor to right of desk with moderate kibble. No prop overlap or duplication."
     },
     "anchors_present": {
       "status": "pass",
-      "evidence": "Desk with medium-tone wood visible, oversized silver laptop centered on desk with soft amber screen glow, Chicago skyline visible through window behind and to left."
+      "evidence": "Desk surface visible and centered. Oversized silver laptop present and open. Chicago skyline visible through window in background."
     },
     "temporal_mood_match": {
       "status": "pass",
-      "evidence": "Afternoon time of day correctly rendered with warm golden light. Ecstatic mood matches state.pet.mood. No sleeping Z's present as is_sleeping=false."
+      "evidence": "Evening warm golden lighting matches time_of_day=evening and time_of_day_transition=afternoon_to_evening. Ecstatic mood (100% happiness) reflected in wide eyes and energetic posture. is_sleeping=false confirmed by awake pose."
     },
     "reground_cleanup": {
       "status": "pass",
-      "evidence": "Re-ground from canonical teen anchor restored Byte to proper teen proportions. Previous drift corrected - Byte is clearly recognizable as teen blob form. Trophy and plant properly spaced on shelf with explicit cardinality (one each). Food bowl single instance with clear spacing. No accumulated edit artifacts preserved."
+      "evidence": "Check not applicable for normal mode - no re-ground operation performed this cycle."
     }
   },
   "decision": "accept"
