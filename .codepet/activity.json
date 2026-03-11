@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-11T20:53:31.621879+00:00",
+  "timestamp": "2026-03-11T21:51:36.363503+00:00",
   "period": {
-    "start": "2026-03-11T19:55:11.211721+00:00",
-    "end": "2026-03-11T20:53:31.621879+00:00"
+    "start": "2026-03-11T20:54:12.813932+00:00",
+    "end": "2026-03-11T21:51:36.363503+00:00"
   },
   "activity": {
     "commits_detected": 0,
@@ -17,15 +17,7 @@
     "primary_session": null,
     "detected_sessions": [],
     "session_tracker": {
-      "open_session": {
-        "start": "2026-03-11T19:18:17+00:00",
-        "last_commit": "2026-03-11T19:46:33+00:00",
-        "commit_count": 2,
-        "repos_touched": [
-          "CoinAnole/grok_tasks"
-        ],
-        "split_timeout_minutes": 85
-      },
+      "open_session": null,
       "last_timeout_minutes": 85
     },
     "last_commit_timestamp": null,
@@ -36,7 +28,7 @@
     }
   },
   "calculation": {
-    "previous_check": "2026-03-11T19:55:11.211721+00:00",
-    "hours_since_last_check": 0.97
+    "previous_check": "2026-03-11T20:54:12.813932+00:00",
+    "hours_since_last_check": 0.96
   }
 }
