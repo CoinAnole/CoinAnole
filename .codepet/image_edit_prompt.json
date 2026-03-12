@@ -1,21 +1,21 @@
 {
-  "scene": "Ecstatic teen Byte sitting at his desk on a sunny afternoon.",
+  "scene": "Byte is in an ecstatic coding flow during a sunny Chicago afternoon.",
   "subjects": [
     {
-      "description": "Byte, a gangly teen-stage pixel art blob with big expressive happy eyes and ecstatic expression",
-      "position": "centered at desk",
-      "action": "sitting happily with hands on the desk"
+      "description": "Gangly teen Byte, big expressive eyes, ecstatic expression, typing at the oversized laptop.",
+      "position": "center foreground",
+      "action": "energetically typing code"
     },
     {
-      "description": "Wooden desk with centered oversized silver laptop, wooden trophy shelf above with one golden 10-day trophy on left and one leafy green plant on right, Chicago skyline window on left, exactly one food bowl on floor to the right",
-      "position": "background room environment",
-      "action": "static room elements"
+      "description": "Desk, oversized laptop, trophy shelf above with golden 10-day trophy and green plant, Chicago skyline window.",
+      "position": "room background",
+      "action": "static environment"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm afternoon sunlight streaming from skyline window",
-  "mood": "ecstatic, joyful, celebratory",
-  "background": "clean room with skyline window, trophy shelf, floor with food bowl",
-  "composition": "foreground Byte at desk, background wall with shelf, skyline view in window",
-  "color_palette": ["#f4d03f", "#5d6d7e", "#27ae60"]
+  "lighting": "bright warm afternoon golden light streaming through the window",
+  "mood": "ecstatic, productive energy",
+  "background": "tidy desk, trophy shelf with one golden trophy on the left and one green plant on the right, window showing Chicago skyline",
+  "composition": "medium shot, Byte centered at desk",
+  "color_palette": ["#FFD700", "#87CEEB", "#2E8B57"]
 }
