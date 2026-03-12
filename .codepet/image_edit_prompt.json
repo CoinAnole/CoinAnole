@@ -1,21 +1,21 @@
 {
-  "scene": "Byte is sitting at the desk, actively coding on the oversized laptop during the late night, with the Chicago skyline visible through the window.",
+  "scene": "Byte sleeping peacefully in the cozy bed during deep night, with the laptop screen casting a soft amber glow.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly and expressive, sitting at the desk with focused posture.",
-      "position": "primary foreground placement",
-      "action": "typing on the oversized laptop"
+      "description": "Teen Byte with gangly limbs, eyes closed, sleeping peacefully in the cozy bed with soft blankets and pillow",
+      "position": "center stage in the cozy bed",
+      "action": "sleeping with three light blue Z's floating above head"
     },
     {
       "description": "anchor environment: desk, oversized laptop, Chicago skyline window",
       "position": "room/background placement",
-      "action": "static environment anchor"
+      "action": "static environment anchor, laptop screen casting soft amber glow"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "night lighting with soft glow from the laptop screen",
-  "mood": "ecstatic and focused",
-  "background": "trophy shelf with one golden trophy on the left and one green plant on the right, food bowl on the floor",
+  "lighting": "deep night, soft amber glow from laptop screen, dark room",
+  "mood": "peaceful, restful, calm",
+  "background": "cozy bed, trophy shelf with golden 10-day achievement and green plant friend, Chicago skyline window at night",
   "composition": "framing and layout instructions",
-  "color_palette": ["#1a1a2e", "#16213e", "#0f3460", "#e94560"]
+  "color_palette": ["#1a1a2e", "#16213e", "#e94560", "#f0a500"]
 }

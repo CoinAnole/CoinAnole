@@ -5,13 +5,13 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte is in teen form, gangly and expressive." },
+    "stage_identity": { "status": "pass", "evidence": "Byte is in teen form, gangly limbs visible." },
     "pixel_style": { "status": "pass", "evidence": "Pixel art style preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is actively coding at the desk." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is sleeping in the bed with Z's floating above." },
     "artifact_free": { "status": "pass", "evidence": "No obvious artifacts." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy, plant, and food bowl are in their correct places." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, and window are present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Night lighting matches the ecstatic mood." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy and plant on shelf, bed in center, laptop on desk." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, skyline window present." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Sleeping Byte matches night state." },
     "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode." }
   },
   "decision": "accept"
