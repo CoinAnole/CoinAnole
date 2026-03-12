@@ -1,21 +1,21 @@
 {
-  "scene": "Byte sleeping peacefully in bed during deep night, Z's floating above, soft amber laptop glow illuminating the room.",
+  "scene": "Byte waking up in the morning, gangly teen form stretching after peaceful sleep.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly form, eyes closed, sleeping peacefully in cozy bed with blankets and pillow",
-      "position": "center stage in bed",
-      "action": "sleeping"
+      "description": "Byte, a gangly teen blue blob, happily stretching with big expressive eyes wide open.",
+      "position": "center foreground",
+      "action": "waking up and stretching"
     },
     {
-      "description": "anchor environment: desk, oversized laptop, Chicago skyline window",
-      "position": "room/background placement",
+      "description": "Desk with oversized silver laptop, Chicago skyline window, trophy shelf above with one gold trophy and one green plant.",
+      "position": "room background",
       "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night, soft amber glow from laptop screen, purple-blue ambient darkness",
-  "mood": "peaceful, calm, restful",
-  "background": "cozy bed, trophy shelf with golden 10-day achievement and green plant friend, food bowl on floor",
-  "composition": "framing and layout instructions",
-  "color_palette": ["#2e1a47", "#f5a623", "#4a90e2", "#ffffff"]
+  "lighting": "bright, warm morning light streaming through the window",
+  "mood": "ecstatic, refreshed",
+  "background": "room with desk, oversized laptop, and trophy shelf",
+  "composition": "centered",
+  "color_palette": ["#4a9eff", "#ffffff", "#f8d7da"]
 }

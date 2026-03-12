@@ -5,13 +5,13 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte is in teen form, gangly limbs, sleeping in bed." },
+    "stage_identity": { "status": "pass", "evidence": "Byte is in teen form, gangly limbs, stretching happily." },
     "pixel_style": { "status": "pass", "evidence": "Pixel art style preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is sleeping with Z's floating above." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is waking up and stretching, bed is gone, desk is back." },
     "artifact_free": { "status": "pass", "evidence": "No obvious artifacts." },
     "prop_layout_integrity": { "status": "pass", "evidence": "Trophy, plant, and bowl are in place." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, and window are present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Matches sleeping state." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, window, trophy shelf are present." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Matches morning state." },
     "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode." }
   },
   "decision": "accept"
