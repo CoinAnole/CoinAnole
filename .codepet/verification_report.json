@@ -1,18 +1,18 @@
 {
   "attempt": 1,
-  "mode": "normal",
-  "base_image": ".codepet/codepet.png",
+  "mode": "reground",
+  "base_image": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte is in teen form, gangly limbs, stretching happily." },
-    "pixel_style": { "status": "pass", "evidence": "Pixel art style preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is waking up and stretching, bed is gone, desk is back." },
-    "artifact_free": { "status": "pass", "evidence": "No obvious artifacts." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy, plant, and bowl are in place." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, window, trophy shelf are present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Matches morning state." },
-    "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode." }
+    "stage_identity": { "status": "pass", "evidence": "Byte exhibits the canonical gangly teen-stage proportions." },
+    "pixel_style": { "status": "pass", "evidence": "Pixel art style, clean forms, and dithered shading are maintained." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is depicted in an ecstatic mood consistent with a sunny afternoon setting." },
+    "artifact_free": { "status": "pass", "evidence": "No evidence of duplicated parts, smeared objects, or garbled elements." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "1 golden trophy on the left of shelf, 1 green plant on the right of shelf, 1 food bowl on the floor. Proper spacing is observed." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, oversized laptop, and Chicago skyline window are correctly positioned." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Afternoon lighting matches the requested mood." },
+    "reground_cleanup": { "status": "pass", "evidence": "Removed accumulated artifacts and re-applied prop counts strictly according to inventory." }
   },
   "decision": "accept"
 }

@@ -1,21 +1,21 @@
 {
-  "scene": "Byte waking up in the morning, gangly teen form stretching after peaceful sleep.",
+  "scene": "Ecstatic teen Byte sitting at his desk on a sunny afternoon.",
   "subjects": [
     {
-      "description": "Byte, a gangly teen blue blob, happily stretching with big expressive eyes wide open.",
-      "position": "center foreground",
-      "action": "waking up and stretching"
+      "description": "Byte, a gangly teen-stage pixel art blob with big expressive happy eyes and ecstatic expression",
+      "position": "centered at desk",
+      "action": "sitting happily with hands on the desk"
     },
     {
-      "description": "Desk with oversized silver laptop, Chicago skyline window, trophy shelf above with one gold trophy and one green plant.",
-      "position": "room background",
-      "action": "static environment anchor"
+      "description": "Wooden desk with centered oversized silver laptop, wooden trophy shelf above with one golden 10-day trophy on left and one leafy green plant on right, Chicago skyline window on left, exactly one food bowl on floor to the right",
+      "position": "background room environment",
+      "action": "static room elements"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "bright, warm morning light streaming through the window",
-  "mood": "ecstatic, refreshed",
-  "background": "room with desk, oversized laptop, and trophy shelf",
-  "composition": "centered",
-  "color_palette": ["#4a9eff", "#ffffff", "#f8d7da"]
+  "lighting": "warm afternoon sunlight streaming from skyline window",
+  "mood": "ecstatic, joyful, celebratory",
+  "background": "clean room with skyline window, trophy shelf, floor with food bowl",
+  "composition": "foreground Byte at desk, background wall with shelf, skyline view in window",
+  "color_palette": ["#f4d03f", "#5d6d7e", "#27ae60"]
 }
