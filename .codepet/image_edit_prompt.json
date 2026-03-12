@@ -1,21 +1,21 @@
 {
-  "scene": "Byte is in an ecstatic coding flow during a sunny Chicago afternoon.",
+  "scene": "Byte actively coding on his laptop with ecstatic expression.",
   "subjects": [
     {
-      "description": "Gangly teen Byte, big expressive eyes, ecstatic expression, typing at the oversized laptop.",
-      "position": "center foreground",
-      "action": "energetically typing code"
+      "description": "Teen Byte, gangly form, blue hoodie, ecstatic expression, actively typing on oversized silver laptop",
+      "position": "foreground at desk",
+      "action": "coding with enthusiasm"
     },
     {
-      "description": "Desk, oversized laptop, trophy shelf above with golden 10-day trophy and green plant, Chicago skyline window.",
-      "position": "room background",
-      "action": "static environment"
+      "description": "Desk, oversized silver laptop, Chicago skyline window view",
+      "position": "room environment",
+      "action": "static background"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "bright warm afternoon golden light streaming through the window",
+  "lighting": "bright afternoon golden sunlight",
   "mood": "ecstatic, productive energy",
-  "background": "tidy desk, trophy shelf with one golden trophy on the left and one green plant on the right, window showing Chicago skyline",
-  "composition": "medium shot, Byte centered at desk",
-  "color_palette": ["#FFD700", "#87CEEB", "#2E8B57"]
+  "background": "tidy desk, Chicago skyline window, trophy shelf with golden 10-day streak trophy and green succulent plant",
+  "composition": "centered composition, eye-level framing",
+  "color_palette": ["#4a9eff", "#ffcc00", "#7cfc00"]
 }
