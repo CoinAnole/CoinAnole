@@ -1,21 +1,21 @@
 {
-  "scene": "Byte actively coding on his laptop with ecstatic expression.",
+  "scene": "Ecstatic teen Byte sitting at his desk during a bright, sunny afternoon, actively coding on an oversized silver laptop with the Chicago skyline visible through the window.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly form, blue hoodie, ecstatic expression, actively typing on oversized silver laptop",
-      "position": "foreground at desk",
-      "action": "coding with enthusiasm"
+      "description": "Teen Byte, a gangly blue pixel-art blob with big expressive eyes and an ecstatic, focused expression.",
+      "position": "Centered at the wooden desk, facing the laptop.",
+      "action": "Typing enthusiastically on an oversized silver laptop keyboard with both hands."
     },
     {
-      "description": "Desk, oversized silver laptop, Chicago skyline window view",
-      "position": "room environment",
-      "action": "static background"
+      "description": "Anchor environment: wooden desk, oversized silver laptop, Chicago skyline window, trophy shelf above.",
+      "position": "Room/background placement.",
+      "action": "Static environment anchor."
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "bright afternoon golden sunlight",
-  "mood": "ecstatic, productive energy",
-  "background": "tidy desk, Chicago skyline window, trophy shelf with golden 10-day streak trophy and green succulent plant",
-  "composition": "centered composition, eye-level framing",
-  "color_palette": ["#4a9eff", "#ffcc00", "#7cfc00"]
+  "lighting": "Warm, bright golden afternoon sunlight streaming through the window, illuminating the room.",
+  "mood": "Ecstatic, productive, energetic.",
+  "background": "Tidy wooden desk with an oversized laptop, a mounted trophy shelf holding exactly one golden 10-day trophy on the left and exactly one green plant on the right with clear spacing, and exactly one food bowl on the floor to the right of the desk.",
+  "composition": "Centered, eye-level view of Byte at the desk.",
+  "color_palette": ["#FFD700", "#FF8C00", "#4169E1"]
 }
