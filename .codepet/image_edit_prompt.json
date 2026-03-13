@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte sleeping soundly in his cozy bed at night, with laptop providing a soft amber glow.",
+  "scene": "Byte sleeping peacefully in the cozy bed during deep night",
   "subjects": [
     {
-      "description": "Teen Byte, gangly and relaxed, sleeping under soft blankets in his cozy bed, with three Z's floating above him",
-      "position": "Center stage",
-      "action": "sleeping peacefully"
+      "description": "Gangly teen Byte, curled up asleep in the cozy bed, floating Z's above head",
+      "position": "center stage",
+      "action": "sleeping soundly"
     },
     {
-      "description": "Anchor environment: Desk (set back), oversized laptop (screen casting soft amber glow), Chicago skyline window in background",
-      "position": "Room background",
+      "description": "Desk, oversized laptop with soft amber screen glow, trophy shelf above",
+      "position": "background room",
       "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "Deep night, room dark with soft amber glow from laptop screen",
-  "mood": "peaceful",
-  "background": "Room at night with trophy shelf on wall (golden 10-day trophy on left, plant friend on right), Chicago skyline through window",
-  "composition": "Byte in cozy bed center stage, desk/laptop slightly set back",
-  "color_palette": ["#1a0f2e", "#4a1c5d", "#ffb347"]
+  "lighting": "Deep night, room bathed in soft amber laptop glow, Chicago skyline with twinkling lights",
+  "mood": "Peaceful, ecstatic sleep",
+  "background": "Trophy on left side of shelf, plant on right side of shelf, cozy bed centered",
+  "composition": "centered view of Byte in bed",
+  "color_palette": ["#2e1f40", "#ffc107", "#4caf50", "#2196f3"]
 }
