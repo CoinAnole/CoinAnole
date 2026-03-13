@@ -5,13 +5,13 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte is correctly in teen form with gangly limbs." },
+    "stage_identity": { "status": "pass", "evidence": "Byte is correctly in teen form, gangly limbs stretching." },
     "pixel_style": { "status": "pass", "evidence": "Pixel art style maintained." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte remains sleeping in cozy bed with Z's floating above." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is stretching, bed is partially tucked away, morning light filling the room." },
     "artifact_free": { "status": "pass", "evidence": "No artifacts, smearing, or duplicated objects detected." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy remains on left of shelf, plant on right of shelf. Bed is centered." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy on left of shelf, plant on right of shelf. Bed in transition." },
     "anchors_present": { "status": "pass", "evidence": "Desk, laptop, and window are properly anchored." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Night lighting, deep shadows, and laptop glow match sleeping state." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Morning light matches the night_to_morning transition." },
     "reground_cleanup": { "status": "pass", "evidence": "Normal mode, cleanup not applicable." }
   },
   "decision": "accept"
