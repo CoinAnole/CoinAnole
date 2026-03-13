@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Active 🌅
+**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Sleeping 💤
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 97/100 | █████████░ |
+ | 🍖 Satiety | 96/100 | █████████░ |
  | ⚡ Energy | 100/100 | ██████████ |
  | 😊 Happiness | 100/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 14 days | **Best Streak:** 14 days 🎉 | **Best Day:** 18 commits 🚀
 
-Byte is enjoying a quiet night, glowing softly as he rests after a record-breaking day of 17 commits. His 14-day streak burns brightly, and even in the stillness, he remains ecstatic and ready for whatever the next coding session brings. 🌙⌨️💻✨
+Byte is sleeping soundly in his cozy bed, cradled by soft blankets while the Chicago skyline twinkles outside. The room is bathed in the soft amber glow of his oversized laptop, and peaceful Z's drift above his head. He's dreaming of tomorrow's coding adventures after a very productive streak! 🌙💤💻✨

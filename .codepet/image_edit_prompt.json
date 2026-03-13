@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte sitting at his desk, working on an oversized laptop, in a quiet night-time room with a Chicago skyline view.",
+  "scene": "Teen Byte sleeping soundly in his cozy bed at night, with laptop providing a soft amber glow.",
   "subjects": [
     {
-      "description": "Teen Byte with gangly proportions and ecstatic expression",
-      "position": "primary foreground placement at desk",
-      "action": "working on an oversized laptop"
+      "description": "Teen Byte, gangly and relaxed, sleeping under soft blankets in his cozy bed, with three Z's floating above him",
+      "position": "Center stage",
+      "action": "sleeping peacefully"
     },
     {
-      "description": "anchor environment: desk, oversized laptop, Chicago skyline window, trophy shelf above desk",
-      "position": "room/background placement",
+      "description": "Anchor environment: Desk (set back), oversized laptop (screen casting soft amber glow), Chicago skyline window in background",
+      "position": "Room background",
       "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "night lighting, desk light, soft glow from laptop screen",
-  "mood": "ecstatic and productive",
-  "background": "room details: trophy shelf above desk with exactly one golden 10-day trophy on the left and exactly one green plant on the right; one food bowl on the floor to the right of the desk",
-  "composition": "framing with Byte centered at the desk",
-  "color_palette": ["#2C3E50", "#E67E22", "#3498DB"]
+  "lighting": "Deep night, room dark with soft amber glow from laptop screen",
+  "mood": "peaceful",
+  "background": "Room at night with trophy shelf on wall (golden 10-day trophy on left, plant friend on right), Chicago skyline through window",
+  "composition": "Byte in cozy bed center stage, desk/laptop slightly set back",
+  "color_palette": ["#1a0f2e", "#4a1c5d", "#ffb347"]
 }
