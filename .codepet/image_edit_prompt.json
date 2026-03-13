@@ -1,21 +1,21 @@
 {
-  "scene": "Byte is working ecstatically on his laptop at his desk during a golden evening.",
+  "scene": "Teen Byte sitting at his desk, working on an oversized laptop, in a quiet night-time room with a Chicago skyline view.",
   "subjects": [
     {
-      "description": "A gangly teen Byte with big expressive eyes and a confident posture.",
-      "position": "Centered at the desk, actively typing on the oversized laptop.",
-      "action": "Typing ecstatically on the keyboard."
+      "description": "Teen Byte with gangly proportions and ecstatic expression",
+      "position": "primary foreground placement at desk",
+      "action": "working on an oversized laptop"
     },
     {
-      "description": "Desk, oversized laptop, and Chicago skyline window.",
-      "position": "Room/background placement.",
-      "action": "Static environment anchor."
+      "description": "anchor environment: desk, oversized laptop, Chicago skyline window, trophy shelf above desk",
+      "position": "room/background placement",
+      "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "Warm golden evening light streaming through the window.",
-  "mood": "Ecstatic, enthusiastic, productive.",
-  "background": "Room details with the trophy shelf above the desk, golden trophy on the left, plant on the right.",
-  "composition": "Framing and layout instructions to maintain the original pet's position.",
-  "color_palette": ["#FFD700", "#FF8C00", "#4A235A"]
+  "lighting": "night lighting, desk light, soft glow from laptop screen",
+  "mood": "ecstatic and productive",
+  "background": "room details: trophy shelf above desk with exactly one golden 10-day trophy on the left and exactly one green plant on the right; one food bowl on the floor to the right of the desk",
+  "composition": "framing with Byte centered at the desk",
+  "color_palette": ["#2C3E50", "#E67E22", "#3498DB"]
 }

@@ -1,18 +1,18 @@
 {
   "attempt": 1,
-  "mode": "normal",
-  "base_image": ".codepet/codepet.png",
+  "mode": "reground",
+  "base_image": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte remains in teen form." },
-    "pixel_style": { "status": "pass", "evidence": "Pixel art style is preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Evening lighting and ecstatic typing action are present." },
-    "artifact_free": { "status": "pass", "evidence": "No noticeable artifacts detected." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy on left shelf, plant on right shelf." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, and Chicago skyline window are present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Matches ecstatic/evening mood." },
-    "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode." }
+    "stage_identity": { "status": "pass", "evidence": "Byte is in canonical teen form with correct proportions." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art style maintained." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Night lighting, ecstatic posture." },
+    "artifact_free": { "status": "pass", "evidence": "No visible artifacts." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one trophy on left, one plant on right, one food bowl." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, skyline window." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Night lighting, ecstatic mood, laptop glow." },
+    "reground_cleanup": { "status": "pass", "evidence": "Accumulated prop drift from codepet.png has been corrected." }
   },
   "decision": "accept"
 }
