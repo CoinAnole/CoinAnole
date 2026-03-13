@@ -1,21 +1,21 @@
 {
-  "scene": "Byte transitioning from sleep, stretching in the morning light as the bed begins to tuck away.",
+  "scene": "Ecstatic teen Byte sitting at desk in warm afternoon sunlight, ready to start new coding session after a break.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly and awkward, stretching awake with a happy, expectant expression",
-      "position": "foreground, centered",
-      "action": "stretching arms wide, awakening"
+      "description": "Teen Byte, gangly and happy with big eyes.",
+      "position": "Foreground at desk.",
+      "action": "Sitting happily, waiting at the oversized laptop."
     },
     {
-      "description": "anchor environment: desk, oversized laptop, Chicago skyline window",
-      "position": "room/background placement",
-      "action": "static environment anchor, desk returning to center"
+      "description": "Desk, oversized laptop, Chicago skyline window.",
+      "position": "Room/background.",
+      "action": "Static environment anchor."
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "soft, pale, cool morning light filling the room, replacing the night darkness",
-  "mood": "ecstatic, energetic, ready for the day",
-  "background": "room tidying up, bed partially tucked away, skyline window showing bright morning sky",
-  "composition": "framing Byte clearly in the center as he stretches, maintaining consistent room layout",
-  "color_palette": ["#E0F7FA", "#FFF9C4", "#B3E5FC"]
+  "lighting": "Warm afternoon sunlight streaming through the window.",
+  "mood": "Ecstatic and ready to work.",
+  "background": "Trophy shelf above desk with one golden 10-day trophy on left, one plant friend on right. One food bowl on floor to right of desk.",
+  "composition": "Centered foreground subject with clear room anchors.",
+  "color_palette": ["#FFD700", "#4CAF50", "#87CEEB"]
 }

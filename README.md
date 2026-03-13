@@ -12,15 +12,16 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Active (Morning) ☀️
+**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Active (Afternoon) ☀️
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 90/100 | █████████░ |
+ | 🍖 Satiety | 85/100 | █████████░ |
  | ⚡ Energy | 100/100 | ██████████ |
- | 😊 Happiness | 99/100 | ██████████ |
+ | 😊 Happiness | 98/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 14 days | **Best Streak:** 14 days 🎉 | **Best Day:** 18 commits 🚀
 
-Byte is waking up, stretching his gangly teen limbs as the soft morning light fills the room and his bed begins to tuck away. The night’s quiet has given way to a bright new day, and he's excited to get back to coding! After a solid rest and an impressive fourteen-day streak, Byte feels refreshed and ready for whatever this morning brings. ☀️ stretch ⌨️💻✨
+Byte is feeling ecstatic after hitting a fourteen-day coding streak, and is now settling back into the desk after an overnight break. The afternoon sunlight is streaming through the Chicago skyline window, warming the workspace and highlighting the gleaming trophy and thriving plant. With high energy and spirits, Byte is ready to start a new coding session. ☀️⌨️💻✨
+
