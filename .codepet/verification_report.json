@@ -5,14 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte is still in his teen form, gangly and awkward." },
+    "stage_identity": { "status": "pass", "evidence": "Byte is in teen form, gangly and identifiable." },
     "pixel_style": { "status": "pass", "evidence": "Pixel art style is preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is standing near the window, looking out." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is looking up at the trophy on the shelf." },
     "artifact_free": { "status": "pass", "evidence": "No noticeable artifacts." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one trophy, one plant, one food bowl, properly spaced." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, skyline window present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Mood matches afternoon content/reflective." },
-    "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode." }
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one trophy on left, one plant on right, proper spacing." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, and skyline window are present." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Matches evening light and reflective mood." },
+    "reground_cleanup": { "status": "pass", "evidence": "Normal mode, cleanup not applicable." }
   },
   "decision": "accept"
 }

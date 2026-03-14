@@ -1,21 +1,21 @@
 {
-  "scene": "Byte is standing away from the desk, looking thoughtfully out the window at the Chicago skyline, reflecting on the recent lull in activity.",
+  "scene": "Byte is standing near the desk and trophy shelf, looking up at his golden 10-day trophy with a content expression.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly and awkward, standing near the window, looking out. Exactly one food bowl with moderate kibble on the floor to the right of the desk, no overlap or intersection. Shelf above desk holds exactly one golden 10-day trophy on the left and exactly one healthy green plant friend on the right, clear spacing between all items.",
-      "position": "Foreground, near the window to the left.",
-      "action": "Looking out the window at the skyline."
+      "description": "Teen Byte, gangly form, standing posture",
+      "position": "standing in front of the desk, looking upward",
+      "action": "admiring the trophy on the shelf"
     },
     {
-      "description": "Anchor environment: desk, oversized laptop, Chicago skyline window.",
-      "position": "Room/background placement.",
-      "action": "Static environment anchor."
+      "description": "anchor environment: desk, oversized laptop, Chicago skyline window",
+      "position": "room/background placement",
+      "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "Afternoon sunlight streaming through the window.",
-  "mood": "content, reflective",
-  "background": "Room details: desk with oversized laptop, trophy shelf above (trophy, plant), food bowl on floor.",
-  "composition": "Byte is shifted away from the desk towards the window.",
-  "color_palette": ["#FFD700", "#A8D8EA", "#4A4E69"]
+  "lighting": "warm evening light streaming from the window",
+  "mood": "content and reflective",
+  "background": "trophy shelf above desk with single golden trophy on the left and green plant on the right",
+  "composition": "framing and layout instructions to show Byte and the shelf",
+  "color_palette": ["#f4a460", "#708090", "#2f4f4f", "#ffd700"]
 }
