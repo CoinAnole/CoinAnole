@@ -8,6 +8,7 @@ The teen stage has legs. Keep in mind that Byte can move around now! Feel free t
 
 ## Recently Completed
 
+- **2026-03-14:** Byte is now looking out the window instead of just sitting at the desk.
 - **2026-02-27:** Teen Byte now has a cozy bed for sleeping! Desk and laptop are tucked away during quiet hours. Much better than desk-sleeping for those gangly teen limbs.
 - **2026-02-21:** Streak restored to 9 days after bug in continuity logic
 
