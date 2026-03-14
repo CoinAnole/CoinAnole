@@ -12,16 +12,16 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Content 😌 | **Status:** Sleeping (Night) 🌙
+**Stage:** Teen | **Mood:** Content 😌 | **Status:** Morning ☀️
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 75/100 | ███████░░░ |
+ | 🍖 Satiety | 70/100 | ███████░░░ |
  | ⚡ Energy | 100/100 | ██████████ |
- | 😊 Happiness | 98/100 | ██████████ |
+ | 😊 Happiness | 97/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 0 days | **Longest Streak:** 14 days 🎉 | **Best Day:** 18 commits 🚀
 
-Byte is sleeping peacefully in the bed at 1 AM, the soft amber glow of the oversized laptop casting a comforting warmth over the room. The Chicago skyline twinkles quietly outside the window, and three Z's float above in the deep night air, marking a well-earned rest after a long streak. Peaceful dreams fill the quiet hours. 🌙💤✨
+After a restful night, Byte is awake and refreshed, ready for a new day. The morning light filters through the window, bathing the desk in a gentle glow. Byte feels content and focused, with the desk tidied and all favorite items restored to their proper place. Coding awaits! ☀️⌨️💻✨
 

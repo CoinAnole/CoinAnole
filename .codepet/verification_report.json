@@ -1,18 +1,18 @@
 {
   "attempt": 1,
-  "mode": "normal",
-  "base_image": ".codepet/codepet.png",
+  "mode": "reground",
+  "base_image": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte remains a teen with appropriate gangly proportions." },
-    "pixel_style": { "status": "pass", "evidence": "Pixel art style is preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is in bed, sleeping, with Z's." },
-    "artifact_free": { "status": "pass", "evidence": "No visible artifacts." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy and plant on shelf, laptop on desk, bed with Byte." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, skyline window visible." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Sleeping, night lighting, content mood." },
-    "reground_cleanup": { "status": "pass", "evidence": "Not applicable." }
+    "stage_identity": { "status": "pass", "evidence": "Byte maintains canonical teen silhouette and proportions." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art style, dithered shading maintained." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Morning light, refreshed content mood, props re-applied." },
+    "artifact_free": { "status": "pass", "evidence": "No smearing, no garbled text, no duplicated parts detected." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one trophy on left, one plant on right, one bowl on floor. Spacing and positioning correct." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, oversized laptop, skyline window correctly positioned." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Morning light consistent with state, mood matches content state." },
+    "reground_cleanup": { "status": "pass", "evidence": "Previous defects (minor drift in limbs, prop spacing issues) in .codepet/codepet.png are corrected." }
   },
   "decision": "accept"
 }

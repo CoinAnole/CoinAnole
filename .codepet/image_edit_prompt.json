@@ -1,21 +1,21 @@
 {
-  "scene": "Teen Byte is sleeping peacefully in a cozy bed at 1 AM with three light blue Z's floating gently above head in a night-time bedroom scene.",
+  "scene": "A refreshed teen Byte at his desk in the morning light, content and ready for the day.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly form, closed eyes, sleeping in a cozy bed with soft blankets and pillow",
-      "position": "center foreground in bed",
-      "action": "sleeping peacefully with Z's floating above"
+      "description": "Byte, a gangly teen pixel art creature, posture relaxed and content, sitting at the desk. Exactly one food bowl with moderate kibble on the floor to the right of the desk, no overlap or intersection. Shelf above desk holds exactly one golden 10-day trophy on the left and exactly one healthy green plant friend on the right, clear spacing between all items.",
+      "position": "Centered at the desk",
+      "action": "Sitting contentedly at the desk"
     },
     {
-      "description": "Anchor environment: room with desk, oversized laptop casting soft amber glow, Chicago skyline window in background",
-      "position": "room background",
-      "action": "static environment anchor"
+      "description": "Room environment with clean desk, oversized open laptop, and window showing Chicago skyline.",
+      "position": "Background room environment",
+      "action": "Static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night with soft amber glow from the oversized laptop illuminating the sleeping area",
-  "mood": "peaceful, content, restorative sleep",
-  "background": "bedroom interior, trophy shelf above desk displaying one gold trophy and one plant on right, Chicago skyline view through window",
-  "composition": "Byte in cozy bed centered, desk and oversized laptop to side, trophy shelf above bed",
-  "color_palette": ["#2E1A47", "#FDBB30", "#4A2D69"]
+  "lighting": "Bright morning light filtering through the window, gentle and warm",
+  "mood": "Content and refreshed",
+  "background": "Room with desk, oversized laptop, shelf with one trophy and one plant, food bowl on floor, and window with Chicago skyline.",
+  "composition": "Balanced, centered framing.",
+  "color_palette": ["#FFD700", "#4CAF50", "#E1F5FE", "#795548"]
 }
