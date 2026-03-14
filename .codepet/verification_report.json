@@ -5,14 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Byte is in canonical teen form." },
+    "stage_identity": { "status": "pass", "evidence": "Byte remains a teen with appropriate gangly proportions." },
     "pixel_style": { "status": "pass", "evidence": "Pixel art style is preserved." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is ecstatic, at the desk, with afternoon light." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte is in bed, sleeping, with Z's." },
     "artifact_free": { "status": "pass", "evidence": "No visible artifacts." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy, plant, and bowl are correctly placed and singular." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, and Chicago skyline are present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Mood and afternoon lighting match state." },
-    "reground_cleanup": { "status": "pass", "evidence": "Not applicable for normal mode." }
+    "prop_layout_integrity": { "status": "pass", "evidence": "Trophy and plant on shelf, laptop on desk, bed with Byte." },
+    "anchors_present": { "status": "pass", "evidence": "Desk, laptop, skyline window visible." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Sleeping, night lighting, content mood." },
+    "reground_cleanup": { "status": "pass", "evidence": "Not applicable." }
   },
   "decision": "accept"
 }

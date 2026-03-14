@@ -1,21 +1,21 @@
 {
-  "scene": "Ecstatic teen Byte sitting at desk in warm afternoon sunlight, ready to start new coding session after a break.",
+  "scene": "Teen Byte is sleeping peacefully in a cozy bed at 1 AM with three light blue Z's floating gently above head in a night-time bedroom scene.",
   "subjects": [
     {
-      "description": "Teen Byte, gangly and happy with big eyes.",
-      "position": "Foreground at desk.",
-      "action": "Sitting happily, waiting at the oversized laptop."
+      "description": "Teen Byte, gangly form, closed eyes, sleeping in a cozy bed with soft blankets and pillow",
+      "position": "center foreground in bed",
+      "action": "sleeping peacefully with Z's floating above"
     },
     {
-      "description": "Desk, oversized laptop, Chicago skyline window.",
-      "position": "Room/background.",
-      "action": "Static environment anchor."
+      "description": "Anchor environment: room with desk, oversized laptop casting soft amber glow, Chicago skyline window in background",
+      "position": "room background",
+      "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "Warm afternoon sunlight streaming through the window.",
-  "mood": "Ecstatic and ready to work.",
-  "background": "Trophy shelf above desk with one golden 10-day trophy on left, one plant friend on right. One food bowl on floor to right of desk.",
-  "composition": "Centered foreground subject with clear room anchors.",
-  "color_palette": ["#FFD700", "#4CAF50", "#87CEEB"]
+  "lighting": "deep night with soft amber glow from the oversized laptop illuminating the sleeping area",
+  "mood": "peaceful, content, restorative sleep",
+  "background": "bedroom interior, trophy shelf above desk displaying one gold trophy and one plant on right, Chicago skyline view through window",
+  "composition": "Byte in cozy bed centered, desk and oversized laptop to side, trophy shelf above bed",
+  "color_palette": ["#2E1A47", "#FDBB30", "#4A2D69"]
 }

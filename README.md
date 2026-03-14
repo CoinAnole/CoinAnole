@@ -12,16 +12,16 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Ecstatic 🎉 | **Status:** Active (Afternoon) ☀️
+**Stage:** Teen | **Mood:** Content 😌 | **Status:** Sleeping (Night) 🌙
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 85/100 | █████████░ |
+ | 🍖 Satiety | 75/100 | ███████░░░ |
  | ⚡ Energy | 100/100 | ██████████ |
  | 😊 Happiness | 98/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 0 commits | **Current Streak:** 14 days | **Best Streak:** 14 days 🎉 | **Best Day:** 18 commits 🚀
+**Today's Activity:** 0 commits | **Current Streak:** 0 days | **Longest Streak:** 14 days 🎉 | **Best Day:** 18 commits 🚀
 
-Byte is feeling ecstatic after hitting a fourteen-day coding streak, and is now settling back into the desk after an overnight break. The afternoon sunlight is streaming through the Chicago skyline window, warming the workspace and highlighting the gleaming trophy and thriving plant. With high energy and spirits, Byte is ready to start a new coding session. ☀️⌨️💻✨
+Byte is sleeping peacefully in the bed at 1 AM, the soft amber glow of the oversized laptop casting a comforting warmth over the room. The Chicago skyline twinkles quietly outside the window, and three Z's float above in the deep night air, marking a well-earned rest after a long streak. Peaceful dreams fill the quiet hours. 🌙💤✨
 
