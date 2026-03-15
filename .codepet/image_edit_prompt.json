@@ -1,21 +1,21 @@
 {
-  "scene": "Byte sleeping soundly in a dark, peaceful room at night",
+  "scene": "Byte the teen pet sleeping peacefully in a cozy bed at night, with Z's floating above.",
   "subjects": [
     {
-      "description": "Byte, a teen-form pet with gangly, awkward proportions, fast asleep with closed eyes and peaceful expression",
-      "position": "curled up on the desk next to the oversized laptop",
-      "action": "sleeping peacefully"
+      "description": "Sleeping teen Byte, gangly form tucked under blankets in bed, eyes closed, calm expression",
+      "position": "center stage in bed",
+      "action": "sleeping peacefully with three light blue Z's floating above head"
     },
     {
-      "description": "anchor environment: desk, oversized laptop, Chicago skyline window at night with soft ambient moonlight",
-      "position": "room/background placement",
-      "action": "static environment anchor"
+      "description": "Desk, oversized laptop, and Chicago skyline window",
+      "position": "background, slightly set back",
+      "action": "inactive, laptop providing soft amber glow"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "dim, soft amber glow from the laptop, moonlight through the window",
-  "mood": "restful, calm, peaceful",
-  "background": "desk, oversized laptop, Chicago skyline window, no extra props",
-  "composition": "Byte curled up on the desk near the laptop, skyline visible",
-  "color_palette": ["#000033", "#333366", "#FFCC66"]
+  "lighting": "deep night, soft amber glow from laptop, purple-blue atmosphere",
+  "mood": "peaceful, quiet, sleepy",
+  "background": "cozy bed with blankets, desk and laptop in background, trophy shelf on wall with 1 trophy and 1 plant",
+  "composition": "centered composition with sleeping Byte as focus",
+  "color_palette": ["#1a1a2e", "#16213e", "#e94560", "#ffc107"]
 }
