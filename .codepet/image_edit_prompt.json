@@ -1,21 +1,21 @@
 {
-  "scene": "Byte sleeping peacefully in the cozy bed at night with laptop glow illuminating the room.",
+  "scene": "Gangly teen Byte contentedly at desk in warm afternoon room with Chicago skyline.",
   "subjects": [
     {
-      "description": "Teen Byte curled up in blankets in the bed, eyes closed peacefully, sleeping expression",
-      "position": "center foreground, on the bed",
-      "action": "sleeping with three light blue Z's floating gently above head"
+      "description": "gangly teen pixel art blob creature: elongated awkward limbs, oversized head, big happy eyes, fluffy light blue fur, content expression",
+      "position": "foreground center seated at desk on wooden chair",
+      "action": "paws gently resting on oversized laptop keyboard, subtle content smile after recent coding"
     },
     {
-      "description": "background room: desk, oversized laptop, Chicago skyline window, trophy shelf with one trophy on left, one plant on right",
-      "position": "background",
-      "action": "static environment anchor, desk stepped back"
+      "description": "medium-tone wooden desk, oversized open silver laptop centered on desk, simple room with large window showing Chicago skyline buildings",
+      "position": "midground background",
+      "action": "static canonical environment"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "deep night with soft amber glow from laptop, cool moonlight through window",
-  "mood": "peaceful, content",
-  "background": "cozy bed with blankets, trophy shelf above desk",
-  "composition": "centered on Byte in bed",
-  "color_palette": ["#1a1a2e", "#16213e", "#ffc300", "#e94560"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, precise proportions",
+  "lighting": "warm golden afternoon sunlight from window, bright and inviting",
+  "mood": "content and happy, relaxed post-activity glow",
+  "background": "wooden trophy shelf above desk: exactly one shiny golden 14-day streak trophy positioned on left side, exactly one small healthy green leafy plant on right side with clear space between no overlap; exactly one food bowl containing moderate kibble placed on floor to the right of desk no clipping or intersection",
+  "composition": "balanced framing centered on Byte and desk, shelf and bowl clearly visible, skyline through window",
+  "color_palette": ["#FFD700","#228B22","#87CEEB","#D2B48C","#FFF8DC"]
 }

@@ -1,18 +1,18 @@
 {
   "attempt": 1,
-  "mode": "normal",
-  "base_image": ".codepet/codepet.png",
+  "mode": "reground",
+  "base_image": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Teen Byte form proportions preserved in sleeping pose." },
-    "pixel_style": { "status": "pass", "evidence": "Pixel art style consistent with previous edits." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte is now sleeping, night lighting applied, no active screen text." },
-    "artifact_free": { "status": "pass", "evidence": "No obvious artifacts or smearing." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Desk and laptop are present; no stray props." },
-    "anchors_present": { "status": "pass", "evidence": "Desk, oversized laptop, and skyline window remain." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Sleeping state matches temporal data (night, is_sleeping=true)." },
-    "reground_cleanup": { "status": "pass", "evidence": "Normal mode, cleanup not applicable." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen proportions preserved: elongated limbs dangling from chair, oversized head with big eyes matching stage anchor exactly." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art style with dithered shading, sharp edges, consistent 512x512 pixel forms." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Warm golden afternoon lighting applied; content happy eyes/smile on Byte; props visible: shelf trophy left, plant right, bowl floor right." },
+    "artifact_free": { "status": "pass", "evidence": "No artifacts, text leakage, malformed objects, or pixel smearing; crisp render throughout." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden trophy labeled '14' positioned left on shelf; exactly one green potted plant right on shelf with clear space between; exactly one brown bowl with kibble on floor right of desk leg, no overlaps or clipping." },
+    "anchors_present": { "status": "pass", "evidence": "Wooden desk prominent center; oversized laptop open front-center on desk; Chicago skyline clearly visible through window behind-left." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Bright warm afternoon sunlight matches 'afternoon' time_of_day and morning_to_afternoon transition; content relaxed pose matches 'content' mood, high 98 happiness, awake no sleep cues." },
+    "reground_cleanup": { "status": "pass", "evidence": "Prior live image showed night sleep in bed with Z's, side desk/laptop glow, dark skyline; corrected to daytime awake desk-center, removed bed/Z's/night elements, restored canonical desk layout, re-applied props without duplicates." }
   },
   "decision": "accept"
 }
