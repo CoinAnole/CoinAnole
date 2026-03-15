@@ -1,21 +1,26 @@
 {
-  "scene": "Gangly teen Byte contentedly at desk in warm afternoon room with Chicago skyline.",
+  "scene": "Gangly teen Byte contentedly idles paws near laptop in warm afternoon light, bowl showing slight kibble depletion.",
   "subjects": [
     {
-      "description": "gangly teen pixel art blob creature: elongated awkward limbs, oversized head, big happy eyes, fluffy light blue fur, content expression",
-      "position": "foreground center seated at desk on wooden chair",
-      "action": "paws gently resting on oversized laptop keyboard, subtle content smile after recent coding"
+      "description": "gangly awkward teen-stage pixel art blob: elongated limbs, large head, big happy expressive eyes, light cyan fluffy body",
+      "position": "center foreground seated on desk chair",
+      "action": "paws resting idly beside oversized laptop keys, relaxed content smile, subtle lean back after coding pause"
     },
     {
-      "description": "medium-tone wooden desk, oversized open silver laptop centered on desk, simple room with large window showing Chicago skyline buildings",
-      "position": "midground background",
-      "action": "static canonical environment"
+      "description": "medium wooden desk with chair, oversized open dark laptop centered, trophy shelf above with golden 14-day trophy left and green plant right, Chicago skyline window background",
+      "position": "midground room background",
+      "action": "static"
+    },
+    {
+      "description": "single metal food bowl with moderate-low kibble pile",
+      "position": "floor right of desk",
+      "action": "static visible depletion"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, precise proportions",
-  "lighting": "warm golden afternoon sunlight from window, bright and inviting",
-  "mood": "content and happy, relaxed post-activity glow",
-  "background": "wooden trophy shelf above desk: exactly one shiny golden 14-day streak trophy positioned on left side, exactly one small healthy green leafy plant on right side with clear space between no overlap; exactly one food bowl containing moderate kibble placed on floor to the right of desk no clipping or intersection",
-  "composition": "balanced framing centered on Byte and desk, shelf and bowl clearly visible, skyline through window",
-  "color_palette": ["#FFD700","#228B22","#87CEEB","#D2B48C","#FFF8DC"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "warm golden afternoon sunlight through window, soft shadows",
+  "mood": "content happy relaxed during quiet hours",
+  "background": "simple room; shelf: one trophy left, clear space, one plant right no overlap; bowl right floor clear from legs",
+  "composition": "Byte center desk, laptop front, shelf above visible, bowl lower right, skyline window left back",
+  "color_palette": ["#FFD700","#228B22","#87CEEB","#D2B48C","#FFA07A","#FFFACD"]
 }

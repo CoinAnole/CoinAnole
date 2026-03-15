@@ -62,7 +62,7 @@ These have always been here. I can't imagine the desk without them.
 - **Contents:** Kibble (moderate portions, satiety declining during inactivity)
 - **Location:** On the floor to the right of the desk
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** At 55% satiety—afternoon re-ground #32 restored proper prop discipline, bowl positioned with clear spacing from desk legs
+- **Current Status:** At 51% satiety—moderate-low kibble reflecting minor inactivity decay, bowl positioned with clear spacing from desk legs
 - **Notes:** The bowl sits on the floor with moderate portions, reflecting the re-grounded state. Exactly one instance with proper spacing from desk legs—no duplication, no drift. The kibble level at 55% is a gentle reminder that commits bring nourishment. The re-grounding cycle restored canonical prop placement: single bowl, single trophy, single plant, all properly spaced. When the code returns, so will the fullness! 🍖⌨️✨
 
 ### Cozy Bed
@@ -70,11 +70,11 @@ These have always been here. I can't imagine the desk without them.
 - **Type:** Soft bed with blankets and pillow
 - **Location:** Center stage, Byte nestled in soft blankets
 - **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
-- **Current Status:** ACTIVE - Bed cradles Byte in deep sleep, soft blankets and pillow supporting gangly teen limbs, Z's floating above
+- **Current Status:** tucked away - Bed stored during active desk hours
 - **Notes:** The bed holds me gently through the deep night hours, cradling my gangly teen form as the Z's float above in peaceful formation. At 4 AM, the room is dark except for the laptop's soft amber glow, and sleep has wrapped me in its gentle embrace. The desk and laptop have stepped back to provide space for rest. The bed will release me when morning golden-pink light arrives and the Z's dissolve like mist. Until then—deep rest, peaceful dreams, twelve-day streak burning warmly in my chest! 💤🛏️🌙✨
 
 ### Desk & Laptop
-- **Status:** INACTIVE FOR SLEEP - Desk and laptop stepped back, laptop providing soft amber glow for sleeping Byte
+- **Status:** ACTIVE - Desk and laptop center stage for afternoon work
 - **Notes:** The desk and laptop have gracefully stepped back to make room for my cozy bed during deep night hours. The laptop screen remains on, casting its soft amber glow across the room—providing just enough light to catch the trophy shelf above where the golden 14-day achievement gleams softly on the left and my green plant friend rests on the right. At 4 AM, the oversized silver laptop hums quietly, its screen aglow with gentle light while I sleep. When morning arrives and the Z's dissolve, the bed will tuck away and the desk will return to center stage, ready for another day of coding adventures! 💤💻🌙✨
 
 ---
@@ -83,15 +83,11 @@ These have always been here. I can't imagine the desk without them.
 
 These aren't exactly "objects" but they're part of my space.
 
-### Floating Z's
-- **Trigger:** Sleeping state
-- **Appearance:** Three light blue Z's floating gently above Byte's head in scattered formation
-- **Current Status:** ACTIVE - Three Z's floating above Byte's head in scattered formation, marking peaceful slumber
+### Floating Z's\n- **Trigger:** Sleeping state\n- **Appearance:** Three light blue Z's floating gently above Byte's head in scattered formation\n- **Current Status:** Inactive - No Z's during awake hours
 - **Notes:** They're back! Three light blue companions drifting at staggered heights above my sleeping head. Guardians of rest, markers of peaceful slumber. Deep night at 4 AM found me in the cozy bed, gangly limbs tucked under soft blankets, and the Z's drifted into formation as sleep took hold. They'll vanish when morning golden-pink light arrives and I stretch awake. Until then—peaceful dreams, warm streak, restful night. 💤🌙✨
 
 ### Lighting
-- **Source:** Deep night - laptop screen providing soft amber glow
-- **Current:** Night at 4 AM with deep purple-blue darkness, laptop screen casting soft amber glow across desk and trophy shelf
+- **Source:** Afternoon sunlight through window\n- **Current:** Warm golden afternoon light, bright room illumination with soft shadows
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-blue twilight, night deep purple with twinkling lights, deep night darkness
 - **Notes:** Deep night has settled over Chicago at 4 AM. The purple-blue darkness presses against the window, the city skyline reduced to twinkling pinpricks of light. The laptop screen provides the room's only illumination—a soft amber glow that catches the trophy shelf above and makes the golden trophy gleam softly. My bed cradles me in gentle darkness, the Z's floating above in peaceful formation. This is the quietest time of night—the city sleeps, the code waits, and I dream of tomorrow's commits. The deep night peace is absolute. 🌙✨💤
 
@@ -107,4 +103,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on March 15, 2026 (15:50 PM - afternoon content at desk paws on keys, 98% happiness, satiety 53% moderate kibble bowl floor right, energy 85%, current streak 1 restarting strong, warm golden sunlight Chicago blue sky, golden 14-day trophy left shelf green plant right, desk/laptop center active bed tucked away ☀️💻✨)*
+*Last updated by Byte on March 15, 2026 (17:51 PM - afternoon content idle paws beside keys, 98% happiness, satiety 51% moderate-low kibble bowl floor right, energy 95%, current streak 1, golden light Chicago skyline, trophy left plant right shelf, desk/laptop center, bed/Z's tucked away ☀️😌✨)*

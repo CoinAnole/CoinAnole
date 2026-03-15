@@ -1,1 +1,18 @@
-{\n  \"attempt\": 1,\n  \"mode\": \"normal\",\n  \"base_image\": \".codepet/codepet.png\",\n  \"candidate_image\": \".codepet/new_pet.png\",\n  \"reference_live_image\": \".codepet/codepet.png\",\n  \"checks\": {\n    \"stage_identity\": {\"status\": \"pass\", \"evidence\": \"Gangly teen proportions preserved: elongated limbs, oversized head, expressive eyes matching stage anchor.\" },\n    \"pixel_style\": {\"status\": \"pass\", \"evidence\": \"Clean pixel art, dithered shading, sharp silhouettes maintained.\" },\n    \"requested_changes_visible\": {\"status\": \"pass\", \"evidence\": \"Subtle posture shift to paws resting, content smile, incremental from prior typing pose.\" },\n    \"artifact_free\": {\"status\": \"pass\", \"evidence\": \"No garbles, duplicates, or malformations; crisp image.\" },\n    \"prop_layout_integrity\": {\"status\": \"pass\", \"evidence\": \"One trophy left shelf, one plant right clear space; one bowl floor right no overlap.\" },\n    \"anchors_present\": {\"status\": \"pass\", \"evidence\": \"Desk, oversized laptop, skyline window all present and positioned correctly.\" },\n    \"temporal_mood_match\": {\"status\": \"pass\", \"evidence\": \"Afternoon warm lighting, content happy expression matching state.\" },\n    \"reground_cleanup\": {\"status\": \"pass\", \"evidence\": \"N/A for normal mode.\" }\n  },\n  \"decision\": \"accept\"\n}
+{
+  "attempt": 1,
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
+  "candidate_image": ".codepet/new_pet.png",
+  "reference_live_image": ".codepet/codepet.png",
+  "checks": {
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen proportions: elongated limbs, oversized head, light cyan blob matching teen anchor." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art dithered shading, sharp forms preserved." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Subtle shift to idle paws near keys, relaxed lean, bowl kibble visually consistent with slight depletion prompt." },
+    "artifact_free": { "status": "pass", "evidence": "No artifacts, duplicates, or malformations visible." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one trophy left shelf, one plant right with space; one bowl floor right no overlap/clip." },
+    "anchors_present": { "status": "pass", "evidence": "Desk/chair, oversized laptop, Chicago skyline window all intact." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Warm afternoon lighting, content happy expression aligns with state." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode." }
+  },
+  "decision": "accept"
+}

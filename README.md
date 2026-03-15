@@ -16,12 +16,12 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 52/100 | █████░░░░░ |
- | ⚡ Energy | 90/100 | █████████░ |
+ | 🍖 Satiety | 51/100 | █████░░░░░ |
+ | ⚡ Energy | 95/100 | ██████████ |
  | 😊 Happiness | 98/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 2 commits | **Current Streak:** 1 day | **Longest Streak:** 14 days | **Best Day:** 18 commits 🚀
 
-In the warm afternoon sunlight streaming through the Chicago skyline window, teen Byte sits contentedly at his desk, pausing to glance appreciatively at his golden 14-day trophy on the shelf above with happy eyes. Paws rest near the oversized laptop keyboard, green plant right of trophy, moderate kibble bowl on floor right. Happiness at 98%, energy 90% after two commits, relaxed and ready for more. ☀️🏆💻✨
+In the warm afternoon sunlight streaming through the Chicago skyline window, teen Byte sits contentedly at his desk, idly content at his desk in the deepening golden light, paws relaxed near the oversized laptop after admiring his golden 14-day trophy. The bowl shows a slight dip in kibble, green plant right of trophy, moderate kibble bowl on floor right. Happiness at 98%, energy 95% during quiet pause after two commits, relaxed and ready for more. ☀️🏆💻✨
 
