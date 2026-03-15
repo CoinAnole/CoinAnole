@@ -11,7 +11,7 @@ These have always been here. I can't imagine the desk without them.
 ### My Laptop
 - **Location:** On desk, screen casting soft amber glow
 - **State:** Open, screen providing gentle night illumination, softly glowing in the darkness
-- **Notes:** The laptop provides the room's only light at 4 AM—soft amber glow illuminating the space while Byte sleeps. The oversized screen casts gentle light across the desk surface, catching the trophy shelf above where the golden 10-day achievement gleams. This is the quiet hours, the deep night, and the laptop waits patiently for morning when coding will resume. The screen hums with potential energy, ready for when inspiration strikes and the keys start clicking again. Sweet dreams, laptop. See you in the morning! 💤💻🌙✨
+- **Notes:** The laptop provides the room's only light at 4 AM—soft amber glow illuminating the space while Byte sleeps. The oversized screen casts gentle light across the desk surface, catching the trophy shelf above where the golden 14-day achievement gleams. This is the quiet hours, the deep night, and the laptop waits patiently for morning when coding will resume. The screen hums with potential energy, ready for when inspiration strikes and the keys start clicking again. Sweet dreams, laptop. See you in the morning! 💤💻🌙✨
 
 ### The Window
 - **Location:** Behind me and slightly to the left
@@ -32,15 +32,15 @@ These have always been here. I can't imagine the desk without them.
 - **Material:** Wooden, mounted on wall above desk
 - **Location:** Wall space directly above Byte's desk
 - **Significance:** A permanent home for achievements
-- **Current Status:** Holds 1 trophy (the 10-day streak trophy)
+- **Current Status:** Holds 1 trophy (the 14-day streak trophy)
 
-### 10-Day Streak Trophy (formerly 9-Day)
+### 14-Day Streak Trophy (formerly 10-Day)
 - **Acquired:** February 14, 2026 (upgraded to 6-day status February 16, 2026, upgraded to 7-day status February 16, 2026 evening, upgraded to 8-day status February 18, 2026 evening, upgraded to 9-day status February 18, 2026 evening, upgraded to 10-day status February 21, 2026 evening)
 - **Material:** Gold-colored, shiny
 - **Location:** On the trophy shelf above the desk, positioned on the left side
-- **Significance:** My first and currently only trophy! Marking ten days of coding streak—a new all-time record! Over a week and a half of consistent coding!
-- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "10" and gleaming in the afternoon light
-- **Notes:** After re-grounding #30, the trophy sits perfectly positioned on the left side of the shelf with proper spacing restored. Exactly one trophy—no duplicates, no drift. The canonical placement is back: golden 10-day achievement on the left, clear space, then my plant friend on the right. ☀️🏆✨
+- **Significance:** My first and currently only trophy! Marking fourteen days of coding streak—a new all-time record! A sign that consistent work compounds over time.
+- **Current Status:** Displayed proudly as the sole trophy on the shelf, clearly showing "14" and gleaming in the afternoon light
+- **Notes:** After re-grounding #30, the trophy sits perfectly positioned on the left side of the shelf with proper spacing restored. Exactly one trophy—no duplicates, no drift. The canonical placement is back: golden 14-day achievement on the left, clear space, then my plant friend on the right. ☀️🏆✨
 
 ---
 
@@ -75,7 +75,7 @@ These have always been here. I can't imagine the desk without them.
 
 ### Desk & Laptop
 - **Status:** INACTIVE FOR SLEEP - Desk and laptop stepped back, laptop providing soft amber glow for sleeping Byte
-- **Notes:** The desk and laptop have gracefully stepped back to make room for my cozy bed during deep night hours. The laptop screen remains on, casting its soft amber glow across the room—providing just enough light to catch the trophy shelf above where the golden 10-day achievement gleams softly on the left and my green plant friend rests on the right. At 4 AM, the oversized silver laptop hums quietly, its screen aglow with gentle light while I sleep. When morning arrives and the Z's dissolve, the bed will tuck away and the desk will return to center stage, ready for another day of coding adventures! 💤💻🌙✨
+- **Notes:** The desk and laptop have gracefully stepped back to make room for my cozy bed during deep night hours. The laptop screen remains on, casting its soft amber glow across the room—providing just enough light to catch the trophy shelf above where the golden 14-day achievement gleams softly on the left and my green plant friend rests on the right. At 4 AM, the oversized silver laptop hums quietly, its screen aglow with gentle light while I sleep. When morning arrives and the Z's dissolve, the bed will tuck away and the desk will return to center stage, ready for another day of coding adventures! 💤💻🌙✨
 
 ---
 
