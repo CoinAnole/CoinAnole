@@ -1,21 +1,21 @@
 {
-  "scene": "Byte is standing near the desk and trophy shelf, looking up at his golden 10-day trophy with a content expression.",
+  "scene": "Byte sleeping soundly in a dark, peaceful room at night",
   "subjects": [
     {
-      "description": "Teen Byte, gangly form, standing posture",
-      "position": "standing in front of the desk, looking upward",
-      "action": "admiring the trophy on the shelf"
+      "description": "Byte, a teen-form pet with gangly, awkward proportions, fast asleep with closed eyes and peaceful expression",
+      "position": "curled up on the desk next to the oversized laptop",
+      "action": "sleeping peacefully"
     },
     {
-      "description": "anchor environment: desk, oversized laptop, Chicago skyline window",
+      "description": "anchor environment: desk, oversized laptop, Chicago skyline window at night with soft ambient moonlight",
       "position": "room/background placement",
       "action": "static environment anchor"
     }
   ],
   "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm evening light streaming from the window",
-  "mood": "content and reflective",
-  "background": "trophy shelf above desk with single golden trophy on the left and green plant on the right",
-  "composition": "framing and layout instructions to show Byte and the shelf",
-  "color_palette": ["#f4a460", "#708090", "#2f4f4f", "#ffd700"]
+  "lighting": "dim, soft amber glow from the laptop, moonlight through the window",
+  "mood": "restful, calm, peaceful",
+  "background": "desk, oversized laptop, Chicago skyline window, no extra props",
+  "composition": "Byte curled up on the desk near the laptop, skyline visible",
+  "color_palette": ["#000033", "#333366", "#FFCC66"]
 }
