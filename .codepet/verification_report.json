@@ -1,18 +1,18 @@
 {
-  "attempt": 2,
-  "mode": "normal",
-  "base_image": ".codepet/codepet.png",
+  "attempt": 1,
+  "mode": "reground",
+  "base_image": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen proportions intact: elongated cyan limbs big eyes balanced silhouette at desk matches stage anchor." },
-    "pixel_style": { "status": "pass", "evidence": "Clean pixel art dithered shading sharp forms consistent colors." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Morning awake transition: Byte centered at desk paws near keys open eyes relaxed content pose no bed no Z's desk laptop prominent." },
-    "artifact_free": { "status": "pass", "evidence": "No artifacts duplicates smears clean render." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "One 14-trophy left shelf one plant right clear space; one bowl low-moderate kibble floor right clear no overlap." },
-    "anchors_present": { "status": "pass", "evidence": "Desk center oversized laptop skyline window left shelf above all present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Morning golden-pink light dawn tones through window awake content pose matches morning 8am is_sleeping=false night_to_morning." },
-    "reground_cleanup": { "status": "pass", "evidence": "N/A normal mode." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob proportions directly inherited from stage anchor: elongated cyan limbs, big eyes, awkward gangly posture precisely matched." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading, sharp 2D forms, readable silhouette consistent across elements." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Afternoon warm golden lighting visible through window on desk; Byte in content idle pose paws beside keys; props re-applied: trophy left shelf, plant right shelf, bowl floor right." },
+    "artifact_free": { "status": "pass", "evidence": "No garbled text, duplicates, smears, or malformed objects; clean generation from anchor." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden 14-day trophy on left shelf, exactly one green leafy plant on right shelf with clear space between no overlap; exactly one food bowl with moderate kibble on floor right of desk clear spacing from legs." },
+    "anchors_present": { "status": "pass", "evidence": "Wooden desk center, oversized open laptop on desk, Chicago skyline window behind left all prominently visible and intact." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Warm golden afternoon lighting matches 16:00 time_of_day 'afternoon'; content relaxed pose matches mood 'content', is_sleeping=false, high happiness/energy." },
+    "reground_cleanup": { "status": "pass", "evidence": "Rebuilt from clean stage anchor correcting potential minor prop drift or style accumulation after 6 edits on previous live image; props explicitly re-positioned with enforced counts/spacing; Byte silhouette refreshed to canonical teen form." }
   },
   "decision": "accept"
 }

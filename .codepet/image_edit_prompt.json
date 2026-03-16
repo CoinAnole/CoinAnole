@@ -1,21 +1,21 @@
 {
-  "scene": "Gangly teen Byte awake content at desk in morning dawn light after rest.",
+  "scene": "Gangly teen Byte content idle at desk in warm afternoon light, canonical props precisely restored.",
   "subjects": [
     {
-      "description": "gangly teen-stage Byte fluffy awkward cyan blob elongated limbs big open expressive eyes balanced proportions",
-      "position": "centered foreground on wooden chair at desk",
-      "action": "sitting relaxed awake paws gently near oversized laptop keys content refreshed expression"
+      "description": "gangly awkward teen pixel art blob Byte elongated limbs big expressive eyes fluffy cyan fur content relaxed posture",
+      "position": "foreground center sitting on desk chair",
+      "action": "paws resting idly beside oversized laptop keys gazing contentedly"
     },
     {
-      "description": "medium-tone wooden desk oversized open silver laptop Chicago skyline window behind left trophy shelf above",
-      "position": "midground background room",
-      "action": "static anchor no bed"
+      "description": "wooden desk oversized open laptop softly glowing Chicago skyline window behind left trophy shelf above desk exactly one golden 14-day trophy positioned left side exactly one small leafy green plant positioned right side clear spacing no overlap single food bowl moderate kibble on floor right of desk clear spacing from desk legs",
+      "position": "midground background simple room",
+      "action": "static environment with precise prop placements"
     }
   ],
-  "style": "pixel art clean 2D forms dithered shading readable silhouette consistent",
-  "lighting": "soft golden-pink morning dawn light streaming through window warm gentle illumination transitioning from night",
-  "mood": "content refreshed high happiness relaxed warm tones",
-  "background": "trophy shelf above desk exactly one golden 14-day trophy left one green leafy plant right clear space no overlap; single food bowl low-moderate kibble floor right desk clear spacing no duplication",
-  "composition": "Byte centered facing laptop slightly left window behind left shelf above desk balanced framing no sleep elements",
-  "color_palette": ["#FFD700","#228B22","#FFE4B5","#87CEEB","#D2B48C","#FFB6C1","#FFEBCD"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent stage proportions",
+  "lighting": "warm golden afternoon sunlight through window soft warm illumination on desk props",
+  "mood": "content relaxed high happiness full energy",
+  "background": "plain room walls wooden shelf above desk props exactly as specified no duplicates artifacts",
+  "composition": "Byte centered prominent desk filling frame shelf window visible behind",
+  "color_palette": ["#FFD700","#228B22","#FFE4B5","#87CEEB","#D2B48C","#FFB6C1","#FFEBCD","#FAD5A5","#E8B923"]
 }
