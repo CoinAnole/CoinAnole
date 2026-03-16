@@ -1,26 +1,21 @@
 {
-  "scene": "Gangly teen Byte contentedly idles paws near laptop in warm afternoon light, bowl showing slight kibble depletion.",
+  "scene": "Gangly teen Byte contentedly idling paws beside oversized laptop in night-lit Chicago skyline room.",
   "subjects": [
     {
-      "description": "gangly awkward teen-stage pixel art blob: elongated limbs, large head, big happy expressive eyes, light cyan fluffy body",
-      "position": "center foreground seated on desk chair",
-      "action": "paws resting idly beside oversized laptop keys, relaxed content smile, subtle lean back after coding pause"
+      "description": "gangly teen pixel art blob Byte elongated limbs big expressive eyes fluffy cyan body teen proportions",
+      "position": "foreground center seated at desk",
+      "action": "relaxed paws resting beside keyboard not touching keys content happy expression high energy"
     },
     {
-      "description": "medium wooden desk with chair, oversized open dark laptop centered, trophy shelf above with golden 14-day trophy left and green plant right, Chicago skyline window background",
-      "position": "midground room background",
+      "description": "wooden desk oversized open laptop Chicago skyline window simple room",
+      "position": "midground background",
       "action": "static"
-    },
-    {
-      "description": "single metal food bowl with moderate-low kibble pile",
-      "position": "floor right of desk",
-      "action": "static visible depletion"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm golden afternoon sunlight through window, soft shadows",
-  "mood": "content happy relaxed during quiet hours",
-  "background": "simple room; shelf: one trophy left, clear space, one plant right no overlap; bowl right floor clear from legs",
-  "composition": "Byte center desk, laptop front, shelf above visible, bowl lower right, skyline window left back",
-  "color_palette": ["#FFD700","#228B22","#87CEEB","#D2B48C","#FFA07A","#FFFACD"]
+  "style": "pixel art clean 2D dithered shading readable",
+  "lighting": "night deep purple indigo sky twinkling yellow white city lights prominent window laptop amber glow main illumination cool tones gentle shadows",
+  "mood": "content high happiness full energy relaxed positive",
+  "background": "shelf above desk one golden 14 trophy left clear space one green plant right; one food bowl half empty kibble floor right desk no overlap",
+  "composition": "Byte center desk lower laptop front shelf above window back left balanced",
+  "color_palette": ["#0a0a1f", "#1a1a3a", "#2a2a5f", "#b59f70", "#f0b040", "#609060"]
 }
