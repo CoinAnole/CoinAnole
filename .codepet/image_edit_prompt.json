@@ -1,10 +1,10 @@
 {
-  "scene": "Gangly teen Byte idle with paws flat on desk beside laptop keyboard not touching keys, content relaxed in afternoon light, shelf with only one trophy and one plant.",
+  "scene": "Gangly teen Byte with paws flat detached on desk surface beside laptop base not touching keys, content relaxed in evening twilight light, shelf with only one trophy left and one plant right.",
   "subjects": [
     {
       "description": "gangly teen pixel art blob creature elongated limbs large gentle eyes blue fluffy translucent body awkward proportions relaxed posture",
       "position": "precise center foreground seated facing desk",
-      "action": "both paws flat resting on desk surface not touching keyboard, one paw beside left edge one beside right edge of laptop base, soft content smile relaxed half-closed eyes"
+      "action": "arms relaxed not extended, both paws flat on bare wood desk surface left and right of laptop base with visible wood between paws and laptop, zero contact with keyboard or laptop, half-lidded relaxed eyes soft smile"
     },
     {
       "description": "oversized open dark laptop centered on wooden desk, Chicago skyline cityscape window background left",
@@ -13,7 +13,7 @@
     }
   ],
   "style": "pixel art clean sharp 2D forms dithered shading readable silhouettes no blur",
-  "lighting": "warm golden late afternoon sun from left window soft highlights on Byte paws desk",
+  "lighting": "warm golden-purple evening twilight ambient glow from left window softer indirect light on Byte paws desk",
   "mood": "calm content relaxed after 1h coding lull full energy high happiness",
   "background": "plain room walls; wooden shelf directly above desk holding ONLY exactly one golden 14-day trophy positioned on left side, clear empty middle space no other items, exactly one small green leafy potted plant positioned on right side no overlap; single food bowl on floor to right of desk with kibble at moderately low half-full level clear spacing from desk legs no other props",
   "composition": "framed to clearly show paws resting flat beside laptop edges not on keys, Byte centered, shelf full view above, window skyline left upper",
