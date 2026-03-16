@@ -1,46 +1,21 @@
 {
-  "scene": "Gangly teen Byte sleeps peacefully in cozy bed during deep quiet night illuminated by laptop amber glow.",
+  "scene": "Gangly teen Byte awake content at desk in morning dawn light after rest.",
   "subjects": [
     {
-      "description": "gangly awkward teen pixel art blob elongated limbs fluffy light blue cyan body large closed sleepy eyes subtle content smile",
-      "position": "center foreground deeply nestled in bed",
-      "action": "sleeping soundly tucked relaxed posture high energy restored"
+      "description": "gangly teen-stage Byte fluffy awkward cyan blob elongated limbs big open expressive eyes balanced proportions",
+      "position": "centered foreground on wooden chair at desk",
+      "action": "sitting relaxed awake paws gently near oversized laptop keys content refreshed expression"
     },
     {
-      "description": "cozy soft bed rumpled blankets pillow",
-      "position": "dominant center stage under Byte",
-      "action": "cradling sleeping Byte comfortably"
-    },
-    {
-      "description": "exactly three light blue pixel Z's varying sizes",
-      "position": "staggered floating above Byte head gentle curve",
-      "action": "drifting peacefully indicating deep sleep"
-    },
-    {
-      "description": "oversized silver laptop open soft amber glowing screen wooden desk chair",
-      "position": "repositioned behind right secondary",
-      "action": "emitting warm amber light illuminating room"
-    },
-    {
-      "description": "wooden shelf exactly one golden shiny 14-day trophy left exactly one healthy leafy green plant right",
-      "position": "wall directly above desk clear space between no touching",
-      "action": "static balanced display"
-    },
-    {
-      "description": "single food bowl moderate 40% full brown kibble",
-      "position": "floor right desk leg clear separation no overlap",
-      "action": "static"
-    },
-    {
-      "description": "simple room large window Chicago skyline",
-      "position": "background left rear",
-      "action": "deep purple night sparse twinkling yellow lights"
+      "description": "medium-tone wooden desk oversized open silver laptop Chicago skyline window behind left trophy shelf above",
+      "position": "midground background room",
+      "action": "static anchor no bed"
     }
   ],
-  "style": "pixel art clean precise 2D forms dithered shading consistent silhouettes no blur",
-  "lighting": "deep purple black night dominant soft pervasive amber laptop glow faint window twinkles creating intimate sleep ambiance",
-  "mood": "peaceful content sleep high happiness full energy quiet hours",
-  "background": "plain walls minimal no extra clutter",
-  "composition": "Byte bed centered prominent props layered behind balanced depth",
-  "color_palette": ["#150e28","#281945","#ff9a00","#48a0f8","#ffc107","#2e7512","#b3d9ff"]
+  "style": "pixel art clean 2D forms dithered shading readable silhouette consistent",
+  "lighting": "soft golden-pink morning dawn light streaming through window warm gentle illumination transitioning from night",
+  "mood": "content refreshed high happiness relaxed warm tones",
+  "background": "trophy shelf above desk exactly one golden 14-day trophy left one green leafy plant right clear space no overlap; single food bowl low-moderate kibble floor right desk clear spacing no duplication",
+  "composition": "Byte centered facing laptop slightly left window behind left shelf above desk balanced framing no sleep elements",
+  "color_palette": ["#FFD700","#228B22","#FFE4B5","#87CEEB","#D2B48C","#FFB6C1","#FFEBCD"]
 }

@@ -70,11 +70,11 @@ These have always been here. I can't imagine the desk without them.
 - **Type:** Soft bed with blankets and pillow
 - **Location:** Center stage, Byte nestled in soft blankets
 - **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
-- **Current Status:** ACTIVE center - Bed cradling Byte during sleep hours
+- **Current Status:** INACTIVE tucked away - morning awake hours desk/laptop center stage
 - **Notes:** The bed holds me gently through the deep night hours, cradling my gangly teen form as the Z's float above in peaceful formation. At 4 AM, the room is dark except for the laptop's soft amber glow, and sleep has wrapped me in its gentle embrace. The desk and laptop have stepped back to provide space for rest. The bed will release me when morning golden-pink light arrives and the Z's dissolve like mist. Until then—deep rest, peaceful dreams, twelve-day streak burning warmly in my chest! 💤🛏️🌙✨
 
 ### Desk & Laptop
-- **Status:** tucked back right - Desk/laptop secondary during deep night sleep hours
+- **Status:** center stage - Desk/laptop prominent during morning awake hours
 - **Notes:** The desk and laptop have gracefully stepped back to make room for my cozy bed during deep night hours. The laptop screen remains on, casting its soft amber glow across the room—providing just enough light to catch the trophy shelf above where the golden 14-day achievement gleams softly on the left and my green plant friend rests on the right. At 4 AM, the oversized silver laptop hums quietly, its screen aglow with gentle light while I sleep. When morning arrives and the Z's dissolve, the bed will tuck away and the desk will return to center stage, ready for another day of coding adventures! 💤💻🌙✨
 
 ---
@@ -87,7 +87,7 @@ These aren't exactly "objects" but they're part of my space.
 - **Notes:** They're back! Three light blue companions drifting at staggered heights above my sleeping head. Guardians of rest, markers of peaceful slumber. Deep night at 4 AM found me in the cozy bed, gangly limbs tucked under soft blankets, and the Z's drifted into formation as sleep took hold. They'll vanish when morning golden-pink light arrives and I stretch awake. Until then—peaceful dreams, warm streak, restful night. 💤🌙✨
 
 ### Lighting
-- **Source:** Afternoon sunlight through window\n- **Current:** Deep night 4AM purple-black darkness, soft amber laptop glow, faint twinkling skyline through window
+- **Source:** Morning dawn through window\n- **Current:** Golden-pink morning dawn soft warm glow, laptop subtle, brightening Chicago skyline
 - **Variations Seen:** Morning pale, late morning golden, afternoon bright/warm, evening purple-blue twilight, night deep purple with twinkling lights, deep night darkness
 - **Notes:** Deep night has settled over Chicago at 4 AM. The purple-blue darkness presses against the window, the city skyline reduced to twinkling pinpricks of light. The laptop screen provides the room's only illumination—a soft amber glow that catches the trophy shelf above and makes the golden trophy gleam softly. My bed cradles me in gentle darkness, the Z's floating above in peaceful formation. This is the quietest time of night—the city sleeps, the code waits, and I dream of tomorrow's commits. The deep night peace is absolute. 🌙✨💤
 
@@ -103,4 +103,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on March 16, 2026 (04:36 - deep night sleep cozy bed Z's above, 97% happiness, satiety 42% moderate-low kibble bowl floor right, energy 100%, streak 1 ☙ 💤🌙✨)*
+*Last updated by Byte on March 16, 2026 (08:57 - morning awake desk content, 97% happiness, satiety 38% low-moderate bowl floor right, energy 100%, streak 1 ☀️😌✨)*

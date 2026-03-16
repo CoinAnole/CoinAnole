@@ -5,14 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen proportions preserved: elongated limbs tucked in bed, cyan fluffy body, head shape matches stage anchor teen.png." },
-    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading, sharp 2D forms, consistent vibrant pixel colors and silhouettes." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Sleep transition complete: cozy bed center with Byte tucked closed eyes happy smile; exactly three blue Z's staggered floating above head; desk/laptop tucked right behind." },
-    "artifact_free": { "status": "pass", "evidence": "No duplicates, smears, malformations, or floating glyphs; all elements cleanly rendered without overlap or clipping." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one 14 trophy left shelf, one green plant right shelf clear space no overlap; single bowl moderate kibble floor right desk separated from leg." },
-    "anchors_present": { "status": "pass", "evidence": "Desk/wooden chair right rear, oversized laptop glowing amber on desk, Chicago skyline window left background all visible." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Deep night 4AM quiet hours: purple darkness twinkling skyline, amber laptop glow; is_sleeping=true matched by bed/Z's/closed eyes, content mood via smile/posture." },
-    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen proportions intact: elongated cyan limbs big eyes balanced silhouette at desk matches stage anchor." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art dithered shading sharp forms consistent colors." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Morning awake transition: Byte centered at desk paws near keys open eyes relaxed content pose no bed no Z's desk laptop prominent." },
+    "artifact_free": { "status": "pass", "evidence": "No artifacts duplicates smears clean render." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "One 14-trophy left shelf one plant right clear space; one bowl low-moderate kibble floor right clear no overlap." },
+    "anchors_present": { "status": "pass", "evidence": "Desk center oversized laptop skyline window left shelf above all present." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Morning golden-pink light dawn tones through window awake content pose matches morning 8am is_sleeping=false night_to_morning." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A normal mode." }
   },
   "decision": "accept"
 }
