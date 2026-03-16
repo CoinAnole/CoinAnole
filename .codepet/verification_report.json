@@ -1,18 +1,18 @@
 {
   "attempt": 1,
-  "mode": "reground",
-  "base_image": ".codepet/stage_images/teen.png",
+  "mode": "normal",
+  "base_image": ".codepet/codepet.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob proportions directly inherited from stage anchor: elongated cyan limbs, big eyes, awkward gangly posture precisely matched." },
-    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading, sharp 2D forms, readable silhouette consistent across elements." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Afternoon warm golden lighting visible through window on desk; Byte in content idle pose paws beside keys; props re-applied: trophy left shelf, plant right shelf, bowl floor right." },
-    "artifact_free": { "status": "pass", "evidence": "No garbled text, duplicates, smears, or malformed objects; clean generation from anchor." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden 14-day trophy on left shelf, exactly one green leafy plant on right shelf with clear space between no overlap; exactly one food bowl with moderate kibble on floor right of desk clear spacing from legs." },
-    "anchors_present": { "status": "pass", "evidence": "Wooden desk center, oversized open laptop on desk, Chicago skyline window behind left all prominently visible and intact." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Warm golden afternoon lighting matches 16:00 time_of_day 'afternoon'; content relaxed pose matches mood 'content', is_sleeping=false, high happiness/energy." },
-    "reground_cleanup": { "status": "pass", "evidence": "Rebuilt from clean stage anchor correcting potential minor prop drift or style accumulation after 6 edits on previous live image; props explicitly re-positioned with enforced counts/spacing; Byte silhouette refreshed to canonical teen form." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob silhouette preserved with lanky limbs and big eyes matching stage anchor reference." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art dithering and 2D forms consistent from base and anchor inputs." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Byte paws positioned actively on keys transitioning from idle; bowl kibble level visually fuller matching satiety 62%; joyful spark in eyes for happiness 98% and recent 6 commits." },
+    "artifact_free": { "status": "pass", "evidence": "No duplicates, smears, or malformations; smooth incremental edit." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one 14-day trophy left shelf, one green plant right shelf clear space no overlap; one food bowl moderate-full floor right clear desk spacing." },
+    "anchors_present": { "status": "pass", "evidence": "Oversized laptop center desk, wooden desk surface, Chicago skyline window background all intact." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Warm afternoon golden lighting at 16:57 local; content mood with coding action after 0.27h since commit." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode - incremental refinement post-reground." }
   },
   "decision": "accept"
 }

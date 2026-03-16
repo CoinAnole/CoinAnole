@@ -1,21 +1,21 @@
 {
-  "scene": "Gangly teen Byte content idle at desk in warm afternoon light, canonical props precisely restored.",
+  "scene": "Gangly teen Byte energetically typing on oversized laptop in warm afternoon light, surrounded by achievement props.",
   "subjects": [
     {
-      "description": "gangly awkward teen pixel art blob Byte elongated limbs big expressive eyes fluffy cyan fur content relaxed posture",
-      "position": "foreground center sitting on desk chair",
-      "action": "paws resting idly beside oversized laptop keys gazing contentedly"
+      "description": "gangly teen pixel art blob with lanky limbs, large sparkling joyful eyes, fluffy fur, awkward elongated proportions",
+      "position": "foreground center seated at wooden desk",
+      "action": "paws blurred typing rapidly on laptop keyboard in coding flow state"
     },
     {
-      "description": "wooden desk oversized open laptop softly glowing Chicago skyline window behind left trophy shelf above desk exactly one golden 14-day trophy positioned left side exactly one small leafy green plant positioned right side clear spacing no overlap single food bowl moderate kibble on floor right of desk clear spacing from desk legs",
-      "position": "midground background simple room",
-      "action": "static environment with precise prop placements"
+      "description": "oversized open silver laptop on desk, simple room with Chicago skyline window behind",
+      "position": "midground desk, background wall and window",
+      "action": "laptop screen emitting soft glow, window framing sunlit city skyline"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette, consistent stage proportions",
-  "lighting": "warm golden afternoon sunlight through window soft warm illumination on desk props",
-  "mood": "content relaxed high happiness full energy",
-  "background": "plain room walls wooden shelf above desk props exactly as specified no duplicates artifacts",
-  "composition": "Byte centered prominent desk filling frame shelf window visible behind",
-  "color_palette": ["#FFD700","#228B22","#FFE4B5","#87CEEB","#D2B48C","#FFB6C1","#FFEBCD","#FAD5A5","#E8B923"]
+  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
+  "lighting": "warm golden afternoon sunlight streaming through window onto desk, soft highlights on Byte and props",
+  "mood": "content and ecstatic from six recent commits and streak of two",
+  "background": "trophy shelf above desk holding exactly one golden 14-day trophy on left side and one green leafy plant on right side with clear space between no overlap; single food bowl on floor right of desk filled to moderate-full level with kibble, clear spacing from desk legs",
+  "composition": "centered framing on Byte typing at desk, prominent shelf above with props, skyline window visible behind to left, balanced layout",
+  "color_palette": ["#FFD700", "#FF8C00", "#228B22", "#87CEEB", "#D2B48C"]
 }
