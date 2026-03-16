@@ -1,18 +1,20 @@
 {
-  "attempt": 1,
+  "attempt": 3,
   "mode": "normal",
   "base_image": ".codepet/codepet.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob silhouette preserved with lanky limbs and big eyes matching stage anchor reference." },
-    "pixel_style": { "status": "pass", "evidence": "Clean pixel art dithering and 2D forms consistent from base and anchor inputs." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Byte paws positioned actively on keys transitioning from idle; bowl kibble level visually fuller matching satiety 62%; joyful spark in eyes for happiness 98% and recent 6 commits." },
-    "artifact_free": { "status": "pass", "evidence": "No duplicates, smears, or malformations; smooth incremental edit." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one 14-day trophy left shelf, one green plant right shelf clear space no overlap; one food bowl moderate-full floor right clear desk spacing." },
-    "anchors_present": { "status": "pass", "evidence": "Oversized laptop center desk, wooden desk surface, Chicago skyline window background all intact." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Warm afternoon golden lighting at 16:57 local; content mood with coding action after 0.27h since commit." },
-    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode - incremental refinement post-reground." }
+    "stage_identity": { "status": "pass", "evidence": "Teen gangly form limbs eyes preserved." },
+    "pixel_style": { "status": "pass", "evidence": "Pixel art consistent." },
+    "requested_changes_visible": { "status": "fail", "evidence": "Paws persist in typing position on keys; no resting on desk beside despite explicit prompt." },
+    "artifact_free": { "status": "pass", "evidence": "No new smears or garbling." },
+    "prop_layout_integrity": { "status": "fail", "evidence": "Golden 14-day trophy missing from shelf (left side empty); only plant right visible." },
+    "anchors_present": { "status": "pass", "evidence": "Desk laptop window ok." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Afternoon light content face." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A." }
   },
-  "decision": "accept"
+  "decision": "reject",
+  "rejection_reason": "Failed to apply idle paws pose; lost critical prop (14-day trophy) from shelf.",
+  "prompt_delta_for_next_attempt": "N/A - max retries reached."
 }

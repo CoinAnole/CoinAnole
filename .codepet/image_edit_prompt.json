@@ -1,21 +1,21 @@
 {
-  "scene": "Gangly teen Byte energetically typing on oversized laptop in warm afternoon light, surrounded by achievement props.",
+  "scene": "Gangly teen Byte idle with paws flat on desk beside laptop keyboard not touching keys, content relaxed in afternoon light, shelf with only one trophy and one plant.",
   "subjects": [
     {
-      "description": "gangly teen pixel art blob with lanky limbs, large sparkling joyful eyes, fluffy fur, awkward elongated proportions",
-      "position": "foreground center seated at wooden desk",
-      "action": "paws blurred typing rapidly on laptop keyboard in coding flow state"
+      "description": "gangly teen pixel art blob creature elongated limbs large gentle eyes blue fluffy translucent body awkward proportions relaxed posture",
+      "position": "precise center foreground seated facing desk",
+      "action": "both paws flat resting on desk surface not touching keyboard, one paw beside left edge one beside right edge of laptop base, soft content smile relaxed half-closed eyes"
     },
     {
-      "description": "oversized open silver laptop on desk, simple room with Chicago skyline window behind",
-      "position": "midground desk, background wall and window",
-      "action": "laptop screen emitting soft glow, window framing sunlit city skyline"
+      "description": "oversized open dark laptop centered on wooden desk, Chicago skyline cityscape window background left",
+      "position": "midground central desk background",
+      "action": "static unchanged environment"
     }
   ],
-  "style": "pixel art, clean 2D forms, dithered shading, readable silhouette",
-  "lighting": "warm golden afternoon sunlight streaming through window onto desk, soft highlights on Byte and props",
-  "mood": "content and ecstatic from six recent commits and streak of two",
-  "background": "trophy shelf above desk holding exactly one golden 14-day trophy on left side and one green leafy plant on right side with clear space between no overlap; single food bowl on floor right of desk filled to moderate-full level with kibble, clear spacing from desk legs",
-  "composition": "centered framing on Byte typing at desk, prominent shelf above with props, skyline window visible behind to left, balanced layout",
-  "color_palette": ["#FFD700", "#FF8C00", "#228B22", "#87CEEB", "#D2B48C"]
+  "style": "pixel art clean sharp 2D forms dithered shading readable silhouettes no blur",
+  "lighting": "warm golden late afternoon sun from left window soft highlights on Byte paws desk",
+  "mood": "calm content relaxed after 1h coding lull full energy high happiness",
+  "background": "plain room walls; wooden shelf directly above desk holding ONLY exactly one golden 14-day trophy positioned on left side, clear empty middle space no other items, exactly one small green leafy potted plant positioned on right side no overlap; single food bowl on floor to right of desk with kibble at moderately low half-full level clear spacing from desk legs no other props",
+  "composition": "framed to clearly show paws resting flat beside laptop edges not on keys, Byte centered, shelf full view above, window skyline left upper",
+  "color_palette": ["#4682B4", "#87CEEB", "#DAA520", "#228B22", "#8B4513", "#FFD700"]
 }
