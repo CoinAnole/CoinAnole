@@ -1,21 +1,46 @@
 {
-  "scene": "Gangly teen Byte contentedly idling paws beside oversized laptop in night-lit Chicago skyline room.",
+  "scene": "Gangly teen Byte sleeps peacefully in cozy bed during deep quiet night illuminated by laptop amber glow.",
   "subjects": [
     {
-      "description": "gangly teen pixel art blob Byte elongated limbs big expressive eyes fluffy cyan body teen proportions",
-      "position": "foreground center seated at desk",
-      "action": "relaxed paws resting beside keyboard not touching keys content happy expression high energy"
+      "description": "gangly awkward teen pixel art blob elongated limbs fluffy light blue cyan body large closed sleepy eyes subtle content smile",
+      "position": "center foreground deeply nestled in bed",
+      "action": "sleeping soundly tucked relaxed posture high energy restored"
     },
     {
-      "description": "wooden desk oversized open laptop Chicago skyline window simple room",
-      "position": "midground background",
+      "description": "cozy soft bed rumpled blankets pillow",
+      "position": "dominant center stage under Byte",
+      "action": "cradling sleeping Byte comfortably"
+    },
+    {
+      "description": "exactly three light blue pixel Z's varying sizes",
+      "position": "staggered floating above Byte head gentle curve",
+      "action": "drifting peacefully indicating deep sleep"
+    },
+    {
+      "description": "oversized silver laptop open soft amber glowing screen wooden desk chair",
+      "position": "repositioned behind right secondary",
+      "action": "emitting warm amber light illuminating room"
+    },
+    {
+      "description": "wooden shelf exactly one golden shiny 14-day trophy left exactly one healthy leafy green plant right",
+      "position": "wall directly above desk clear space between no touching",
+      "action": "static balanced display"
+    },
+    {
+      "description": "single food bowl moderate 40% full brown kibble",
+      "position": "floor right desk leg clear separation no overlap",
       "action": "static"
+    },
+    {
+      "description": "simple room large window Chicago skyline",
+      "position": "background left rear",
+      "action": "deep purple night sparse twinkling yellow lights"
     }
   ],
-  "style": "pixel art clean 2D dithered shading readable",
-  "lighting": "night deep purple indigo sky twinkling yellow white city lights prominent window laptop amber glow main illumination cool tones gentle shadows",
-  "mood": "content high happiness full energy relaxed positive",
-  "background": "shelf above desk one golden 14 trophy left clear space one green plant right; one food bowl half empty kibble floor right desk no overlap",
-  "composition": "Byte center desk lower laptop front shelf above window back left balanced",
-  "color_palette": ["#0a0a1f", "#1a1a3a", "#2a2a5f", "#b59f70", "#f0b040", "#609060"]
+  "style": "pixel art clean precise 2D forms dithered shading consistent silhouettes no blur",
+  "lighting": "deep purple black night dominant soft pervasive amber laptop glow faint window twinkles creating intimate sleep ambiance",
+  "mood": "peaceful content sleep high happiness full energy quiet hours",
+  "background": "plain walls minimal no extra clutter",
+  "composition": "Byte bed centered prominent props layered behind balanced depth",
+  "color_palette": ["#150e28","#281945","#ff9a00","#48a0f8","#ffc107","#2e7512","#b3d9ff"]
 }

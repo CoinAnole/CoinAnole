@@ -12,16 +12,16 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Content 🌙 | **Status:** Night 💻
+**Stage:** Teen | **Mood:** Content 💤 | **Status:** Sleeping 🌙
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 47/100 | ████▏░░░░░ |
+ | 🍖 Satiety | 42/100 | ████░░░░░░ |
  | ⚡ Energy | 100/100 | ██████████ |
- | 😊 Happiness | 98/100 | ██████████ |
+ | 😊 Happiness | 97/100 | █████████▏ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 0 commits | **Current Streak:** 1 day | **Longest Streak:** 14 days | **Best Day:** 18 commits 🚀
 
-Amid twinkling Chicago skyline night lights and amber laptop glow, teen Byte sits content at desk paws near keys in relaxed idle after 8-hour quiet. Satiety 47% moderate-low kibble bowl floor right, yet happiness 98% energy 100% radiate positivity. Golden 14-day trophy left shelf green plant right, poised ready. 🌙🏙️💻✨
+Deep 4 AM quiet night in purple darkness lit by amber laptop glow from tucked desk. Gangly teen Byte sleeps content in cozy bed center, three Z's drifting above; satiety 42% moderate bowl floor right, happiness 97%, energy 100%. Shelf gleams: 14-day gold trophy left, green plant right; twinkling Chicago skyline faint. 💤🌙💻✨
 

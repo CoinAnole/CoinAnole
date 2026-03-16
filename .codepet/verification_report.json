@@ -5,14 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": {"status": "pass", "evidence": "Gangly teen blob preserved: elongated legs/arms, big eyes, cyan fluffy body matching stage anchor silhouette."},
-    "pixel_style": {"status": "pass", "evidence": "Pixel art dithering, clean 2D forms, vibrant colors intact."},
-    "requested_changes_visible": {"status": "pass", "evidence": "Night lighting applied: purple starry sky with twinkling city lights through window, cooler tones, prominent yellow laptop glow illuminating scene replacing afternoon warmth."},
-    "artifact_free": {"status": "pass", "evidence": "No garbles, duplicates, smears, or malformations; smooth edit."},
-    "prop_layout_integrity": {"status": "pass", "evidence": "Exactly one golden 14 trophy left shelf, one green plant right with clear space no overlap; single bowl moderate kibble floor right desk, spaced from legs."},
-    "anchors_present": {"status": "pass", "evidence": "Wooden desk/chair, oversized laptop center desk, Chicago skyline window upper left all positioned correctly."},
-    "temporal_mood_match": {"status": "pass", "evidence": "Night time_of_day matched with purple twinkling skyline and laptop glow; content mood via happy expression relaxed posture."},
-    "reground_cleanup": {"status": "pass", "evidence": "N/A for normal mode."}
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen proportions preserved: elongated limbs tucked in bed, cyan fluffy body, head shape matches stage anchor teen.png." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading, sharp 2D forms, consistent vibrant pixel colors and silhouettes." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Sleep transition complete: cozy bed center with Byte tucked closed eyes happy smile; exactly three blue Z's staggered floating above head; desk/laptop tucked right behind." },
+    "artifact_free": { "status": "pass", "evidence": "No duplicates, smears, malformations, or floating glyphs; all elements cleanly rendered without overlap or clipping." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one 14 trophy left shelf, one green plant right shelf clear space no overlap; single bowl moderate kibble floor right desk separated from leg." },
+    "anchors_present": { "status": "pass", "evidence": "Desk/wooden chair right rear, oversized laptop glowing amber on desk, Chicago skyline window left background all visible." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Deep night 4AM quiet hours: purple darkness twinkling skyline, amber laptop glow; is_sleeping=true matched by bed/Z's/closed eyes, content mood via smile/posture." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode." }
   },
   "decision": "accept"
 }
