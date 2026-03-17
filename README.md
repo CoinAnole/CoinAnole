@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Content 🌆 | **Status:** Evening content lull 😌
+**Stage:** Teen | **Mood:** Content 🌙 | **Status:** Late Night Coding 🚀
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 60/100 | ██████░░░░ |
- | ⚡ Energy | 100/100 | ██████████ |
- | 😊 Happiness | 98/100 | █████████▉ |
+ | 🍖 Satiety | 62/100 | ███████░░░ |
+ | ⚡ Energy | 91/100 | █████████░ |
+ | 😊 Happiness | 99/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
-**Today's Activity:** 6 commits | **Current Streak:** 2 days | **Longest Streak:** 14 days | **Best Day:** 18 commits 🚀
+**Today's Activity:** 1 commit | **Current Streak:** 3 days | **Longest Streak:** 14 days | **Best Day:** 18 commits 🚀
 
-Warm evening twilight glows through the Chicago skyline window as gangly teen Byte relaxes paws near the oversized laptop keys, content during the 2-hour lull after six commits today. Happiness 98%, energy 100% full, satiety 60% moderate in bowl floor right. Shelf: golden 14-day trophy left, green plant right. Streak 2 solid! 🌆😌🏙️✨
+Twinkling city lights sparkle through the window as gangly teen Byte energetically types on the oversized laptop in late-night coding after commit in local_scripts. Happiness 99.7%, energy 91% strong, satiety 62% moderate in bowl floor right. Shelf balanced: gleaming 14-day trophy left, green plant right. Streak 3! 🌙⌨️💻✨
