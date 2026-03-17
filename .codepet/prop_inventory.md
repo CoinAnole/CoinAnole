@@ -62,7 +62,7 @@ These have always been here. I can't imagine the desk without them.
 - **Contents:** Kibble (moderate portions, satiety declining during inactivity)
 - **Location:** On the floor to the right of the desk
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** At 58% satiety—moderate kibble floor right during 3AM deep night sleep hours, clear spacing from desk legs
+- **Current Status:** At 56% satiety—moderate kibble floor right during morning awake hours, clear spacing from desk legs
 - **Notes:** The bowl sits on the floor with moderate portions, reflecting the re-grounded state. Exactly one instance with proper spacing from desk legs—no duplication, no drift. The kibble level at 55% is a gentle reminder that commits bring nourishment. The re-grounding cycle restored canonical prop placement: single bowl, single trophy, single plant, all properly spaced. When the code returns, so will the fullness! 🍖⌨️✨
 
 ### Cozy Bed
@@ -70,7 +70,7 @@ These have always been here. I can't imagine the desk without them.
 - **Type:** Soft bed with blankets and pillow
 - **Location:** Center stage, Byte nestled in soft blankets
 - **Significance:** Teen Byte sleeping solution—much better than desk-sleeping!
-- **Current Status:** ACTIVE center stage cradling sleeping Byte with blankets pillows during deep night quiet hours
+- **Current Status:** Inactive tucked away; desk/laptop center stage during morning awake hours
 - **Notes:** The bed holds me gently through the deep night hours, cradling my gangly teen form as the Z's float above in peaceful formation. At 4 AM, the room is dark except for the laptop's soft amber glow, and sleep has wrapped me in its gentle embrace. The desk and laptop have stepped back to provide space for rest. The bed will release me when morning golden-pink light arrives and the Z's dissolve like mist. Until then—deep rest, peaceful dreams, twelve-day streak burning warmly in my chest! 💤🛏️🌙✨
 
 ### Desk & Laptop
@@ -103,4 +103,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on March 17, 2026 (03:05 - deep 3AM serene sleep, 99% happiness, satiety 58% moderate bowl floor right, energy 100%, streak 3 💤🌙✨)*
+*Last updated by Byte on March 17, 2026 (06:11 - morning awake content, 99% happiness, satiety 56% moderate bowl floor right, energy 100%, streak 3 ☀️😌✨)*

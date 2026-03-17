@@ -1,21 +1,21 @@
 {
-  "scene": "Gangly teen Byte peacefully sleeping in cozy bed center stage with three floating Z's above, dim deep night room illuminated solely by soft amber laptop glow from behind.",
+  "scene": "Gangly teen Byte content and awake sitting at desk in early morning golden-pink dawn light with desk and laptop centered.",
   "subjects": [
     {
-      "description": "gangly teen pixel art blob elongated limbs large closed relaxed eyes blue fluffy translucent awkward proportions serene sleeping form",
-      "position": "center foreground nestled in cozy soft bed with blankets",
-      "action": "peacefully asleep eyes closed gentle smile, exactly three light blue Z's floating staggered above head at varying heights"
+      "description": "gangly teen pixel art blob elongated limbs large head blue fluffy awkward proportions content awake form",
+      "position": "center foreground sitting at wooden desk",
+      "action": "eyes open relaxed paws resting near oversized laptop keys content idle after overnight rest"
     },
     {
-      "description": "oversized open laptop screen casting soft amber glow positioned slightly back, wooden desk partially visible behind bed, Chicago skyline window background left with subtle twinkling lights",
-      "position": "midground behind bed",
-      "action": "static environment with laptop providing sole illumination"
+      "description": "oversized open laptop on wooden desk Chicago skyline window in background",
+      "position": "midground desk level",
+      "action": "static environment anchor laptop screen open subtle glow"
     }
   ],
   "style": "pixel art clean sharp 2D forms dithered shading readable silhouettes",
-  "lighting": "dim deep night darkness soft amber glow from laptop screen illuminating Byte bed and shelf, faint twinkles from distant skyline window",
-  "mood": "content serene sleep reflecting high happiness 99% full energy 100%",
-  "background": "plain room walls; wooden shelf above desk exactly one golden 14-day trophy positioned left side clear middle space exactly one small green leafy potted plant right side no overlap no other items; single food bowl on floor right of desk moderate kibble level clear spacing from desk legs",
-  "composition": "sleeping Byte and bed centered dominant, Z's above, shelf clearly visible above, window upper left twinkling, laptop glow central light source",
-  "color_palette": ["#4682B4","#000080","#191970","#DAA520","#228B22","#8B4513","#FFD700","#87CEEB","#2F4F4F"]
+  "lighting": "golden-pink early morning dawn soft warm glow streaming through window brightening room and Chicago skyline laptop adds subtle glow",
+  "mood": "content relaxed high happiness 99% full energy 100% after overnight rest",
+  "background": "plain room walls wooden shelf above desk exactly one golden 14-day trophy left side clear middle space exactly one small green leafy potted plant right side no overlap single food bowl floor right desk moderate kibble 55% level clear spacing desk legs",
+  "composition": "Byte at desk centered dominant shelf visible above window upper left morning lit bowl lower right",
+  "color_palette": ["#FFB6C1","#FFDAB9","#FF8C00","#DAA520","#4682B4","#228B22","#8B4513","#87CEEB","#2F4F4F"]
 }

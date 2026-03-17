@@ -5,14 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob elongated limbs large head fluffy blue matching teen anchor in sleep pose." },
-    "pixel_style": { "status": "pass", "evidence": "Pixel art dithered clean sharp no style drift." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Sleep bed center Z's three blue night amber glow visible prominent." },
-    "artifact_free": { "status": "pass", "evidence": "Clean no artifacts duplicates malformations." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "One trophy left one plant right no overlap one bowl moderate right floor spacing clear." },
-    "anchors_present": { "status": "pass", "evidence": "Desk laptop skyline window present." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Night sleep serene content high stats." },
-    "reground_cleanup": { "status": "pass", "evidence": "N/A normal." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob with elongated limbs, large head, blue fluffy form matching teen stage proportions and awake pose." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading, sharp 2D forms, no style drift." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Transition from sleep bed/Z's to awake at desk paws on keys; morning golden-pink dawn lighting prominent through window." },
+    "artifact_free": { "status": "pass", "evidence": "No garbling, duplicates, malformations, or smears; clean render." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden 14-day trophy left shelf, clear space, exactly one green plant right shelf no overlap; single moderate kibble bowl (55%) floor right clear spacing from desk." },
+    "anchors_present": { "status": "pass", "evidence": "Wooden desk centered, oversized laptop prominent, Chicago skyline window upper left with dawn light." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Early morning night-to-morning transition with warm glow; content mood via relaxed happy eyes and posture matching high stats." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode." }
   },
   "decision": "accept"
 }
