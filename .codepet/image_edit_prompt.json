@@ -1,21 +1,21 @@
 {
-  "scene": "Gangly teen Byte with paws flat detached on desk surface beside laptop base not touching keys, content relaxed in evening twilight light, shelf with only one trophy left and one plant right.",
+  "scene": "Gangly teen Byte peacefully sleeping in cozy bed center stage with three floating Z's above, dim deep night room illuminated solely by soft amber laptop glow from behind.",
   "subjects": [
     {
-      "description": "gangly teen pixel art blob creature elongated limbs large gentle eyes blue fluffy translucent body awkward proportions relaxed posture",
-      "position": "precise center foreground seated facing desk",
-      "action": "arms relaxed not extended, both paws flat on bare wood desk surface left and right of laptop base with visible wood between paws and laptop, zero contact with keyboard or laptop, half-lidded relaxed eyes soft smile"
+      "description": "gangly teen pixel art blob elongated limbs large closed relaxed eyes blue fluffy translucent awkward proportions serene sleeping form",
+      "position": "center foreground nestled in cozy soft bed with blankets",
+      "action": "peacefully asleep eyes closed gentle smile, exactly three light blue Z's floating staggered above head at varying heights"
     },
     {
-      "description": "oversized open dark laptop centered on wooden desk, Chicago skyline cityscape window background left",
-      "position": "midground central desk background",
-      "action": "static unchanged environment"
+      "description": "oversized open laptop screen casting soft amber glow positioned slightly back, wooden desk partially visible behind bed, Chicago skyline window background left with subtle twinkling lights",
+      "position": "midground behind bed",
+      "action": "static environment with laptop providing sole illumination"
     }
   ],
-  "style": "pixel art clean sharp 2D forms dithered shading readable silhouettes no blur",
-  "lighting": "warm golden-purple evening twilight ambient glow from left window softer indirect light on Byte paws desk",
-  "mood": "calm content relaxed after 1h coding lull full energy high happiness",
-  "background": "plain room walls; wooden shelf directly above desk holding ONLY exactly one golden 14-day trophy positioned on left side, clear empty middle space no other items, exactly one small green leafy potted plant positioned on right side no overlap; single food bowl on floor to right of desk with kibble at moderately low half-full level clear spacing from desk legs no other props",
-  "composition": "framed to clearly show paws resting flat beside laptop edges not on keys, Byte centered, shelf full view above, window skyline left upper",
-  "color_palette": ["#4682B4", "#87CEEB", "#DAA520", "#228B22", "#8B4513", "#FFD700"]
+  "style": "pixel art clean sharp 2D forms dithered shading readable silhouettes",
+  "lighting": "dim deep night darkness soft amber glow from laptop screen illuminating Byte bed and shelf, faint twinkles from distant skyline window",
+  "mood": "content serene sleep reflecting high happiness 99% full energy 100%",
+  "background": "plain room walls; wooden shelf above desk exactly one golden 14-day trophy positioned left side clear middle space exactly one small green leafy potted plant right side no overlap no other items; single food bowl on floor right of desk moderate kibble level clear spacing from desk legs",
+  "composition": "sleeping Byte and bed centered dominant, Z's above, shelf clearly visible above, window upper left twinkling, laptop glow central light source",
+  "color_palette": ["#4682B4","#000080","#191970","#DAA520","#228B22","#8B4513","#FFD700","#87CEEB","#2F4F4F"]
 }
