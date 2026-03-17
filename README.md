@@ -12,15 +12,15 @@ Want to set up your own CodePet? Find configuration examples in [`.codepet/confi
 
 ![CodePet - Byte the coding companion](.codepet/codepet.png)
 
-**Stage:** Teen | **Mood:** Content ☀️ | **Status:** Awake morning 🌅
+**Stage:** Teen | **Mood:** Content ☀️ | **Status:** Morning content ☀️
 
  | Stat | Value | Bar |
  |------|-------|-----|
- | 🍖 Satiety | 56/100 | ██████░░░ |
+ | 🍖 Satiety | 52/100 | █████░░░░░ |
  | ⚡ Energy | 100/100 | ██████████ |
  | 😊 Happiness | 99/100 | ██████████ |
  | 👥 Social | 50/100 | █████░░░░░ |
 
 **Today's Activity:** 1 commit | **Current Streak:** 3 days | **Longest Streak:** 14 days | **Best Day:** 18 commits 🚀
 
-Early 6AM golden-pink dawn lights the Chicago skyline as content teen Byte sits awake at the desk, paws relaxed near the oversized laptop after restful overnight quiet. Happiness 99%, energy 100%, satiety 56% in bowl right floor—8 hours since last commit but streak holds strong. Shelf proud with 14-day trophy left, thriving plant right, ready for new code. 🌅😌✨
+Warm 10AM morning light glows over the Chicago skyline as content teen Byte relaxes paws near the oversized laptop keys in quiet morning lull. Happiness 99%, energy 100%, satiety 52% moderate in bowl right floor—12 hours since last commit but streak 3 solid post-reground. Shelf crisp: gleaming 14-day trophy left, thriving plant right, all artifact-free and ready! ☀️😌✨

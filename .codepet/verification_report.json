@@ -1,18 +1,18 @@
 {
   "attempt": 1,
-  "mode": "normal",
-  "base_image": ".codepet/codepet.png",
+  "mode": "reground",
+  "base_image": ".codepet/stage_images/teen.png",
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob with elongated limbs, large head, blue fluffy form matching teen stage proportions and awake pose." },
-    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading, sharp 2D forms, no style drift." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Transition from sleep bed/Z's to awake at desk paws on keys; morning golden-pink dawn lighting prominent through window." },
-    "artifact_free": { "status": "pass", "evidence": "No garbling, duplicates, malformations, or smears; clean render." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden 14-day trophy left shelf, clear space, exactly one green plant right shelf no overlap; single moderate kibble bowl (55%) floor right clear spacing from desk." },
-    "anchors_present": { "status": "pass", "evidence": "Wooden desk centered, oversized laptop prominent, Chicago skyline window upper left with dawn light." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Early morning night-to-morning transition with warm glow; content mood via relaxed happy eyes and posture matching high stats." },
-    "reground_cleanup": { "status": "pass", "evidence": "N/A for normal mode." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly elongated limbs large head blue fluffy teen blob awkward proportions clearly restored from clean stage anchor geometry." },
+    "pixel_style": { "status": "pass", "evidence": "Clean pixel art with dithered shading sharp 2D forms readable silhouettes no style drift or noise." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Morning warm golden lighting through window; content relaxed pose paws near keys; props re-applied single golden 14 trophy left shelf single green plant right moderate kibble bowl floor right." },
+    "artifact_free": { "status": "pass", "evidence": "No garbling duplicates malformations smears or floating artifacts all elements crisp." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden trophy positioned left on shelf clear middle space exactly one green leafy plant right shelf no overlap clipping; single bowl floor right desk moderate kibble level clear spacing from desk legs." },
+    "anchors_present": { "status": "pass", "evidence": "Wooden desk centered oversized silver laptop on desk Chicago skyline window behind left visible." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Soft morning golden light illuminating scene content mood via happy eyes relaxed posture matching high happiness energy content stats morning time_of_day." },
+    "reground_cleanup": { "status": "pass", "evidence": "Rebuilt purely from stage anchor correcting 6 incremental edit drift; prior live image had kibble bowl with '%55' text label now replaced by pure visual moderate kibble no text; props single crisp instances no duplicates or smear; canonical teen silhouette geometry refreshed no preservation of prior pixel defects." }
   },
   "decision": "accept"
 }

@@ -62,7 +62,7 @@ These have always been here. I can't imagine the desk without them.
 - **Contents:** Kibble (moderate portions, satiety declining during inactivity)
 - **Location:** On the floor to the right of the desk
 - **Refill Pattern:** When my human codes consistently, I stay well-fed
-- **Current Status:** At 56% satiety—moderate kibble floor right during morning awake hours, clear spacing from desk legs
+- **Current Status:** At 52% satiety—moderate kibble floor right during morning content hours post-reground, clear spacing from desk legs
 - **Notes:** The bowl sits on the floor with moderate portions, reflecting the re-grounded state. Exactly one instance with proper spacing from desk legs—no duplication, no drift. The kibble level at 55% is a gentle reminder that commits bring nourishment. The re-grounding cycle restored canonical prop placement: single bowl, single trophy, single plant, all properly spaced. When the code returns, so will the fullness! 🍖⌨️✨
 
 ### Cozy Bed
@@ -103,4 +103,4 @@ These aren't exactly "objects" but they're part of my space.
 
 ---
 
-*Last updated by Byte on March 17, 2026 (06:11 - morning awake content, 99% happiness, satiety 56% moderate bowl floor right, energy 100%, streak 3 ☀️😌✨)*
+*Last updated by Byte on March 17, 2026 (10:40 - morning content post-reground #38, happiness 99%, satiety 52% moderate bowl floor right, energy 100%, streak 3 ☀️😌✨)*

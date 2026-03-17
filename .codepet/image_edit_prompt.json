@@ -1,21 +1,21 @@
 {
-  "scene": "Gangly teen Byte content and awake sitting at desk in early morning golden-pink dawn light with desk and laptop centered.",
+  "scene": "Gangly content teen Byte at wooden desk in morning-lit simple room with Chicago skyline window, trophy shelf above with props, and food bowl on floor.",
   "subjects": [
     {
-      "description": "gangly teen pixel art blob elongated limbs large head blue fluffy awkward proportions content awake form",
-      "position": "center foreground sitting at wooden desk",
-      "action": "eyes open relaxed paws resting near oversized laptop keys content idle after overnight rest"
+      "description": "gangly awkward teen-stage pixel art blob, elongated limbs large expressive eyes fluffy blue fur emotional balanced posture",
+      "position": "foreground center seated comfortably on wooden desk",
+      "action": "paws relaxed resting near oversized laptop keyboard, content relaxed gaze with slight smile reflecting high happiness"
     },
     {
-      "description": "oversized open laptop on wooden desk Chicago skyline window in background",
-      "position": "midground desk level",
-      "action": "static environment anchor laptop screen open subtle glow"
+      "description": "medium-tone wooden desk, mounted wooden trophy shelf directly above holding exactly one shiny golden 14-day streak trophy positioned on left side and exactly one thriving small green leafy potted plant on right side with clear space between no overlap, oversized open silver laptop centered on desk screen blank soft glow, simple Chicago skyline window positioned behind and slightly left, single food bowl on floor immediately to right of desk legs containing moderate half-full level of kibble",
+      "position": "midground desk level and background room",
+      "action": "static canonical environment elements with precise prop placements and cardinalities"
     }
   ],
-  "style": "pixel art clean sharp 2D forms dithered shading readable silhouettes",
-  "lighting": "golden-pink early morning dawn soft warm glow streaming through window brightening room and Chicago skyline laptop adds subtle glow",
-  "mood": "content relaxed high happiness 99% full energy 100% after overnight rest",
-  "background": "plain room walls wooden shelf above desk exactly one golden 14-day trophy left side clear middle space exactly one small green leafy potted plant right side no overlap single food bowl floor right desk moderate kibble 55% level clear spacing desk legs",
-  "composition": "Byte at desk centered dominant shelf visible above window upper left morning lit bowl lower right",
-  "color_palette": ["#FFB6C1","#FFDAB9","#FF8C00","#DAA520","#4682B4","#228B22","#8B4513","#87CEEB","#2F4F4F"]
+  "style": "pixel art, clean sharp 2D forms, dithered shading, readable silhouettes, consistent stage proportions",
+  "lighting": "warm soft morning light golden hues streaming through Chicago skyline window illuminating Byte desk and props warmly, subtle additional glow from laptop screen",
+  "mood": "content relaxed warm palette high happiness 98% full energy 100% satiety moderate",
+  "background": "plain simple room walls, wooden trophy shelf above desk single golden trophy left single green plant right clearly spaced no duplicates or artifacts, single food bowl floor right desk moderate kibble level clear spacing from desk no overlap or clipping",
+  "composition": "balanced centered composition on Byte at desk showing full shelf above laptop window behind left bowl floor right, all elements visible with proper spacing",
+  "color_palette": ["#FFDAB9", "#FFCC99", "#FFD700", "#228B22", "#DEB887", "#87CEEB"]
 }
