@@ -5,14 +5,14 @@
   "candidate_image": ".codepet/new_pet.png",
   "reference_live_image": ".codepet/codepet.png",
   "checks": {
-    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob with elongated limbs, large closed eyes, awkward proportions preserved in sleeping pose matching teen stage anchor." },
-    "pixel_style": { "status": "pass", "evidence": "Clean pixel art, dithered shading, sharp 2D forms, consistent silhouettes no blur or noise." },
-    "requested_changes_visible": { "status": "pass", "evidence": "Cozy bed introduced center with Byte nestled sleeping closed eyes gentle smile; exactly three light blue Z's staggered floating above; dim deep night with amber laptop glow and twinkling skyline." },
-    "artifact_free": { "status": "pass", "evidence": "No garbles, floating glyphs, duplicated parts, smears, or malformed anatomy; crisp clean render." },
-    "prop_layout_integrity": { "status": "pass", "evidence": "Exactly one golden 14-day trophy left shelf; exactly one green leafy plant right shelf clear middle spacing no overlap; single moderate kibble bowl floor right desk clear spacing from legs no extras." },
-    "anchors_present": { "status": "pass", "evidence": "Oversized laptop open amber glowing visible behind bed on desk; wooden desk partially framing bed; Chicago skyline window upper left with night twinkles." },
-    "temporal_mood_match": { "status": "pass", "evidence": "Dim deep night amber glow twinkles matches night quiet_hours inactive_overnight is_sleeping=true; serene content sleep pose fits high happiness 99.6% energy 100% mood content." },
-    "reground_cleanup": { "status": "pass", "evidence": "N/A - normal incremental edit from coding to sleep transition." }
+    "stage_identity": { "status": "pass", "evidence": "Gangly teen blob elongated limbs large head fluffy blue matching teen anchor in sleep pose." },
+    "pixel_style": { "status": "pass", "evidence": "Pixel art dithered clean sharp no style drift." },
+    "requested_changes_visible": { "status": "pass", "evidence": "Sleep bed center Z's three blue night amber glow visible prominent." },
+    "artifact_free": { "status": "pass", "evidence": "Clean no artifacts duplicates malformations." },
+    "prop_layout_integrity": { "status": "pass", "evidence": "One trophy left one plant right no overlap one bowl moderate right floor spacing clear." },
+    "anchors_present": { "status": "pass", "evidence": "Desk laptop skyline window present." },
+    "temporal_mood_match": { "status": "pass", "evidence": "Night sleep serene content high stats." },
+    "reground_cleanup": { "status": "pass", "evidence": "N/A normal." }
   },
   "decision": "accept"
 }
